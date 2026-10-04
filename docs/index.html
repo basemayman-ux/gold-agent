@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>XAUUSD desk</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥇</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
+<style>
+:root{
+  --bg:#1d1913; --panel:#26211a; --line:#3a3227; --ink:#ede6d6; --muted:#a39780;
+  --gold:#cfa54a; --long:#5faf8a; --short:#d0654e; --wait:#8fb3d9; --none:#a39780;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){--bg:#eceae4;--panel:#f7f6f2;--line:#d6d0c3;--ink:#211c14;--muted:#6d6453;--gold:#9a7522;--long:#2f7d5b;--short:#b04a33;--wait:#3d6c9c;--none:#6d6453}
+}
+:root[data-theme="light"]{--bg:#eceae4;--panel:#f7f6f2;--line:#d6d0c3;--ink:#211c14;--muted:#6d6453;--gold:#9a7522;--long:#2f7d5b;--short:#b04a33;--wait:#3d6c9c;--none:#6d6453}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 var(--sans);font-variant-numeric:tabular-nums}
+a{color:var(--gold)}
+.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 40px}
+header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+header h1{font:600 17px/1.2 var(--sans);margin:0;letter-spacing:.01em}
+.fresh{font-size:13px;color:var(--muted)}
+.fresh b{font-weight:600}
+.fresh.stale b{color:var(--short)}
+.grid{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+@media(min-width:920px){.grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}}
+.col{display:flex;flex-direction:column;gap:16px;min-width:0}
+section{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px}
+h2{font:600 14px/1.3 var(--sans);margin:0 0 10px;color:var(--muted)}
+
+/* the hallmark: the one bold element */
+.mark{--c:var(--none);padding:22px 22px 18px;border:2px solid var(--c);border-radius:3px;
+  box-shadow:inset 0 0 0 5px var(--panel),inset 0 0 0 6px color-mix(in srgb,var(--c) 55%,transparent)}
+.mark.LONG{--c:var(--long)} .mark.SHORT{--c:var(--short)} .mark.WAIT{--c:var(--wait)}
+.decision{font:700 clamp(44px,11vw,72px)/0.95 var(--serif);color:var(--c);margin:0;font-variation-settings:"opsz" 144}
+.sub{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:12px;font-size:14px}
+.sub span{color:var(--muted)} .sub strong{font-weight:600;color:var(--ink)}
+.price{font:500 28px/1 var(--serif);margin-top:16px}
+.when{font-size:13px;color:var(--muted);margin-top:4px}
+
+.plan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.plan>div{border-top:2px solid var(--line);padding-top:6px}
+.plan .k{font-size:12px;color:var(--muted)} .plan .v{font:600 18px/1.3 var(--sans)}
+.plan>.sl{border-color:var(--short)} .plan>.tp{border-color:var(--long)}
+.empty{color:var(--muted);margin:0}
+ul.why{margin:0;padding-left:18px} ul.why li{margin:4px 0}
+.inval{margin:12px 0 0;padding:10px 12px;border-left:3px solid var(--short);background:color-mix(in srgb,var(--short) 8%,transparent);font-size:14px}
+
+.chart-box{height:340px;width:100%;overflow:hidden}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--muted);margin-top:8px;flex-wrap:wrap}
+.legend i{display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:5px}
+
+.tfs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.tf{border:1px solid var(--line);border-radius:4px;padding:8px;text-align:center}
+.tf .n{font-size:12px;color:var(--muted)} .tf .b{font-weight:600}
+.tf .s{font-size:12px;color:var(--muted)}
+.Bullish{color:var(--long)} .Bearish{color:var(--short)} .Neutral{color:var(--muted)}
+
+.bars{display:grid;gap:7px}
+.bar{display:grid;grid-template-columns:96px minmax(0,1fr) 46px;align-items:center;gap:10px;font-size:13px}
+.track{height:8px;background:var(--line);border-radius:4px;overflow:hidden}
+.fill{height:100%;background:var(--gold)}
+.bar .val{text-align:right;color:var(--muted)}
+
+.vp svg{width:100%;height:auto;display:block}
+.vp .key{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:8px}
+.vp .key i{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:-1px;margin-right:5px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td,th{padding:7px 4px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-weight:500;color:var(--muted);width:38%}
+.scroll{overflow-x:auto}
+.lv td:last-child{text-align:right;white-space:nowrap}
+.lv .swept{color:var(--muted);text-decoration:line-through}
+.lv .buy td:first-child{border-left:3px solid var(--long);padding-left:8px}
+.lv .sell td:first-child{border-left:3px solid var(--short);padding-left:8px}
+.lv .now td{font-weight:600;color:var(--gold)} .lv .now td:first-child{border-left:3px solid var(--gold);padding-left:8px}
+
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:12px}
+.stats .k{font-size:12px;color:var(--muted)} .stats .v{font:600 17px var(--sans)}
+.warn{font-size:13px;color:var(--muted);margin:8px 0 0}
+.risk-High{color:var(--short);font-weight:600} .risk-Medium{color:var(--gold);font-weight:600} .risk-Low{color:var(--long);font-weight:600}
+footer{margin-top:22px;font-size:12px;color:var(--muted);max-width:70ch}
+button.theme{background:none;border:1px solid var(--line);color:var(--muted);border-radius:4px;padding:4px 10px;font:13px var(--sans);cursor:pointer}
+button.theme:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.error{padding:14px;border:1px solid var(--short);border-radius:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>XAUUSD desk</h1>
+    <div style="display:flex;gap:12px;align-items:center">
+      <span class="fresh" id="fresh">Loading…</span>
+      <button class="theme" id="themeBtn" aria-label="Switch colour theme">Theme</button>
+    </div>
+  </header>
+  <div id="app"></div>
+  <footer>Rule-based decision support from free, delayed data. Setup score measures confluence, not the chance of winning. Confirm price and spread on your broker before any entry. Not financial advice.</footer>
+</div>
+
+<script>
+const $ = (s, el=document) => el.querySelector(s);
+const esc = s => String(s ?? "—").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const n2 = x => x == null ? "—" : Number(x).toFixed(2);
+const STALE_MIN = 20;
+let chart;
+
+(function theme(){
+  let t; try { t = localStorage.getItem("theme"); } catch(e) {}
+  if (t) document.documentElement.dataset.theme = t;
+  $("#themeBtn").onclick = () => {
+    const dark = getComputedStyle(document.documentElement).getPropertyValue("--bg").trim() === "#1d1913";
+    const next = dark ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem("theme", next); } catch(e) {}
+    if (window.__last) render(window.__last);
+  };
+})();
+
+function freshness(d){
+  const el = $("#fresh");
+  if (!d.last_bar_utc){ el.textContent = "No market data"; el.className = "fresh stale"; return Infinity; }
+  const age = (Date.now() - new Date(d.last_bar_utc).getTime())/60000 - 5;
+  const stale = age > STALE_MIN;
+  el.className = "fresh" + (stale ? " stale" : "");
+  el.innerHTML = `Last bar <b>${Math.max(0,Math.round(age))} min old</b>`;
+  return age;
+}
+
+function hallmark(d, age){
+  let dec = d.decision || "NO TRADE";
+  let note = d.headline || "";
+  if ((dec === "LONG" || dec === "SHORT") && age > STALE_MIN){ dec = "NO TRADE"; note = "Signal expired: data is now stale"; }
+  return `<section class="mark ${dec.replace(" ","_")}">
+    <p class="decision">${esc(dec === "NO TRADE" ? "No trade" : dec === "WAIT" ? "Wait" : dec === "LONG" ? "Long" : "Short")}</p>
+    <div class="sub">
+      <div><span>Score </span><strong>${d.score ?? 0}/100</strong></div>
+      <div><span>Quality </span><strong>${esc(d.quality)}</strong></div>
+      <div><span>Regime </span><strong>${esc(d.regime)}</strong></div>
+    </div>
+    <div class="price">${n2(d.price)}</div><div class="when">${esc(d.dubai_time)} Dubai, ${esc(d.session)} session</div>
+    ${note && note !== "Wait" && note !== "No trade" && !/confirmed/.test(note) ? `<p class="warn">${esc(note)}</p>` : ""}
+  </section>`;
+}
+
+function planBlock(d, age){
+  const p = d.plan;
+  if (!p || age > STALE_MIN) return `<section><h2>Trade plan</h2><p class="empty">No entry. The setup does not meet the minimum conditions.</p></section>`;
+  const size = p.size ? `<div><div class="k">Size</div><div class="v">${p.size.lots} lots</div></div>` : `<div><div class="k">Size</div><div class="v">Set equity</div></div>`;
+  return `<section><h2>Trade plan</h2>
+    <div class="plan">
+      <div><div class="k">Entry</div><div class="v">${n2(p.entry)}</div></div>
+      <div class="sl"><div class="k">Stop loss</div><div class="v">${n2(p.sl)}</div></div>
+      <div><div class="k">Reward : risk</div><div class="v">${esc(p.rr)}</div></div>
+      <div class="tp"><div class="k">TP1 (1R)</div><div class="v">${n2(p.tp1)}</div></div>
+      <div class="tp"><div class="k">TP2</div><div class="v">${n2(p.tp2)}</div></div>
+      ${size}
+    </div>
+    <p class="warn">TP2 is the ${esc(p.tp2_name)}. Risk ${p.risk_pct}% of equity.</p>
+  </section>`;
+}
+
+function whyBlock(d){
+  const items = (d.why || []).map(w => `<li>${esc(w)}</li>`).join("");
+  return `<section><h2>Why</h2><ul class="why">${items || "<li>No reasons recorded</li>"}</ul>
+    ${d.invalidation ? `<p class="inval"><strong>Invalidation:</strong> ${esc(d.invalidation)}</p>` : ""}</section>`;
+}
+
+function tfBlock(d){
+  if (!d.bias) return "";
+  const tfs = ["H4","H1","M15","M5"].map(k => `<div class="tf"><div class="n">${k}</div>
+    <div class="b ${d.bias[k]}">${d.bias[k]}</div><div class="s">${(d.swings?.[k]||[]).join(" ") || "—"}</div></div>`).join("");
+  return `<section><h2>Timeframe structure</h2><div class="tfs">${tfs}</div></section>`;
+}
+
+function scoreBlock(d){
+  const max = {structure:25,liquidity:20,momentum:12,vwap:8,volume_flow:15,volatility:5,session:5,news:10};
+  const label = {volume_flow:"Volume & flow", vwap:"VWAP"};
+  const parts = d.score_parts || {};
+  if (!Object.keys(parts).length) return "";
+  const rows = Object.entries(max).map(([k,m]) => {
+    const v = parts[k] ?? 0;
+    return `<div class="bar"><span>${label[k] || k[0].toUpperCase()+k.slice(1)}</span>
+      <div class="track" role="img" aria-label="${k} ${v} of ${m}"><div class="fill" style="width:${100*v/m}%"></div></div>
+      <span class="val">${v}/${m}</span></div>`;
+  }).join("");
+  return `<section><h2>Setup score for the ${esc((d.candidate||"").toLowerCase())} side</h2><div class="bars">${rows}</div></section>`;
+}
+
+function readings(d){
+  if (!d.vwap) return "";
+  const r = [
+    ["EMA200", `H4 price ${d.ema200.H4}, H1 price ${d.ema200.H1}`],
+    ["EMA20/50", `M5 ${d.ema20_50.M5.replace("EMA20 ","")}, M15 ${d.ema20_50.M15.replace("EMA20 ","")}`],
+    ["VWAP", `${d.vwap.side} (${n2(d.vwap.value)}), ${d.vwap.crosses_2h} crosses in 2h${d.vwap.volume_weighted ? "" : ", equal-weight proxy"}`],
+    ["RSI7 / RSI14", `${d.rsi7} / ${d.rsi14}`],
+    ["ADX14", `M5 ${d.adx14.M5}, M15 ${d.adx14.M15}`],
+    ["ATR14", `M5 ${d.atr14.M5}, M15 ${d.atr14.M15} (${d.atr14.percentile}th pct)`],
+    ["Volume", d.volume],
+    ["Liquidity event", d.liquidity_event],
+    ["BOS/CHOCH", d.bos_choch],
+    ["Spread", d.spread],
+    ["Price source", d.source],
+  ];
+  return `<section><h2>Readings (M5 unless noted)</h2><div class="scroll"><table>${r.map(([k,v]) => `<tr><th>${k}</th><td>${esc(v)}</td></tr>`).join("")}</table></div>
+    ${(d.warnings||[]).map(w => `<p class="warn">${esc(w)}</p>`).join("")}</section>`;
+}
+
+function profileBlock(d){
+  const pf = d.profile; if (!pf || !pf.developing) return "";
+  const dev = pf.developing, prior = pf.prior, css = getComputedStyle(document.documentElement);
+  const v = k => css.getPropertyValue(k).trim();
+  const bins = dev.bins.filter(b => b[1] > 0);
+  const lines = [{p:dev.poc,t:"POC",c:v("--gold"),w:2},{p:dev.vah,t:"VAH",c:v("--gold"),dash:"4 3"},{p:dev.val,t:"VAL",c:v("--gold"),dash:"4 3"}];
+  if (prior) lines.push({p:prior.poc,t:"Prior POC",c:v("--wait"),dash:"2 3"},{p:prior.vah,t:"Prior VAH",c:v("--wait"),dash:"2 3"},{p:prior.val,t:"Prior VAL",c:v("--wait"),dash:"2 3"});
+  (pf.naked_pocs||[]).forEach(n => { if (!prior || Math.abs(n.price - prior.poc) > 0.01) lines.push({p:n.price,t:"Naked POC "+n.day.slice(0,3),c:v("--wait"),dash:"1 3"}); else lines.find(l => l.t==="Prior POC").t = "Naked POC"; });
+  lines.push({p:d.price,t:"Price",c:v("--ink"),w:1.5,now:true});
+  let lo = Math.min(...bins.map(b=>b[0]), d.price), hi = Math.max(...bins.map(b=>b[0]), d.price);
+  const near = lines.filter(l => l.p >= lo - (hi-lo)*0.6 && l.p <= hi + (hi-lo)*0.6);
+  lo = Math.min(lo, ...near.map(l=>l.p)) - 1; hi = Math.max(hi, ...near.map(l=>l.p)) + 1;
+  const W = 360, H = 320, L = 4, R = 232, y = p => 8 + (hi - p) / (hi - lo) * (H - 16);
+  const vmax = Math.max(...bins.map(b=>b[1]));
+  const bh = Math.max(1, (H-16) / ((hi-lo) / Math.max(0.01, (dev.bins[1]?.[0]-dev.bins[0]?.[0]) || 0.5)) - 0.5);
+  const bars = bins.map(([p,vol]) => `<rect x="${L}" y="${(y(p)-bh/2).toFixed(1)}" width="${(vol/vmax*(R-L)).toFixed(1)}" height="${bh.toFixed(1)}"
+    fill="${p>=dev.val && p<=dev.vah ? v("--gold") : v("--line")}" opacity="${p>=dev.val && p<=dev.vah ? .75 : 1}"/>`).join("");
+  near.sort((a,b) => b.p - a.p);
+  let lastY = -99;
+  near.forEach(l => { l.ty = Math.max(y(l.p) + 4, lastY + 12); lastY = l.ty; });
+  const lns = near.map(l => `<line x1="${L}" x2="${R}" y1="${y(l.p)}" y2="${y(l.p)}" stroke="${l.c}" stroke-width="${l.w||1}" ${l.dash?`stroke-dasharray="${l.dash}"`:""}/>
+    ${l.now ? `<circle cx="${R}" cy="${y(l.p)}" r="3.5" fill="${l.c}"/>` : ""}
+    <text x="${R+6}" y="${l.ty}" font-size="10.5" fill="${l.c}" ${l.now?'font-weight="600"':""}>${l.t} ${l.p.toFixed(1)}</text>`).join("");
+  const now = "";
+  return `<section class="vp"><h2>Volume profile, today${pf.type.startsWith("TPO") ? " (time-based, no volume)" : ""}</h2>
+    <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Volume profile: POC ${dev.poc}, value area ${dev.val} to ${dev.vah}">${bars}${lns}${now}</svg>
+    <div class="key"><span><i style="background:var(--gold)"></i>Value area (70%)</span><span><i style="background:var(--line)"></i>Outside value</span><span><i style="background:var(--ink);height:2px"></i>Price</span></div>
+    ${pf.context ? `<p class="warn">${esc(pf.context)}</p>` : ""}</section>`;
+}
+
+function flowBlock(d){
+  const f = d.orderflow; if (!f) return "";
+  if (!f.available) return `<section><h2>Order flow (estimated)</h2><p class="empty">Needs volume data, which is unavailable this run.</p></section>`;
+  if (f.leg_ratio == null) return "";
+  const word = x => x > 0.15 ? "buyers in control" : x < -0.15 ? "sellers in control" : "balanced";
+  const r = [
+    ["Setup-leg delta", `${f.leg_ratio > 0 ? "+" : ""}${f.leg_ratio} (${word(f.leg_ratio)})`],
+    ["Session delta", `${Math.round(f.session_delta).toLocaleString()} contracts, last hour ${f.session_slope > 0 ? "rising" : "falling"}`],
+    ["Delta divergence at sweep", f.divergence == null ? "No sweep to test" : f.divergence ? "Yes" : "No"],
+    ["Absorption at sweep", f.absorption == null ? "No sweep to test" : f.absorption ? "Yes" : "No"],
+  ];
+  return `<section><h2>Order flow (estimated)</h2><div class="scroll"><table>${r.map(([k,v]) => `<tr><th>${k}</th><td>${esc(v)}</td></tr>`).join("")}</table></div>
+    <p class="warn">Estimated from where each bar closed in its range, weighted by COMEX volume. Free data has no bid/ask split, so this approximates footprint delta rather than measuring it.</p></section>`;
+}
+
+function levelsBlock(d){
+  if (!d.levels) return "";
+  const rows = [...d.levels, {name:"Current price", price:d.price, now:true}].sort((a,b) => b.price - a.price)
+    .map(l => `<tr class="${l.now ? "now" : l.side}"><td class="${l.swept ? "swept" : ""}">${esc(l.name)}${l.swept ? " (taken)" : ""}</td><td class="${l.swept ? "swept" : ""}">${n2(l.price)}</td></tr>`).join("");
+  return `<section><h2>Liquidity map</h2><div class="scroll"><table class="lv">${rows}</table></div></section>`;
+}
+
+function newsBlock(d){
+  const nw = d.news; if (!nw) return "";
+  const up = (nw.upcoming||[]).map(e => `<tr><td>${esc(e.time)}</td><td>${esc(e.title)}</td><td>${esc(e.impact)}</td></tr>`).join("");
+  return `<section><h2>News risk</h2><p style="margin:0 0 8px"><span class="risk-${nw.risk}">${esc(nw.risk)}</span> ${esc(nw.detail)}</p>
+    ${up ? `<div class="scroll"><table>${up}</table></div>` : `<p class="empty">No high-impact USD events listed this week.</p>`}
+    <p class="warn">Source: Forex Factory weekly calendar (${esc(nw.status)}). Times in Dubai.</p></section>`;
+}
+
+function journalBlock(d){
+  const j = d.journal || {trades:0};
+  const sigs = d.recent_signals || [];
+  const stats = j.trades ? `<div class="stats">
+    <div><div class="k">Trades</div><div class="v">${j.trades}</div></div>
+    <div><div class="k">Win rate</div><div class="v">${j.win_rate}%</div></div>
+    <div><div class="k">Expectancy</div><div class="v">${j.expectancy_r}R</div></div>
+    <div><div class="k">Profit factor</div><div class="v">${j.profit_factor ?? "—"}</div></div>
+    <div><div class="k">Total</div><div class="v">${j.total_r}R</div></div>
+    <div><div class="k">Max drawdown</div><div class="v">${j.max_drawdown_r}R</div></div></div>` :
+    `<p class="empty">No closed signals yet. Results build up here automatically.</p>`;
+  const rows = sigs.map(s => `<tr><td>${esc(s.dubai)}</td><td class="${s.direction==="LONG"?"Bullish":"Bearish"}">${s.direction}</td>
+    <td>${n2(s.entry)}</td><td>${s.score}</td><td>${s.status==="open" ? "Open" : esc(s.result) + " " + (s.r>0?"+":"") + s.r + "R"}</td></tr>`).join("");
+  return `<section><h2>Journal</h2>${stats}${rows ? `<div class="scroll"><table><tr><th>Time</th><th>Side</th><th>Entry</th><th>Score</th><th>Result</th></tr>${rows}</table></div>` : ""}
+    ${j.trades && j.trades < 30 ? `<p class="warn">Fewer than 30 trades: too few to judge the win rate.</p>` : ""}</section>`;
+}
+
+function drawChart(d){
+  const box = $("#chart"); if (!box || !d.chart || !window.LightweightCharts) return;
+  const css = getComputedStyle(document.documentElement);
+  const v = k => css.getPropertyValue(k).trim();
+  if (chart) chart.remove();
+  chart = LightweightCharts.createChart(box, {
+    autoSize: true,
+    layout:{background:{color:"transparent"}, textColor:v("--muted"), fontFamily:"Instrument Sans, system-ui, sans-serif"},
+    grid:{vertLines:{color:v("--line")}, horzLines:{color:v("--line")}},
+    rightPriceScale:{borderColor:v("--line")}, timeScale:{borderColor:v("--line"), timeVisible:true},
+    localization:{timeFormatter: t => new Date(t*1000).toLocaleTimeString("en-GB",{timeZone:"Asia/Dubai",hour:"2-digit",minute:"2-digit"})},
+  });
+  const c = chart.addCandlestickSeries({upColor:v("--long"),downColor:v("--short"),borderVisible:false,wickUpColor:v("--long"),wickDownColor:v("--short")});
+  c.setData(d.chart.map(b => ({time:b.t, open:b.o, high:b.h, low:b.l, close:b.c})));
+  const line = (key,color,w=1) => { const s = chart.addLineSeries({color, lineWidth:w, priceLineVisible:false, lastValueVisible:false});
+    s.setData(d.chart.filter(b => b[key]!=null).map(b => ({time:b.t, value:b[key]}))); };
+  line("e20", v("--gold")); line("e50", v("--wait")); line("vw", v("--muted"), 2);
+  if (d.chart.some(b => b.dl != null)){
+    const h = chart.addHistogramSeries({priceScaleId:"delta", priceLineVisible:false, lastValueVisible:false, priceFormat:{type:"volume"}});
+    chart.priceScale("delta").applyOptions({scaleMargins:{top:0.82, bottom:0}});
+    h.setData(d.chart.filter(b => b.dl != null).map(b => ({time:b.t, value:b.dl, color: b.dl >= 0 ? v("--long") : v("--short")})));
+  }
+  const dv = d.profile?.developing;
+  if (dv) c.createPriceLine({price:dv.poc,color:v("--gold"),lineWidth:1,lineStyle:1,title:"POC"});
+  const p = d.plan;
+  if (p && (d.decision==="LONG"||d.decision==="SHORT")){
+    c.createPriceLine({price:p.entry,color:v("--ink"),lineWidth:1,title:"Entry"});
+    c.createPriceLine({price:p.sl,color:v("--short"),lineWidth:1,title:"SL"});
+    c.createPriceLine({price:p.tp1,color:v("--long"),lineWidth:1,lineStyle:2,title:"TP1"});
+    c.createPriceLine({price:p.tp2,color:v("--long"),lineWidth:1,title:"TP2"});
+  } else {
+    const lo = Math.min(...d.chart.map(b=>b.l)), hi = Math.max(...d.chart.map(b=>b.h));
+    (d.levels||[]).filter(l => !l.swept && l.price>=lo && l.price<=hi).slice(0,6).forEach(l =>
+      c.createPriceLine({price:l.price,color:l.side==="buy"?v("--long"):v("--short"),lineWidth:1,lineStyle:2,title:l.name}));
+  }
+  chart.timeScale().fitContent();
+}
+
+function render(d){
+  window.__last = d;
+  const age = freshness(d);
+  const hasMarket = !!d.chart;
+  $("#app").innerHTML = `<div class="grid">
+    <div class="col">${hallmark(d, age)}${planBlock(d, age)}${whyBlock(d)}${hasMarket ? scoreBlock(d) : ""}</div>
+    <div class="col">
+      ${hasMarket ? `<section><h2>M5 chart (Dubai time)</h2><div class="chart-box" id="chart"></div>
+        <div class="legend"><span><i style="background:var(--gold)"></i>EMA20</span><span><i style="background:var(--wait)"></i>EMA50</span><span><i style="background:var(--muted);height:3px"></i>VWAP</span><span><i style="background:var(--long);height:8px;width:6px"></i><i style="background:var(--short);height:8px;width:6px;margin-left:-3px"></i>Est. delta</span></div></section>` : ""}
+      ${tfBlock(d)}${profileBlock(d)}${flowBlock(d)}${readings(d)}${levelsBlock(d)}${newsBlock(d)}${journalBlock(d)}
+    </div></div>`;
+  drawChart(d);
+}
+
+async function load(){
+  try{
+    const r = await fetch("data/signal.json?t=" + Date.now(), {cache:"no-store"});
+    if (!r.ok) throw new Error("signal.json returned " + r.status);
+    render(await r.json());
+  }catch(e){
+    $("#fresh").textContent = "Offline";
+    if (!window.__last) $("#app").innerHTML = `<div class="error">Signal file not found. Run the "Gold agent" workflow once from the Actions tab, then reload. (${esc(e.message)})</div>`;
+  }
+}
+load();
+setInterval(load, 60000);
+setInterval(() => window.__last && freshness(window.__last), 30000);
+</script>
+</body>
+</html>
