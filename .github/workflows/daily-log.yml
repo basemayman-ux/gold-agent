@@ -1,0 +1,43 @@
+name: Daily price log
+
+on:
+  schedule:
+    - cron: "30 22 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gold-agent
+  cancel-in-progress: false
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Update daily log
+        run: python engine/daily_log.py
+        env:
+          TWELVE_DATA_KEY: ${{ secrets.TWELVE_DATA_KEY }}
+
+      - name: Commit results
+        run: |
+          git config user.name "gold-agent"
+          git config user.email "gold-agent@users.noreply.github.com"
+          git add docs/data
+          if ! git diff --cached --quiet; then
+            git commit -m "daily log $(date -u +%Y-%m-%d)"
+            git pull --rebase
+            git push
+          fi
