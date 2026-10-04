@@ -5,6 +5,7 @@ It never fills in an entry unless every hard gate passes and the setup score cle
 import json
 import math
 import os
+import re
 import sys
 import traceback
 from datetime import datetime, timedelta, timezone
@@ -621,16 +622,30 @@ def invalidation(decision, plan, d, ctx):
 
 # ───────────────────────────── alerts ─────────────────────────────
 
+def _clean_phone(raw):
+    """'+971 50-123 4567', '00971501234567' or '971501234567' -> '+971501234567'."""
+    p = "".join(ch for ch in raw if ch.isdigit() or ch == "+")
+    if p.startswith("00"):
+        p = "+" + p[2:]
+    if not p.startswith("+"):
+        p = "+" + p
+    return p
+
+
 def notify(text):
-    """WhatsApp alert via CallMeBot. Silent if the secrets are not set."""
+    """WhatsApp alert via CallMeBot. Logs CallMeBot's own reply so failures are visible."""
     phone, key = os.getenv("CALLMEBOT_PHONE", "").strip(), os.getenv("CALLMEBOT_APIKEY", "").strip()
     if not (phone and key):
         print("WhatsApp alert skipped: CALLMEBOT_PHONE / CALLMEBOT_APIKEY not set")
         return
+    phone = _clean_phone(phone)
+    masked = phone[:4] + "*" * max(len(phone) - 7, 0) + phone[-3:]
     try:
-        r = requests.get("https://api.callmebot.com/whatsapp.php", timeout=25,
+        r = requests.get("https://api.callmebot.com/whatsapp.php", timeout=30,
                          params={"phone": phone, "text": text, "apikey": key})
-        print(f"WhatsApp alert sent (HTTP {r.status_code})")
+        body = re.sub(r"<[^>]+>", " ", r.text)
+        body = re.sub(r"\s+", " ", body).strip()[:300]
+        print(f"WhatsApp to {masked}: HTTP {r.status_code} | CallMeBot says: {body}")
     except Exception as e:  # noqa: BLE001
         print(f"WhatsApp alert failed: {e}")
 
@@ -646,7 +661,7 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     journal = load_journal()
     if os.getenv("TEST_ALERT", "").lower() == "true":
-        notify("✅ XAUUSD desk is connected. Trade alerts will arrive here.")
+        notify("XAUUSD desk is connected. Trade alerts will arrive here.")
     base = {"generated_utc": now.isoformat(), "dubai_time": now.tz_convert(DUBAI).strftime("%a %d %b %Y, %H:%M"),
             "session": session_of(now)}
 
