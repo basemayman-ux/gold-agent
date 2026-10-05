@@ -4,7 +4,7 @@ on:
   schedule:
     # Every 10 min, 05:00–21:59 UTC (09:00–01:59 Dubai), Mon–Fri.
     # GitHub may delay scheduled runs by several minutes.
-    - cron: "*/10 5-21 * * 1-5"
+      - cron: "17 5-21 * * 1-5"
   workflow_dispatch:
     inputs:
       test_alert:
