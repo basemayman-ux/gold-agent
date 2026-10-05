@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-10-05T21:50:46.251794+00:00",
- "dubai_time": "Tue 06 Oct 2026, 01:50",
+ "generated_utc": "2026-10-05T22:00:40.559906+00:00",
+ "dubai_time": "Tue 06 Oct 2026, 02:00",
  "session": "Late US / off-hours",
- "price": 4139.95,
+ "price": 4139.6,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-10-05T21:45:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-10-05T21:55:00+00:00",
  "warnings": [],
  "regime": "Trend",
  "bias": {
   "H4": "Bearish",
   "H1": "Bullish",
   "M15": "Bearish",
-  "M5": "Bullish"
+  "M5": "Bearish"
  },
  "swings": {
   "H4": [
@@ -47,15 +47,15 @@
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 45.8,
- "rsi14": 49.9,
+ "rsi7": 38.2,
+ "rsi14": 47.9,
  "adx14": {
-  "M5": 7.9,
-  "M15": 19.0
+  "M5": 7.8,
+  "M15": 18.1
  },
  "atr14": {
-  "M5": 1.2,
-  "M15": 4.27,
+  "M5": 1.13,
+  "M15": 4.04,
   "percentile": 40
  },
  "volume": "RVOL 0.63\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
@@ -453,12 +453,12 @@
   "available": true,
   "leg_ratio": -0.246,
   "session_delta": 3951.0,
-  "session_slope": -240.0,
+  "session_slope": -1.0,
   "divergence": null,
   "absorption": null
  },
  "liquidity_event": "No valid sweep in the last 2.5 hours",
- "bos_choch": "M5 CHOCH bullish through 4141.99 at 00:45",
+ "bos_choch": "M5 CHOCH bearish through 4139.88 at 01:55",
  "news": {
   "risk": "Low",
   "status": "live",
@@ -602,28 +602,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791192000,
-   "o": 4166.52,
-   "h": 4169.45,
-   "l": 4166.52,
-   "c": 4169.31,
-   "e20": 4164.54,
-   "e50": 4157.78,
-   "vw": 4151.18,
-   "dl": 389.0
-  },
-  {
-   "t": 1791192300,
-   "o": 4169.09,
-   "h": 4169.09,
-   "l": 4166.54,
-   "c": 4166.73,
-   "e20": 4164.75,
-   "e50": 4158.13,
-   "vw": 4151.25,
-   "dl": -160.0
-  },
   {
    "t": 1791192600,
    "o": 4167.02,
@@ -2251,6 +2229,28 @@
    "e50": 4139.56,
    "vw": 4147.09,
    "dl": 0.0
+  },
+  {
+   "t": 1791237000,
+   "o": 4139.86,
+   "h": 4140.05,
+   "l": 4139.82,
+   "c": 4139.97,
+   "e20": 4140.09,
+   "e50": 4139.58,
+   "vw": 4147.09,
+   "dl": 0.0
+  },
+  {
+   "t": 1791237300,
+   "o": 4139.87,
+   "h": 4140.56,
+   "l": 4139.47,
+   "c": 4139.6,
+   "e20": 4140.05,
+   "e50": 4139.58,
+   "vw": 4147.09,
+   "dl": -0.0
   }
  ],
  "journal": {
