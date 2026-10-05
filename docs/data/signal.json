@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-05T21:29:54.114477+00:00",
- "dubai_time": "Tue 06 Oct 2026, 01:29",
+ "generated_utc": "2026-10-05T21:30:46.724074+00:00",
+ "dubai_time": "Tue 06 Oct 2026, 01:30",
  "session": "Late US / off-hours",
  "price": 4139.98,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 4.9,
- "last_bar_utc": "2026-10-05T21:20:00+00:00",
+ "data_age_min": 0.8,
+ "last_bar_utc": "2026-10-05T21:25:00+00:00",
  "warnings": [],
  "regime": "Trend",
  "bias": {
@@ -50,13 +50,13 @@
  "rsi7": 46.3,
  "rsi14": 50.1,
  "adx14": {
-  "M5": 9.5,
-  "M15": 20.9
+  "M5": 9.1,
+  "M15": 19.9
  },
  "atr14": {
-  "M5": 1.59,
-  "M15": 4.9,
-  "percentile": 42
+  "M5": 1.49,
+  "M15": 4.57,
+  "percentile": 41
  },
  "volume": "RVOL 0.63\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -447,13 +447,13 @@
     ]
    ]
   },
-  "context": "Buying right under a POC/VAH (supply overhead)"
+  "context": "Buying in the lower half of developing value"
  },
  "orderflow": {
   "available": true,
   "leg_ratio": -0.245,
   "session_delta": 3952.0,
-  "session_slope": -177.0,
+  "session_slope": -189.0,
   "divergence": null,
   "absorption": null
  },
@@ -486,9 +486,9 @@
  "score_parts": {
   "structure": 10,
   "liquidity": 15,
-  "momentum": 6,
+  "momentum": 4,
   "vwap": 3,
-  "volume_flow": 1,
+  "volume_flow": 3,
   "volatility": 5,
   "session": 0,
   "news": 10
@@ -602,17 +602,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791190500,
-   "o": 4167.04,
-   "h": 4167.04,
-   "l": 4164.06,
-   "c": 4166.56,
-   "e20": 4162.44,
-   "e50": 4155.58,
-   "vw": 4150.52,
-   "dl": 198.0
-  },
   {
    "t": 1791190800,
    "o": 4165.91,
@@ -2249,6 +2238,17 @@
    "c": 4139.98,
    "e20": 4140.19,
    "e50": 4139.47,
+   "vw": 4147.09,
+   "dl": 0.0
+  },
+  {
+   "t": 1791235500,
+   "o": 4139.93,
+   "h": 4140.03,
+   "l": 4139.8,
+   "c": 4139.98,
+   "e20": 4140.17,
+   "e50": 4139.49,
    "vw": 4147.09,
    "dl": 0.0
   }
