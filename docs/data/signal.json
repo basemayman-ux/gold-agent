@@ -1,14 +1,14 @@
 {
- "generated_utc": "2026-10-05T14:00:43.966573+00:00",
- "dubai_time": "Mon 05 Oct 2026, 18:00",
+ "generated_utc": "2026-10-05T14:10:38.580484+00:00",
+ "dubai_time": "Mon 05 Oct 2026, 18:10",
  "session": "London/NY overlap",
- "price": 4135.93,
+ "price": 4139.67,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-10-05T13:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-05T14:05:00+00:00",
  "warnings": [],
- "regime": "Trend",
+ "regime": "High Volatility",
  "bias": {
   "H4": "Bearish",
   "H1": "Bullish",
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4152.8,
+  "value": 4152.4,
   "side": "Below",
   "crosses_2h": 3,
   "volume_weighted": true
  },
- "rsi7": 21.8,
- "rsi14": 27.8,
+ "rsi7": 38.9,
+ "rsi14": 38.0,
  "adx14": {
-  "M5": 30.8,
+  "M5": 32.8,
   "M15": 17.4
  },
  "atr14": {
-  "M5": 5.02,
+  "M5": 5.59,
   "M15": 7.31,
-  "percentile": 89
+  "percentile": 91
  },
  "volume": "RVOL 3.65\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -74,8 +74,8 @@
   ],
   "developing": {
    "poc": 4158.25,
-   "vah": 4169.0,
-   "val": 4147.0,
+   "vah": 4169.5,
+   "val": 4145.5,
    "bins": [
     [
      4126.25,
@@ -147,91 +147,91 @@
     ],
     [
      4134.75,
-     270.3
+     306.6
     ],
     [
      4135.25,
-     270.3
+     306.6
     ],
     [
      4135.75,
-     400.7
+     528.1
     ],
     [
      4136.25,
-     437.5
+     564.9
     ],
     [
      4136.75,
-     532.9
+     660.3
     ],
     [
      4137.25,
-     845.2
+     972.6
     ],
     [
      4137.75,
-     798.2
+     925.6
     ],
     [
      4138.25,
-     784.6
+     912.0
     ],
     [
      4138.75,
-     533.1
+     660.5
     ],
     [
      4139.25,
-     487.4
+     614.8
     ],
     [
      4139.75,
-     636.1
+     763.5
     ],
     [
      4140.25,
-     611.3
+     738.7
     ],
     [
      4140.75,
-     720.1
+     847.5
     ],
     [
      4141.25,
-     672.1
+     799.5
     ],
     [
      4141.75,
-     715.2
+     842.6
     ],
     [
      4142.25,
-     840.1
+     967.5
     ],
     [
      4142.75,
-     698.4
+     825.8
     ],
     [
      4143.25,
-     801.1
+     837.3
     ],
     [
      4143.75,
-     741.9
+     778.2
     ],
     [
      4144.25,
-     802.8
+     839.1
     ],
     [
      4144.75,
-     735.3
+     771.6
     ],
     [
      4145.25,
-     715.2
+     751.5
     ],
     [
      4145.75,
@@ -439,13 +439,13 @@
     ]
    ]
   },
-  "context": "Sweep happened at the value-area low (responsive buying)"
+  "context": "Buying in the lower half of developing value"
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.222,
-  "session_delta": -189.0,
-  "session_slope": -2071.0,
+  "leg_ratio": -0.143,
+  "session_delta": 94.0,
+  "session_slope": -1245.0,
   "divergence": false,
   "absorption": false
  },
@@ -474,14 +474,14 @@
   "detail": "ISM Services PMI at 18:00 Dubai"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 42,
+ "score": 37,
  "score_parts": {
   "structure": 7,
   "liquidity": 12,
   "momentum": 2,
   "vwap": 1,
-  "volume_flow": 10,
-  "volatility": 5,
+  "volume_flow": 8,
+  "volatility": 2,
   "session": 5,
   "news": 0
  },
@@ -493,18 +493,12 @@
  "why": [
   "High-impact news window: ISM Services PMI at 18:00 Dubai",
   "H4 (Bearish) and H1 (Bullish) conflict",
-  "Setup score would be 42/100 (not tradable while blocked)"
+  "Setup score would be 37/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
   {
-   "name": "Equal highs",
-   "price": 4370.44,
-   "side": "buy",
-   "swept": false
-  },
-  {
-   "name": "Equal highs",
+   "name": "H1 swing high",
    "price": 4370.17,
    "side": "buy",
    "swept": false
@@ -592,31 +586,15 @@
    "price": 4130.37,
    "side": "sell",
    "swept": true
+  },
+  {
+   "name": "M15 swing low",
+   "price": 4130.12,
+   "side": "sell",
+   "swept": false
   }
  ],
  "chart": [
-  {
-   "t": 1791163800,
-   "o": 4155.17,
-   "h": 4156.94,
-   "l": 4154.7,
-   "c": 4156.57,
-   "e20": 4153.64,
-   "e50": 4148.78,
-   "vw": 4149.95,
-   "dl": 128.0
-  },
-  {
-   "t": 1791164100,
-   "o": 4155.99,
-   "h": 4155.99,
-   "l": 4153.03,
-   "c": 4153.25,
-   "e20": 4153.6,
-   "e50": 4148.96,
-   "vw": 4150.02,
-   "dl": -103.0
-  },
   {
    "t": 1791164400,
    "o": 4153.79,
@@ -2231,8 +2209,8 @@
    "c": 4141.58,
    "e20": 4150.59,
    "e50": 4154.69,
-   "vw": 4152.8,
-   "dl": 0.0
+   "vw": 4152.55,
+   "dl": 880.0
   },
   {
    "t": 1791208500,
@@ -2242,7 +2220,29 @@
    "c": 4135.93,
    "e20": 4149.2,
    "e50": 4153.96,
-   "vw": 4152.8,
+   "vw": 4152.4,
+   "dl": -598.0
+  },
+  {
+   "t": 1791208800,
+   "o": 4135.79,
+   "h": 4145.42,
+   "l": 4134.25,
+   "c": 4145.23,
+   "e20": 4148.82,
+   "e50": 4153.61,
+   "vw": 4152.4,
+   "dl": 0.0
+  },
+  {
+   "t": 1791209100,
+   "o": 4145.03,
+   "h": 4145.03,
+   "l": 4137.85,
+   "c": 4139.67,
+   "e20": 4147.95,
+   "e50": 4153.07,
+   "vw": 4152.4,
    "dl": -0.0
   }
  ],
