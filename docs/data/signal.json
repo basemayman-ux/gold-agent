@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-05T22:30:36.034747+00:00",
- "dubai_time": "Tue 06 Oct 2026, 02:30",
+ "generated_utc": "2026-10-05T22:40:32.218127+00:00",
+ "dubai_time": "Tue 06 Oct 2026, 02:40",
  "session": "Late US / off-hours",
- "price": 4142.57,
+ "price": 4144.38,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-10-05T22:25:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-10-05T22:35:00+00:00",
  "warnings": [],
  "regime": "Range",
  "bias": {
@@ -30,7 +30,7 @@
   ],
   "M5": [
    "HH",
-   "LL"
+   "HL"
   ]
  },
  "ema200": {
@@ -42,19 +42,19 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4143.11,
+  "value": 4143.08,
   "side": "Choppy",
-  "crosses_2h": 4,
+  "crosses_2h": 5,
   "volume_weighted": true
  },
- "rsi7": 57.5,
- "rsi14": 57.1,
+ "rsi7": 70.4,
+ "rsi14": 63.7,
  "adx14": {
-  "M5": 17.8,
+  "M5": 20.1,
   "M15": 17.1
  },
  "atr14": {
-  "M5": 1.31,
+  "M5": 1.29,
   "M15": 3.93,
   "percentile": 40
  },
@@ -74,7 +74,7 @@
   ],
   "developing": {
    "poc": 4143.25,
-   "vah": 4144.5,
+   "vah": 4144.0,
    "val": 4142.0,
    "bins": [
     [
@@ -99,19 +99,19 @@
     ],
     [
      4142.25,
-     47.2
+     76.7
     ],
     [
      4142.75,
-     76.2
+     114.3
     ],
     [
      4143.25,
-     102.5
+     140.7
     ],
     [
      4143.75,
-     71.2
+     109.3
     ],
     [
      4144.25,
@@ -123,13 +123,13 @@
     ]
    ]
   },
-  "context": "Buying in the lower half of developing value"
+  "context": "Price inside value, no edge from the profile"
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.313,
-  "session_delta": 136.0,
-  "session_slope": -3815.0,
+  "leg_ratio": 0.297,
+  "session_delta": 172.0,
+  "session_slope": -3780.0,
   "divergence": null,
   "absorption": null
  },
@@ -158,13 +158,13 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 49,
+ "score": 54,
  "score_parts": {
   "structure": 10,
   "liquidity": 12,
-  "momentum": 6,
-  "vwap": 0,
-  "volume_flow": 6,
+  "momentum": 7,
+  "vwap": 5,
+  "volume_flow": 5,
   "volatility": 5,
   "session": 0,
   "news": 10
@@ -176,8 +176,8 @@
  "plan": null,
  "why": [
   "H4 (Bearish) and H1 (Bullish) conflict",
-  "MARKET CHOP \u2014 ADX weak, VWAP crossed 4\u00d7 in 2h",
-  "Setup score would be 49/100 (not tradable while blocked)"
+  "MARKET CHOP \u2014 ADX weak, VWAP crossed 5\u00d7 in 2h",
+  "Setup score would be 54/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -279,28 +279,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791194400,
-   "o": 4159.31,
-   "h": 4159.39,
-   "l": 4157.66,
-   "c": 4157.76,
-   "e20": 4162.12,
-   "e50": 4158.51,
-   "vw": 4151.86,
-   "dl": -173.0
-  },
-  {
-   "t": 1791194700,
-   "o": 4158.01,
-   "h": 4158.74,
-   "l": 4157.66,
-   "c": 4157.68,
-   "e20": 4161.7,
-   "e50": 4158.48,
-   "vw": 4151.9,
-   "dl": -264.0
-  },
   {
    "t": 1791195000,
    "o": 4157.92,
@@ -1915,8 +1893,8 @@
    "c": 4143.23,
    "e20": 4141.36,
    "e50": 4140.27,
-   "vw": 4143.11,
-   "dl": 0.0
+   "vw": 4143.09,
+   "dl": 58.0
   },
   {
    "t": 1791239100,
@@ -1926,8 +1904,30 @@
    "c": 4142.57,
    "e20": 4141.48,
    "e50": 4140.36,
-   "vw": 4143.11,
-   "dl": -0.0
+   "vw": 4143.08,
+   "dl": -22.0
+  },
+  {
+   "t": 1791239400,
+   "o": 4142.74,
+   "h": 4144.22,
+   "l": 4142.74,
+   "c": 4144.06,
+   "e20": 4141.72,
+   "e50": 4140.51,
+   "vw": 4143.08,
+   "dl": 0.0
+  },
+  {
+   "t": 1791239700,
+   "o": 4144.04,
+   "h": 4144.44,
+   "l": 4143.7,
+   "c": 4144.38,
+   "e20": 4141.98,
+   "e50": 4140.66,
+   "vw": 4143.08,
+   "dl": 0.0
   }
  ],
  "journal": {
