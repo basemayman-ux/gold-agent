@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-05T18:51:14.374200+00:00",
- "dubai_time": "Mon 05 Oct 2026, 22:51",
+ "generated_utc": "2026-10-05T19:00:46.710390+00:00",
+ "dubai_time": "Mon 05 Oct 2026, 23:00",
  "session": "New York",
- "price": 4139.93,
+ "price": 4142.54,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 1.2,
- "last_bar_utc": "2026-10-05T18:45:00+00:00",
+ "data_age_min": 0.8,
+ "last_bar_utc": "2026-10-05T18:55:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4147.43,
+  "value": 4147.41,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 69.2,
- "rsi14": 60.9,
+ "rsi7": 76.6,
+ "rsi14": 65.4,
  "adx14": {
-  "M5": 20.2,
-  "M15": 32.4
+  "M5": 18.6,
+  "M15": 30.8
  },
  "atr14": {
-  "M5": 3.32,
-  "M15": 6.69,
-  "percentile": 60
+  "M5": 3.1,
+  "M15": 6.58,
+  "percentile": 55
  },
  "volume": "RVOL 2.19\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -167,35 +167,35 @@
     ],
     [
      4136.25,
-     1591.7
+     1613.7
     ],
     [
      4136.75,
-     1699.8
+     1721.8
     ],
     [
      4137.25,
-     2016.3
+     2070.2
     ],
     [
      4137.75,
-     2032.8
+     2086.6
     ],
     [
      4138.25,
-     2077.2
+     2131.0
     ],
     [
      4138.75,
-     1678.4
+     1732.3
     ],
     [
      4139.25,
-     1604.4
+     1636.2
     ],
     [
      4139.75,
-     1859.6
+     1891.5
     ],
     [
      4140.25,
@@ -451,14 +451,14 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.109,
-  "session_delta": 3030.0,
-  "session_slope": 216.0,
+  "leg_ratio": 0.145,
+  "session_delta": 3324.0,
+  "session_slope": 296.0,
   "divergence": true,
   "absorption": false
  },
  "liquidity_event": "Asian low 4126.08 swept (sell-side), displacement",
- "bos_choch": "M5 CHOCH bullish through 4131.68 at 21:40",
+ "bos_choch": "M5 BOS bullish through 4140.50 at 22:50",
  "news": {
   "risk": "Low",
   "status": "live",
@@ -597,33 +597,11 @@
   {
    "name": "Prior VAL",
    "price": 4142.0,
-   "side": "buy",
+   "side": "sell",
    "swept": false
   }
  ],
  "chart": [
-  {
-   "t": 1791181200,
-   "o": 4152.45,
-   "h": 4154.19,
-   "l": 4147.83,
-   "c": 4153.9,
-   "e20": 4141.85,
-   "e50": 4141.94,
-   "vw": 4145.0,
-   "dl": 822.0
-  },
-  {
-   "t": 1791181500,
-   "o": 4153.15,
-   "h": 4155.76,
-   "l": 4153.15,
-   "c": 4153.94,
-   "e20": 4143.0,
-   "e50": 4142.41,
-   "vw": 4145.17,
-   "dl": -196.0
-  },
   {
    "t": 1791181800,
    "o": 4153.73,
@@ -2238,8 +2216,8 @@
    "c": 4138.72,
    "e20": 4135.19,
    "e50": 4136.56,
-   "vw": 4147.43,
-   "dl": 21.0
+   "vw": 4147.42,
+   "dl": 133.0
   },
   {
    "t": 1791225900,
@@ -2249,7 +2227,29 @@
    "c": 4139.93,
    "e20": 4135.64,
    "e50": 4136.69,
-   "vw": 4147.43,
+   "vw": 4147.41,
+   "dl": 183.0
+  },
+  {
+   "t": 1791226200,
+   "o": 4139.69,
+   "h": 4141.66,
+   "l": 4139.59,
+   "c": 4141.53,
+   "e20": 4136.2,
+   "e50": 4136.88,
+   "vw": 4147.41,
+   "dl": 0.0
+  },
+  {
+   "t": 1791226500,
+   "o": 4141.12,
+   "h": 4142.56,
+   "l": 4141.09,
+   "c": 4142.54,
+   "e20": 4136.8,
+   "e50": 4137.11,
+   "vw": 4147.41,
    "dl": 0.0
   }
  ],
