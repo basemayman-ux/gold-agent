@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-10-05T14:10:38.580484+00:00",
- "dubai_time": "Mon 05 Oct 2026, 18:10",
+ "generated_utc": "2026-10-05T14:20:31.594837+00:00",
+ "dubai_time": "Mon 05 Oct 2026, 18:20",
  "session": "London/NY overlap",
- "price": 4139.67,
+ "price": 4141.68,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-10-05T14:05:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-10-05T14:15:00+00:00",
  "warnings": [],
  "regime": "High Volatility",
  "bias": {
   "H4": "Bearish",
   "H1": "Bullish",
   "M15": "Bearish",
-  "M5": "Bearish"
+  "M5": "Neutral"
  },
  "swings": {
   "H4": [
@@ -30,7 +30,7 @@
   ],
   "M5": [
    "HH",
-   "LL"
+   "HL"
   ]
  },
  "ema200": {
@@ -42,23 +42,23 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4152.4,
+  "value": 4151.84,
   "side": "Below",
   "crosses_2h": 3,
   "volume_weighted": true
  },
- "rsi7": 38.9,
- "rsi14": 38.0,
+ "rsi7": 43.5,
+ "rsi14": 40.9,
  "adx14": {
-  "M5": 32.8,
-  "M15": 17.4
+  "M5": 33.4,
+  "M15": 19.0
  },
  "atr14": {
-  "M5": 5.59,
-  "M15": 7.31,
+  "M5": 5.56,
+  "M15": 7.66,
   "percentile": 91
  },
- "volume": "RVOL 3.65\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "RVOL 4.46\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -75,7 +75,7 @@
   "developing": {
    "poc": 4158.25,
    "vah": 4169.5,
-   "val": 4145.5,
+   "val": 4144.0,
    "bins": [
     [
      4126.25,
@@ -143,95 +143,95 @@
     ],
     [
      4134.25,
-     378.5
+     470.3
     ],
     [
      4134.75,
-     306.6
+     398.4
     ],
     [
      4135.25,
-     306.6
+     398.4
     ],
     [
      4135.75,
-     528.1
+     619.9
     ],
     [
      4136.25,
-     564.9
+     656.7
     ],
     [
      4136.75,
-     660.3
+     752.1
     ],
     [
      4137.25,
-     972.6
+     1064.3
     ],
     [
      4137.75,
-     925.6
+     1117.7
     ],
     [
      4138.25,
-     912.0
+     1104.1
     ],
     [
      4138.75,
-     660.5
+     852.6
     ],
     [
      4139.25,
-     614.8
+     806.9
     ],
     [
      4139.75,
-     763.5
+     955.6
     ],
     [
      4140.25,
-     738.7
+     930.8
     ],
     [
      4140.75,
-     847.5
+     1039.6
     ],
     [
      4141.25,
-     799.5
+     991.6
     ],
     [
      4141.75,
-     842.6
+     1034.7
     ],
     [
      4142.25,
-     967.5
+     1159.6
     ],
     [
      4142.75,
-     825.8
+     1017.9
     ],
     [
      4143.25,
-     837.3
+     1029.4
     ],
     [
      4143.75,
-     778.2
+     970.3
     ],
     [
      4144.25,
-     839.1
+     1031.2
     ],
     [
      4144.75,
-     771.6
+     963.7
     ],
     [
      4145.25,
-     751.5
+     943.6
     ],
     [
      4145.75,
@@ -443,23 +443,18 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.143,
-  "session_delta": 94.0,
-  "session_slope": -1245.0,
+  "leg_ratio": -0.01,
+  "session_delta": 1342.0,
+  "session_slope": -332.0,
   "divergence": false,
   "absorption": false
  },
  "liquidity_event": "London low 4149.89 swept (sell-side), rejection wick",
  "bos_choch": "M5 BOS bearish through 4147.48 at 17:35",
  "news": {
-  "risk": "High",
+  "risk": "Low",
   "status": "live",
   "upcoming": [
-   {
-    "title": "ISM Services PMI",
-    "impact": "Medium",
-    "time": "Mon 18:00"
-   },
    {
     "title": "FOMC Meeting Minutes",
     "impact": "High",
@@ -471,19 +466,19 @@
     "time": "Thu 16:30"
    }
   ],
-  "detail": "ISM Services PMI at 18:00 Dubai"
+  "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 37,
+ "score": 55,
  "score_parts": {
   "structure": 7,
-  "liquidity": 12,
+  "liquidity": 20,
   "momentum": 2,
   "vwap": 1,
   "volume_flow": 8,
   "volatility": 2,
   "session": 5,
-  "news": 0
+  "news": 10
  },
  "candidate": "LONG",
  "decision": "NO TRADE",
@@ -491,9 +486,8 @@
  "quality": "NO TRADE",
  "plan": null,
  "why": [
-  "High-impact news window: ISM Services PMI at 18:00 Dubai",
   "H4 (Bearish) and H1 (Bullish) conflict",
-  "Setup score would be 37/100 (not tradable while blocked)"
+  "Setup score would be 55/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -595,28 +589,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791164400,
-   "o": 4153.79,
-   "h": 4154.89,
-   "l": 4152.82,
-   "c": 4153.06,
-   "e20": 4153.55,
-   "e50": 4149.12,
-   "vw": 4150.11,
-   "dl": -139.0
-  },
-  {
-   "t": 1791164700,
-   "o": 4153.47,
-   "h": 4158.41,
-   "l": 4152.82,
-   "c": 4158.16,
-   "e20": 4153.99,
-   "e50": 4149.47,
-   "vw": 4150.31,
-   "dl": 231.0
-  },
   {
    "t": 1791165000,
    "o": 4157.7,
@@ -2231,8 +2203,8 @@
    "c": 4145.23,
    "e20": 4148.82,
    "e50": 4153.61,
-   "vw": 4152.4,
-   "dl": 0.0
+   "vw": 4152.09,
+   "dl": 2039.0
   },
   {
    "t": 1791209100,
@@ -2242,8 +2214,30 @@
    "c": 4139.67,
    "e20": 4147.95,
    "e50": 4153.07,
-   "vw": 4152.4,
+   "vw": 4151.84,
+   "dl": -790.0
+  },
+  {
+   "t": 1791209400,
+   "o": 4139.53,
+   "h": 4146.5,
+   "l": 4139.53,
+   "c": 4141.91,
+   "e20": 4147.37,
+   "e50": 4152.63,
+   "vw": 4151.84,
    "dl": -0.0
+  },
+  {
+   "t": 1791209700,
+   "o": 4142.29,
+   "h": 4143.59,
+   "l": 4139.76,
+   "c": 4141.68,
+   "e20": 4146.83,
+   "e50": 4152.2,
+   "vw": 4151.84,
+   "dl": 0.0
   }
  ],
  "journal": {
