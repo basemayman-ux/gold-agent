@@ -213,6 +213,24 @@ def dedupe(levels, tol):
     return kept
 
 
+def ema_bias(row):
+    """Price and fast EMAs stacked: close > EMA20 > EMA50 is bullish, the reverse bearish."""
+    if row["close"] > row["ema20"] > row["ema50"]:
+        return "Bullish"
+    if row["close"] < row["ema20"] < row["ema50"]:
+        return "Bearish"
+    return "Neutral"
+
+
+def combine_bias(structure, emas):
+    """Structure and EMAs must not disagree. If one is neutral the other decides; if they clash, neutral."""
+    if structure == emas or emas == "Neutral":
+        return structure
+    if structure == "Neutral":
+        return emas
+    return "Neutral"
+
+
 def h4_regime(h4, st):
     last = h4.iloc[-1]
     a = last["atr14"]
@@ -334,10 +352,14 @@ def analyze(now):
 
     st = {
         "H4": analyze_structure(h4, 3, 3),
-        "H1": analyze_structure(h1, 3, 3),
-        "M15": analyze_structure(m15, 3, 3),
+        "H1": analyze_structure(h1, 2, 2),
+        "M15": analyze_structure(m15, 2, 2),
         "M5": analyze_structure(m5, 2, 2),
     }
+    for key, df in (("H1", h1), ("M15", m15)):
+        st[key]["structure_bias"] = st[key]["bias"]
+        st[key]["ema_bias"] = ema_bias(df.iloc[-1])
+        st[key]["bias"] = combine_bias(st[key]["bias"], st[key]["ema_bias"])
     h4_bias, h4_note = h4_regime(h4, st["H4"])
     b5, b15, bh1 = m5.iloc[-1], m15.iloc[-1], h1.iloc[-1]
     a5 = float(b5["atr14"])
@@ -424,7 +446,7 @@ def score_setup(ctx, d, plan):
     s = 0
     s += 7 if ctx["h4_bias"] == want else 3 if ctx["h4_bias"] == "Neutral" else 0
     h1_side_ok = (bh1["close"] > bh1["ema200"]) if d > 0 else (bh1["close"] < bh1["ema200"])
-    s += (8 if h1_side_ok else 5) if st["H1"]["bias"] == want else 0
+    s += (8 if h1_side_ok else 5) if st["H1"]["bias"] == want else (3 if ctx.get("h1_transition") else 0)
     s += 5 if st["M15"]["bias"] == want else 2 if st["M15"]["bias"] == "Neutral" else 0
     recent = [e for e in st["M5"]["events"] if e["dir"] == edir and e["i"] >= len(m5) - 36]
     sweep_ok = ctx["sweep"] and ctx["sweep"]["dir"] == edir
@@ -503,10 +525,16 @@ def decide(ctx, journal):
     decision, d, plan, score, sc = "NO TRADE", 0, None, 0, {}
 
     h1 = st["H1"]["bias"]
+    ctx["h1_transition"] = False
     if h1 == "Bullish":
         d = 1
     elif h1 == "Bearish":
         d = -1
+    else:
+        lower = {ctx["h4_bias"], st["M15"]["bias"], st["M5"]["bias"]}
+        if len(lower) == 1 and "Neutral" not in lower:
+            d = 1 if lower == {"Bullish"} else -1
+            ctx["h1_transition"] = True
 
     adx_weak = ctx["b15"]["adx14"] < 18
     vwap_chop = ctx["crosses"] >= 4
@@ -525,8 +553,8 @@ def decide(ctx, journal):
     if ctx["news"]["risk"] == "High":
         blockers.append(f"High-impact news window: {ctx['news']['detail']}")
     if d == 0:
-        blockers.append("H1 structure is neutral, no primary directional bias")
-    elif ctx["h4_bias"] != "Neutral" and ctx["h4_bias"] != h1:
+        blockers.append("No clear direction: H1 is neutral and H4, M15 and M5 do not all agree")
+    elif h1 != "Neutral" and ctx["h4_bias"] != "Neutral" and ctx["h4_bias"] != h1:
         blockers.append(f"H4 ({ctx['h4_bias']}) and H1 ({h1}) conflict")
     if chop:
         bits = [t for t, f in (("ADX weak", adx_weak), (f"VWAP crossed {ctx['crosses']}× in 2h", vwap_chop),
@@ -557,6 +585,9 @@ def decide(ctx, journal):
     elif score < CFG["min_trade_score"]:
         decision = "WAIT"
         why.append(f"Score {score}/100 is below the {CFG['min_trade_score']} live-trade minimum")
+    elif ctx["session"] == "Asia" and score < CFG.get("asia_min_score", 90):
+        decision = "WAIT"
+        why.append(f"Asian session needs {CFG.get('asia_min_score', 90)}+ (score {score}/100); liquidity is thinner before London")
     else:
         ext = abs(ctx["price"] - ctx["b5"]["ema20"]) / ctx["a5"]
         if plan["stop_atr"] > 3:
@@ -590,6 +621,8 @@ def decide(ctx, journal):
         if ctx["confirm"]:
             e = ctx["confirm"][-1]
             why.append(f"M5 {dirw} {e['kind']} through {e['level']:.2f}")
+        if ctx.get("h1_transition"):
+            why.append("H1 is in transition; H4, M15 and M5 all agree on the direction")
         why.append(f"H4 {ctx['h4_bias'].lower()} ({ctx['h4_note']}), H1 {h1.lower()}, "
                    f"M15 {st['M15']['bias'].lower()}")
         rv = ctx.get("rvol")
@@ -764,6 +797,16 @@ def main():
         notify(f"{'🟢' if decision == 'LONG' else '🔴'} XAUUSD {decision} — score {score}/100 ({quality(score)})\n"
                f"Entry {plan['entry']:.2f}  SL {plan['sl']:.2f}\nTP1 {plan['tp1']:.2f}  TP2 {plan['tp2']:.2f} "
                f"(1:{plan['rr']:.1f})\nCheck spread and your broker price before entering.")
+
+    # 🟡 heads-up: a setup is close (score 75+) but not tradable yet. At most once an hour per direction.
+    if decision == "WAIT" and score >= CFG.get("watch_min_score", 75) and d:
+        side = "LONG" if d > 0 else "SHORT"
+        last = journal.get("watch", {}).get(side)
+        if not last or now - pd.Timestamp(last) >= timedelta(minutes=CFG.get("watch_cooldown_minutes", 60)):
+            journal.setdefault("watch", {})[side] = now.isoformat()
+            notify(f"🟡 XAUUSD WATCH — possible {side}, score {score}/100\n"
+                   f"Price {ctx['price']:.2f}. Not a trade yet: {why[0] if why else 'conditions incomplete'}\n"
+                   f"Watch your chart; a {side} alert follows only if every check passes.")
 
     journal["signals"] = journal["signals"][-500:]
     out["journal"] = journal_stats(journal)
