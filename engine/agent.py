@@ -519,8 +519,27 @@ def quality(score):
     return "A+" if score >= 90 else "A" if score >= 85 else "B+" if score >= 80 else "WATCH" if score >= 70 else "NO TRADE"
 
 
+MODES = {
+    # strict:   your original rulebook
+    # balanced: also trades early trend turns (H1 + M15 agree against H4); quicker re-entry
+    # active:   balanced plus a lower score bar; more trades, more losers
+    "strict":   {"min_score": 85, "asia_min": 90, "early_turn": False, "cooldown": 30, "max_per_session": 3},
+    "balanced": {"min_score": 85, "asia_min": 90, "early_turn": True,  "cooldown": 20, "max_per_session": 3},
+    "active":   {"min_score": 80, "asia_min": 85, "early_turn": True,  "cooldown": 15, "max_per_session": 4},
+}
+
+
+def mode_cfg():
+    m = MODES.get(CFG.get("mode", "strict"), MODES["strict"]).copy()
+    m["name"] = CFG.get("mode", "strict") if CFG.get("mode") in MODES else "strict"
+    return m
+
+
 def decide(ctx, journal):
     now, st = ctx["now"], ctx["st"]
+    M = mode_cfg()
+    ctx["mode"], ctx["min_score"] = M["name"], M["min_score"]
+    ctx["early_turn"] = ctx["conflict_only"] = False
     blockers, why = [], []
     decision, d, plan, score, sc = "NO TRADE", 0, None, 0, {}
 
@@ -555,7 +574,11 @@ def decide(ctx, journal):
     if d == 0:
         blockers.append("No clear direction: H1 is neutral and H4, M15 and M5 do not all agree")
     elif h1 != "Neutral" and ctx["h4_bias"] != "Neutral" and ctx["h4_bias"] != h1:
-        blockers.append(f"H4 ({ctx['h4_bias']}) and H1 ({h1}) conflict")
+        if M["early_turn"] and st["M15"]["bias"] == h1:
+            ctx["early_turn"] = True      # H1 and M15 have turned together; H4 has not caught up yet
+        else:
+            blockers.append(f"H4 ({ctx['h4_bias']}) and H1 ({h1}) conflict")
+            ctx["conflict_only"] = True
     if chop:
         bits = [t for t, f in (("ADX weak", adx_weak), (f"VWAP crossed {ctx['crosses']}× in 2h", vwap_chop),
                                ("EMA20/50 flat", ema_flat)) if f]
@@ -565,16 +588,18 @@ def decide(ctx, journal):
         plan = plan_trade(ctx, d)
         score, sc = score_setup(ctx, d, plan)
 
+    if len(blockers) > 1:
+        ctx["conflict_only"] = False
     if blockers:
         decision = "NO TRADE"
         why += blockers
     elif open_sig:
         decision = "WAIT"
         why.append(f"A {open_sig[0]['direction']} signal is still active, manage it before a new one")
-    elif len(sess_sigs) >= CFG["max_signals_per_session"]:
+    elif len(sess_sigs) >= M["max_per_session"]:
         decision = "WAIT"
         why.append("Session signal cap reached")
-    elif last_sig and now - pd.Timestamp(last_sig["time_utc"]) < timedelta(minutes=CFG["cooldown_minutes"]):
+    elif last_sig and now - pd.Timestamp(last_sig["time_utc"]) < timedelta(minutes=M["cooldown"]):
         decision = "WAIT"
         why.append("Cooling down after the last signal")
     elif plan is None:
@@ -582,12 +607,12 @@ def decide(ctx, journal):
         why.append("No logical structural stop available")
     elif score < 70:
         decision = "NO TRADE"
-    elif score < CFG["min_trade_score"]:
+    elif score < M["min_score"]:
         decision = "WAIT"
-        why.append(f"Score {score}/100 is below the {CFG['min_trade_score']} live-trade minimum")
-    elif ctx["session"] == "Asia" and score < CFG.get("asia_min_score", 90):
+        why.append(f"Score {score}/100 is below the {M['min_score']} live-trade minimum")
+    elif ctx["session"] == "Asia" and score < M["asia_min"]:
         decision = "WAIT"
-        why.append(f"Asian session needs {CFG.get('asia_min_score', 90)}+ (score {score}/100); liquidity is thinner before London")
+        why.append(f"Asian session needs {M['asia_min']}+ (score {score}/100); liquidity is thinner before London")
     else:
         ext = abs(ctx["price"] - ctx["b5"]["ema20"]) / ctx["a5"]
         if plan["stop_atr"] > 3:
@@ -621,6 +646,8 @@ def decide(ctx, journal):
         if ctx["confirm"]:
             e = ctx["confirm"][-1]
             why.append(f"M5 {dirw} {e['kind']} through {e['level']:.2f}")
+        if ctx.get("early_turn"):
+            why.append(f"Early trend turn: H1 and M15 turned {'up' if d > 0 else 'down'} before H4 (allowed in {M['name']} mode)")
         if ctx.get("h1_transition"):
             why.append("H1 is in transition; H4, M15 and M5 all agree on the direction")
         why.append(f"H4 {ctx['h4_bias'].lower()} ({ctx['h4_note']}), H1 {h1.lower()}, "
@@ -774,6 +801,7 @@ def main():
         "headline": {"LONG": "Long setup confirmed", "SHORT": "Short setup confirmed", "WAIT": "Wait",
                      "NO TRADE": "No trade"}[decision],
         "quality": quality(score) if trade or decision == "WAIT" else "NO TRADE",
+        "mode": ctx.get("mode", "strict"), "min_score": ctx.get("min_score", 85),
         "plan": ({"entry": fmt(plan["entry"]), "sl": fmt(plan["sl"]), "tp1": fmt(plan["tp1"]),
                   "tp2": fmt(plan["tp2"]), "tp2_name": plan["tp2_name"], "rr": f"1:{plan['rr']:.2f}",
                   "risk_pct": CFG["risk_pct"], "size": size} if trade else None),
@@ -799,7 +827,7 @@ def main():
                f"(1:{plan['rr']:.1f})\nCheck spread and your broker price before entering.")
 
     # 🟡 heads-up: a setup is close (score 75+) but not tradable yet. At most once an hour per direction.
-    if decision == "WAIT" and score >= CFG.get("watch_min_score", 75) and d:
+    if (decision == "WAIT" or ctx.get("conflict_only")) and score >= CFG.get("watch_min_score", 75) and d:
         side = "LONG" if d > 0 else "SHORT"
         last = journal.get("watch", {}).get(side)
         if not last or now - pd.Timestamp(last) >= timedelta(minutes=CFG.get("watch_cooldown_minutes", 60)):
