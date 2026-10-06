@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-10-06T05:20:31.061229+00:00",
- "dubai_time": "Tue 06 Oct 2026, 09:20",
+ "generated_utc": "2026-10-06T05:30:41.026150+00:00",
+ "dubai_time": "Tue 06 Oct 2026, 09:30",
  "session": "Asia",
- "price": 4125.56,
+ "price": 4121.78,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.5,
- "last_bar_utc": "2026-10-06T05:15:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-10-06T05:25:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
   "H4": "Bearish",
   "H1": "Bearish",
   "M15": "Bearish",
-  "M5": "Neutral"
+  "M5": "Bearish"
  },
  "swings": {
   "H4": [
@@ -29,7 +29,7 @@
    "LL"
   ],
   "M5": [
-   "LH",
+   "HH",
    "LL"
   ]
  },
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4136.79,
+  "value": 4136.41,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 56.9,
- "rsi14": 48.4,
+ "rsi7": 36.3,
+ "rsi14": 39.7,
  "adx14": {
-  "M5": 16.4,
-  "M15": 22.8
+  "M5": 15.0,
+  "M15": 23.3
  },
  "atr14": {
-  "M5": 3.28,
-  "M15": 6.09,
-  "percentile": 58
+  "M5": 3.15,
+  "M15": 6.08,
+  "percentile": 56
  },
  "volume": "RVOL 3.53\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -74,8 +74,8 @@
   ],
   "developing": {
    "poc": 4140.25,
-   "vah": 4151.0,
-   "val": 4133.5,
+   "vah": 4152.5,
+   "val": 4133.0,
    "bins": [
     [
      4107.75,
@@ -175,55 +175,55 @@
     ],
     [
      4119.75,
-     0.0
+     13.7
     ],
     [
      4120.25,
-     50.7
+     64.4
     ],
     [
      4120.75,
-     50.7
+     83.7
     ],
     [
      4121.25,
-     97.4
+     130.4
     ],
     [
      4121.75,
-     247.0
+     280.0
     ],
     [
      4122.25,
-     247.0
+     280.0
     ],
     [
      4122.75,
-     200.3
+     233.4
     ],
     [
      4123.25,
-     200.3
+     233.4
     ],
     [
      4123.75,
-     101.9
+     115.6
     ],
     [
      4124.25,
-     202.2
+     215.9
     ],
     [
      4124.75,
-     202.2
+     215.9
     ],
     [
      4125.25,
-     152.2
+     165.9
     ],
     [
      4125.75,
-     128.7
+     142.4
     ],
     [
      4126.25,
@@ -443,14 +443,14 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.351,
-  "session_delta": -657.0,
-  "session_slope": -888.0,
+  "leg_ratio": -0.252,
+  "session_delta": -528.0,
+  "session_slope": -735.0,
   "divergence": null,
   "absorption": null
  },
  "liquidity_event": "No valid sweep in the last 2.5 hours",
- "bos_choch": "M5 CHOCH bullish through 4124.90 at 09:15",
+ "bos_choch": "M5 CHOCH bearish through 4125.58 at 08:35",
  "news": {
   "risk": "Low",
   "status": "live",
@@ -474,11 +474,11 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 87,
+ "score": 90,
  "score_parts": {
   "structure": 25,
   "liquidity": 15,
-  "momentum": 9,
+  "momentum": 12,
   "vwap": 8,
   "volume_flow": 14,
   "volatility": 5,
@@ -486,31 +486,20 @@
   "news": 10
  },
  "candidate": "SHORT",
- "decision": "SHORT",
- "headline": "Short setup confirmed",
- "quality": "A",
- "plan": {
-  "entry": 4125.56,
-  "sl": 4132.07,
-  "tp1": 4119.05,
-  "tp2": 4107.79,
-  "tp2_name": "M15 swing low",
-  "rr": "1:2.73",
-  "risk_pct": 0.5,
-  "size": {
-   "risk_cash": 500.0,
-   "lots": 0.76
-  }
- },
+ "decision": "WAIT",
+ "headline": "Wait",
+ "quality": "A+",
+ "plan": null,
  "why": [
+  "A SHORT signal is still active, manage it before a new one",
   "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bearish CHOCH through 4125.58",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 57, RSI14 48, M15 ADX 23, RVOL 3.5\u00d7",
-  "Profile & flow: Accepted below prior VAL 4126.50 (initiative selling); setup-leg delta -0.35",
+  "RSI7 36, RSI14 40, M15 ADX 23, RVOL 3.5\u00d7",
+  "Profile & flow: Accepted below prior VAL 4126.50 (initiative selling); setup-leg delta -0.25",
   "Weak components: session"
  ],
- "invalidation": "Trade through 4132.07 (beyond the last M5 swing high), or an M15 close above the M15 EMA50 (4134.99) before TP1.",
+ "invalidation": null,
  "levels": [
   {
    "name": "H1 swing high",
@@ -610,28 +599,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791219000,
-   "o": 4129.63,
-   "h": 4132.23,
-   "l": 4127.53,
-   "c": 4132.07,
-   "e20": 4133.36,
-   "e50": 4139.7,
-   "vw": 4148.65,
-   "dl": 290.0
-  },
-  {
-   "t": 1791219300,
-   "o": 4131.74,
-   "h": 4131.89,
-   "l": 4131.21,
-   "c": 4131.87,
-   "e20": 4133.22,
-   "e50": 4139.39,
-   "vw": 4148.59,
-   "dl": 334.0
-  },
   {
    "t": 1791219600,
    "o": 4131.81,
@@ -2246,19 +2213,41 @@
    "c": 4122.84,
    "e20": 4125.26,
    "e50": 4129.12,
-   "vw": 4136.79,
-   "dl": 0.0
+   "vw": 4136.63,
+   "dl": 96.0
   },
   {
    "t": 1791263700,
    "o": 4122.5,
    "h": 4125.82,
    "l": 4119.83,
-   "c": 4125.56,
-   "e20": 4125.29,
-   "e50": 4128.98,
-   "vw": 4136.79,
-   "dl": 0.0
+   "c": 4123.38,
+   "e20": 4125.08,
+   "e50": 4128.89,
+   "vw": 4136.41,
+   "dl": 33.0
+  },
+  {
+   "t": 1791264000,
+   "o": 4123.7,
+   "h": 4124.09,
+   "l": 4122.69,
+   "c": 4122.82,
+   "e20": 4124.86,
+   "e50": 4128.65,
+   "vw": 4136.41,
+   "dl": -0.0
+  },
+  {
+   "t": 1791264300,
+   "o": 4123.03,
+   "h": 4123.88,
+   "l": 4120.65,
+   "c": 4121.78,
+   "e20": 4124.57,
+   "e50": 4128.38,
+   "vw": 4136.41,
+   "dl": -0.0
   }
  ],
  "journal": {
