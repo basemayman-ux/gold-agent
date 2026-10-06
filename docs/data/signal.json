@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-06T19:50:33.478136+00:00",
- "dubai_time": "Tue 06 Oct 2026, 23:50",
+ "generated_utc": "2026-10-06T20:00:43.983202+00:00",
+ "dubai_time": "Wed 07 Oct 2026, 00:00",
  "session": "New York",
- "price": 4168.59,
+ "price": 4169.39,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-10-06T19:45:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-10-06T19:55:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4151.84,
+  "value": 4151.91,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 33.9,
- "rsi14": 46.7,
+ "rsi7": 43.0,
+ "rsi14": 49.2,
  "adx14": {
-  "M5": 35.9,
-  "M15": 19.6
+  "M5": 32.1,
+  "M15": 19.5
  },
  "atr14": {
-  "M5": 2.74,
-  "M15": 5.94,
-  "percentile": 51
+  "M5": 2.62,
+  "M15": 5.72,
+  "percentile": 50
  },
  "volume": "RVOL 3.41\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -563,19 +563,19 @@
     ],
     [
      4168.25,
-     1481.0
+     1552.2
     ],
     [
      4168.75,
-     1399.6
+     1528.5
     ],
     [
      4169.25,
-     1572.9
+     1701.9
     ],
     [
      4169.75,
-     1169.9
+     1298.8
     ],
     [
      4170.25,
@@ -695,9 +695,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.24,
-  "session_delta": 4291.0,
-  "session_slope": -1313.0,
+  "leg_ratio": -0.23,
+  "session_delta": 4224.0,
+  "session_slope": -1509.0,
   "divergence": null,
   "absorption": null
  },
@@ -750,12 +750,18 @@
   "M5 bullish BOS through 4173.10",
   "Early trend turn: H1 and M15 turned up before H4 (allowed in balanced mode)",
   "H4 bearish (Price clearly below H4 EMA200), H1 bullish, M15 bullish",
-  "RSI7 34, RSI14 47, M15 ADX 20, RVOL 3.4\u00d7",
-  "Profile & flow: Accepted above prior VAH 4156.00 (initiative buying); setup-leg delta -0.24",
+  "RSI7 43, RSI14 49, M15 ADX 20, RVOL 3.4\u00d7",
+  "Profile & flow: Accepted above prior VAH 4156.00 (initiative buying); setup-leg delta -0.23",
   "Weak components: momentum"
  ],
  "invalidation": null,
  "levels": [
+  {
+   "name": "H1 swing high",
+   "price": 4347.64,
+   "side": "buy",
+   "swept": false
+  },
   {
    "name": "H1 swing high",
    "price": 4315.6,
@@ -793,8 +799,8 @@
    "swept": false
   },
   {
-   "name": "H1 swing high",
-   "price": 4179.9,
+   "name": "M15 swing high",
+   "price": 4183.93,
    "side": "buy",
    "swept": false
   },
@@ -845,37 +851,9 @@
    "price": 4128.03,
    "side": "sell",
    "swept": false
-  },
-  {
-   "name": "Prior VAL",
-   "price": 4126.5,
-   "side": "sell",
-   "swept": false
   }
  ],
  "chart": [
-  {
-   "t": 1791271200,
-   "o": 4139.36,
-   "h": 4140.44,
-   "l": 4136.8,
-   "c": 4137.03,
-   "e20": 4130.59,
-   "e50": 4128.96,
-   "vw": 4129.8,
-   "dl": -301.0
-  },
-  {
-   "t": 1791271500,
-   "o": 4137.7,
-   "h": 4139.49,
-   "l": 4136.04,
-   "c": 4136.4,
-   "e20": 4131.14,
-   "e50": 4129.25,
-   "vw": 4129.85,
-   "dl": -194.0
-  },
   {
    "t": 1791271800,
    "o": 4137.14,
@@ -2490,8 +2468,8 @@
    "c": 4169.7,
    "e20": 4171.0,
    "e50": 4167.43,
-   "vw": 4151.84,
-   "dl": 0.0
+   "vw": 4151.87,
+   "dl": 146.0
   },
   {
    "t": 1791315900,
@@ -2501,8 +2479,30 @@
    "c": 4168.59,
    "e20": 4170.77,
    "e50": 4167.48,
-   "vw": 4151.84,
+   "vw": 4151.91,
+   "dl": -214.0
+  },
+  {
+   "t": 1791316200,
+   "o": 4168.83,
+   "h": 4168.83,
+   "l": 4167.19,
+   "c": 4167.55,
+   "e20": 4170.47,
+   "e50": 4167.48,
+   "vw": 4151.91,
    "dl": -0.0
+  },
+  {
+   "t": 1791316500,
+   "o": 4167.41,
+   "h": 4169.49,
+   "l": 4167.41,
+   "c": 4169.39,
+   "e20": 4170.36,
+   "e50": 4167.55,
+   "vw": 4151.91,
+   "dl": 0.0
   }
  ],
  "journal": {
