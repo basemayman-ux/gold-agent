@@ -1,14 +1,14 @@
 {
- "generated_utc": "2026-10-06T06:00:46.993301+00:00",
- "dubai_time": "Tue 06 Oct 2026, 10:00",
+ "generated_utc": "2026-10-06T06:10:37.768571+00:00",
+ "dubai_time": "Tue 06 Oct 2026, 10:10",
  "session": "Asia",
- "price": 4116.84,
+ "price": 4119.16,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-10-06T05:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-06T06:05:00+00:00",
  "warnings": [],
- "regime": "Trend",
+ "regime": "Breakout",
  "bias": {
   "H4": "Bearish",
   "H1": "Bearish",
@@ -42,23 +42,23 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4135.01,
+  "value": 4133.74,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 24.8,
- "rsi14": 33.0,
+ "rsi7": 43.7,
+ "rsi14": 41.7,
  "adx14": {
-  "M5": 14.4,
+  "M5": 17.5,
   "M15": 24.8
  },
  "atr14": {
-  "M5": 3.1,
+  "M5": 3.47,
   "M15": 6.05,
-  "percentile": 55
+  "percentile": 62
  },
- "volume": "Not available \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "RVOL 5.12\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -74,8 +74,8 @@
   ],
   "developing": {
    "poc": 4121.75,
-   "vah": 4141.0,
-   "val": 4120.0,
+   "vah": 4140.5,
+   "val": 4116.0,
    "bins": [
     [
      4107.75,
@@ -147,67 +147,67 @@
     ],
     [
      4116.25,
-     0.0
+     75.8
     ],
     [
      4116.75,
-     0.0
+     75.8
     ],
     [
      4117.25,
-     0.0
+     75.8
     ],
     [
      4117.75,
-     0.0
+     75.8
     ],
     [
      4118.25,
-     0.0
+     75.8
     ],
     [
      4118.75,
-     0.0
+     75.8
     ],
     [
      4119.25,
-     0.0
+     75.8
     ],
     [
      4119.75,
-     13.7
+     89.5
     ],
     [
      4120.25,
-     87.4
+     203.7
     ],
     [
      4120.75,
-     127.6
+     243.9
     ],
     [
      4121.25,
-     174.3
+     290.6
     ],
     [
      4121.75,
-     422.1
+     462.6
     ],
     [
      4122.25,
-     422.1
+     462.6
     ],
     [
      4122.75,
-     394.9
+     435.4
     ],
     [
      4123.25,
-     394.9
+     435.4
     ],
     [
      4123.75,
-     225.4
+     265.9
     ],
     [
      4124.25,
@@ -443,9 +443,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.0,
-  "session_delta": -722.0,
-  "session_slope": 114.0,
+  "leg_ratio": -0.793,
+  "session_delta": -1660.0,
+  "session_slope": -690.0,
   "divergence": null,
   "absorption": null
  },
@@ -474,13 +474,13 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 66,
+ "score": 86,
  "score_parts": {
   "structure": 25,
-  "liquidity": 0,
-  "momentum": 12,
+  "liquidity": 12,
+  "momentum": 11,
   "vwap": 8,
-  "volume_flow": 5,
+  "volume_flow": 14,
   "volatility": 5,
   "session": 1,
   "news": 10
@@ -488,16 +488,16 @@
  "candidate": "SHORT",
  "decision": "WAIT",
  "headline": "Wait",
- "quality": "NO TRADE",
+ "quality": "A",
  "plan": null,
  "why": [
   "A SHORT signal is still active, manage it before a new one",
-  "No liquidity sweep or clean continuation setup",
+  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bearish BOS through 4120.37",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 25, RSI14 33, M15 ADX 25, volume unavailable",
-  "Profile & flow: Accepted below prior VAL 4126.50 (initiative selling); setup-leg delta +0.00",
-  "Weak components: liquidity, volume & flow, session"
+  "RSI7 44, RSI14 42, M15 ADX 25, RVOL 5.1\u00d7",
+  "Profile & flow: Accepted below prior VAL 4126.50 (initiative selling); setup-leg delta -0.79",
+  "Weak components: session"
  ],
  "invalidation": null,
  "levels": [
@@ -599,28 +599,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791221400,
-   "o": 4130.19,
-   "h": 4130.19,
-   "l": 4128.48,
-   "c": 4128.62,
-   "e20": 4131.01,
-   "e50": 4136.8,
-   "vw": 4147.91,
-   "dl": -325.0
-  },
-  {
-   "t": 1791221700,
-   "o": 4128.78,
-   "h": 4130.02,
-   "l": 4127.46,
-   "c": 4129.62,
-   "e20": 4130.88,
-   "e50": 4136.52,
-   "vw": 4147.87,
-   "dl": 154.0
-  },
   {
    "t": 1791222000,
    "o": 4128.56,
@@ -2235,8 +2213,8 @@
    "c": 4120.57,
    "e20": 4123.68,
    "e50": 4127.29,
-   "vw": 4135.01,
-   "dl": -0.0
+   "vw": 4134.69,
+   "dl": -278.0
   },
   {
    "t": 1791266100,
@@ -2246,8 +2224,30 @@
    "c": 4116.84,
    "e20": 4123.03,
    "e50": 4126.88,
-   "vw": 4135.01,
+   "vw": 4133.74,
+   "dl": -661.0
+  },
+  {
+   "t": 1791266400,
+   "o": 4117.71,
+   "h": 4122.16,
+   "l": 4114.89,
+   "c": 4115.01,
+   "e20": 4122.26,
+   "e50": 4126.42,
+   "vw": 4133.74,
    "dl": -0.0
+  },
+  {
+   "t": 1791266700,
+   "o": 4115.07,
+   "h": 4119.36,
+   "l": 4115.07,
+   "c": 4119.16,
+   "e20": 4121.97,
+   "e50": 4126.13,
+   "vw": 4133.74,
+   "dl": 0.0
   }
  ],
  "journal": {
