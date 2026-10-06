@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-06T16:40:28.825133+00:00",
- "dubai_time": "Tue 06 Oct 2026, 20:40",
+ "generated_utc": "2026-10-06T16:41:38.972509+00:00",
+ "dubai_time": "Tue 06 Oct 2026, 20:41",
  "session": "New York",
  "price": 4159.77,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.5,
+ "data_age_min": 1.6,
  "last_bar_utc": "2026-10-06T16:35:00+00:00",
  "warnings": [],
  "regime": "Breakout",
@@ -42,7 +42,7 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4149.42,
+  "value": 4149.43,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
@@ -499,15 +499,15 @@
     ],
     [
      4160.25,
-     649.4
+     681.4
     ],
     [
      4160.75,
-     684.0
+     716.0
     ],
     [
      4161.25,
-     674.4
+     706.4
     ],
     [
      4161.75,
@@ -663,9 +663,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.118,
-  "session_delta": 5364.0,
-  "session_slope": 322.0,
+  "leg_ratio": 0.106,
+  "session_delta": 5284.0,
+  "session_slope": 242.0,
   "divergence": null,
   "absorption": null
  },
@@ -2452,8 +2452,8 @@
    "c": 4160.34,
    "e20": 4162.39,
    "e50": 4161.19,
-   "vw": 4149.42,
-   "dl": -0.0
+   "vw": 4149.43,
+   "dl": -80.0
   },
   {
    "t": 1791304500,
@@ -2463,7 +2463,7 @@
    "c": 4159.77,
    "e20": 4162.14,
    "e50": 4161.14,
-   "vw": 4149.42,
+   "vw": 4149.43,
    "dl": -0.0
   }
  ],
