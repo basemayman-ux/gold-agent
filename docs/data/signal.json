@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-07T18:10:37.395363+00:00",
- "dubai_time": "Wed 07 Oct 2026, 22:10",
+ "generated_utc": "2026-10-07T18:20:35.982461+00:00",
+ "dubai_time": "Wed 07 Oct 2026, 22:20",
  "session": "New York",
- "price": 4115.06,
+ "price": 4112.41,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-10-07T18:05:00+00:00",
+ "last_bar_utc": "2026-10-07T18:15:00+00:00",
  "warnings": [],
  "regime": "Trend",
  "bias": {
@@ -29,7 +29,7 @@
    "HL"
   ],
   "M5": [
-   "HH",
+   "LH",
    "HL"
   ]
  },
@@ -47,16 +47,16 @@
   "crosses_2h": 6,
   "volume_weighted": true
  },
- "rsi7": 58.7,
- "rsi14": 56.5,
+ "rsi7": 46.4,
+ "rsi14": 50.8,
  "adx14": {
-  "M5": 24.7,
-  "M15": 29.4
+  "M5": 25.3,
+  "M15": 28.1
  },
  "atr14": {
-  "M5": 4.27,
-  "M15": 8.75,
-  "percentile": 88
+  "M5": 3.98,
+  "M15": 8.78,
+  "percentile": 84
  },
  "volume": "RVOL 3.51\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -455,83 +455,83 @@
     ],
     [
      4108.75,
-     1137.3
+     1168.8
     ],
     [
      4109.25,
-     1154.6
+     1251.0
     ],
     [
      4109.75,
-     1320.7
+     1417.1
     ],
     [
      4110.25,
-     1211.5
+     1307.9
     ],
     [
      4110.75,
-     1116.9
+     1213.3
     ],
     [
      4111.25,
-     1097.6
+     1194.0
     ],
     [
      4111.75,
-     1088.6
+     1185.0
     ],
     [
      4112.25,
-     1164.3
+     1260.7
     ],
     [
      4112.75,
-     1021.2
+     1117.6
     ],
     [
      4113.25,
-     1445.4
+     1541.8
     ],
     [
      4113.75,
-     1423.7
+     1455.2
     ],
     [
      4114.25,
-     1333.9
+     1365.4
     ],
     [
      4114.75,
-     1551.0
+     1582.5
     ],
     [
      4115.25,
-     1195.1
+     1226.6
     ],
     [
      4115.75,
-     1406.2
+     1437.7
     ],
     [
      4116.25,
-     1514.0
+     1545.5
     ],
     [
      4116.75,
-     1647.1
+     1678.6
     ],
     [
      4117.25,
-     1730.3
+     1761.8
     ],
     [
      4117.75,
-     2090.9
+     2122.4
     ],
     [
      4118.25,
-     2032.9
+     2064.4
     ],
     [
      4118.75,
@@ -951,23 +951,18 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.585,
-  "session_delta": -5850.0,
-  "session_slope": -5925.0,
+  "leg_ratio": -0.469,
+  "session_delta": -5241.0,
+  "session_slope": -4806.0,
   "divergence": true,
   "absorption": false
  },
  "liquidity_event": "M15 swing high 4123.80 swept (buy-side), displacement",
  "bos_choch": "M5 BOS bullish through 4114.55 at 21:05",
  "news": {
-  "risk": "High",
+  "risk": "Low",
   "status": "live",
   "upcoming": [
-   {
-    "title": "FOMC Meeting Minutes",
-    "impact": "High",
-    "time": "Wed 22:00"
-   },
    {
     "title": "FOMC Member Waller Speaks",
     "impact": "Medium",
@@ -979,19 +974,19 @@
     "time": "Thu 16:30"
    }
   ],
-  "detail": "FOMC Meeting Minutes at 22:00 Dubai"
+  "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 56,
+ "score": 68,
  "score_parts": {
-  "structure": 17,
+  "structure": 15,
   "liquidity": 12,
-  "momentum": 3,
+  "momentum": 7,
   "vwap": 0,
   "volume_flow": 15,
   "volatility": 5,
   "session": 4,
-  "news": 0
+  "news": 10
  },
  "candidate": "SHORT",
  "decision": "NO TRADE",
@@ -1001,8 +996,11 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "High-impact news window: FOMC Meeting Minutes at 22:00 Dubai",
-  "Setup score would be 56/100 (not tradable while blocked)"
+  "M15 swing high at 4123.80 swept, then displacement",
+  "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bullish",
+  "RSI7 46, RSI14 51, M15 ADX 28, RVOL 3.5\u00d7",
+  "Profile & flow: Accepted below prior VAL 4140.50 (initiative selling); setup-leg delta -0.47, delta divergence at the sweep",
+  "Weak components: vwap"
  ],
  "invalidation": null,
  "levels": [
@@ -1104,28 +1102,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791351600,
-   "o": 4136.2,
-   "h": 4136.94,
-   "l": 4136.2,
-   "c": 4136.68,
-   "e20": 4137.35,
-   "e50": 4142.66,
-   "vw": 4150.54,
-   "dl": 57.0
-  },
-  {
-   "t": 1791351900,
-   "o": 4136.72,
-   "h": 4137.36,
-   "l": 4135.31,
-   "c": 4137.24,
-   "e20": 4137.34,
-   "e50": 4142.44,
-   "vw": 4150.38,
-   "dl": 239.0
-  },
   {
    "t": 1791352200,
    "o": 4136.99,
@@ -2741,7 +2717,7 @@
    "e20": 4112.37,
    "e50": 4109.66,
    "vw": 4112.27,
-   "dl": 0.0
+   "dl": 394.0
   },
   {
    "t": 1791396300,
@@ -2752,7 +2728,29 @@
    "e20": 4112.63,
    "e50": 4109.87,
    "vw": 4112.27,
-   "dl": 0.0
+   "dl": 215.0
+  },
+  {
+   "t": 1791396600,
+   "o": 4116.0,
+   "h": 4116.0,
+   "l": 4113.59,
+   "c": 4114.16,
+   "e20": 4112.78,
+   "e50": 4110.04,
+   "vw": 4112.27,
+   "dl": -0.0
+  },
+  {
+   "t": 1791396900,
+   "o": 4113.99,
+   "h": 4114.01,
+   "l": 4112.35,
+   "c": 4112.41,
+   "e20": 4112.74,
+   "e50": 4110.13,
+   "vw": 4112.27,
+   "dl": -0.0
   }
  ],
  "journal": {
