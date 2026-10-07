@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-07T19:30:38.546205+00:00",
- "dubai_time": "Wed 07 Oct 2026, 23:30",
+ "generated_utc": "2026-10-07T19:40:35.759283+00:00",
+ "dubai_time": "Wed 07 Oct 2026, 23:40",
  "session": "New York",
- "price": 4107.29,
+ "price": 4106.24,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-10-07T19:25:00+00:00",
+ "last_bar_utc": "2026-10-07T19:35:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -38,25 +38,25 @@
   "H1": "below"
  },
  "ema20_50": {
-  "M5": "EMA20 above EMA50",
+  "M5": "EMA20 below EMA50",
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4112.2,
+  "value": 4112.19,
   "side": "Choppy",
-  "crosses_2h": 7,
+  "crosses_2h": 6,
   "volume_weighted": true
  },
- "rsi7": 41.7,
- "rsi14": 44.1,
+ "rsi7": 37.6,
+ "rsi14": 42.1,
  "adx14": {
-  "M5": 17.6,
+  "M5": 18.2,
   "M15": 21.3
  },
  "atr14": {
-  "M5": 3.26,
+  "M5": 3.0,
   "M15": 7.47,
-  "percentile": 70
+  "percentile": 63
  },
  "volume": "RVOL 3.51\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -435,31 +435,31 @@
     ],
     [
      4106.25,
-     1062.2
+     1090.2
     ],
     [
      4106.75,
-     1002.5
+     1030.5
     ],
     [
      4107.25,
-     1202.5
+     1230.5
     ],
     [
      4107.75,
-     1324.2
+     1352.2
     ],
     [
      4108.25,
-     1313.2
+     1381.8
     ],
     [
      4108.75,
-     1455.7
+     1524.4
     ],
     [
      4109.25,
-     1529.9
+     1598.6
     ],
     [
      4109.75,
@@ -951,9 +951,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.385,
-  "session_delta": -5905.0,
-  "session_slope": -384.0,
+  "leg_ratio": -0.382,
+  "session_delta": -5980.0,
+  "session_slope": -110.0,
   "divergence": true,
   "absorption": false
  },
@@ -977,11 +977,11 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 82,
+ "score": 84,
  "score_parts": {
   "structure": 22,
   "liquidity": 12,
-  "momentum": 9,
+  "momentum": 11,
   "vwap": 5,
   "volume_flow": 15,
   "volatility": 5,
@@ -996,12 +996,12 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "Score 82/100 is below the 85 live-trade minimum",
+  "Score 84/100 is below the 85 live-trade minimum",
   "M15 swing high at 4123.80 swept, then displacement",
   "M5 bearish CHOCH through 4107.96",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 neutral",
-  "RSI7 42, RSI14 44, M15 ADX 21, RVOL 3.5\u00d7",
-  "Profile & flow: Accepted below prior VAL 4140.50 (initiative selling); setup-leg delta -0.39, delta divergence at the sweep"
+  "RSI7 38, RSI14 42, M15 ADX 21, RVOL 3.5\u00d7",
+  "Profile & flow: Accepted below prior VAL 4140.50 (initiative selling); setup-leg delta -0.38, delta divergence at the sweep"
  ],
  "invalidation": null,
  "levels": [
@@ -1103,28 +1103,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791356400,
-   "o": 4132.94,
-   "h": 4132.94,
-   "l": 4130.35,
-   "c": 4130.75,
-   "e20": 4133.69,
-   "e50": 4138.02,
-   "vw": 4146.9,
-   "dl": -386.0
-  },
-  {
-   "t": 1791356700,
-   "o": 4131.38,
-   "h": 4134.34,
-   "l": 4131.38,
-   "c": 4134.13,
-   "e20": 4133.73,
-   "e50": 4137.87,
-   "vw": 4146.68,
-   "dl": 391.0
-  },
   {
    "t": 1791357000,
    "o": 4133.81,
@@ -2739,8 +2717,8 @@
    "c": 4108.8,
    "e20": 4109.89,
    "e50": 4109.72,
-   "vw": 4112.2,
-   "dl": -0.0
+   "vw": 4112.19,
+   "dl": -1.0
   },
   {
    "t": 1791401100,
@@ -2750,7 +2728,29 @@
    "c": 4107.29,
    "e20": 4109.64,
    "e50": 4109.63,
-   "vw": 4112.2,
+   "vw": 4112.19,
+   "dl": -74.0
+  },
+  {
+   "t": 1791401400,
+   "o": 4107.25,
+   "h": 4107.28,
+   "l": 4106.27,
+   "c": 4106.3,
+   "e20": 4109.32,
+   "e50": 4109.5,
+   "vw": 4112.19,
+   "dl": -0.0
+  },
+  {
+   "t": 1791401700,
+   "o": 4106.42,
+   "h": 4107.08,
+   "l": 4105.46,
+   "c": 4106.24,
+   "e20": 4109.03,
+   "e50": 4109.37,
+   "vw": 4112.19,
    "dl": -0.0
   }
  ],
