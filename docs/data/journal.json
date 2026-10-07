@@ -16,9 +16,10 @@
    "reason": "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP; M5 bearish CHOCH through 4125.58; H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
    "status": "closed",
    "tp1_hit": true,
-   "result": "Loss",
-   "r": -1.0,
-   "closed_utc": "2026-10-06T06:25:00+00:00"
+   "result": "TP1 then breakeven",
+   "r": 0.5,
+   "closed_utc": "2026-10-06T06:25:00+00:00",
+   "mgmt": "half_tp1_be"
   },
   {
    "time_utc": "2026-10-07T06:55:00+00:00",
@@ -36,9 +37,10 @@
    "reason": "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP; M5 bearish BOS through 4131.55; H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
    "status": "closed",
    "tp1_hit": true,
-   "result": "Loss",
-   "r": -1.0,
-   "closed_utc": "2026-10-07T07:30:00+00:00"
+   "result": "TP1 then breakeven",
+   "r": 0.5,
+   "closed_utc": "2026-10-07T07:30:00+00:00",
+   "mgmt": "half_tp1_be"
   },
   {
    "time_utc": "2026-10-07T10:55:00+00:00",
@@ -58,11 +60,12 @@
    "tp1_hit": false,
    "result": "Loss",
    "r": -1.0,
-   "closed_utc": "2026-10-07T11:10:00+00:00"
+   "closed_utc": "2026-10-07T11:10:00+00:00",
+   "mgmt": "half_tp1_be"
   }
  ],
  "watch": {
   "LONG": "2026-10-06T19:40:32.846402+00:00",
-  "SHORT": "2026-10-07T11:10:35.101742+00:00"
+  "SHORT": "2026-10-07T16:10:33.474886+00:00"
  }
 }
