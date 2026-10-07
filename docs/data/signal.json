@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-10-07T15:40:38.811475+00:00",
- "dubai_time": "Wed 07 Oct 2026, 19:40",
+ "generated_utc": "2026-10-07T15:50:33.317632+00:00",
+ "dubai_time": "Wed 07 Oct 2026, 19:50",
  "session": "London/NY overlap",
- "price": 4110.05,
+ "price": 4106.59,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-10-07T15:35:00+00:00",
+ "last_bar_utc": "2026-10-07T15:45:00+00:00",
  "warnings": [],
  "regime": "High Volatility",
  "bias": {
   "H4": "Neutral",
   "H1": "Bearish",
   "M15": "Bearish",
-  "M5": "Neutral"
+  "M5": "Bullish"
  },
  "swings": {
   "H4": [
@@ -29,7 +29,7 @@
    "HL"
   ],
   "M5": [
-   "LH",
+   "HH",
    "LL"
   ]
  },
@@ -42,23 +42,23 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4111.4,
+  "value": 4111.31,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 70.2,
- "rsi14": 61.6,
+ "rsi7": 57.6,
+ "rsi14": 56.2,
  "adx14": {
-  "M5": 23.6,
-  "M15": 48.9
+  "M5": 25.3,
+  "M15": 46.6
  },
  "atr14": {
-  "M5": 6.32,
-  "M15": 9.25,
-  "percentile": 97
+  "M5": 5.86,
+  "M15": 9.55,
+  "percentile": 96
  },
- "volume": "RVOL 0.88\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "Not available \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -74,8 +74,8 @@
   ],
   "developing": {
    "poc": 4118.75,
-   "vah": 4148.5,
-   "val": 4088.0,
+   "vah": 4127.0,
+   "val": 4069.0,
    "bins": [
     [
      4061.75,
@@ -383,115 +383,115 @@
     ],
     [
      4099.75,
-     749.1
+     820.4
     ],
     [
      4100.25,
-     803.2
+     874.5
     ],
     [
      4100.75,
-     921.7
+     992.9
     ],
     [
      4101.25,
-     921.7
+     992.9
     ],
     [
      4101.75,
-     869.3
+     940.5
     ],
     [
      4102.25,
-     1144.5
+     1215.8
     ],
     [
      4102.75,
-     907.7
+     978.9
     ],
     [
      4103.25,
-     911.4
+     982.7
     ],
     [
      4103.75,
-     911.4
+     982.7
     ],
     [
      4104.25,
-     911.4
+     982.7
     ],
     [
      4104.75,
-     783.8
+     855.1
     ],
     [
      4105.25,
-     783.8
+     855.1
     ],
     [
      4105.75,
-     578.3
+     649.6
     ],
     [
      4106.25,
-     523.5
+     594.8
     ],
     [
      4106.75,
-     405.1
+     535.1
     ],
     [
      4107.25,
-     405.1
+     535.1
     ],
     [
      4107.75,
-     282.6
+     412.5
     ],
     [
      4108.25,
-     233.7
+     363.7
     ],
     [
      4108.75,
-     233.7
+     363.7
     ],
     [
      4109.25,
-     167.2
+     297.2
     ],
     [
      4109.75,
-     167.2
+     297.2
     ],
     [
      4110.25,
-     167.2
+     297.2
     ],
     [
      4110.75,
-     218.1
+     276.8
     ],
     [
      4111.25,
-     278.5
+     337.2
     ],
     [
      4111.75,
-     278.5
+     337.2
     ],
     [
      4112.25,
-     278.5
+     337.2
     ],
     [
      4112.75,
-     322.3
+     381.0
     ],
     [
      4113.25,
-     478.6
+     537.3
     ],
     [
      4113.75,
@@ -951,13 +951,13 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.195,
-  "session_delta": -4417.0,
-  "session_slope": -1169.0,
-  "divergence": null,
-  "absorption": null
+  "leg_ratio": 0.0,
+  "session_delta": -4021.0,
+  "session_slope": 93.0,
+  "divergence": false,
+  "absorption": false
  },
- "liquidity_event": "No valid sweep in the last 2.5 hours",
+ "liquidity_event": "M15 swing high 4108.80 swept (buy-side), rejection wick",
  "bos_choch": "M5 CHOCH bullish through 4107.45 at 19:35",
  "news": {
   "risk": "Medium",
@@ -982,14 +982,14 @@
   "detail": "FOMC Meeting Minutes at 22:00 Dubai"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 59,
+ "score": 67,
  "score_parts": {
-  "structure": 21,
-  "liquidity": 7,
+  "structure": 18,
+  "liquidity": 20,
   "momentum": 5,
   "vwap": 8,
-  "volume_flow": 9,
-  "volatility": 0,
+  "volume_flow": 5,
+  "volatility": 2,
   "session": 5,
   "news": 4
  },
@@ -1002,7 +1002,7 @@
  "plan": null,
  "why": [
   "Daily loss limit reached (-2.0R)",
-  "Setup score would be 59/100 (not tradable while blocked)"
+  "Setup score would be 67/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -1104,28 +1104,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791342600,
-   "o": 4142.58,
-   "h": 4143.02,
-   "l": 4139.59,
-   "c": 4139.69,
-   "e20": 4146.41,
-   "e50": 4152.54,
-   "vw": 4154.02,
-   "dl": -372.0
-  },
-  {
-   "t": 1791342900,
-   "o": 4139.93,
-   "h": 4140.13,
-   "l": 4138.5,
-   "c": 4139.86,
-   "e20": 4145.78,
-   "e50": 4152.04,
-   "vw": 4153.76,
-   "dl": 179.0
-  },
   {
    "t": 1791343200,
    "o": 4139.66,
@@ -2740,8 +2718,8 @@
    "c": 4106.48,
    "e20": 4101.16,
    "e50": 4102.88,
-   "vw": 4111.4,
-   "dl": 0.0
+   "vw": 4111.32,
+   "dl": 381.0
   },
   {
    "t": 1791387300,
@@ -2751,8 +2729,30 @@
    "c": 4110.05,
    "e20": 4102.01,
    "e50": 4103.16,
-   "vw": 4111.4,
-   "dl": 0.0
+   "vw": 4111.31,
+   "dl": 15.0
+  },
+  {
+   "t": 1791387600,
+   "o": 4110.67,
+   "h": 4110.67,
+   "l": 4107.79,
+   "c": 4107.85,
+   "e20": 4102.56,
+   "e50": 4103.35,
+   "vw": 4111.31,
+   "dl": -0.0
+  },
+  {
+   "t": 1791387900,
+   "o": 4108.01,
+   "h": 4109.5,
+   "l": 4106.37,
+   "c": 4106.59,
+   "e20": 4102.95,
+   "e50": 4103.47,
+   "vw": 4111.31,
+   "dl": -0.0
   }
  ],
  "journal": {
