@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-07T21:30:39.678346+00:00",
- "dubai_time": "Thu 08 Oct 2026, 01:30",
+ "generated_utc": "2026-10-07T21:40:32.364559+00:00",
+ "dubai_time": "Thu 08 Oct 2026, 01:40",
  "session": "Late US / off-hours",
- "price": 4111.17,
+ "price": 4111.1,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-10-07T21:25:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-10-07T21:35:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -47,16 +47,16 @@
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 61.3,
- "rsi14": 56.4,
+ "rsi7": 60.3,
+ "rsi14": 56.1,
  "adx14": {
-  "M5": 11.7,
+  "M5": 10.4,
   "M15": 13.8
  },
  "atr14": {
-  "M5": 1.96,
+  "M5": 1.73,
   "M15": 5.82,
-  "percentile": 46
+  "percentile": 45
  },
  "volume": "RVOL 1.53\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -953,7 +953,7 @@
   "available": true,
   "leg_ratio": -0.097,
   "session_delta": -6617.0,
-  "session_slope": -162.0,
+  "session_slope": 3.0,
   "divergence": null,
   "absorption": null
  },
@@ -977,13 +977,13 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 77,
+ "score": 76,
  "score_parts": {
   "structure": 25,
   "liquidity": 15,
   "momentum": 1,
   "vwap": 8,
-  "volume_flow": 13,
+  "volume_flow": 12,
   "volatility": 5,
   "session": 0,
   "news": 10
@@ -997,7 +997,7 @@
  "plan": null,
  "why": [
   "Two consecutive losses today, stop trading for the session",
-  "Setup score would be 77/100 (not tradable while blocked)"
+  "Setup score would be 76/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -1099,28 +1099,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791363600,
-   "o": 4123.57,
-   "h": 4125.41,
-   "l": 4122.81,
-   "c": 4123.55,
-   "e20": 4128.91,
-   "e50": 4133.01,
-   "vw": 4142.43,
-   "dl": -174.0
-  },
-  {
-   "t": 1791363900,
-   "o": 4124.4,
-   "h": 4124.69,
-   "l": 4119.29,
-   "c": 4121.78,
-   "e20": 4128.23,
-   "e50": 4132.57,
-   "vw": 4141.97,
-   "dl": -73.0
-  },
   {
    "t": 1791364200,
    "o": 4120.46,
@@ -2748,6 +2726,28 @@
    "e50": 4109.01,
    "vw": 4111.98,
    "dl": 0.0
+  },
+  {
+   "t": 1791408600,
+   "o": 4111.1,
+   "h": 4111.5,
+   "l": 4111.09,
+   "c": 4111.17,
+   "e20": 4109.69,
+   "e50": 4109.09,
+   "vw": 4111.98,
+   "dl": -0.0
+  },
+  {
+   "t": 1791408900,
+   "o": 4111.26,
+   "h": 4111.26,
+   "l": 4111.0,
+   "c": 4111.1,
+   "e20": 4109.83,
+   "e50": 4109.17,
+   "vw": 4111.98,
+   "dl": -0.0
   }
  ],
  "journal": {
