@@ -259,31 +259,50 @@ def load_journal():
 
 
 def update_journal(journal, m5):
-    """Resolve open signals bar by bar. Same-bar SL+TP counts as a loss (conservative)."""
-    closed_now = []
+    """Standard management: take half at TP1 and move the stop to entry; the rest runs to TP2.
+    Results in R: stop before TP1 = -1; TP1 then back to entry = +0.5; TP1 then TP2 = 0.5 + 0.5 x RR.
+    A bar that touches both stop and target before TP1 counts as a loss (conservative)."""
+    closed_now, tp1_now = [], []
     for s in journal["signals"]:
+        # one-time rescore of signals closed under the old all-or-nothing method
+        if s.get("status") == "closed" and s.get("mgmt") != "half_tp1_be":
+            if s.get("tp1_hit") and s.get("result") == "Loss":
+                s.update(result="TP1 then breakeven", r=0.5)
+            elif s.get("tp1_hit") and s.get("result") == "Win":
+                s.update(r=round(0.5 + 0.5 * s["rr"], 2))
+            s["mgmt"] = "half_tp1_be"
+            continue
         if s["status"] != "open":
             continue
+        s["mgmt"] = "half_tp1_be"
         t0 = pd.Timestamp(s["time_utc"])
         bars = m5[m5.index > t0]
         R = abs(s["entry"] - s["sl"])
         long = s["direction"] == "LONG"
         for k, (ts, b) in enumerate(bars.iterrows()):
-            hit_sl = b["low"] <= s["sl"] if long else b["high"] >= s["sl"]
-            hit_tp2 = b["high"] >= s["tp2"] if long else b["low"] <= s["tp2"]
-            if (b["high"] >= s["tp1"] if long else b["low"] <= s["tp1"]):
-                s["tp1_hit"] = True
-            if hit_sl:
-                s.update(status="closed", result="Loss", r=-1.0, closed_utc=ts.isoformat())
-            elif hit_tp2:
-                s.update(status="closed", result="Win", r=round(s["rr"], 2), closed_utc=ts.isoformat())
-            elif k + 1 >= CFG["signal_expiry_bars"]:
-                r = ((b["close"] - s["entry"]) if long else (s["entry"] - b["close"])) / R
+            hi, lo = b["high"], b["low"]
+            if not s.get("tp1_hit"):
+                if (lo <= s["sl"]) if long else (hi >= s["sl"]):
+                    s.update(status="closed", result="Loss", r=-1.0, closed_utc=ts.isoformat())
+                elif (hi >= s["tp1"]) if long else (lo <= s["tp1"]):
+                    s["tp1_hit"] = True
+                    s["tp1_utc"] = ts.isoformat()
+                    tp1_now.append(s)
+                    if (hi >= s["tp2"]) if long else (lo <= s["tp2"]):
+                        s.update(status="closed", result="Win", r=round(0.5 + 0.5 * s["rr"], 2), closed_utc=ts.isoformat())
+            else:
+                if (hi >= s["tp2"]) if long else (lo <= s["tp2"]):
+                    s.update(status="closed", result="Win", r=round(0.5 + 0.5 * s["rr"], 2), closed_utc=ts.isoformat())
+                elif (lo <= s["entry"]) if long else (hi >= s["entry"]):
+                    s.update(status="closed", result="TP1 then breakeven", r=0.5, closed_utc=ts.isoformat())
+            if s["status"] == "open" and k + 1 >= CFG["signal_expiry_bars"]:
+                move = ((b["close"] - s["entry"]) if long else (s["entry"] - b["close"])) / R
+                r = 0.5 + 0.5 * move if s.get("tp1_hit") else move
                 s.update(status="closed", result="Expired", r=round(float(r), 2), closed_utc=ts.isoformat())
             if s["status"] == "closed":
                 closed_now.append(s)
                 break
-    return closed_now
+    return closed_now, tp1_now
 
 
 def journal_stats(journal):
@@ -491,6 +510,13 @@ def score_setup(ctx, d, plan):
     sc["vwap"] = s
 
     since = ctx["sweep"]["i"] if sweep_ok else (confirm[-1]["i"] if confirm else len(m5) - 6)
+    # Futures volume (Yahoo) runs ~10 min behind spot prices, so the newest bars often have none.
+    # Measure volume and delta over the latest bars that do have it (at least 6 bars).
+    has_vol = m5["volume"].notna() & (m5["volume"] > 0) if "volume" in m5 else pd.Series(False, index=m5.index)
+    if has_vol.any():
+        last_vol = int(has_vol.values.nonzero()[0][-1])
+        if last_vol - since < 5:
+            since = max(0, min(since, last_vol - 5))
     rv = m5["rvol"].iloc[since:].max()
     ctx["rvol"] = None if pd.isna(rv) else float(rv)
     v = 0 if pd.isna(rv) else 5 if rv >= 1.5 else 4 if rv >= 1.2 else 2 if rv >= 1.0 else 0
@@ -740,7 +766,12 @@ def main():
         (OUT / "signal.json").write_text(json.dumps(out, indent=1))
         return
 
-    closed = update_journal(journal, ctx["m5"])
+    closed, tp1_hits = update_journal(journal, ctx["m5"])
+    for s in tp1_hits:
+        if s["status"] == "open":
+            notify(f"🎯 XAUUSD {s['direction']} hit Target 1 ({s['tp1']:.2f})\n"
+                   f"Take half the position and move your stop to entry ({s['entry']:.2f}).\n"
+                   f"The rest aims for Target 2 ({s['tp2']:.2f}).")
     for s in closed:
         notify(f"{'✅' if s['r'] > 0 else '❌'} XAUUSD {s['direction']} closed: {s['result']} ({s['r']:+.2f}R)")
 
@@ -824,7 +855,7 @@ def main():
         journal["signals"].append(rec)
         notify(f"{'🟢' if decision == 'LONG' else '🔴'} XAUUSD {decision} — score {score}/100 ({quality(score)})\n"
                f"Entry {plan['entry']:.2f}  SL {plan['sl']:.2f}\nTP1 {plan['tp1']:.2f}  TP2 {plan['tp2']:.2f} "
-               f"(1:{plan['rr']:.1f})\nCheck spread and your broker price before entering.")
+               f"(1:{plan['rr']:.1f})\nAt TP1: take half and move the stop to entry.\nCheck spread and your broker price before entering.")
 
     # 🟡 heads-up: a setup is close (score 75+) but not tradable yet. At most once an hour per direction.
     if (decision == "WAIT" or ctx.get("conflict_only")) and score >= CFG.get("watch_min_score", 75) and d:
