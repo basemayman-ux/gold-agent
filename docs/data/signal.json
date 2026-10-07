@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-10-07T11:10:35.101742+00:00",
- "dubai_time": "Wed 07 Oct 2026, 15:10",
+ "generated_utc": "2026-10-07T11:20:33.469630+00:00",
+ "dubai_time": "Wed 07 Oct 2026, 15:20",
  "session": "London",
- "price": 4119.79,
+ "price": 4120.22,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-10-07T11:05:00+00:00",
+ "last_bar_utc": "2026-10-07T11:15:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
   "H4": "Neutral",
   "H1": "Bearish",
   "M15": "Bearish",
-  "M5": "Bearish"
+  "M5": "Neutral"
  },
  "swings": {
   "H4": [
@@ -26,7 +26,7 @@
   ],
   "M15": [
    "HH",
-   "HL"
+   "LL"
   ],
   "M5": [
    "LH",
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4136.36,
+  "value": 4136.08,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 63.3,
- "rsi14": 51.5,
+ "rsi7": 63.2,
+ "rsi14": 52.3,
  "adx14": {
-  "M5": 53.9,
-  "M15": 53.1
+  "M5": 48.4,
+  "M15": 52.6
  },
  "atr14": {
-  "M5": 3.13,
-  "M15": 5.45,
-  "percentile": 65
+  "M5": 2.96,
+  "M15": 5.39,
+  "percentile": 62
  },
  "volume": "RVOL 2.53\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -139,31 +139,31 @@
     ],
     [
      4116.75,
-     693.5
+     767.3
     ],
     [
      4117.25,
-     776.7
+     850.5
     ],
     [
      4117.75,
-     846.0
+     919.8
     ],
     [
      4118.25,
-     731.9
+     929.9
     ],
     [
      4118.75,
-     769.5
+     967.6
     ],
     [
      4119.25,
-     702.4
+     826.7
     ],
     [
      4119.75,
-     573.3
+     697.5
     ],
     [
      4120.25,
@@ -571,14 +571,14 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.042,
-  "session_delta": -3085.0,
-  "session_slope": -446.0,
+  "leg_ratio": 0.039,
+  "session_delta": -2348.0,
+  "session_slope": 809.0,
   "divergence": null,
   "absorption": null
  },
  "liquidity_event": "No valid sweep in the last 2.5 hours",
- "bos_choch": "M5 BOS bearish through 4119.29 at 13:40",
+ "bos_choch": "M5 CHOCH bullish through 4120.31 at 15:10",
  "news": {
   "risk": "Low",
   "status": "live",
@@ -602,31 +602,27 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 81,
+ "score": 80,
  "score_parts": {
   "structure": 21,
   "liquidity": 15,
   "momentum": 7,
   "vwap": 8,
-  "volume_flow": 11,
+  "volume_flow": 10,
   "volatility": 5,
   "session": 4,
   "news": 10
  },
  "candidate": "SHORT",
- "decision": "WAIT",
- "headline": "Wait",
- "quality": "B+",
+ "decision": "NO TRADE",
+ "headline": "No trade",
+ "quality": "NO TRADE",
  "mode": "balanced",
  "min_score": 85,
  "plan": null,
  "why": [
-  "A SHORT signal is still active, manage it before a new one",
-  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
-  "M5 bearish BOS through 4119.29",
-  "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bearish, M15 bearish",
-  "RSI7 63, RSI14 52, M15 ADX 53, RVOL 2.5\u00d7",
-  "Profile & flow: Accepted below prior VAL 4140.50 (initiative selling); setup-leg delta -0.04"
+  "Daily loss limit reached (-2.0R)",
+  "Setup score would be 80/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -697,8 +693,14 @@
    "swept": false
   },
   {
-   "name": "Prior VAL",
+   "name": "Equal highs",
    "price": 4140.5,
+   "side": "buy",
+   "swept": false
+  },
+  {
+   "name": "Equal highs",
+   "price": 4140.35,
    "side": "buy",
    "swept": false
   },
@@ -716,28 +718,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791326400,
-   "o": 4164.18,
-   "h": 4164.18,
-   "l": 4162.5,
-   "c": 4163.25,
-   "e20": 4165.34,
-   "e50": 4165.75,
-   "vw": 4165.76,
-   "dl": -12.0
-  },
-  {
-   "t": 1791326700,
-   "o": 4162.9,
-   "h": 4163.72,
-   "l": 4162.85,
-   "c": 4163.29,
-   "e20": 4165.15,
-   "e50": 4165.65,
-   "vw": 4165.2,
-   "dl": 4.0
-  },
   {
    "t": 1791327000,
    "o": 4163.14,
@@ -2352,8 +2332,8 @@
    "c": 4118.46,
    "e20": 4117.78,
    "e50": 4123.33,
-   "vw": 4136.36,
-   "dl": 0.0
+   "vw": 4136.23,
+   "dl": 301.0
   },
   {
    "t": 1791371100,
@@ -2363,20 +2343,42 @@
    "c": 4119.79,
    "e20": 4117.97,
    "e50": 4123.19,
-   "vw": 4136.36,
+   "vw": 4136.08,
+   "dl": 436.0
+  },
+  {
+   "t": 1791371400,
+   "o": 4119.69,
+   "h": 4121.5,
+   "l": 4119.69,
+   "c": 4120.67,
+   "e20": 4118.23,
+   "e50": 4123.09,
+   "vw": 4136.08,
+   "dl": 0.0
+  },
+  {
+   "t": 1791371700,
+   "o": 4120.84,
+   "h": 4120.9,
+   "l": 4118.96,
+   "c": 4120.22,
+   "e20": 4118.42,
+   "e50": 4122.98,
+   "vw": 4136.08,
    "dl": 0.0
   }
  ],
  "journal": {
-  "trades": 2,
+  "trades": 3,
   "win_rate": 0.0,
   "avg_r": -1.0,
   "expectancy_r": -1.0,
   "profit_factor": 0.0,
-  "total_r": -2.0,
-  "max_drawdown_r": 2.0,
+  "total_r": -3.0,
+  "max_drawdown_r": 3.0,
   "max_consec_wins": 0,
-  "max_consec_losses": 2,
+  "max_consec_losses": 3,
   "by_session": {
    "Asia": {
     "n": 1,
@@ -2384,21 +2386,21 @@
     "avg_r": -1.0
    },
    "London": {
-    "n": 1,
+    "n": 2,
     "win_rate": 0,
     "avg_r": -1.0
    }
   },
   "by_score": {
    "85-89": {
-    "n": 2,
+    "n": 3,
     "win_rate": 0,
     "avg_r": -1.0
    }
   },
   "by_direction": {
    "SHORT": {
-    "n": 2,
+    "n": 3,
     "win_rate": 0,
     "avg_r": -1.0
    }
@@ -2419,8 +2421,11 @@
    "risk_pct": 0.5,
    "regime": "Transition",
    "reason": "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP; M5 bearish BOS through 4119.29; H4 neutral (H4 price near EMA200 or structure disagrees), H1 bearish, M15 bearish",
-   "status": "open",
-   "tp1_hit": false
+   "status": "closed",
+   "tp1_hit": false,
+   "result": "Loss",
+   "r": -1.0,
+   "closed_utc": "2026-10-07T11:10:00+00:00"
   },
   {
    "time_utc": "2026-10-07T06:55:00+00:00",
