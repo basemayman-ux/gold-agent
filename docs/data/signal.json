@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-10-07T00:00:47.460012+00:00",
- "dubai_time": "Wed 07 Oct 2026, 04:00",
+ "generated_utc": "2026-10-07T00:11:09.473700+00:00",
+ "dubai_time": "Wed 07 Oct 2026, 04:11",
  "session": "Asia",
- "price": 4166.19,
+ "price": 4164.01,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-10-06T23:55:00+00:00",
+ "data_age_min": 1.2,
+ "last_bar_utc": "2026-10-07T00:05:00+00:00",
  "warnings": [],
  "regime": "Range",
  "bias": {
   "H4": "Bearish",
   "H1": "Bullish",
   "M15": "Bullish",
-  "M5": "Bullish"
+  "M5": "Bearish"
  },
  "swings": {
   "H4": [
@@ -29,7 +29,7 @@
    "LL"
   ],
   "M5": [
-   "HH",
+   "LH",
    "HL"
   ]
  },
@@ -42,19 +42,19 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4165.58,
+  "value": 4165.61,
   "side": "Choppy",
   "crosses_2h": 5,
   "volume_weighted": true
  },
- "rsi7": 48.5,
- "rsi14": 50.8,
+ "rsi7": 36.2,
+ "rsi14": 43.4,
  "adx14": {
-  "M5": 18.2,
+  "M5": 16.7,
   "M15": 11.6
  },
  "atr14": {
-  "M5": 1.65,
+  "M5": 1.8,
   "M15": 3.61,
   "percentile": 45
  },
@@ -75,7 +75,7 @@
   "developing": {
    "poc": 4166.75,
    "vah": 4167.5,
-   "val": 4162.5,
+   "val": 4163.0,
    "bins": [
     [
      4161.75,
@@ -99,39 +99,39 @@
     ],
     [
      4164.25,
-     196.7
+     216.4
     ],
     [
      4164.75,
-     193.6
+     213.3
     ],
     [
      4165.25,
-     153.4
+     173.1
     ],
     [
      4165.75,
-     171.4
+     198.2
     ],
     [
      4166.25,
-     258.4
+     296.2
     ],
     [
      4166.75,
-     303.8
+     341.5
     ],
     [
      4167.25,
-     281.5
+     319.2
     ],
     [
      4167.75,
-     148.9
+     166.9
     ],
     [
      4168.25,
-     150.9
+     157.9
     ],
     [
      4168.75,
@@ -151,14 +151,14 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.095,
-  "session_delta": 169.0,
-  "session_slope": 312.0,
+  "leg_ratio": 0.018,
+  "session_delta": 38.0,
+  "session_slope": -103.0,
   "divergence": false,
   "absorption": false
  },
  "liquidity_event": "M15 swing low 4162.00 swept (sell-side), displacement",
- "bos_choch": "M5 CHOCH bullish through 4167.56 at 03:25",
+ "bos_choch": "M5 CHOCH bearish through 4165.63 at 04:00",
  "news": {
   "risk": "Low",
   "status": "live",
@@ -182,13 +182,13 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 75,
+ "score": 64,
  "score_parts": {
   "structure": 15,
   "liquidity": 20,
-  "momentum": 6,
-  "vwap": 5,
-  "volume_flow": 13,
+  "momentum": 3,
+  "vwap": 0,
+  "volume_flow": 10,
   "volatility": 5,
   "session": 1,
   "news": 10
@@ -202,7 +202,7 @@
  "plan": null,
  "why": [
   "MARKET CHOP \u2014 ADX weak, VWAP crossed 5\u00d7 in 2h",
-  "Setup score would be 75/100 (not tradable while blocked)"
+  "Setup score would be 64/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -304,28 +304,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791286200,
-   "o": 4164.73,
-   "h": 4169.27,
-   "l": 4164.73,
-   "c": 4168.96,
-   "e20": 4159.24,
-   "e50": 4152.03,
-   "vw": 4138.34,
-   "dl": 916.0
-  },
-  {
-   "t": 1791286500,
-   "o": 4168.38,
-   "h": 4170.13,
-   "l": 4168.26,
-   "c": 4169.77,
-   "e20": 4160.24,
-   "e50": 4152.73,
-   "vw": 4139.04,
-   "dl": 809.0
-  },
   {
    "t": 1791286800,
    "o": 4169.23,
@@ -1940,8 +1918,8 @@
    "c": 4167.46,
    "e20": 4166.09,
    "e50": 4165.85,
-   "vw": 4165.58,
-   "dl": 0.0
+   "vw": 4165.6,
+   "dl": 14.0
   },
   {
    "t": 1791330900,
@@ -1951,7 +1929,29 @@
    "c": 4166.19,
    "e20": 4166.1,
    "e50": 4165.86,
-   "vw": 4165.58,
+   "vw": 4165.61,
+   "dl": -42.0
+  },
+  {
+   "t": 1791331200,
+   "o": 4166.28,
+   "h": 4167.38,
+   "l": 4164.36,
+   "c": 4164.74,
+   "e20": 4165.97,
+   "e50": 4165.82,
+   "vw": 4165.61,
+   "dl": -103.0
+  },
+  {
+   "t": 1791331500,
+   "o": 4165.53,
+   "h": 4165.53,
+   "l": 4163.16,
+   "c": 4164.01,
+   "e20": 4165.78,
+   "e50": 4165.75,
+   "vw": 4165.61,
    "dl": -0.0
   }
  ],
