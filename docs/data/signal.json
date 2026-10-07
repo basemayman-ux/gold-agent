@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-10-07T04:00:45.044971+00:00",
- "dubai_time": "Wed 07 Oct 2026, 08:00",
+ "generated_utc": "2026-10-07T04:10:31.635514+00:00",
+ "dubai_time": "Wed 07 Oct 2026, 08:10",
  "session": "Asia",
- "price": 4143.57,
+ "price": 4142.03,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-10-07T03:55:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-10-07T04:05:00+00:00",
  "warnings": [],
  "regime": "Trend",
  "bias": {
   "H4": "Bearish",
   "H1": "Bearish",
   "M15": "Bearish",
-  "M5": "Neutral"
+  "M5": "Bullish"
  },
  "swings": {
   "H4": [
@@ -29,7 +29,7 @@
    "LL"
   ],
   "M5": [
-   "LH",
+   "HH",
    "LL"
   ]
  },
@@ -47,16 +47,16 @@
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 46.3,
- "rsi14": 43.4,
+ "rsi7": 38.2,
+ "rsi14": 40.0,
  "adx14": {
-  "M5": 33.4,
+  "M5": 29.9,
   "M15": 27.4
  },
  "atr14": {
-  "M5": 2.59,
+  "M5": 2.5,
   "M15": 4.69,
-  "percentile": 52
+  "percentile": 51
  },
  "volume": "Not available \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -366,10 +366,10 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 75,
+ "score": 70,
  "score_parts": {
   "structure": 25,
-  "liquidity": 12,
+  "liquidity": 7,
   "momentum": 12,
   "vwap": 8,
   "volume_flow": 2,
@@ -385,13 +385,13 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "Score 75/100 is below the 85 live-trade minimum",
+  "Score 70/100 is below the 85 live-trade minimum",
   "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bearish BOS through 4145.15",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 46, RSI14 43, M15 ADX 27, volume unavailable",
+  "RSI7 38, RSI14 40, M15 ADX 27, volume unavailable",
   "Profile & flow: Price inside value, no edge from the profile; setup-leg delta +0.00",
-  "Weak components: volume & flow, session"
+  "Weak components: liquidity, volume & flow, session"
  ],
  "invalidation": null,
  "levels": [
@@ -481,28 +481,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791300600,
-   "o": 4164.48,
-   "h": 4167.39,
-   "l": 4161.55,
-   "c": 4166.73,
-   "e20": 4159.44,
-   "e50": 4159.4,
-   "vw": 4148.26,
-   "dl": 549.0
-  },
-  {
-   "t": 1791300900,
-   "o": 4165.66,
-   "h": 4168.4,
-   "l": 4165.66,
-   "c": 4166.56,
-   "e20": 4160.12,
-   "e50": 4159.69,
-   "vw": 4148.39,
-   "dl": -217.0
-  },
   {
    "t": 1791301200,
    "o": 4166.52,
@@ -2128,6 +2106,28 @@
    "c": 4143.57,
    "e20": 4144.88,
    "e50": 4149.84,
+   "vw": 4161.66,
+   "dl": -0.0
+  },
+  {
+   "t": 1791345600,
+   "o": 4143.92,
+   "h": 4144.57,
+   "l": 4143.19,
+   "c": 4143.83,
+   "e20": 4144.78,
+   "e50": 4149.6,
+   "vw": 4161.66,
+   "dl": -0.0
+  },
+  {
+   "t": 1791345900,
+   "o": 4143.93,
+   "h": 4144.2,
+   "l": 4141.82,
+   "c": 4142.03,
+   "e20": 4144.52,
+   "e50": 4149.31,
    "vw": 4161.66,
    "dl": -0.0
   }
