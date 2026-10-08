@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-10-08T12:40:35.351297+00:00",
- "dubai_time": "Thu 08 Oct 2026, 16:40",
+ "generated_utc": "2026-10-08T12:50:33.921877+00:00",
+ "dubai_time": "Thu 08 Oct 2026, 16:50",
  "session": "London/NY overlap",
- "price": 4122.59,
+ "price": 4118.77,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-10-08T12:35:00+00:00",
+ "last_bar_utc": "2026-10-08T12:45:00+00:00",
  "warnings": [],
  "regime": "High Volatility",
  "bias": {
   "H4": "Bearish",
   "H1": "Bullish",
   "M15": "Bullish",
-  "M5": "Bullish"
+  "M5": "Bearish"
  },
  "swings": {
   "H4": [
@@ -30,7 +30,7 @@
   ],
   "M5": [
    "HH",
-   "HL"
+   "LL"
   ]
  },
  "ema200": {
@@ -42,23 +42,23 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4123.66,
+  "value": 4123.68,
   "side": "Choppy",
   "crosses_2h": 8,
   "volume_weighted": true
  },
- "rsi7": 45.2,
- "rsi14": 48.8,
+ "rsi7": 37.0,
+ "rsi14": 43.8,
  "adx14": {
-  "M5": 23.8,
-  "M15": 14.0
+  "M5": 22.7,
+  "M15": 13.8
  },
  "atr14": {
-  "M5": 4.81,
-  "M15": 7.21,
-  "percentile": 94
+  "M5": 4.66,
+  "M15": 7.52,
+  "percentile": 93
  },
- "volume": "RVOL 1.97\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "RVOL 3.53\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -69,7 +69,7 @@
   "naked_pocs": [],
   "developing": {
    "poc": 4122.75,
-   "vah": 4134.5,
+   "vah": 4134.0,
    "val": 4117.0,
    "bins": [
     [
@@ -202,99 +202,99 @@
     ],
     [
      4120.25,
-     1555.5
+     1609.0
     ],
     [
      4120.75,
-     1451.2
+     1558.1
     ],
     [
      4121.25,
-     1422.9
+     1529.9
     ],
     [
      4121.75,
-     1818.5
+     1925.4
     ],
     [
      4122.25,
-     2067.3
+     2174.3
     ],
     [
      4122.75,
-     2154.8
+     2261.8
     ],
     [
      4123.25,
-     2101.9
+     2208.9
     ],
     [
      4123.75,
-     1929.5
+     2036.4
     ],
     [
      4124.25,
-     1716.8
+     1823.8
     ],
     [
      4124.75,
-     1709.3
+     1816.2
     ],
     [
      4125.25,
-     1754.9
+     1808.4
     ],
     [
      4125.75,
-     1569.4
+     1622.9
     ],
     [
      4126.25,
-     1466.8
+     1520.3
     ],
     [
      4126.75,
-     1447.3
+     1500.8
     ],
     [
      4127.25,
-     1433.7
+     1487.2
     ],
     [
      4127.75,
-     1298.1
+     1351.6
     ],
     [
      4128.25,
-     1387.8
+     1441.3
     ],
     [
      4128.75,
-     1322.1
+     1375.6
     ],
     [
      4129.25,
-     1365.5
+     1419.0
     ],
     [
      4129.75,
-     1114.4
+     1167.9
     ],
     [
      4130.25,
-     1027.4
+     1080.9
     ],
     [
      4130.75,
-     886.1
+     939.6
     ],
     [
      4131.25,
-     967.2
+     1020.7
     ],
     [
      4131.75,
-     857.9
+     911.4
     ],
     [
      4132.25,
@@ -390,37 +390,31 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.317,
-  "session_delta": 1589.0,
-  "session_slope": 447.0,
+  "leg_ratio": -0.085,
+  "session_delta": 947.0,
+  "session_slope": 440.0,
   "divergence": null,
   "absorption": null
  },
- "liquidity_event": "M15 swing high 4126.71 swept (buy-side), rejection wick",
- "bos_choch": "M5 CHOCH bullish through 4130.18 at 16:25",
+ "liquidity_event": "M15 swing high 4131.49 swept (buy-side), displacement",
+ "bos_choch": "M5 CHOCH bearish through 4120.31 at 16:45",
  "news": {
-  "risk": "High",
+  "risk": "Low",
   "status": "live",
-  "upcoming": [
-   {
-    "title": "Unemployment Claims",
-    "impact": "Medium",
-    "time": "Thu 16:30"
-   }
-  ],
-  "detail": "Unemployment Claims at 16:30 Dubai"
+  "upcoming": [],
+  "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 43,
+ "score": 49,
  "score_parts": {
   "structure": 15,
   "liquidity": 7,
-  "momentum": 4,
+  "momentum": 3,
   "vwap": 0,
-  "volume_flow": 10,
+  "volume_flow": 7,
   "volatility": 2,
   "session": 5,
-  "news": 0
+  "news": 10
  },
  "candidate": "LONG",
  "decision": "NO TRADE",
@@ -430,9 +424,8 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "High-impact news window: Unemployment Claims at 16:30 Dubai",
   "MARKET CHOP \u2014 ADX weak, VWAP crossed 8\u00d7 in 2h, EMA20/50 flat",
-  "Setup score would be 43/100 (not tradable while blocked)"
+  "Setup score would be 49/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -467,7 +460,13 @@
    "swept": false
   },
   {
-   "name": "M15 swing high",
+   "name": "Equal highs",
+   "price": 4148.52,
+   "side": "buy",
+   "swept": false
+  },
+  {
+   "name": "Equal highs",
    "price": 4148.19,
    "side": "buy",
    "swept": false
@@ -491,14 +490,8 @@
    "swept": false
   },
   {
-   "name": "Equal highs",
+   "name": "London high",
    "price": 4131.89,
-   "side": "buy",
-   "swept": false
-  },
-  {
-   "name": "Equal highs",
-   "price": 4131.49,
    "side": "buy",
    "swept": false
   },
@@ -511,7 +504,7 @@
   {
    "name": "Prior POC",
    "price": 4119.25,
-   "side": "sell",
+   "side": "buy",
    "swept": false
   },
   {
@@ -534,28 +527,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791418200,
-   "o": 4107.63,
-   "h": 4111.67,
-   "l": 4106.27,
-   "c": 4111.23,
-   "e20": 4109.71,
-   "e50": 4109.3,
-   "vw": 4109.7,
-   "dl": 339.0
-  },
-  {
-   "t": 1791418500,
-   "o": 4110.33,
-   "h": 4110.49,
-   "l": 4109.31,
-   "c": 4109.9,
-   "e20": 4109.73,
-   "e50": 4109.32,
-   "vw": 4109.71,
-   "dl": 0.0
-  },
   {
    "t": 1791418800,
    "o": 4109.76,
@@ -2170,8 +2141,8 @@
    "c": 4123.44,
    "e20": 4123.91,
    "e50": 4123.23,
-   "vw": 4123.66,
-   "dl": -0.0
+   "vw": 4123.69,
+   "dl": -590.0
   },
   {
    "t": 1791462900,
@@ -2181,7 +2152,29 @@
    "c": 4122.59,
    "e20": 4123.78,
    "e50": 4123.21,
-   "vw": 4123.66,
+   "vw": 4123.68,
+   "dl": -52.0
+  },
+  {
+   "t": 1791463200,
+   "o": 4122.03,
+   "h": 4123.2,
+   "l": 4120.67,
+   "c": 4121.09,
+   "e20": 4123.53,
+   "e50": 4123.12,
+   "vw": 4123.68,
+   "dl": -0.0
+  },
+  {
+   "t": 1791463500,
+   "o": 4121.64,
+   "h": 4122.4,
+   "l": 4117.6,
+   "c": 4118.77,
+   "e20": 4123.07,
+   "e50": 4122.95,
+   "vw": 4123.68,
    "dl": -0.0
   }
  ],
