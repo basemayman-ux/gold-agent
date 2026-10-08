@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-08T13:30:39.213205+00:00",
- "dubai_time": "Thu 08 Oct 2026, 17:30",
+ "generated_utc": "2026-10-08T13:40:34.190447+00:00",
+ "dubai_time": "Thu 08 Oct 2026, 17:40",
  "session": "London/NY overlap",
- "price": 4121.05,
+ "price": 4128.13,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-10-08T13:25:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-08T13:35:00+00:00",
  "warnings": [],
  "regime": "High Volatility",
  "bias": {
@@ -38,25 +38,25 @@
   "H1": "below"
  },
  "ema20_50": {
-  "M5": "EMA20 below EMA50",
+  "M5": "EMA20 above EMA50",
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4123.49,
+  "value": 4123.5,
   "side": "Choppy",
-  "crosses_2h": 11,
+  "crosses_2h": 10,
   "volume_weighted": true
  },
- "rsi7": 45.6,
- "rsi14": 48.0,
+ "rsi7": 61.1,
+ "rsi14": 56.4,
  "adx14": {
-  "M5": 19.2,
+  "M5": 19.7,
   "M15": 12.5
  },
  "atr14": {
-  "M5": 4.8,
+  "M5": 5.13,
   "M15": 7.82,
-  "percentile": 93
+  "percentile": 95
  },
  "volume": "RVOL 3.53\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -206,55 +206,55 @@
     ],
     [
      4120.75,
-     1835.5
+     1890.2
     ],
     [
      4121.25,
-     1807.2
+     1861.9
     ],
     [
      4121.75,
-     2201.9
+     2256.7
     ],
     [
      4122.25,
-     2381.2
+     2435.9
     ],
     [
      4122.75,
-     2409.0
+     2463.7
     ],
     [
      4123.25,
-     2422.6
+     2558.4
     ],
     [
      4123.75,
-     2166.4
+     2302.1
     ],
     [
      4124.25,
-     1953.5
+     2089.3
     ],
     [
      4124.75,
-     1945.6
+     2081.4
     ],
     [
      4125.25,
-     2085.2
+     2220.9
     ],
     [
      4125.75,
-     1899.6
+     2035.4
     ],
     [
      4126.25,
-     1797.2
+     1932.9
     ],
     [
      4126.75,
-     1777.7
+     1858.7
     ],
     [
      4127.25,
@@ -390,9 +390,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.119,
-  "session_delta": 586.0,
-  "session_slope": -974.0,
+  "leg_ratio": -0.179,
+  "session_delta": -134.0,
+  "session_slope": -1050.0,
   "divergence": true,
   "absorption": false
  },
@@ -405,13 +405,13 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 75,
+ "score": 64,
  "score_parts": {
   "structure": 20,
   "liquidity": 12,
-  "momentum": 7,
-  "vwap": 5,
-  "volume_flow": 14,
+  "momentum": 0,
+  "vwap": 0,
+  "volume_flow": 15,
   "volatility": 2,
   "session": 5,
   "news": 10
@@ -424,8 +424,8 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "MARKET CHOP \u2014 ADX weak, VWAP crossed 11\u00d7 in 2h, EMA20/50 flat",
-  "Setup score would be 75/100 (not tradable while blocked)"
+  "MARKET CHOP \u2014 ADX weak, VWAP crossed 10\u00d7 in 2h, EMA20/50 flat",
+  "Setup score would be 64/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -448,13 +448,13 @@
    "swept": false
   },
   {
-   "name": "H1 swing high",
+   "name": "Equal highs",
    "price": 4169.68,
    "side": "buy",
    "swept": false
   },
   {
-   "name": "Previous day high",
+   "name": "Equal highs",
    "price": 4168.92,
    "side": "buy",
    "swept": false
@@ -492,7 +492,7 @@
   {
    "name": "Prior VAH",
    "price": 4124.0,
-   "side": "buy",
+   "side": "sell",
    "swept": false
   },
   {
@@ -527,28 +527,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791421200,
-   "o": 4118.99,
-   "h": 4131.72,
-   "l": 4116.42,
-   "c": 4131.49,
-   "e20": 4112.57,
-   "e50": 4110.56,
-   "vw": 4113.32,
-   "dl": 2158.0
-  },
-  {
-   "t": 1791421500,
-   "o": 4131.09,
-   "h": 4133.81,
-   "l": 4126.76,
-   "c": 4127.02,
-   "e20": 4113.95,
-   "e50": 4111.21,
-   "vw": 4114.78,
-   "dl": -1110.0
-  },
   {
    "t": 1791421800,
    "o": 4127.43,
@@ -2163,8 +2141,8 @@
    "c": 4124.75,
    "e20": 4122.78,
    "e50": 4122.75,
-   "vw": 4123.49,
-   "dl": -0.0
+   "vw": 4123.5,
+   "dl": -77.0
   },
   {
    "t": 1791465900,
@@ -2174,8 +2152,30 @@
    "c": 4121.05,
    "e20": 4122.61,
    "e50": 4122.68,
-   "vw": 4123.49,
-   "dl": -0.0
+   "vw": 4123.5,
+   "dl": -643.0
+  },
+  {
+   "t": 1791466200,
+   "o": 4121.48,
+   "h": 4131.04,
+   "l": 4120.7,
+   "c": 4127.03,
+   "e20": 4123.03,
+   "e50": 4122.85,
+   "vw": 4123.5,
+   "dl": 0.0
+  },
+  {
+   "t": 1791466500,
+   "o": 4128.37,
+   "h": 4128.48,
+   "l": 4124.22,
+   "c": 4128.13,
+   "e20": 4123.52,
+   "e50": 4123.06,
+   "vw": 4123.5,
+   "dl": 0.0
   }
  ],
  "journal": {
