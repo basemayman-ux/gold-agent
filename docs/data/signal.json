@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-10-08T11:40:36.969275+00:00",
- "dubai_time": "Thu 08 Oct 2026, 15:40",
+ "generated_utc": "2026-10-08T11:50:35.577285+00:00",
+ "dubai_time": "Thu 08 Oct 2026, 15:50",
  "session": "London",
- "price": 4123.01,
+ "price": 4123.33,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-10-08T11:35:00+00:00",
+ "last_bar_utc": "2026-10-08T11:45:00+00:00",
  "warnings": [],
  "regime": "Range",
  "bias": {
   "H4": "Bearish",
   "H1": "Neutral",
   "M15": "Bearish",
-  "M5": "Bearish"
+  "M5": "Bullish"
  },
  "swings": {
   "H4": [
@@ -42,23 +42,23 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4123.55,
+  "value": 4123.53,
   "side": "Choppy",
-  "crosses_2h": 4,
+  "crosses_2h": 6,
   "volume_weighted": true
  },
- "rsi7": 62.0,
- "rsi14": 54.6,
+ "rsi7": 61.2,
+ "rsi14": 54.8,
  "adx14": {
-  "M5": 16.8,
-  "M15": 16.1
+  "M5": 18.5,
+  "M15": 15.4
  },
  "atr14": {
-  "M5": 3.75,
-  "M15": 6.89,
-  "percentile": 78
+  "M5": 3.91,
+  "M15": 7.24,
+  "percentile": 81
  },
- "volume": "RVOL 1.96\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "Not available \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -186,51 +186,51 @@
     ],
     [
      4118.25,
-     988.4
+     1064.9
     ],
     [
      4118.75,
-     1059.2
+     1135.6
     ],
     [
      4119.25,
-     1272.7
+     1349.2
     ],
     [
      4119.75,
-     1543.1
+     1619.5
     ],
     [
      4120.25,
-     1479.1
+     1555.5
     ],
     [
      4120.75,
-     1374.8
+     1451.2
     ],
     [
      4121.25,
-     1310.3
+     1386.8
     ],
     [
      4121.75,
-     1572.4
+     1648.8
     ],
     [
      4122.25,
-     1709.0
+     1849.7
     ],
     [
      4122.75,
-     1756.6
+     1897.3
     ],
     [
      4123.25,
-     1581.5
+     1722.2
     ],
     [
      4123.75,
-     1465.8
+     1530.0
     ],
     [
      4124.25,
@@ -386,20 +386,15 @@
     ]
    ]
   },
-  "context": "Selling right above a POC/VAL (demand below)"
+  "context": null
  },
  "orderflow": {
-  "available": true,
-  "leg_ratio": -0.025,
-  "session_delta": 202.0,
-  "session_slope": 952.0,
-  "divergence": null,
-  "absorption": null
+  "available": true
  },
- "liquidity_event": "M15 swing low 4113.12 swept (sell-side), displacement",
- "bos_choch": "M5 BOS bearish through 4119.29 at 14:25",
+ "liquidity_event": "M15 swing high 4126.71 swept (buy-side), rejection wick",
+ "bos_choch": "M5 CHOCH bullish through 4123.71 at 15:40",
  "news": {
-  "risk": "Medium",
+  "risk": "High",
   "status": "live",
   "upcoming": [
    {
@@ -411,18 +406,9 @@
   "detail": "Unemployment Claims at 16:30 Dubai"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 60,
- "score_parts": {
-  "structure": 20,
-  "liquidity": 12,
-  "momentum": 4,
-  "vwap": 5,
-  "volume_flow": 6,
-  "volatility": 5,
-  "session": 4,
-  "news": 4
- },
- "candidate": "SHORT",
+ "score": 0,
+ "score_parts": {},
+ "candidate": null,
  "decision": "NO TRADE",
  "headline": "No trade",
  "quality": "NO TRADE",
@@ -430,8 +416,9 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "MARKET CHOP \u2014 ADX weak, VWAP crossed 4\u00d7 in 2h, EMA20/50 flat",
-  "Setup score would be 60/100 (not tradable while blocked)"
+  "High-impact news window: Unemployment Claims at 16:30 Dubai",
+  "No clear direction: H1 is neutral and H4, M15 and M5 do not all agree",
+  "MARKET CHOP \u2014 ADX weak, VWAP crossed 6\u00d7 in 2h, EMA20/50 flat"
  ],
  "invalidation": null,
  "levels": [
@@ -472,6 +459,12 @@
    "swept": false
   },
   {
+   "name": "M15 swing high",
+   "price": 4148.19,
+   "side": "buy",
+   "swept": false
+  },
+  {
    "name": "Asian high",
    "price": 4142.51,
    "side": "buy",
@@ -502,12 +495,6 @@
    "swept": false
   },
   {
-   "name": "M15 swing high",
-   "price": 4126.71,
-   "side": "buy",
-   "swept": false
-  },
-  {
    "name": "Prior VAH",
    "price": 4124.0,
    "side": "buy",
@@ -533,28 +520,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791414600,
-   "o": 4108.72,
-   "h": 4109.96,
-   "l": 4108.72,
-   "c": 4109.47,
-   "e20": 4108.03,
-   "e50": 4108.53,
-   "vw": 4108.49,
-   "dl": 10.0
-  },
-  {
-   "t": 1791414900,
-   "o": 4109.46,
-   "h": 4111.17,
-   "l": 4109.44,
-   "c": 4111.15,
-   "e20": 4108.33,
-   "e50": 4108.64,
-   "vw": 4108.57,
-   "dl": 89.0
-  },
   {
    "t": 1791415200,
    "o": 4111.08,
@@ -2170,7 +2135,7 @@
    "e20": 4120.23,
    "e50": 4121.91,
    "vw": 4123.55,
-   "dl": 0.0
+   "dl": 230.0
   },
   {
    "t": 1791459300,
@@ -2180,8 +2145,30 @@
    "c": 4123.01,
    "e20": 4120.5,
    "e50": 4121.95,
-   "vw": 4123.55,
-   "dl": 0.0
+   "vw": 4123.53,
+   "dl": 710.0
+  },
+  {
+   "t": 1791459600,
+   "o": 4122.46,
+   "h": 4130.18,
+   "l": 4121.74,
+   "c": 4123.96,
+   "e20": 4120.83,
+   "e50": 4122.03,
+   "vw": 4123.53,
+   "dl": -0.0
+  },
+  {
+   "t": 1791459900,
+   "o": 4124.84,
+   "h": 4124.84,
+   "l": 4123.2,
+   "c": 4123.33,
+   "e20": 4121.07,
+   "e50": 4122.08,
+   "vw": 4123.53,
+   "dl": -0.0
   }
  ],
  "journal": {
