@@ -1,14 +1,14 @@
 {
- "generated_utc": "2026-10-08T22:20:32.389711+00:00",
- "dubai_time": "Fri 09 Oct 2026, 02:20",
+ "generated_utc": "2026-10-08T22:30:40.665159+00:00",
+ "dubai_time": "Fri 09 Oct 2026, 02:30",
  "session": "Late US / off-hours",
- "price": 4135.88,
+ "price": 4136.69,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.5,
- "last_bar_utc": "2026-10-08T22:15:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-10-08T22:25:00+00:00",
  "warnings": [],
- "regime": "Trend",
+ "regime": "Breakout",
  "bias": {
   "H4": "Bearish",
   "H1": "Bullish",
@@ -42,23 +42,23 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4132.79,
+  "value": 4134.59,
   "side": "Above",
   "crosses_2h": 2,
   "volume_weighted": true
  },
- "rsi7": 61.9,
- "rsi14": 58.6,
+ "rsi7": 66.2,
+ "rsi14": 61.0,
  "adx14": {
-  "M5": 16.3,
-  "M15": 23.1
+  "M5": 15.2,
+  "M15": 22.7
  },
  "atr14": {
-  "M5": 1.9,
-  "M15": 4.79,
-  "percentile": 27
+  "M5": 1.77,
+  "M15": 4.73,
+  "percentile": 25
  },
- "volume": "RVOL 0.84\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "RVOL 1.77\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -73,9 +73,9 @@
    }
   ],
   "developing": {
-   "poc": 4131.75,
-   "vah": 4135.0,
-   "val": 4131.5,
+   "poc": 4133.25,
+   "vah": 4136.0,
+   "val": 4133.0,
    "bins": [
     [
      4130.75,
@@ -99,49 +99,49 @@
     ],
     [
      4133.25,
-     27.8
+     119.1
     ],
     [
      4133.75,
-     27.8
+     119.1
     ],
     [
      4134.25,
-     27.8
+     119.1
     ],
     [
      4134.75,
-     27.8
+     119.1
     ],
     [
      4135.25,
-     16.9
+     108.2
     ],
     [
      4135.75,
-     0.0
+     91.3
     ],
     [
      4136.25,
-     0.0
+     38.3
     ],
     [
      4136.75,
-     0.0
+     38.3
     ],
     [
      4137.25,
-     0.0
+     38.3
     ]
    ]
   },
-  "context": "Sweep happened at the value-area low (responsive buying)"
+  "context": "Accepted above prior VAH 4135.00 (initiative buying)"
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.357,
-  "session_delta": -87.0,
-  "session_slope": -7562.0,
+  "leg_ratio": 0.32,
+  "session_delta": 290.0,
+  "session_slope": -7184.0,
   "divergence": false,
   "absorption": false
  },
@@ -154,34 +154,35 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 66,
+ "score": 79,
  "score_parts": {
   "structure": 15,
-  "liquidity": 12,
+  "liquidity": 17,
   "momentum": 11,
   "vwap": 8,
-  "volume_flow": 5,
+  "volume_flow": 13,
   "volatility": 5,
   "session": 0,
   "news": 10
  },
  "candidate": "LONG",
- "decision": "NO TRADE",
- "headline": "No trade",
- "quality": "NO TRADE",
+ "decision": "WAIT",
+ "headline": "Wait",
+ "quality": "WATCH",
  "setup": "trend",
  "range": null,
  "mode": "balanced",
  "min_score": 85,
  "plan": null,
  "why": [
+  "Score 79/100 is below the 85 live-trade minimum",
   "M15 swing low at 4131.89 swept, then displacement",
   "M5 bullish CHOCH through 4135.14",
   "Early trend turn: H1 and M15 turned up before H4 (allowed in balanced mode)",
   "H4 bearish (Price clearly below H4 EMA200), H1 bullish, M15 bullish",
-  "RSI7 62, RSI14 59, M15 ADX 23, RVOL 0.8\u00d7",
-  "Profile & flow: Sweep happened at the value-area low (responsive buying); setup-leg delta -0.36",
-  "Weak components: volume & flow, session"
+  "RSI7 66, RSI14 61, M15 ADX 23, RVOL 1.8\u00d7",
+  "Profile & flow: Accepted above prior VAH 4135.00 (initiative buying); setup-leg delta +0.32",
+  "Weak components: session"
  ],
  "invalidation": null,
  "levels": [
@@ -246,12 +247,6 @@
    "swept": true
   },
   {
-   "name": "M15 swing high",
-   "price": 4136.5,
-   "side": "buy",
-   "swept": false
-  },
-  {
    "name": "Prior VAH",
    "price": 4135.0,
    "side": "sell",
@@ -280,31 +275,15 @@
    "price": 4117.0,
    "side": "sell",
    "swept": false
+  },
+  {
+   "name": "London low",
+   "price": 4110.32,
+   "side": "sell",
+   "swept": true
   }
  ],
  "chart": [
-  {
-   "t": 1791453000,
-   "o": 4120.9,
-   "h": 4122.35,
-   "l": 4120.48,
-   "c": 4122.14,
-   "e20": 4123.98,
-   "e50": 4124.9,
-   "vw": 4124.3,
-   "dl": 454.0
-  },
-  {
-   "t": 1791453300,
-   "o": 4122.05,
-   "h": 4123.22,
-   "l": 4121.96,
-   "c": 4123.16,
-   "e20": 4123.9,
-   "e50": 4124.83,
-   "vw": 4124.29,
-   "dl": 320.0
-  },
   {
    "t": 1791453600,
    "o": 4123.04,
@@ -1919,8 +1898,8 @@
    "c": 4135.76,
    "e20": 4133.77,
    "e50": 4131.84,
-   "vw": 4132.79,
-   "dl": 0.0
+   "vw": 4134.06,
+   "dl": 263.0
   },
   {
    "t": 1791497700,
@@ -1930,8 +1909,30 @@
    "c": 4135.88,
    "e20": 4133.97,
    "e50": 4132.0,
-   "vw": 4132.79,
+   "vw": 4134.59,
+   "dl": 115.0
+  },
+  {
+   "t": 1791498000,
+   "o": 4135.96,
+   "h": 4136.68,
+   "l": 4135.65,
+   "c": 4136.52,
+   "e20": 4134.22,
+   "e50": 4132.18,
+   "vw": 4134.59,
    "dl": 0.0
+  },
+  {
+   "t": 1791498300,
+   "o": 4136.28,
+   "h": 4137.19,
+   "l": 4136.28,
+   "c": 4136.69,
+   "e20": 4134.45,
+   "e50": 4132.35,
+   "vw": 4134.59,
+   "dl": -0.0
   }
  ],
  "journal": {
