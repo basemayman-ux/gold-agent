@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-08T19:20:38.592603+00:00",
- "dubai_time": "Thu 08 Oct 2026, 23:20",
+ "generated_utc": "2026-10-08T19:30:45.537813+00:00",
+ "dubai_time": "Thu 08 Oct 2026, 23:30",
  "session": "New York",
- "price": 4128.86,
+ "price": 4131.6,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-10-08T19:15:00+00:00",
+ "data_age_min": 0.8,
+ "last_bar_utc": "2026-10-08T19:25:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4124.78,
+  "value": 4124.79,
   "side": "Above",
   "crosses_2h": 2,
   "volume_weighted": true
  },
- "rsi7": 56.6,
- "rsi14": 53.3,
+ "rsi7": 66.0,
+ "rsi14": 57.8,
  "adx14": {
-  "M5": 17.2,
-  "M15": 19.8
+  "M5": 17.0,
+  "M15": 20.2
  },
  "atr14": {
-  "M5": 3.55,
-  "M15": 7.68,
-  "percentile": 66
+  "M5": 3.46,
+  "M15": 7.45,
+  "percentile": 62
  },
  "volume": "RVOL 4.67\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -262,31 +262,31 @@
     ],
     [
      4127.75,
-     2485.0
+     2507.1
     ],
     [
      4128.25,
-     2508.2
+     2530.4
     ],
     [
      4128.75,
-     2289.0
+     2343.4
     ],
     [
      4129.25,
-     2320.0
+     2374.4
     ],
     [
      4129.75,
-     2036.2
+     2090.6
     ],
     [
      4130.25,
-     2317.1
+     2371.5
     ],
     [
      4130.75,
-     2152.8
+     2174.9
     ],
     [
      4131.25,
@@ -418,9 +418,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.045,
-  "session_delta": 6159.0,
-  "session_slope": 261.0,
+  "leg_ratio": 0.042,
+  "session_delta": 6113.0,
+  "session_slope": 175.0,
   "divergence": null,
   "absorption": null
  },
@@ -433,11 +433,11 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 77,
+ "score": 72,
  "score_parts": {
   "structure": 15,
-  "liquidity": 15,
-  "momentum": 9,
+  "liquidity": 7,
+  "momentum": 12,
   "vwap": 8,
   "volume_flow": 11,
   "volatility": 5,
@@ -454,13 +454,14 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "Score 77/100 is below the 85 live-trade minimum",
+  "Score 72/100 is below the 85 live-trade minimum",
   "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bullish BOS through 4125.73",
   "Early trend turn: H1 and M15 turned up before H4 (allowed in balanced mode)",
   "H4 bearish (Price clearly below H4 EMA200), H1 bullish, M15 bullish",
-  "RSI7 57, RSI14 53, M15 ADX 20, RVOL 4.7\u00d7",
-  "Profile & flow: Accepted above prior VAH 4124.00 (initiative buying); setup-leg delta +0.04"
+  "RSI7 66, RSI14 58, M15 ADX 20, RVOL 4.7\u00d7",
+  "Profile & flow: Accepted above prior VAH 4124.00 (initiative buying); setup-leg delta +0.04",
+  "Weak components: liquidity"
  ],
  "invalidation": null,
  "levels": [
@@ -543,6 +544,12 @@
    "swept": false
   },
   {
+   "name": "M15 swing low",
+   "price": 4121.16,
+   "side": "sell",
+   "swept": false
+  },
+  {
    "name": "Prior POC",
    "price": 4119.25,
    "side": "sell",
@@ -553,37 +560,9 @@
    "price": 4110.32,
    "side": "sell",
    "swept": true
-  },
-  {
-   "name": "Asian low",
-   "price": 4105.59,
-   "side": "sell",
-   "swept": false
   }
  ],
  "chart": [
-  {
-   "t": 1791442200,
-   "o": 4123.78,
-   "h": 4127.27,
-   "l": 4123.71,
-   "c": 4125.33,
-   "e20": 4123.49,
-   "e50": 4126.51,
-   "vw": 4124.18,
-   "dl": -30.0
-  },
-  {
-   "t": 1791442500,
-   "o": 4125.12,
-   "h": 4125.12,
-   "l": 4122.86,
-   "c": 4123.1,
-   "e20": 4123.46,
-   "e50": 4126.38,
-   "vw": 4124.17,
-   "dl": -194.0
-  },
   {
    "t": 1791442800,
    "o": 4123.34,
@@ -2198,19 +2177,41 @@
    "c": 4130.13,
    "e20": 4127.41,
    "e50": 4126.09,
-   "vw": 4124.78,
-   "dl": 0.0
+   "vw": 4124.79,
+   "dl": 84.0
   },
   {
    "t": 1791486900,
    "o": 4129.63,
    "h": 4130.87,
    "l": 4127.8,
-   "c": 4128.86,
-   "e20": 4127.55,
-   "e50": 4126.2,
-   "vw": 4124.78,
-   "dl": -0.0
+   "c": 4128.05,
+   "e20": 4127.47,
+   "e50": 4126.17,
+   "vw": 4124.79,
+   "dl": -130.0
+  },
+  {
+   "t": 1791487200,
+   "o": 4128.22,
+   "h": 4131.06,
+   "l": 4128.19,
+   "c": 4130.58,
+   "e20": 4127.77,
+   "e50": 4126.34,
+   "vw": 4124.79,
+   "dl": 0.0
+  },
+  {
+   "t": 1791487500,
+   "o": 4129.55,
+   "h": 4132.23,
+   "l": 4129.55,
+   "c": 4131.6,
+   "e20": 4128.13,
+   "e50": 4126.55,
+   "vw": 4124.79,
+   "dl": 0.0
   }
  ],
  "journal": {
