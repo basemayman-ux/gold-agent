@@ -256,7 +256,15 @@ function hero(d, age, animate){
       <div class="tp"><div class="k">Target 1</div><div class="v">${n2(p.tp1)}</div></div>
       <div class="tp"><div class="k">Target 2</div><div class="v">${n2(p.tp2)}</div></div>
       <div><div class="k">Risk</div><div class="v">${p.risk_pct}%${p.size ? `, ${p.size.lots} lots` : ""}</div></div>
-    </div><p class="note">Target 2 is the ${esc(p.tp2_name)}. Confirm price and spread with your broker before entering.</p>`
+    </div>
+    ${p.max_entry != null ? (() => {
+        const expired = p.valid_until && Date.now() > Date.parse(p.valid_until);
+        const lim = dec === "LONG" ? `Buy only up to ${n2(p.max_entry)}` : `Sell only down to ${n2(p.max_entry)}`;
+        return expired
+          ? `<p class="inval"><strong>Entry window closed at ${esc(p.valid_until_dubai)} Dubai.</strong> Skip this trade unless you are already in it.</p>`
+          : `<p class="inval" style="border-color:color-mix(in srgb,var(--long) 50%,var(--line));background:color-mix(in srgb,var(--long) 9%,transparent)"><strong>${lim}.</strong> Valid until ${esc(p.valid_until_dubai)} Dubai. Use a limit order; skip if price is past that level.</p>`;
+      })() : ""}
+    <p class="note">Entry is ${p.live_src ? "the live price when the signal was sent" : "the last candle close"}. Target 2 is the ${esc(p.tp2_name)}. Confirm price and spread with your broker before entering.</p>`
     : `<p class="empty">No entry right now. A plan appears here only when a setup scores ${MIN_SCORE} or more and passes every safety check.</p>`;
   const why = (d.why||[]).map(w => `<li>${esc(w)}</li>`).join("");
   const side = `<section><h2>Trade plan</h2>${plan}

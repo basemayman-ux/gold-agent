@@ -44,6 +44,13 @@ jobs:
 
       - name: Commit results
         run: |
+          # Runs every 5 min. Publish to the website every 10 min (GitHub Pages limit),
+          # or immediately whenever a WhatsApp alert was sent on this run.
+          MIN=$(date -u +%M)
+          if [ ! -f /tmp/force_commit ] && [ $(( 10#$MIN % 10 )) -ge 5 ]; then
+            echo "No alert this run; website update skipped until the next 10-minute mark."
+            exit 0
+          fi
           git config user.name "gold-agent"
           git config user.email "gold-agent@users.noreply.github.com"
           git add docs/data
