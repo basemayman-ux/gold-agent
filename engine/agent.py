@@ -62,6 +62,24 @@ def fetch_twelve(symbol, interval, size, key):
     return _clean(df)
 
 
+def live_price():
+    """Latest spot price right now (not a closed candle). Twelve Data first, keyless gold-api.com as backup."""
+    key = os.getenv("TWELVE_DATA_KEY", "").strip()
+    if key:
+        try:
+            js = requests.get("https://api.twelvedata.com/price", timeout=8,
+                              params={"symbol": CFG["spot_symbol"], "apikey": key}).json()
+            if "price" in js:
+                return float(js["price"]), "Twelve Data"
+        except Exception:  # noqa: BLE001
+            pass
+    try:
+        js = requests.get("https://api.gold-api.com/price/XAU", timeout=8).json()
+        return float(js["price"]), "gold-api.com"
+    except Exception:  # noqa: BLE001
+        return None, None
+
+
 def resample(df, rule):
     agg = {"open": "first", "high": "max", "low": "min", "close": "last"}
     if "volume" in df:
@@ -720,6 +738,10 @@ def _clean_phone(raw):
 
 def notify(text):
     """WhatsApp alert via CallMeBot. Logs CallMeBot's own reply so failures are visible."""
+    try:
+        Path("/tmp/force_commit").touch()            # tells the workflow to publish this run immediately
+    except Exception:  # noqa: BLE001
+        pass
     phone, key = os.getenv("CALLMEBOT_PHONE", "").strip(), os.getenv("CALLMEBOT_APIKEY", "").strip()
     if not (phone and key):
         print("WhatsApp alert skipped: CALLMEBOT_PHONE / CALLMEBOT_APIKEY not set")
@@ -777,6 +799,29 @@ def main():
 
     decision, d, plan, score, sc, why = decide(ctx, journal)
     trade = decision in ("LONG", "SHORT")
+    if trade:
+        dd = 1 if decision == "LONG" else -1
+        lp, lsrc = live_price()
+        if lp:
+            R0 = plan["R"]
+            R1 = (lp - plan["sl"]) * dd                      # stop distance from where price is NOW
+            rr1 = (plan["tp2"] - lp) * dd / R1 if R1 > 0 else 0
+            problem = None
+            if R1 < 0.4 * R0:
+                problem = f"price has moved to {lp:.2f}, too close to the stop at {plan['sl']:.2f}"
+            elif R1 > 1.5 * R0:
+                problem = f"price has run to {lp:.2f}; the stop would be {R1 / R0:.1f}x wider than planned"
+            elif rr1 < 1.5:
+                problem = f"at the live price {lp:.2f} the reward to risk is only 1:{rr1:.2f}"
+            if problem:
+                why.insert(0, f"Setup found, but the entry is no longer valid: {problem}")
+                decision, trade = "WAIT", False
+            else:
+                plan.update(entry=lp, R=R1, tp1=lp + dd * R1, rr=rr1, stop_atr=R1 / ctx["a5"])
+                plan["live_src"] = lsrc
+        if trade:
+            plan["max_entry"] = plan["entry"] + dd * 0.25 * plan["R"]
+            plan["valid_until"] = now + timedelta(minutes=CFG.get("entry_valid_minutes", 10))
     b5, b15 = ctx["b5"], ctx["b15"]
     st = ctx["st"]
 
@@ -835,7 +880,11 @@ def main():
         "mode": ctx.get("mode", "strict"), "min_score": ctx.get("min_score", 85),
         "plan": ({"entry": fmt(plan["entry"]), "sl": fmt(plan["sl"]), "tp1": fmt(plan["tp1"]),
                   "tp2": fmt(plan["tp2"]), "tp2_name": plan["tp2_name"], "rr": f"1:{plan['rr']:.2f}",
-                  "risk_pct": CFG["risk_pct"], "size": size} if trade else None),
+                  "risk_pct": CFG["risk_pct"], "size": size,
+                  "max_entry": fmt(plan.get("max_entry")),
+                  "valid_until": plan["valid_until"].isoformat() if plan.get("valid_until") is not None else None,
+                  "valid_until_dubai": plan["valid_until"].tz_convert(DUBAI).strftime("%H:%M") if plan.get("valid_until") is not None else None,
+                  "live_src": plan.get("live_src")} if trade else None),
         "why": why[:8],
         "invalidation": invalidation(decision, plan, d, ctx),
         "levels": sorted([{"name": l["name"], "price": round(l["price"], 2), "side": l["side"],
@@ -848,14 +897,18 @@ def main():
     }
 
     if trade:
-        rec = {"time_utc": ctx["m5"].index[-1].isoformat(), "dubai": base["dubai_time"], "session": ctx["session"],
+        rec = {"time_utc": now.isoformat(), "dubai": base["dubai_time"], "session": ctx["session"],
                "direction": decision, "entry": fmt(plan["entry"]), "sl": fmt(plan["sl"]), "tp1": fmt(plan["tp1"]),
                "tp2": fmt(plan["tp2"]), "rr": round(plan["rr"], 2), "score": score, "risk_pct": CFG["risk_pct"],
                "regime": regime, "reason": "; ".join(why[:3]), "status": "open", "tp1_hit": False}
         journal["signals"].append(rec)
         notify(f"{'🟢' if decision == 'LONG' else '🔴'} XAUUSD {decision} — score {score}/100 ({quality(score)})\n"
-               f"Entry {plan['entry']:.2f}  SL {plan['sl']:.2f}\nTP1 {plan['tp1']:.2f}  TP2 {plan['tp2']:.2f} "
-               f"(1:{plan['rr']:.1f})\nAt TP1: take half and move the stop to entry.\nCheck spread and your broker price before entering.")
+               f"Entry {plan['entry']:.2f} ({'live price' if plan.get('live_src') else 'last candle close'})  SL {plan['sl']:.2f}\n"
+               f"TP1 {plan['tp1']:.2f}  TP2 {plan['tp2']:.2f} (1:{plan['rr']:.1f})\n"
+               f"{'Buy only up to' if decision == 'LONG' else 'Sell only down to'} {plan['max_entry']:.2f}. "
+               f"Valid until {plan['valid_until'].tz_convert(DUBAI):%H:%M} Dubai.\n"
+               f"Use a limit order. Skip if price is past that level or the time has passed.\n"
+               f"At TP1: take half and move the stop to entry.")
 
     # 🟡 heads-up: a setup is close (score 75+) but not tradable yet. At most once an hour per direction.
     if (decision == "WAIT" or ctx.get("conflict_only")) and score >= CFG.get("watch_min_score", 75) and d:
