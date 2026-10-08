@@ -186,11 +186,13 @@ def load_news(now):
     risk, detail = "Low", "No high-impact USD event in the next 3 hours"
     for ev in sorted(relevant, key=lambda e: e["time"]):
         dt = ev["time"] - now
-        if -after <= dt <= before:
-            risk, detail = "High", f"{ev['title']} at {ev['time'].astimezone(DUBAI):%H:%M} Dubai"
+        label = f"{ev['title']} at {ev['time'].astimezone(DUBAI):%H:%M} Dubai"
+        if ev["impact"] == "High" and -after <= dt <= before:
+            risk, detail = "High", label            # major release: no new trades
             break
-        if before < dt <= timedelta(hours=3) and risk == "Low":
-            risk, detail = "Medium", f"{ev['title']} at {ev['time'].astimezone(DUBAI):%H:%M} Dubai"
+        if risk == "Low" and ((ev["impact"] == "High" and before < dt <= timedelta(hours=3))
+                              or (ev["impact"] == "Medium" and -after <= dt <= before)):
+            risk, detail = "Medium", label + " (score reduced, not blocked)"
     upcoming = [{"title": e["title"], "impact": e["impact"],
                  "time": e["time"].astimezone(DUBAI).strftime("%a %H:%M")}
                 for e in sorted(relevant, key=lambda e: e["time"]) if e["time"] > now - after][:6]
@@ -713,10 +715,156 @@ def decide(ctx, journal):
     elif d and blockers and sc:
         why.append(f"Setup score would be {score}/100 (not tradable while blocked)")
 
+    # ── Range setup: only when the trend setup cannot trade and nothing hard blocks trading ──
+    ctx["setup"] = "trend"
+    hard = [b for b in blockers if b.startswith(("STALE DATA", "High-impact news")) or b == lock]
+    if decision not in ("LONG", "SHORT") and not hard and CFG.get("range_trades", True):
+        rng = find_range(ctx)
+        rs = range_setup(ctx, rng) if rng else None
+        if rs and rs["score"] >= 70:
+            r_dec, r_why = "NO TRADE", []
+            if open_sig:
+                r_dec, r_why = "WAIT", [f"A {open_sig[0]['direction']} signal is still active, manage it before a new one"]
+            elif len(sess_sigs) >= M["max_per_session"]:
+                r_dec, r_why = "WAIT", ["Session signal cap reached"]
+            elif last_sig and now - pd.Timestamp(last_sig["time_utc"]) < timedelta(minutes=M["cooldown"]):
+                r_dec, r_why = "WAIT", ["Cooling down after the last signal"]
+            elif rs["plan"]["stop_atr"] > 3:
+                r_why = [f"Range stop is {rs['plan']['stop_atr']:.1f}× ATR away, too wide"]
+            elif rs["plan"]["rr"] < 1.5:
+                r_why = [f"Range target gives only 1:{rs['plan']['rr']:.2f}"]
+            elif rs["score"] < M["min_score"]:
+                r_dec, r_why = "WAIT", [f"Range setup score {rs['score']}/100 is below the {M['min_score']} minimum"]
+            elif ctx["session"] == "Asia" and rs["score"] < M["asia_min"]:
+                r_dec, r_why = "WAIT", [f"Asian session needs {M['asia_min']}+ (range score {rs['score']}/100)"]
+            else:
+                r_dec = "LONG" if rs["d"] > 0 else "SHORT"
+            if r_dec in ("LONG", "SHORT") or rs["score"] > score or decision == "NO TRADE":
+                decision, d, plan, score, sc = r_dec, rs["d"], rs["plan"], rs["score"], rs["sc"]
+                why = r_why + rs["why"]
+                ctx["setup"], ctx["range"] = "range", rs["range"]
+                ctx["conflict_only"] = False
+
     return decision, d, plan, score, sc, why
 
 
+def find_range(ctx):
+    """Sideways market over the last ~8 hours of 5-minute bars (excluding the last 30 minutes,
+    where the edge test may be happening). Each edge is a zone (15% of the range width, at least
+    half a 15-minute ATR) that price has tested at least twice. Returns None when there is no clean range."""
+    m5, a15 = ctx["m5"], float(ctx["b15"]["atr14"])
+    n = len(m5)
+    w0, w1 = max(0, n - 96), n - 6
+    win = m5.iloc[w0:w1]
+    if len(win) < 60 or a15 <= 0:
+        return None
+    lo, hi = float(win["low"].min()), float(win["high"].max())
+    width = hi - lo
+    if not (3 * a15 <= width <= 12 * a15):
+        return None
+    zone = max(0.5 * a15, 0.15 * width)
+    lows = [p for p in ctx["st"]["M5"]["lows"] if w0 <= p < w1 and m5["low"].iat[p] <= lo + zone]
+    highs = [p for p in ctx["st"]["M5"]["highs"] if w0 <= p < w1 and m5["high"].iat[p] >= hi - zone]
+    if len(lows) < 2 or len(highs) < 2:
+        return None
+    return {"lo": lo, "hi": hi, "width": width, "zone": zone, "low_touches": len(lows), "high_touches": len(highs),
+            "start": m5.index[w0], "end_i": w1, "a15": a15}
+
+
+def edge_test(m5, rng, a5):
+    """No sweep: price dipped deep into an edge zone in the last 30 minutes and was rejected
+    (long lower/upper wick, or a later close beyond the test bar)."""
+    n = len(m5)
+    last = m5.iloc[n - 6:]
+    O, H, L, C = (m5[k].values for k in ("open", "high", "low", "close"))
+    found = []
+    for d, edge in ((1, rng["lo"]), (-1, rng["hi"])):
+        i = int(n - 6 + (last["low"].values.argmin() if d > 0 else last["high"].values.argmax()))
+        ext = L[i] if d > 0 else H[i]
+        if (ext > edge + 0.5 * rng["zone"]) if d > 0 else (ext < edge - 0.5 * rng["zone"]):
+            continue                                            # did not reach deep into the zone
+        rng_i = max(H[i] - L[i], 1e-9)
+        wick = ((min(O[i], C[i]) - L[i]) if d > 0 else (H[i] - max(O[i], C[i]))) / rng_i
+        disp = any((C[k] > H[i]) if d > 0 else (C[k] < L[i]) for k in range(i + 1, n))
+        if (C[-1] - ext) * d < 0.5 * a5 or not (wick >= 0.4 or disp):
+            continue                                            # no real rejection yet
+        found.append({"dir": "bull" if d > 0 else "bear", "name": "Range low zone" if d > 0 else "Range high zone",
+                      "level": edge, "extreme": float(ext), "i": i, "kind": "test",
+                      "confirm": "displacement" if disp else "rejection wick"})
+    return max(found, key=lambda x: x["i"]) if found else None
+
+
+def range_setup(ctx, rng):
+    """Range trade: sweep (or rejected test) of one edge, back inside, target the opposite edge."""
+    m5, a5, price = ctx["m5"], ctx["a5"], ctx["price"]
+    b5 = ctx["b5"]
+    pools = [{"name": "Range low", "price": rng["lo"], "side": "sell", "valid_from": m5.index[rng["end_i"]]},
+             {"name": "Range high", "price": rng["hi"], "side": "buy", "valid_from": m5.index[rng["end_i"]]}]
+    sw = find_sweep(m5, pools, a5, 6)
+    if sw:
+        sw["kind"] = "sweep"
+    else:
+        sw = edge_test(m5, rng, a5)
+    if not sw:
+        return None
+    d = 1 if sw["dir"] == "bull" else -1
+    third = rng["width"] / 3
+    if (d > 0 and not (rng["lo"] - rng["zone"] < price <= rng["lo"] + third)) or \
+       (d < 0 and not (rng["hi"] - third <= price < rng["hi"] + rng["zone"])):
+        return None                                   # already run toward the middle of the range
+    sl = sw["extreme"] - d * 0.25 * a5
+    if abs(price - sl) < 0.6 * a5:
+        sl = price - d * 0.6 * a5
+    R = abs(price - sl)
+    tp2 = (rng["hi"] if d > 0 else rng["lo"]) - d * 0.1 * rng["a15"]
+    rr = (tp2 - price) * d / R if R > 0 else 0
+    what = "sweep" if sw["kind"] == "sweep" else "test"
+    plan = {"entry": price, "sl": sl, "tp1": price + d * R, "tp2": tp2,
+            "tp2_name": "opposite edge of the range", "R": R, "rr": rr,
+            "stop_reason": f"beyond the range {'low' if d > 0 else 'high'} {what}", "stop_atr": R / a5}
+
+    sc = {}
+    s = 10
+    s += 5 if (rng["low_touches"] if d > 0 else rng["high_touches"]) >= 3 else 0
+    s += 5 if 4 <= rng["width"] / rng["a15"] <= 8 else 2
+    adx15 = float(ctx["b15"]["adx14"])
+    s += 5 if adx15 < 20 else 2 if adx15 < 25 else 0
+    sc["structure"] = s                                           # range quality (25)
+    sc["liquidity"] = (12 if what == "sweep" else 8) + (8 if rr >= 2 else 5 if rr >= 1.5 else 0)
+    s = 5 if sw["confirm"] == "displacement" else 3
+    s += 3 if ((b5["rsi7"] > m5["rsi7"].iloc[-4]) if d > 0 else (b5["rsi7"] < m5["rsi7"].iloc[-4])) else 0
+    turned = [e for e in ctx["st"]["M5"]["events"] if e["dir"] == sw["dir"] and e["i"] >= sw["i"]]
+    s += 4 if turned else 0
+    sc["momentum"] = s                                            # rejection (12)
+    s = 4
+    s += 4 if ((b5["vwap"] > price) if d > 0 else (b5["vwap"] < price)) else 0
+    sc["vwap"] = s                                                # location (8)
+    rv = m5["rvol"].iloc[sw["i"]:].max()
+    s = 0 if pd.isna(rv) else 5 if rv >= 1.5 else 3 if rv >= 1.2 else 1
+    fl = flow_read(m5, d, sw["i"], a5, sw)
+    if fl.get("available"):
+        s += 5 if (fl["divergence"] or fl["absorption"]) else 0
+        lr = d * fl["leg_ratio"]
+        s += 5 if lr >= 0.05 else 2 if lr >= 0 else 0
+    sc["volume_flow"] = min(s, 15)
+    p = ctx["atr_pct"]
+    sc["volatility"] = 5 if 15 <= p <= 90 else 2 if 5 <= p <= 97 else 0
+    sc["session"] = {"London/NY overlap": 5, "London": 4, "New York": 4, "Asia": 1}.get(ctx["session"], 0)
+    sc["news"] = {"Low": 10, "Medium": 4}.get(ctx["news"]["risk"], 0)
+    edge_word = "low" if d > 0 else "high"
+    why = [f"Range trade: range {edge_word} {sw['level']:.2f} " + ("swept" if what == "sweep" else "tested")
+           + f", then {sw['confirm']}",
+           f"Gold has ranged {rng['lo']:.2f}–{rng['hi']:.2f} (tested {rng['low_touches']}× low, "
+           f"{rng['high_touches']}× high); target is the {'top' if d > 0 else 'bottom'} of the range",
+           f"RSI7 {b5['rsi7']:.0f}, M15 ADX {adx15:.0f}" + (", M5 structure has turned" if turned else "")]
+    return {"d": d, "plan": plan, "score": sum(sc.values()), "sc": sc, "why": why, "sweep": sw, "range": rng}
+
+
 def invalidation(decision, plan, d, ctx):
+    if decision in ("LONG", "SHORT") and ctx.get("setup") == "range":
+        edge = ctx["range"]["lo"] if d > 0 else ctx["range"]["hi"]
+        return (f"Trade through {plan['sl']:.2f} ({plan['stop_reason']}), or a 15-minute close "
+                f"{'below' if d > 0 else 'above'} the range edge ({edge:.2f}) before TP1.")
     if decision in ("LONG", "SHORT"):
         word = "below" if d > 0 else "above"
         return (f"Trade through {plan['sl']:.2f} ({plan['stop_reason']}), or an M15 close {word} "
@@ -877,6 +1025,8 @@ def main():
         "headline": {"LONG": "Long setup confirmed", "SHORT": "Short setup confirmed", "WAIT": "Wait",
                      "NO TRADE": "No trade"}[decision],
         "quality": quality(score) if trade or decision == "WAIT" else "NO TRADE",
+        "setup": ctx.get("setup", "trend"),
+        "range": ({"lo": fmt(ctx["range"]["lo"]), "hi": fmt(ctx["range"]["hi"])} if ctx.get("setup") == "range" else None),
         "mode": ctx.get("mode", "strict"), "min_score": ctx.get("min_score", 85),
         "plan": ({"entry": fmt(plan["entry"]), "sl": fmt(plan["sl"]), "tp1": fmt(plan["tp1"]),
                   "tp2": fmt(plan["tp2"]), "tp2_name": plan["tp2_name"], "rr": f"1:{plan['rr']:.2f}",
@@ -900,9 +1050,11 @@ def main():
         rec = {"time_utc": now.isoformat(), "dubai": base["dubai_time"], "session": ctx["session"],
                "direction": decision, "entry": fmt(plan["entry"]), "sl": fmt(plan["sl"]), "tp1": fmt(plan["tp1"]),
                "tp2": fmt(plan["tp2"]), "rr": round(plan["rr"], 2), "score": score, "risk_pct": CFG["risk_pct"],
-               "regime": regime, "reason": "; ".join(why[:3]), "status": "open", "tp1_hit": False}
+               "regime": regime, "reason": "; ".join(why[:3]), "status": "open", "tp1_hit": False,
+               "setup": ctx.get("setup", "trend")}
         journal["signals"].append(rec)
-        notify(f"{'🟢' if decision == 'LONG' else '🔴'} XAUUSD {decision} — score {score}/100 ({quality(score)})\n"
+        notify(f"{'🟢' if decision == 'LONG' else '🔴'} XAUUSD {decision} — score {score}/100 ({quality(score)})"
+               f"{' · RANGE TRADE' if ctx.get('setup') == 'range' else ''}\n"
                f"Entry {plan['entry']:.2f} ({'live price' if plan.get('live_src') else 'last candle close'})  SL {plan['sl']:.2f}\n"
                f"TP1 {plan['tp1']:.2f}  TP2 {plan['tp2']:.2f} (1:{plan['rr']:.1f})\n"
                f"{'Buy only up to' if decision == 'LONG' else 'Sell only down to'} {plan['max_entry']:.2f}. "
@@ -916,7 +1068,7 @@ def main():
         last = journal.get("watch", {}).get(side)
         if not last or now - pd.Timestamp(last) >= timedelta(minutes=CFG.get("watch_cooldown_minutes", 60)):
             journal.setdefault("watch", {})[side] = now.isoformat()
-            notify(f"🟡 XAUUSD WATCH — possible {side}, score {score}/100\n"
+            notify(f"🟡 XAUUSD WATCH — possible {side}{' (range trade)' if ctx.get('setup') == 'range' else ''}, score {score}/100\n"
                    f"Price {ctx['price']:.2f}. Not a trade yet: {why[0] if why else 'conditions incomplete'}\n"
                    f"Watch your chart; a {side} alert follows only if every check passes.")
 

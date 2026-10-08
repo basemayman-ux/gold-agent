@@ -243,7 +243,7 @@ function hero(d, age, animate){
     ${gauge(dec, stale ? 0 : d.score, stale ? "" : d.quality, animate)}
     ${d.price != null ? `<div class="price">$${n2(d.price)}</div><div class="livebar">Price at the last analysis. The live price streams at the top.</div>` : ""}
     <div class="when">${esc(d.dubai_time)} Dubai${d.session ? `, ${esc(d.session)} session` : ""}</div>
-    ${d.regime ? `<span class="regime">${esc(d.regime)} market${d.mode ? ", " + esc(d.mode) + " mode" : ""}</span>` : ""}
+    ${d.regime ? `<span class="regime">${d.setup === "range" && d.range ? "Range " + n2(d.range.lo) + "–" + n2(d.range.hi) : esc(d.regime) + " market"}${d.mode ? ", " + esc(d.mode) + " mode" : ""}</span>` : ""}
     ${closed ? `<p class="why-head">Gold is closed for the weekend. Live analysis resumes Monday 09:00 Dubai.</p>` : ""}
     ${note ? `<p class="why-head">${note}</p>` : ""}
   </section>`;
@@ -281,10 +281,12 @@ function tfBlock(d){
 
 function scoreBlock(d){
   const max = {structure:25,liquidity:20,momentum:12,vwap:8,volume_flow:15,volatility:5,session:5,news:10};
-  const label = {volume_flow:"Volume & flow", vwap:"VWAP"};
+  const label = d.setup === "range"
+    ? {structure:"Range quality", liquidity:"Edge sweep", momentum:"Rejection", vwap:"Location", volume_flow:"Volume & flow"}
+    : {volume_flow:"Volume & flow", vwap:"VWAP"};
   const parts = d.score_parts || {};
   if (!Object.keys(parts).length) return "";
-  return `<section class="s5"><h2>What builds the score${d.candidate ? ` (${d.candidate.toLowerCase()} side)` : ""}</h2><div class="bars">${
+  return `<section class="s5"><h2>What builds the score${d.setup === "range" ? " (range setup" + (d.candidate ? ", " + d.candidate.toLowerCase() + " side" : "") + ")" : (d.candidate ? ` (${d.candidate.toLowerCase()} side)` : "")}</h2><div class="bars">${
     Object.entries(max).map(([k,m]) => { const v = parts[k] ?? 0; return `<div class="bar"><span>${label[k] || k[0].toUpperCase()+k.slice(1)}</span>
       <div class="track2" role="img" aria-label="${k} ${v} of ${m}"><div class="fill" style="width:${100*v/m}%"></div></div><span class="val">${v}/${m}</span></div>`; }).join("")}</div></section>`;
 }
