@@ -1,14 +1,14 @@
 {
- "generated_utc": "2026-10-09T04:10:38.593725+00:00",
- "dubai_time": "Fri 09 Oct 2026, 08:10",
+ "generated_utc": "2026-10-09T04:20:36.390660+00:00",
+ "dubai_time": "Fri 09 Oct 2026, 08:20",
  "session": "Asia",
- "price": 4179.2,
+ "price": 4179.28,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-10-09T04:05:00+00:00",
+ "last_bar_utc": "2026-10-09T04:15:00+00:00",
  "warnings": [],
- "regime": "Breakout",
+ "regime": "Trend",
  "bias": {
   "H4": "Bearish",
   "H1": "Bullish",
@@ -42,23 +42,23 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4141.29,
+  "value": 4142.66,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 65.9,
- "rsi14": 65.0,
+ "rsi7": 65.0,
+ "rsi14": 64.7,
  "adx14": {
-  "M5": 37.9,
-  "M15": 46.4
+  "M5": 38.8,
+  "M15": 47.8
  },
  "atr14": {
-  "M5": 2.68,
-  "M15": 5.85,
-  "percentile": 36
+  "M5": 2.55,
+  "M15": 5.6,
+  "percentile": 32
  },
- "volume": "RVOL 2.42\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "Not available \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -75,7 +75,7 @@
   "developing": {
    "poc": 4142.75,
    "vah": 4149.0,
-   "val": 4138.0,
+   "val": 4137.0,
    "bins": [
     [
      4130.75,
@@ -455,19 +455,19 @@
     ],
     [
      4177.75,
-     0.0
+     62.5
     ],
     [
      4178.25,
-     0.0
+     62.5
     ],
     [
      4178.75,
-     0.0
+     62.5
     ],
     [
      4179.25,
-     0.0
+     62.5
     ],
     [
      4179.75,
@@ -483,9 +483,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.126,
-  "session_delta": 1629.0,
-  "session_slope": 0.0,
+  "leg_ratio": 0.13,
+  "session_delta": 1662.0,
+  "session_slope": 33.0,
   "divergence": null,
   "absorption": null
  },
@@ -498,13 +498,13 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 66,
+ "score": 62,
  "score_parts": {
   "structure": 18,
   "liquidity": 0,
   "momentum": 12,
   "vwap": 8,
-  "volume_flow": 12,
+  "volume_flow": 8,
   "volatility": 5,
   "session": 1,
   "news": 10
@@ -523,7 +523,7 @@
   "M5 bullish BOS through 4178.22",
   "Early trend turn: H1 and M15 turned up before H4 (allowed in balanced mode)",
   "H4 bearish (Price clearly below H4 EMA200), H1 bullish, M15 bullish",
-  "RSI7 66, RSI14 65, M15 ADX 46, RVOL 2.4\u00d7",
+  "RSI7 65, RSI14 65, M15 ADX 48, volume unavailable",
   "Profile & flow: Accepted above prior VAH 4135.00 (initiative buying); setup-leg delta +0.13",
   "Weak components: liquidity, session"
  ],
@@ -627,28 +627,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791474000,
-   "o": 4115.23,
-   "h": 4117.78,
-   "l": 4115.23,
-   "c": 4116.41,
-   "e20": 4121.32,
-   "e50": 4123.2,
-   "vw": 4124.23,
-   "dl": -46.0
-  },
-  {
-   "t": 1791474300,
-   "o": 4116.71,
-   "h": 4116.71,
-   "l": 4113.97,
-   "c": 4114.59,
-   "e20": 4120.68,
-   "e50": 4122.87,
-   "vw": 4124.15,
-   "dl": -496.0
-  },
   {
    "t": 1791474600,
    "o": 4116.0,
@@ -2263,8 +2241,8 @@
    "c": 4178.4,
    "e20": 4175.15,
    "e50": 4166.29,
-   "vw": 4141.29,
-   "dl": -0.0
+   "vw": 4142.21,
+   "dl": -42.0
   },
   {
    "t": 1791518700,
@@ -2274,8 +2252,30 @@
    "c": 4179.2,
    "e20": 4175.54,
    "e50": 4166.8,
-   "vw": 4141.29,
+   "vw": 4142.66,
+   "dl": 74.0
+  },
+  {
+   "t": 1791519000,
+   "o": 4179.03,
+   "h": 4180.08,
+   "l": 4177.72,
+   "c": 4179.51,
+   "e20": 4175.92,
+   "e50": 4167.29,
+   "vw": 4142.66,
    "dl": 0.0
+  },
+  {
+   "t": 1791519300,
+   "o": 4179.64,
+   "h": 4180.15,
+   "l": 4179.03,
+   "c": 4179.28,
+   "e20": 4176.24,
+   "e50": 4167.76,
+   "vw": 4142.66,
+   "dl": -0.0
   }
  ],
  "journal": {
