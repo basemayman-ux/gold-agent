@@ -98,15 +98,18 @@
    "risk_pct": 0.5,
    "regime": "Breakout",
    "reason": "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP; M5 bullish BOS through 4187.60; Early trend turn: H1 and M15 turned up before H4 (allowed in active mode)",
-   "status": "open",
+   "status": "closed",
    "tp1_hit": true,
    "setup": "trend",
    "mgmt": "half_tp1_be",
-   "tp1_utc": "2026-10-09T08:20:00+00:00"
+   "tp1_utc": "2026-10-09T08:20:00+00:00",
+   "result": "TP1 then breakeven",
+   "r": 0.5,
+   "closed_utc": "2026-10-09T07:15:00+00:00"
   }
  ],
  "watch": {
-  "LONG": "2026-10-09T07:15:32.916473+00:00",
+  "LONG": "2026-10-09T08:30:37.295808+00:00",
   "SHORT": "2026-10-09T05:00:49.402151+00:00"
  }
 }
