@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-09T09:50:34.355034+00:00",
- "dubai_time": "Fri 09 Oct 2026, 13:50",
+ "generated_utc": "2026-10-09T10:00:42.812563+00:00",
+ "dubai_time": "Fri 09 Oct 2026, 14:00",
  "session": "London",
- "price": 4185.18,
+ "price": 4186.85,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-10-09T09:45:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-10-09T09:55:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4178.64,
+  "value": 4178.67,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 37.9,
- "rsi14": 39.7,
+ "rsi7": 47.7,
+ "rsi14": 44.2,
  "adx14": {
-  "M5": 23.2,
-  "M15": 45.7
+  "M5": 21.6,
+  "M15": 43.4
  },
  "atr14": {
-  "M5": 2.82,
-  "M15": 5.64,
-  "percentile": 36
+  "M5": 2.65,
+  "M15": 5.49,
+  "percentile": 31
  },
  "volume": "RVOL 1.68\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -499,27 +499,27 @@
     ],
     [
      4183.25,
-     367.2
+     402.0
     ],
     [
      4183.75,
-     373.8
+     408.6
     ],
     [
      4184.25,
-     373.8
+     447.3
     ],
     [
      4184.75,
-     321.6
+     395.1
     ],
     [
      4185.25,
-     412.2
+     485.7
     ],
     [
      4185.75,
-     668.5
+     703.3
     ],
     [
      4186.25,
@@ -695,9 +695,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.036,
-  "session_delta": 10082.0,
-  "session_slope": 168.0,
+  "leg_ratio": -0.012,
+  "session_delta": 10249.0,
+  "session_slope": 446.0,
   "divergence": null,
   "absorption": null
  },
@@ -735,8 +735,8 @@
   "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bullish CHOCH through 4196.30",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bullish, M15 neutral",
-  "RSI7 38, RSI14 40, M15 ADX 46, RVOL 1.7\u00d7",
-  "Profile & flow: Accepted above prior VAH 4135.00 (initiative buying); setup-leg delta -0.04",
+  "RSI7 48, RSI14 44, M15 ADX 43, RVOL 1.7\u00d7",
+  "Profile & flow: Accepted above prior VAH 4135.00 (initiative buying); setup-leg delta -0.01",
   "Weak components: momentum"
  ],
  "invalidation": null,
@@ -839,28 +839,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791494400,
-   "o": 4132.88,
-   "h": 4133.26,
-   "l": 4132.88,
-   "c": 4133.16,
-   "e20": 4132.83,
-   "e50": 4130.62,
-   "vw": 4124.97,
-   "dl": 0.0
-  },
-  {
-   "t": 1791494700,
-   "o": 4133.08,
-   "h": 4133.09,
-   "l": 4132.53,
-   "c": 4132.98,
-   "e20": 4132.85,
-   "e50": 4130.72,
-   "vw": 4124.97,
-   "dl": 0.0
-  },
   {
    "t": 1791495000,
    "o": 4132.88,
@@ -2475,8 +2453,8 @@
    "c": 4184.96,
    "e20": 4189.09,
    "e50": 4189.24,
-   "vw": 4178.64,
-   "dl": 0.0
+   "vw": 4178.66,
+   "dl": 74.0
   },
   {
    "t": 1791539100,
@@ -2486,8 +2464,30 @@
    "c": 4185.18,
    "e20": 4188.71,
    "e50": 4189.08,
-   "vw": 4178.64,
+   "vw": 4178.67,
+   "dl": 94.0
+  },
+  {
+   "t": 1791539400,
+   "o": 4185.01,
+   "h": 4187.3,
+   "l": 4184.98,
+   "c": 4186.61,
+   "e20": 4188.51,
+   "e50": 4188.99,
+   "vw": 4178.67,
    "dl": 0.0
+  },
+  {
+   "t": 1791539700,
+   "o": 4186.85,
+   "h": 4187.61,
+   "l": 4186.72,
+   "c": 4186.85,
+   "e20": 4188.35,
+   "e50": 4188.9,
+   "vw": 4178.67,
+   "dl": -0.0
   }
  ],
  "journal": {
