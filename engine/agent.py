@@ -753,6 +753,8 @@ def find_range(ctx):
     where the edge test may be happening). Each edge is a zone (15% of the range width, at least
     half a 15-minute ATR) that price has tested at least twice. Returns None when there is no clean range."""
     m5, a15 = ctx["m5"], float(ctx["b15"]["atr14"])
+    if float(ctx["b15"]["adx14"]) >= 25:
+        return None                      # 15-minute trend is strong: not a range, leave it to the trend rules
     n = len(m5)
     w0, w1 = max(0, n - 96), n - 6
     win = m5.iloc[w0:w1]
