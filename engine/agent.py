@@ -461,8 +461,9 @@ def plan_trade(ctx, d):
         base = cands[-1]
         why = "beyond the last M5 swing " + ("low" if d > 0 else "high")
     sl = base - d * 0.25 * a5
-    if abs(price - sl) < 0.6 * a5:
-        sl = price - d * 0.6 * a5
+    min_r = CFG.get("min_stop_atr", 1.5) * a5          # stops inside normal 5-minute noise get hit too often
+    if abs(price - sl) < min_r:
+        sl = price - d * min_r
     R = abs(price - sl)
     tg = ctx["targets_buy"] if d > 0 else ctx["targets_sell"]
     ahead = sorted([t for t in tg if (t["price"] > price + 0.1 * a5 if d > 0 else t["price"] < price - 0.1 * a5)],
@@ -815,8 +816,9 @@ def range_setup(ctx, rng):
        (d < 0 and not (rng["hi"] - third <= price < rng["hi"] + rng["zone"])):
         return None                                   # already run toward the middle of the range
     sl = sw["extreme"] - d * 0.25 * a5
-    if abs(price - sl) < 0.6 * a5:
-        sl = price - d * 0.6 * a5
+    min_r = CFG.get("min_stop_atr", 1.5) * a5          # stops inside normal 5-minute noise get hit too often
+    if abs(price - sl) < min_r:
+        sl = price - d * min_r
     R = abs(price - sl)
     tp2 = (rng["hi"] if d > 0 else rng["lo"]) - d * 0.1 * rng["a15"]
     rr = (tp2 - price) * d / R if R > 0 else 0
@@ -957,7 +959,7 @@ def main():
             R1 = (lp - plan["sl"]) * dd                      # stop distance from where price is NOW
             rr1 = (plan["tp2"] - lp) * dd / R1 if R1 > 0 else 0
             problem = None
-            if R1 < 0.4 * R0:
+            if R1 < max(0.4 * R0, 1.0 * ctx["a5"]):
                 problem = f"price has moved to {lp:.2f}, too close to the stop at {plan['sl']:.2f}"
             elif R1 > 1.5 * R0:
                 problem = f"price has run to {lp:.2f}; the stop would be {R1 / R0:.1f}x wider than planned"
@@ -987,8 +989,10 @@ def main():
     size = None
     if trade and equity:
         risk_cash = float(equity) * CFG["risk_pct"] / 100
-        lots = math.floor(risk_cash / (plan["R"] * CFG["contract_oz"]) * 100) / 100
-        size = {"risk_cash": round(risk_cash, 2), "lots": lots}
+        oz = math.floor(risk_cash / plan["R"] * 100) / 100       # ounces = eToro "units"
+        lots = math.floor(oz / CFG["contract_oz"] * 100) / 100
+        size = {"risk_cash": round(risk_cash, 2), "oz": oz, "lots_std": lots,
+                "lots": oz, "unit": "oz (eToro units)"}           # dashboard shows "lots" + "unit"
 
     rvol = ctx.get("rvol")
     m5 = ctx["m5"].iloc[-150:]
@@ -1062,7 +1066,8 @@ def main():
                f"{'Buy only up to' if decision == 'LONG' else 'Sell only down to'} {plan['max_entry']:.2f}. "
                f"Valid until {plan['valid_until'].tz_convert(DUBAI):%H:%M} Dubai.\n"
                f"Use a limit order. Skip if price is past that level or the time has passed.\n"
-               f"At TP1: take half and move the stop to entry.")
+               + (f"Size {size['oz']:.2f} oz (eToro units), risk ${size['risk_cash']:.0f}.\n" if size else "")
+               + "At TP1: take half and move the stop to entry.")
 
     # 🟡 heads-up: a setup is close (score 75+) but not tradable yet. At most once an hour per direction.
     if (decision == "WAIT" or ctx.get("conflict_only")) and score >= CFG.get("watch_min_score", 75) and d:
@@ -1071,8 +1076,9 @@ def main():
         if not last or now - pd.Timestamp(last) >= timedelta(minutes=CFG.get("watch_cooldown_minutes", 60)):
             journal.setdefault("watch", {})[side] = now.isoformat()
             notify(f"🟡 XAUUSD WATCH — possible {side}{' (range trade)' if ctx.get('setup') == 'range' else ''}, score {score}/100\n"
+                   f"⚠️ HEADS-UP ONLY — DO NOT TRADE THIS MESSAGE.\n"
                    f"Price {ctx['price']:.2f}. Not a trade yet: {why[0] if why else 'conditions incomplete'}\n"
-                   f"Watch your chart; a {side} alert follows only if every check passes.")
+                   f"A 🟢/🔴 {side} alert with entry and stop follows only if every check passes.")
 
     journal["signals"] = journal["signals"][-500:]
     out["journal"] = journal_stats(journal)
