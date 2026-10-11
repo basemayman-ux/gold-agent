@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-11T22:10:34.714948+00:00",
- "dubai_time": "Mon 12 Oct 2026, 02:10",
+ "generated_utc": "2026-10-11T22:20:33.068497+00:00",
+ "dubai_time": "Mon 12 Oct 2026, 02:20",
  "session": "Late US / off-hours",
- "price": 4190.44,
+ "price": 4187.21,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-10-11T22:05:00+00:00",
+ "last_bar_utc": "2026-10-11T22:15:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -29,7 +29,7 @@
    "LL"
   ],
   "M5": [
-   "HH",
+   "LH",
    "LL"
   ]
  },
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4190.34,
+  "value": 4188.45,
   "side": "Choppy",
   "crosses_2h": 13,
   "volume_weighted": true
  },
- "rsi7": 23.3,
- "rsi14": 24.3,
+ "rsi7": 15.2,
+ "rsi14": 17.7,
  "adx14": {
-  "M5": 59.9,
-  "M15": 61.5
+  "M5": 64.9,
+  "M15": 64.1
  },
  "atr14": {
-  "M5": 1.39,
-  "M15": 0.68,
-  "percentile": 41
+  "M5": 1.64,
+  "M15": 1.2,
+  "percentile": 43
  },
  "volume": "RVOL 0.88\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -123,12 +123,12 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 60,
+ "score": 64,
  "score_parts": {
   "structure": 18,
   "liquidity": 12,
-  "momentum": 12,
-  "vwap": 0,
+  "momentum": 11,
+  "vwap": 5,
   "volume_flow": 3,
   "volatility": 5,
   "session": 0,
@@ -147,9 +147,9 @@
   "M15 swing high at 4196.20 swept, then rejection wick",
   "M5 bearish BOS through 4193.58",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bearish, M15 bearish",
-  "RSI7 23, RSI14 24, M15 ADX 62, RVOL 0.9\u00d7",
+  "RSI7 15, RSI14 18, M15 ADX 64, RVOL 0.9\u00d7",
   "Profile & flow: Profile unavailable; setup-leg delta -0.18",
-  "Weak components: vwap, volume & flow, session"
+  "Weak components: volume & flow, session"
  ],
  "invalidation": null,
  "levels": [
@@ -232,47 +232,25 @@
    "swept": true
   },
   {
-   "name": "M15 swing low",
-   "price": 4192.54,
-   "side": "sell",
-   "swept": false
-  },
-  {
-   "name": "M15 swing low",
-   "price": 4192.03,
-   "side": "sell",
-   "swept": false
-  },
-  {
    "name": "Prior POC",
    "price": 4191.25,
    "side": "buy",
    "swept": false
+  },
+  {
+   "name": "M15 swing low",
+   "price": 4185.86,
+   "side": "sell",
+   "swept": false
+  },
+  {
+   "name": "Prior VAL",
+   "price": 4180.5,
+   "side": "sell",
+   "swept": false
   }
  ],
  "chart": [
-  {
-   "t": 1791711600,
-   "o": 4195.81,
-   "h": 4196.0,
-   "l": 4195.76,
-   "c": 4195.78,
-   "e20": 4195.85,
-   "e50": 4195.85,
-   "vw": 4195.85,
-   "dl": -0.0
-  },
-  {
-   "t": 1791711900,
-   "o": 4195.81,
-   "h": 4195.99,
-   "l": 4195.75,
-   "c": 4195.84,
-   "e20": 4195.85,
-   "e50": 4195.85,
-   "vw": 4195.86,
-   "dl": -0.0
-  },
   {
    "t": 1791712200,
    "o": 4195.81,
@@ -1900,6 +1878,28 @@
    "e50": 4195.07,
    "vw": 4190.34,
    "dl": 0.0
+  },
+  {
+   "t": 1791756600,
+   "o": 4190.66,
+   "h": 4192.17,
+   "l": 4190.13,
+   "c": 4190.58,
+   "e20": 4193.85,
+   "e50": 4194.9,
+   "vw": 4190.96,
+   "dl": -0.0
+  },
+  {
+   "t": 1791756900,
+   "o": 4191.19,
+   "h": 4191.22,
+   "l": 4186.9,
+   "c": 4187.21,
+   "e20": 4193.21,
+   "e50": 4194.59,
+   "vw": 4188.45,
+   "dl": -0.0
   }
  ],
  "journal": {
