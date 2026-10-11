@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-11T22:00:41.913300+00:00",
- "dubai_time": "Mon 12 Oct 2026, 02:00",
+ "generated_utc": "2026-10-11T22:10:34.714948+00:00",
+ "dubai_time": "Mon 12 Oct 2026, 02:10",
  "session": "Late US / off-hours",
- "price": 4194.22,
+ "price": 4190.44,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-10-11T21:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-11T22:05:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4194.1,
+  "value": 4190.34,
   "side": "Choppy",
-  "crosses_2h": 12,
+  "crosses_2h": 13,
   "volume_weighted": true
  },
- "rsi7": 28.2,
- "rsi14": 31.9,
+ "rsi7": 23.3,
+ "rsi14": 24.3,
  "adx14": {
-  "M5": 54.4,
+  "M5": 59.9,
   "M15": 61.5
  },
  "atr14": {
-  "M5": 0.72,
+  "M5": 1.39,
   "M15": 0.68,
-  "percentile": 40
+  "percentile": 41
  },
  "volume": "RVOL 0.88\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -70,10 +70,6 @@
    {
     "price": 4125.25,
     "day": "Thu 08 Oct"
-   },
-   {
-    "price": 4191.25,
-    "day": "Fri 09 Oct"
    }
   ],
   "developing": null,
@@ -88,7 +84,7 @@
   "absorption": false
  },
  "liquidity_event": "M15 swing high 4196.20 swept (buy-side), rejection wick",
- "bos_choch": "M5 BOS bearish through 4194.98 at 01:30",
+ "bos_choch": "M5 BOS bearish through 4193.58 at 02:00",
  "news": {
   "risk": "Low",
   "status": "live",
@@ -127,11 +123,11 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 59,
+ "score": 60,
  "score_parts": {
   "structure": 18,
   "liquidity": 12,
-  "momentum": 11,
+  "momentum": 12,
   "vwap": 0,
   "volume_flow": 3,
   "volatility": 5,
@@ -149,9 +145,9 @@
  "plan": null,
  "why": [
   "M15 swing high at 4196.20 swept, then rejection wick",
-  "M5 bearish BOS through 4194.98",
+  "M5 bearish BOS through 4193.58",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bearish, M15 bearish",
-  "RSI7 28, RSI14 32, M15 ADX 62, RVOL 0.9\u00d7",
+  "RSI7 23, RSI14 24, M15 ADX 62, RVOL 0.9\u00d7",
   "Profile & flow: Profile unavailable; setup-leg delta -0.18",
   "Weak components: vwap, volume & flow, session"
  ],
@@ -248,35 +244,13 @@
    "swept": false
   },
   {
-   "name": "Naked POC (Fri 09 Oct)",
+   "name": "Prior POC",
    "price": 4191.25,
-   "side": "sell",
+   "side": "buy",
    "swept": false
   }
  ],
  "chart": [
-  {
-   "t": 1791711000,
-   "o": 4195.81,
-   "h": 4195.98,
-   "l": 4195.75,
-   "c": 4195.9,
-   "e20": 4195.85,
-   "e50": 4195.85,
-   "vw": 4195.88,
-   "dl": 0.0
-  },
-  {
-   "t": 1791711300,
-   "o": 4195.81,
-   "h": 4196.0,
-   "l": 4195.76,
-   "c": 4195.88,
-   "e20": 4195.86,
-   "e50": 4195.85,
-   "vw": 4195.88,
-   "dl": 0.0
-  },
   {
    "t": 1791711600,
    "o": 4195.81,
@@ -1903,6 +1877,28 @@
    "e20": 4195.15,
    "e50": 4195.51,
    "vw": 4194.1,
+   "dl": 0.0
+  },
+  {
+   "t": 1791756000,
+   "o": 4194.13,
+   "h": 4196.35,
+   "l": 4188.83,
+   "c": 4189.23,
+   "e20": 4194.58,
+   "e50": 4195.26,
+   "vw": 4191.47,
+   "dl": -0.0
+  },
+  {
+   "t": 1791756300,
+   "o": 4189.99,
+   "h": 4192.17,
+   "l": 4188.41,
+   "c": 4190.44,
+   "e20": 4194.19,
+   "e50": 4195.07,
+   "vw": 4190.34,
    "dl": 0.0
   }
  ],
