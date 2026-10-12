@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-12T19:00:41.541274+00:00",
- "dubai_time": "Mon 12 Oct 2026, 23:00",
+ "generated_utc": "2026-10-12T19:10:33.934814+00:00",
+ "dubai_time": "Mon 12 Oct 2026, 23:10",
  "session": "New York",
- "price": 4167.76,
+ "price": 4165.57,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-10-12T18:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-12T19:05:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,15 +42,15 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4179.66,
+  "value": 4179.61,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 36.0,
- "rsi14": 46.0,
+ "rsi7": 25.0,
+ "rsi14": 39.2,
  "adx14": {
-  "M5": 14.5,
+  "M5": 16.9,
   "M15": 29.6
  },
  "atr14": {
@@ -58,7 +58,7 @@
   "M15": 4.47,
   "percentile": 46
  },
- "volume": "RVOL 0.92\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "RVOL 1.06\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -155,35 +155,35 @@
     ],
     [
      4165.75,
-     2293.1
+     2326.4
     ],
     [
      4166.25,
-     1939.1
+     1972.5
     ],
     [
      4166.75,
-     1584.2
+     1617.6
     ],
     [
      4167.25,
-     2307.1
+     2387.0
     ],
     [
      4167.75,
-     2460.2
+     2540.1
     ],
     [
      4168.25,
-     1687.9
+     1767.7
     ],
     [
      4168.75,
-     1615.9
+     1695.8
     ],
     [
      4169.25,
-     1816.6
+     1849.9
     ],
     [
      4169.75,
@@ -567,14 +567,14 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.201,
-  "session_delta": -6027.0,
-  "session_slope": -363.0,
+  "leg_ratio": -0.128,
+  "session_delta": -5954.0,
+  "session_slope": -43.0,
   "divergence": false,
   "absorption": false
  },
  "liquidity_event": "M15 swing high 4171.71 swept (buy-side), rejection wick",
- "bos_choch": "M5 BOS bearish through 4168.23 at 22:55",
+ "bos_choch": "M5 BOS bearish through 4165.96 at 23:05",
  "news": {
   "risk": "Low",
   "status": "live",
@@ -613,13 +613,13 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 80,
+ "score": 76,
  "score_parts": {
   "structure": 18,
-  "liquidity": 17,
+  "liquidity": 12,
   "momentum": 9,
   "vwap": 8,
-  "volume_flow": 9,
+  "volume_flow": 10,
   "volatility": 5,
   "session": 4,
   "news": 10
@@ -627,7 +627,7 @@
  "candidate": "SHORT",
  "decision": "WAIT",
  "headline": "Wait",
- "quality": "B+",
+ "quality": "WATCH",
  "setup": "trend",
  "range": null,
  "mode": "active",
@@ -636,10 +636,10 @@
  "why": [
   "A SHORT signal is still active, manage it before a new one",
   "M15 swing high at 4171.71 swept, then rejection wick",
-  "M5 bearish BOS through 4168.23",
+  "M5 bearish BOS through 4165.96",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bearish, M15 neutral",
-  "RSI7 36, RSI14 46, M15 ADX 30, RVOL 0.9\u00d7",
-  "Profile & flow: Accepted below prior VAL 4180.50 (initiative selling); setup-leg delta -0.20"
+  "RSI7 25, RSI14 39, M15 ADX 30, RVOL 1.1\u00d7",
+  "Profile & flow: Accepted below prior VAL 4180.50 (initiative selling); setup-leg delta -0.13"
  ],
  "invalidation": null,
  "levels": [
@@ -741,28 +741,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791786600,
-   "o": 4182.71,
-   "h": 4185.15,
-   "l": 4182.71,
-   "c": 4184.7,
-   "e20": 4188.35,
-   "e50": 4193.99,
-   "vw": 4198.79,
-   "dl": 142.0
-  },
-  {
-   "t": 1791786900,
-   "o": 4184.81,
-   "h": 4185.24,
-   "l": 4183.58,
-   "c": 4183.65,
-   "e20": 4187.9,
-   "e50": 4193.59,
-   "vw": 4198.7,
-   "dl": -176.0
-  },
   {
    "t": 1791787200,
    "o": 4183.7,
@@ -2377,8 +2355,8 @@
    "c": 4168.42,
    "e20": 4169.26,
    "e50": 4168.58,
-   "vw": 4179.66,
-   "dl": 0.0
+   "vw": 4179.63,
+   "dl": 137.0
   },
   {
    "t": 1791831300,
@@ -2388,7 +2366,29 @@
    "c": 4167.76,
    "e20": 4169.12,
    "e50": 4168.55,
-   "vw": 4179.66,
+   "vw": 4179.61,
+   "dl": -64.0
+  },
+  {
+   "t": 1791831600,
+   "o": 4167.66,
+   "h": 4168.78,
+   "l": 4166.49,
+   "c": 4167.29,
+   "e20": 4168.94,
+   "e50": 4168.5,
+   "vw": 4179.61,
+   "dl": -0.0
+  },
+  {
+   "t": 1791831900,
+   "o": 4167.18,
+   "h": 4167.33,
+   "l": 4165.45,
+   "c": 4165.57,
+   "e20": 4168.62,
+   "e50": 4168.38,
+   "vw": 4179.61,
    "dl": -0.0
   }
  ],
