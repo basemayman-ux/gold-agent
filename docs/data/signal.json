@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-10-12T03:50:36.879016+00:00",
- "dubai_time": "Mon 12 Oct 2026, 07:50",
+ "generated_utc": "2026-10-12T04:00:44.600900+00:00",
+ "dubai_time": "Mon 12 Oct 2026, 08:00",
  "session": "Asia",
- "price": 4207.98,
+ "price": 4202.75,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-10-12T03:45:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-10-12T03:55:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
   "H4": "Neutral",
   "H1": "Bullish",
   "M15": "Bullish",
-  "M5": "Neutral"
+  "M5": "Bullish"
  },
  "swings": {
   "H4": [
@@ -29,7 +29,7 @@
    "HL"
   ],
   "M5": [
-   "LH",
+   "HH",
    "LL"
   ]
  },
@@ -42,23 +42,23 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4202.8,
+  "value": 4202.7,
   "side": "Above",
   "crosses_2h": 2,
   "volume_weighted": true
  },
- "rsi7": 60.2,
- "rsi14": 53.8,
+ "rsi7": 39.9,
+ "rsi14": 44.7,
  "adx14": {
-  "M5": 13.5,
-  "M15": 31.2
+  "M5": 12.3,
+  "M15": 29.3
  },
  "atr14": {
-  "M5": 3.76,
-  "M15": 6.05,
-  "percentile": 75
+  "M5": 3.66,
+  "M15": 6.01,
+  "percentile": 74
  },
- "volume": "RVOL 1.41\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "RVOL 1.35\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -75,7 +75,7 @@
   "developing": {
    "poc": 4205.75,
    "vah": 4215.0,
-   "val": 4198.5,
+   "val": 4197.0,
    "bins": [
     [
      4184.25,
@@ -219,47 +219,47 @@
     ],
     [
      4201.75,
-     207.0
+     181.6
     ],
     [
      4202.25,
-     258.8
+     181.6
     ],
     [
      4202.75,
-     435.2
+     294.7
     ],
     [
      4203.25,
-     525.9
+     339.5
     ],
     [
      4203.75,
-     600.0
+     399.9
     ],
     [
      4204.25,
-     700.2
+     500.1
     ],
     [
      4204.75,
-     697.0
+     522.3
     ],
     [
      4205.25,
-     723.8
+     549.1
     ],
     [
      4205.75,
-     846.3
+     723.4
     ],
     [
      4206.25,
-     790.6
+     698.3
     ],
     [
      4206.75,
-     707.5
+     684.6
     ],
     [
      4207.25,
@@ -343,9 +343,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.223,
-  "session_delta": 1150.0,
-  "session_slope": -15.0,
+  "leg_ratio": 0.202,
+  "session_delta": 1371.0,
+  "session_slope": 292.0,
   "divergence": null,
   "absorption": null
  },
@@ -389,33 +389,34 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 65,
+ "score": 78,
  "score_parts": {
   "structure": 21,
-  "liquidity": 0,
-  "momentum": 11,
+  "liquidity": 15,
+  "momentum": 5,
   "vwap": 8,
-  "volume_flow": 9,
+  "volume_flow": 13,
   "volatility": 5,
   "session": 1,
   "news": 10
  },
  "candidate": "LONG",
- "decision": "NO TRADE",
- "headline": "No trade",
- "quality": "NO TRADE",
+ "decision": "WAIT",
+ "headline": "Wait",
+ "quality": "WATCH",
  "setup": "trend",
  "range": null,
  "mode": "active",
  "min_score": 80,
  "plan": null,
  "why": [
-  "No liquidity sweep or clean continuation setup",
+  "Score 78/100 is below the 80 live-trade minimum",
+  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bullish CHOCH through 4206.28",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bullish, M15 bullish",
-  "RSI7 60, RSI14 54, M15 ADX 31, RVOL 1.4\u00d7",
-  "Profile & flow: Accepted above prior VAH 4199.00 (initiative buying); setup-leg delta -0.22",
-  "Weak components: liquidity, session"
+  "RSI7 40, RSI14 45, M15 ADX 29, RVOL 1.4\u00d7",
+  "Profile & flow: Accepted above prior VAH 4199.00 (initiative buying); setup-leg delta +0.20",
+  "Weak components: momentum, session"
  ],
  "invalidation": null,
  "levels": [
@@ -517,28 +518,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791732000,
-   "o": 4195.81,
-   "h": 4195.98,
-   "l": 4195.75,
-   "c": 4195.85,
-   "e20": 4195.85,
-   "e50": 4195.85,
-   "vw": 4195.86,
-   "dl": -0.0
-  },
-  {
-   "t": 1791732300,
-   "o": 4195.81,
-   "h": 4195.98,
-   "l": 4195.75,
-   "c": 4195.9,
-   "e20": 4195.85,
-   "e50": 4195.85,
-   "vw": 4195.88,
-   "dl": 0.0
-  },
   {
    "t": 1791732600,
    "o": 4195.81,
@@ -2076,8 +2055,8 @@
    "c": 4206.19,
    "e20": 4207.49,
    "e50": 4204.49,
-   "vw": 4202.71,
-   "dl": 86.0
+   "vw": 4202.7,
+   "dl": 10.0
   },
   {
    "t": 1791774600,
@@ -2087,8 +2066,8 @@
    "c": 4204.31,
    "e20": 4207.19,
    "e50": 4204.48,
-   "vw": 4202.73,
-   "dl": -78.0
+   "vw": 4202.7,
+   "dl": -0.0
   },
   {
    "t": 1791774900,
@@ -2098,8 +2077,8 @@
    "c": 4203.49,
    "e20": 4206.83,
    "e50": 4204.44,
-   "vw": 4202.74,
-   "dl": -138.0
+   "vw": 4202.7,
+   "dl": -0.0
   },
   {
    "t": 1791775200,
@@ -2109,8 +2088,8 @@
    "c": 4202.81,
    "e20": 4206.45,
    "e50": 4204.38,
-   "vw": 4202.75,
-   "dl": -231.0
+   "vw": 4202.7,
+   "dl": -0.0
   },
   {
    "t": 1791775500,
@@ -2120,8 +2099,8 @@
    "c": 4202.44,
    "e20": 4206.07,
    "e50": 4204.3,
-   "vw": 4202.75,
-   "dl": -58.0
+   "vw": 4202.7,
+   "dl": -0.0
   },
   {
    "t": 1791775800,
@@ -2131,8 +2110,8 @@
    "c": 4205.9,
    "e20": 4206.05,
    "e50": 4204.36,
-   "vw": 4202.78,
-   "dl": 206.0
+   "vw": 4202.7,
+   "dl": 0.0
   },
   {
    "t": 1791776100,
@@ -2142,8 +2121,8 @@
    "c": 4204.29,
    "e20": 4205.88,
    "e50": 4204.36,
-   "vw": 4202.8,
-   "dl": 2.0
+   "vw": 4202.7,
+   "dl": 0.0
   },
   {
    "t": 1791776400,
@@ -2153,7 +2132,7 @@
    "c": 4205.52,
    "e20": 4205.85,
    "e50": 4204.41,
-   "vw": 4202.8,
+   "vw": 4202.7,
    "dl": 0.0
   },
   {
@@ -2164,8 +2143,30 @@
    "c": 4207.98,
    "e20": 4206.05,
    "e50": 4204.55,
-   "vw": 4202.8,
+   "vw": 4202.7,
    "dl": 0.0
+  },
+  {
+   "t": 1791777000,
+   "o": 4207.81,
+   "h": 4207.81,
+   "l": 4204.48,
+   "c": 4204.53,
+   "e20": 4205.91,
+   "e50": 4204.55,
+   "vw": 4202.7,
+   "dl": -0.0
+  },
+  {
+   "t": 1791777300,
+   "o": 4204.65,
+   "h": 4205.12,
+   "l": 4202.56,
+   "c": 4202.75,
+   "e20": 4205.61,
+   "e50": 4204.48,
+   "vw": 4202.7,
+   "dl": -0.0
   }
  ],
  "journal": {
