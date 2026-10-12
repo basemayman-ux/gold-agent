@@ -324,11 +324,14 @@
    "risk_pct": 0.5,
    "regime": "Transition",
    "reason": "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP; M5 bearish CHOCH through 4169.06; H4 neutral (H4 price near EMA200 or structure disagrees), H1 bearish, M15 bearish",
-   "status": "open",
+   "status": "closed",
    "tp1_hit": true,
    "setup": "trend",
    "mgmt": "half_tp1_be",
-   "tp1_utc": "2026-10-12T16:30:00+00:00"
+   "tp1_utc": "2026-10-12T16:30:00+00:00",
+   "result": "TP1 then breakeven",
+   "r": 0.5,
+   "closed_utc": "2026-10-12T15:45:00+00:00"
   }
  ],
  "watch": {
