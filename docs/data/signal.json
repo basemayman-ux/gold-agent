@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-12T10:50:35.468637+00:00",
- "dubai_time": "Mon 12 Oct 2026, 14:50",
+ "generated_utc": "2026-10-12T11:00:48.739010+00:00",
+ "dubai_time": "Mon 12 Oct 2026, 15:00",
  "session": "London",
- "price": 4177.32,
+ "price": 4177.37,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-10-12T10:45:00+00:00",
+ "data_age_min": 0.8,
+ "last_bar_utc": "2026-10-12T10:55:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -35,28 +35,28 @@
  },
  "ema200": {
   "H4": "below",
-  "H1": "below"
+  "H1": "above"
  },
  "ema20_50": {
   "M5": "EMA20 below EMA50",
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4191.77,
+  "value": 4191.63,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 55.8,
- "rsi14": 51.9,
+ "rsi7": 55.5,
+ "rsi14": 52.0,
  "adx14": {
-  "M5": 24.1,
-  "M15": 39.6
+  "M5": 21.0,
+  "M15": 38.6
  },
  "atr14": {
-  "M5": 2.22,
-  "M15": 4.65,
-  "percentile": 47
+  "M5": 2.05,
+  "M15": 4.53,
+  "percentile": 45
  },
  "volume": "RVOL 3.13\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -74,7 +74,7 @@
   ],
   "developing": {
    "poc": 4185.25,
-   "vah": 4203.5,
+   "vah": 4203.0,
    "val": 4170.0,
    "bins": [
     [
@@ -139,27 +139,27 @@
     ],
     [
      4176.75,
-     910.8
+     968.6
     ],
     [
      4177.25,
-     775.6
+     833.4
     ],
     [
      4177.75,
-     591.0
+     684.3
     ],
     [
      4178.25,
-     534.6
+     628.0
     ],
     [
      4178.75,
-     431.6
+     524.9
     ],
     [
      4179.25,
-     338.7
+     432.0
     ],
     [
      4179.75,
@@ -463,9 +463,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.244,
-  "session_delta": -1386.0,
-  "session_slope": 744.0,
+  "leg_ratio": -0.241,
+  "session_delta": -1490.0,
+  "session_slope": 516.0,
   "divergence": null,
   "absorption": null
  },
@@ -509,9 +509,9 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 82,
+ "score": 79,
  "score_parts": {
-  "structure": 21,
+  "structure": 18,
   "liquidity": 15,
   "momentum": 6,
   "vwap": 8,
@@ -523,7 +523,7 @@
  "candidate": "SHORT",
  "decision": "WAIT",
  "headline": "Wait",
- "quality": "B+",
+ "quality": "WATCH",
  "setup": "trend",
  "range": null,
  "mode": "active",
@@ -534,7 +534,7 @@
   "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bearish BOS through 4173.10",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bearish, M15 bearish",
-  "RSI7 56, RSI14 52, M15 ADX 40, RVOL 3.1\u00d7",
+  "RSI7 56, RSI14 52, M15 ADX 39, RVOL 3.1\u00d7",
   "Profile & flow: Accepted below prior VAL 4180.50 (initiative selling); setup-leg delta -0.24"
  ],
  "invalidation": null,
@@ -637,28 +637,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791757200,
-   "o": 4187.36,
-   "h": 4187.58,
-   "l": 4185.5,
-   "c": 4185.65,
-   "e20": 4192.49,
-   "e50": 4194.24,
-   "vw": 4189.88,
-   "dl": -241.0
-  },
-  {
-   "t": 1791757500,
-   "o": 4185.72,
-   "h": 4189.36,
-   "l": 4185.72,
-   "c": 4189.05,
-   "e20": 4192.17,
-   "e50": 4194.04,
-   "vw": 4189.63,
-   "dl": 233.0
-  },
   {
    "t": 1791757800,
    "o": 4188.44,
@@ -2273,8 +2251,8 @@
    "c": 4178.99,
    "e20": 4176.22,
    "e50": 4179.33,
-   "vw": 4191.77,
-   "dl": 0.0
+   "vw": 4191.73,
+   "dl": 85.0
   },
   {
    "t": 1791801900,
@@ -2284,7 +2262,29 @@
    "c": 4177.32,
    "e20": 4176.33,
    "e50": 4179.25,
-   "vw": 4191.77,
+   "vw": 4191.63,
+   "dl": -189.0
+  },
+  {
+   "t": 1791802200,
+   "o": 4177.23,
+   "h": 4177.63,
+   "l": 4176.41,
+   "c": 4177.55,
+   "e20": 4176.44,
+   "e50": 4179.18,
+   "vw": 4191.63,
+   "dl": 0.0
+  },
+  {
+   "t": 1791802500,
+   "o": 4177.47,
+   "h": 4177.96,
+   "l": 4177.2,
+   "c": 4177.37,
+   "e20": 4176.53,
+   "e50": 4179.11,
+   "vw": 4191.63,
    "dl": -0.0
   }
  ],
