@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-12T19:30:39.583668+00:00",
- "dubai_time": "Mon 12 Oct 2026, 23:30",
+ "generated_utc": "2026-10-12T19:40:36.421499+00:00",
+ "dubai_time": "Mon 12 Oct 2026, 23:40",
  "session": "New York",
- "price": 4165.23,
+ "price": 4166.82,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-10-12T19:25:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-12T19:35:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4179.49,
+  "value": 4179.43,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 36.2,
- "rsi14": 41.2,
+ "rsi7": 49.6,
+ "rsi14": 47.4,
  "adx14": {
-  "M5": 22.7,
+  "M5": 21.1,
   "M15": 29.9
  },
  "atr14": {
-  "M5": 2.02,
+  "M5": 2.15,
   "M15": 4.36,
-  "percentile": 45
+  "percentile": 47
  },
  "volume": "RVOL 1.13\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -135,27 +135,27 @@
     ],
     [
      4163.25,
-     1029.6
+     1068.2
     ],
     [
      4163.75,
-     1398.2
+     1474.0
     ],
     [
      4164.25,
-     1857.8
+     1933.6
     ],
     [
      4164.75,
-     1880.2
+     1956.0
     ],
     [
      4165.25,
-     2276.2
+     2352.0
     ],
     [
      4165.75,
-     2493.9
+     2531.1
     ],
     [
      4166.25,
@@ -567,9 +567,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.169,
-  "session_delta": -6194.0,
-  "session_slope": -588.0,
+  "leg_ratio": -0.151,
+  "session_delta": -6195.0,
+  "session_slope": -273.0,
   "divergence": false,
   "absorption": false
  },
@@ -638,8 +638,8 @@
   "M15 swing high at 4171.71 swept, then rejection wick",
   "M5 bearish BOS through 4165.96",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bearish, M15 neutral",
-  "RSI7 36, RSI14 41, M15 ADX 30, RVOL 1.1\u00d7",
-  "Profile & flow: Accepted below prior VAL 4180.50 (initiative selling); setup-leg delta -0.17"
+  "RSI7 50, RSI14 47, M15 ADX 30, RVOL 1.1\u00d7",
+  "Profile & flow: Accepted below prior VAL 4180.50 (initiative selling); setup-leg delta -0.15"
  ],
  "invalidation": null,
  "levels": [
@@ -741,28 +741,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791788400,
-   "o": 4185.09,
-   "h": 4187.43,
-   "l": 4185.09,
-   "c": 4186.44,
-   "e20": 4187.11,
-   "e50": 4192.2,
-   "vw": 4198.11,
-   "dl": 50.0
-  },
-  {
-   "t": 1791788700,
-   "o": 4186.5,
-   "h": 4187.43,
-   "l": 4185.5,
-   "c": 4186.82,
-   "e20": 4187.09,
-   "e50": 4191.99,
-   "vw": 4198.03,
-   "dl": 88.0
-  },
   {
    "t": 1791789000,
    "o": 4186.49,
@@ -2377,8 +2355,8 @@
    "c": 4163.75,
    "e20": 4167.65,
    "e50": 4167.99,
-   "vw": 4179.49,
-   "dl": -0.0
+   "vw": 4179.46,
+   "dl": -169.0
   },
   {
    "t": 1791833100,
@@ -2388,7 +2366,29 @@
    "c": 4165.23,
    "e20": 4167.42,
    "e50": 4167.88,
-   "vw": 4179.49,
+   "vw": 4179.43,
+   "dl": 168.0
+  },
+  {
+   "t": 1791833400,
+   "o": 4164.79,
+   "h": 4168.58,
+   "l": 4163.02,
+   "c": 4166.75,
+   "e20": 4167.35,
+   "e50": 4167.84,
+   "vw": 4179.43,
+   "dl": 0.0
+  },
+  {
+   "t": 1791833700,
+   "o": 4166.79,
+   "h": 4167.06,
+   "l": 4166.49,
+   "c": 4166.82,
+   "e20": 4167.3,
+   "e50": 4167.8,
+   "vw": 4179.43,
    "dl": 0.0
   }
  ],
