@@ -888,12 +888,27 @@ def _clean_phone(raw):
     return p
 
 
-def notify(text):
-    """WhatsApp alert via CallMeBot. Logs CallMeBot's own reply so failures are visible."""
+def _ntfy(text, kind):
+    """Phone push via ntfy.sh (free, no limit). Topic name comes from the NTFY_TOPIC secret."""
+    topic = os.getenv("NTFY_TOPIC", "").strip()
+    if not topic:
+        print("ntfy alert skipped: NTFY_TOPIC not set")
+        return
+    first = text.split("\n", 1)[0]
+    title = re.sub(r"[^\w\s/().,:+%-]", "", first).strip()[:120] or "XAUUSD alert"
+    prio = {"signal": 5, "update": 4, "watch": 3}.get(kind, 3)
+    tags = {"signal": ["rotating_light"], "update": ["dart"], "watch": ["eyes"]}.get(kind, ["bell"])
     try:
-        Path("/tmp/force_commit").touch()            # tells the workflow to publish this run immediately
-    except Exception:  # noqa: BLE001
-        pass
+        r = requests.post("https://ntfy.sh/", timeout=20, json={
+            "topic": topic, "title": title, "message": text, "priority": prio, "tags": tags,
+            "click": "https://basemayman-ux.github.io/gold-agent/"})
+        print(f"ntfy ({kind}): HTTP {r.status_code}")
+    except Exception as e:  # noqa: BLE001
+        print(f"ntfy alert failed: {e}")
+
+
+def _whatsapp(text):
+    """WhatsApp alert via CallMeBot. Logs CallMeBot's own reply so failures are visible."""
     phone, key = os.getenv("CALLMEBOT_PHONE", "").strip(), os.getenv("CALLMEBOT_APIKEY", "").strip()
     if not (phone and key):
         print("WhatsApp alert skipped: CALLMEBOT_PHONE / CALLMEBOT_APIKEY not set")
@@ -910,6 +925,18 @@ def notify(text):
         print(f"WhatsApp alert failed: {e}")
 
 
+def notify(text, kind="signal"):
+    """Every alert goes to the ntfy app. WhatsApp (CallMeBot has a paid message allowance)
+    only gets real trade signals, so the allowance lasts."""
+    try:
+        Path("/tmp/force_commit").touch()            # tells the workflow to publish this run immediately
+    except Exception:  # noqa: BLE001
+        pass
+    _ntfy(text, kind)
+    if kind == "signal":
+        _whatsapp(text)
+
+
 # ───────────────────────────── main ─────────────────────────────
 
 def fmt(x, n=2):
@@ -921,7 +948,7 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     journal = load_journal()
     if os.getenv("TEST_ALERT", "").lower() == "true":
-        notify("XAUUSD desk is connected. Trade alerts will arrive here.")
+        notify("XAUUSD desk is connected. Trade alerts will arrive here.", kind="update")
     base = {"generated_utc": now.isoformat(), "dubai_time": now.tz_convert(DUBAI).strftime("%a %d %b %Y, %H:%M"),
             "session": session_of(now)}
 
@@ -943,11 +970,11 @@ def main():
     closed, tp1_hits = update_journal(journal, ctx["m5"])
     for s in tp1_hits:
         if s["status"] == "open":
-            notify(f"🎯 XAUUSD {s['direction']} hit Target 1 ({s['tp1']:.2f})\n"
+            notify(kind="update", text=f"🎯 XAUUSD {s['direction']} hit Target 1 ({s['tp1']:.2f})\n"
                    f"Take half the position and move your stop to entry ({s['entry']:.2f}).\n"
                    f"The rest aims for Target 2 ({s['tp2']:.2f}).")
     for s in closed:
-        notify(f"{'✅' if s['r'] > 0 else '❌'} XAUUSD {s['direction']} closed: {s['result']} ({s['r']:+.2f}R)")
+        notify(kind="update", text=f"{'✅' if s['r'] > 0 else '❌'} XAUUSD {s['direction']} closed: {s['result']} ({s['r']:+.2f}R)")
 
     decision, d, plan, score, sc, why = decide(ctx, journal)
     trade = decision in ("LONG", "SHORT")
@@ -1075,7 +1102,7 @@ def main():
         last = journal.get("watch", {}).get(side)
         if not last or now - pd.Timestamp(last) >= timedelta(minutes=CFG.get("watch_cooldown_minutes", 60)):
             journal.setdefault("watch", {})[side] = now.isoformat()
-            notify(f"🟡 XAUUSD WATCH — possible {side}{' (range trade)' if ctx.get('setup') == 'range' else ''}, score {score}/100\n"
+            notify(kind="watch", text=f"🟡 XAUUSD WATCH — possible {side}{' (range trade)' if ctx.get('setup') == 'range' else ''}, score {score}/100\n"
                    f"⚠️ HEADS-UP ONLY — DO NOT TRADE THIS MESSAGE.\n"
                    f"Price {ctx['price']:.2f}. Not a trade yet: {why[0] if why else 'conditions incomplete'}\n"
                    f"A 🟢/🔴 {side} alert with entry and stop follows only if every check passes.")

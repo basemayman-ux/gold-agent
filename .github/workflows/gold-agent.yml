@@ -40,6 +40,7 @@ jobs:
           ACCOUNT_EQUITY: ${{ secrets.ACCOUNT_EQUITY }}
           CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           TEST_ALERT: ${{ inputs.test_alert }}
 
       - name: Commit results
