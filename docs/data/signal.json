@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-13T10:10:34.990179+00:00",
- "dubai_time": "Tue 13 Oct 2026, 14:10",
+ "generated_utc": "2026-10-13T10:20:35.106191+00:00",
+ "dubai_time": "Tue 13 Oct 2026, 14:20",
  "session": "London",
- "price": 4187.86,
+ "price": 4183.21,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-10-13T10:05:00+00:00",
+ "last_bar_utc": "2026-10-13T10:15:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4178.74,
+  "value": 4178.83,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 59.9,
- "rsi14": 52.6,
+ "rsi7": 40.0,
+ "rsi14": 42.8,
  "adx14": {
-  "M5": 22.3,
-  "M15": 18.7
+  "M5": 22.0,
+  "M15": 17.5
  },
  "atr14": {
-  "M5": 2.53,
-  "M15": 5.19,
-  "percentile": 54
+  "M5": 2.56,
+  "M15": 5.12,
+  "percentile": 55
  },
  "volume": "RVOL 3.76\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -75,7 +75,7 @@
   "developing": {
    "poc": 4191.25,
    "vah": 4199.5,
-   "val": 4169.0,
+   "val": 4169.5,
    "bins": [
     [
      4150.75,
@@ -351,35 +351,35 @@
     ],
     [
      4184.75,
-     779.9
+     832.7
     ],
     [
      4185.25,
-     918.8
+     1015.8
     ],
     [
      4185.75,
-     745.6
+     842.6
     ],
     [
      4186.25,
-     748.5
+     845.5
     ],
     [
      4186.75,
-     862.8
+     959.8
     ],
     [
      4187.25,
-     992.2
+     1036.3
     ],
     [
      4187.75,
-     972.8
+     1016.9
     ],
     [
      4188.25,
-     1125.6
+     1169.8
     ],
     [
      4188.75,
@@ -483,9 +483,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.327,
-  "session_delta": 34.0,
-  "session_slope": 220.0,
+  "leg_ratio": 0.305,
+  "session_delta": 146.0,
+  "session_slope": 668.0,
   "divergence": true,
   "absorption": false
  },
@@ -529,11 +529,11 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 74,
+ "score": 68,
  "score_parts": {
   "structure": 15,
   "liquidity": 12,
-  "momentum": 7,
+  "momentum": 1,
   "vwap": 8,
   "volume_flow": 13,
   "volatility": 5,
@@ -551,7 +551,7 @@
  "plan": null,
  "why": [
   "Daily loss limit reached (-2.0R)",
-  "Setup score would be 74/100 (not tradable while blocked)"
+  "Setup score would be 68/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -618,7 +618,7 @@
   {
    "name": "Prior VAH",
    "price": 4186.0,
-   "side": "sell",
+   "side": "buy",
    "swept": false
   },
   {
@@ -653,28 +653,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791841200,
-   "o": 4171.69,
-   "h": 4171.87,
-   "l": 4171.63,
-   "c": 4171.76,
-   "e20": 4170.81,
-   "e50": 4169.63,
-   "vw": 4179.14,
-   "dl": 0.0
-  },
-  {
-   "t": 1791841500,
-   "o": 4171.69,
-   "h": 4171.82,
-   "l": 4171.68,
-   "c": 4171.77,
-   "e20": 4170.9,
-   "e50": 4169.71,
-   "vw": 4179.14,
-   "dl": 0.0
-  },
   {
    "t": 1791841800,
    "o": 4171.69,
@@ -2289,8 +2267,8 @@
    "c": 4185.21,
    "e20": 4186.23,
    "e50": 4187.08,
-   "vw": 4178.74,
-   "dl": -0.0
+   "vw": 4178.77,
+   "dl": -140.0
   },
   {
    "t": 1791885900,
@@ -2300,8 +2278,30 @@
    "c": 4187.86,
    "e20": 4186.39,
    "e50": 4187.11,
-   "vw": 4178.74,
-   "dl": 0.0
+   "vw": 4178.83,
+   "dl": 252.0
+  },
+  {
+   "t": 1791886200,
+   "o": 4187.19,
+   "h": 4187.96,
+   "l": 4183.93,
+   "c": 4184.02,
+   "e20": 4186.16,
+   "e50": 4186.99,
+   "vw": 4178.83,
+   "dl": -0.0
+  },
+  {
+   "t": 1791886500,
+   "o": 4184.13,
+   "h": 4184.13,
+   "l": 4182.53,
+   "c": 4183.21,
+   "e20": 4185.88,
+   "e50": 4186.84,
+   "vw": 4178.83,
+   "dl": -0.0
   }
  ],
  "journal": {
