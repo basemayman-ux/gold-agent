@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-13T04:00:39.748508+00:00",
- "dubai_time": "Tue 13 Oct 2026, 08:00",
+ "generated_utc": "2026-10-13T04:10:35.143734+00:00",
+ "dubai_time": "Tue 13 Oct 2026, 08:10",
  "session": "Asia",
- "price": 4188.01,
+ "price": 4189.78,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-10-13T03:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-13T04:05:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -47,16 +47,16 @@
   "crosses_2h": 1,
   "volume_weighted": true
  },
- "rsi7": 74.4,
- "rsi14": 67.7,
+ "rsi7": 77.4,
+ "rsi14": 69.3,
  "adx14": {
-  "M5": 31.1,
+  "M5": 33.7,
   "M15": 23.7
  },
  "atr14": {
-  "M5": 4.17,
+  "M5": 3.87,
   "M15": 6.94,
-  "percentile": 86
+  "percentile": 81
  },
  "volume": "RVOL 3.33\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -380,10 +380,22 @@
     [
      4188.25,
      0.0
+    ],
+    [
+     4188.75,
+     0.0
+    ],
+    [
+     4189.25,
+     0.0
+    ],
+    [
+     4189.75,
+     0.0
     ]
    ]
   },
-  "context": "Price outside value without confirmed acceptance"
+  "context": "Accepted above prior VAH 4186.00 (initiative buying)"
  },
  "orderflow": {
   "available": true,
@@ -393,7 +405,7 @@
   "divergence": null,
   "absorption": null
  },
- "liquidity_event": "No valid sweep in the last 2.5 hours",
+ "liquidity_event": "M15 swing high 4188.75 swept (buy-side), rejection wick",
  "bos_choch": "M5 BOS bullish through 4183.23 at 07:45",
  "news": {
   "risk": "Low",
@@ -433,13 +445,13 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 64,
+ "score": 67,
  "score_parts": {
   "structure": 21,
   "liquidity": 0,
   "momentum": 12,
   "vwap": 8,
-  "volume_flow": 7,
+  "volume_flow": 10,
   "volatility": 5,
   "session": 1,
   "news": 10
@@ -457,8 +469,8 @@
   "No liquidity sweep or clean continuation setup",
   "M5 bullish BOS through 4183.23",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bullish, M15 bullish",
-  "RSI7 74, RSI14 68, M15 ADX 24, RVOL 3.3\u00d7",
-  "Profile & flow: Price outside value without confirmed acceptance; setup-leg delta -0.42",
+  "RSI7 77, RSI14 69, M15 ADX 24, RVOL 3.3\u00d7",
+  "Profile & flow: Accepted above prior VAH 4186.00 (initiative buying); setup-leg delta -0.42",
   "Weak components: liquidity, session"
  ],
  "invalidation": null,
@@ -561,28 +573,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791819000,
-   "o": 4167.9,
-   "h": 4168.03,
-   "l": 4166.67,
-   "c": 4166.85,
-   "e20": 4167.62,
-   "e50": 4169.32,
-   "vw": 4181.59,
-   "dl": -159.0
-  },
-  {
-   "t": 1791819300,
-   "o": 4166.77,
-   "h": 4167.96,
-   "l": 4166.77,
-   "c": 4167.88,
-   "e20": 4167.64,
-   "e50": 4169.26,
-   "vw": 4181.56,
-   "dl": 156.0
-  },
   {
    "t": 1791819600,
    "o": 4167.8,
@@ -2208,6 +2198,28 @@
    "c": 4188.01,
    "e20": 4177.91,
    "e50": 4172.59,
+   "vw": 4172.08,
+   "dl": 0.0
+  },
+  {
+   "t": 1791864000,
+   "o": 4186.99,
+   "h": 4189.59,
+   "l": 4186.99,
+   "c": 4188.47,
+   "e20": 4178.91,
+   "e50": 4173.21,
+   "vw": 4172.08,
+   "dl": 0.0
+  },
+  {
+   "t": 1791864300,
+   "o": 4188.72,
+   "h": 4189.89,
+   "l": 4188.44,
+   "c": 4189.78,
+   "e20": 4179.95,
+   "e50": 4173.86,
    "vw": 4172.08,
    "dl": 0.0
   }
