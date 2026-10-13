@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-13T19:00:45.230284+00:00",
- "dubai_time": "Tue 13 Oct 2026, 23:00",
+ "generated_utc": "2026-10-13T19:10:31.288776+00:00",
+ "dubai_time": "Tue 13 Oct 2026, 23:10",
  "session": "New York",
- "price": 4164.24,
+ "price": 4164.04,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-10-13T18:55:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-10-13T19:05:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -29,7 +29,7 @@
    "LL"
   ],
   "M5": [
-   "LH",
+   "HH",
    "HL"
   ]
  },
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4173.2,
+  "value": 4173.15,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 69.6,
- "rsi14": 60.8,
+ "rsi7": 66.7,
+ "rsi14": 59.9,
  "adx14": {
-  "M5": 26.6,
+  "M5": 26.3,
   "M15": 26.2
  },
  "atr14": {
-  "M5": 3.07,
+  "M5": 2.84,
   "M15": 5.97,
-  "percentile": 71
+  "percentile": 64
  },
  "volume": "RVOL 4.35\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -199,23 +199,23 @@
     ],
     [
      4162.25,
-     999.0
+     1038.6
     ],
     [
      4162.75,
-     829.7
+     985.8
     ],
     [
      4163.25,
-     922.2
+     1078.3
     ],
     [
      4163.75,
-     914.3
+     1070.4
     ],
     [
      4164.25,
-     871.7
+     1027.8
     ],
     [
      4164.75,
@@ -511,9 +511,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.225,
-  "session_delta": -1566.0,
-  "session_slope": 3526.0,
+  "leg_ratio": 0.243,
+  "session_delta": -1245.0,
+  "session_slope": 1189.0,
   "divergence": null,
   "absorption": null
  },
@@ -557,10 +557,10 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 62,
+ "score": 67,
  "score_parts": {
   "structure": 16,
-  "liquidity": 7,
+  "liquidity": 12,
   "momentum": 5,
   "vwap": 8,
   "volume_flow": 7,
@@ -579,7 +579,7 @@
  "plan": null,
  "why": [
   "Daily loss limit reached (-2.0R)",
-  "Setup score would be 62/100 (not tradable while blocked)"
+  "Setup score would be 67/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -681,28 +681,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791873000,
-   "o": 4185.78,
-   "h": 4187.91,
-   "l": 4184.45,
-   "c": 4184.64,
-   "e20": 4190.48,
-   "e50": 4186.5,
-   "vw": 4175.19,
-   "dl": -274.0
-  },
-  {
-   "t": 1791873300,
-   "o": 4185.1,
-   "h": 4185.91,
-   "l": 4184.59,
-   "c": 4185.35,
-   "e20": 4189.99,
-   "e50": 4186.46,
-   "vw": 4175.26,
-   "dl": 32.0
-  },
   {
    "t": 1791873600,
    "o": 4185.3,
@@ -2317,8 +2295,8 @@
    "c": 4163.57,
    "e20": 4158.91,
    "e50": 4161.06,
-   "vw": 4173.2,
-   "dl": 0.0
+   "vw": 4173.16,
+   "dl": 132.0
   },
   {
    "t": 1791917700,
@@ -2328,7 +2306,29 @@
    "c": 4164.24,
    "e20": 4159.41,
    "e50": 4161.18,
-   "vw": 4173.2,
+   "vw": 4173.15,
+   "dl": 189.0
+  },
+  {
+   "t": 1791918000,
+   "o": 4164.24,
+   "h": 4164.24,
+   "l": 4163.02,
+   "c": 4163.5,
+   "e20": 4159.8,
+   "e50": 4161.27,
+   "vw": 4173.15,
+   "dl": -0.0
+  },
+  {
+   "t": 1791918300,
+   "o": 4163.33,
+   "h": 4164.06,
+   "l": 4162.5,
+   "c": 4164.04,
+   "e20": 4160.21,
+   "e50": 4161.38,
+   "vw": 4173.15,
    "dl": 0.0
   }
  ],
