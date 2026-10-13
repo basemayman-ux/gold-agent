@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-13T20:20:35.412339+00:00",
- "dubai_time": "Wed 14 Oct 2026, 00:20",
+ "generated_utc": "2026-10-13T20:30:41.924631+00:00",
+ "dubai_time": "Wed 14 Oct 2026, 00:30",
  "session": "New York",
- "price": 4160.51,
+ "price": 4159.53,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-10-13T20:15:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-10-13T20:25:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -38,25 +38,25 @@
   "H1": "below"
  },
  "ema20_50": {
-  "M5": "EMA20 above EMA50",
+  "M5": "EMA20 below EMA50",
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4172.88,
+  "value": 4172.84,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 29.4,
- "rsi14": 44.3,
+ "rsi7": 33.3,
+ "rsi14": 43.1,
  "adx14": {
-  "M5": 20.0,
-  "M15": 21.7
+  "M5": 21.3,
+  "M15": 22.2
  },
  "atr14": {
-  "M5": 2.13,
-  "M15": 4.97,
-  "percentile": 48
+  "M5": 2.19,
+  "M15": 4.96,
+  "percentile": 50
  },
  "volume": "RVOL 1.61\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -183,31 +183,31 @@
     ],
     [
      4160.25,
-     1676.6
+     1736.4
     ],
     [
      4160.75,
-     1443.9
+     1503.8
     ],
     [
      4161.25,
-     1421.3
+     1481.1
     ],
     [
      4161.75,
-     1264.8
+     1324.7
     ],
     [
      4162.25,
-     1218.8
+     1310.6
     ],
     [
      4162.75,
-     1330.5
+     1422.3
     ],
     [
      4163.25,
-     1385.8
+     1417.8
     ],
     [
      4163.75,
@@ -511,9 +511,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.018,
-  "session_delta": -1176.0,
-  "session_slope": 142.0,
+  "leg_ratio": -0.073,
+  "session_delta": -1551.0,
+  "session_slope": -437.0,
   "divergence": false,
   "absorption": false
  },
@@ -557,13 +557,13 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 73,
+ "score": 78,
  "score_parts": {
   "structure": 18,
   "liquidity": 12,
-  "momentum": 9,
+  "momentum": 11,
   "vwap": 8,
-  "volume_flow": 7,
+  "volume_flow": 10,
   "volatility": 5,
   "session": 4,
   "news": 10
@@ -579,7 +579,7 @@
  "plan": null,
  "why": [
   "Daily loss limit reached (-2.0R)",
-  "Setup score would be 73/100 (not tradable while blocked)"
+  "Setup score would be 78/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -681,28 +681,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791877800,
-   "o": 4187.66,
-   "h": 4189.79,
-   "l": 4186.73,
-   "c": 4189.54,
-   "e20": 4189.6,
-   "e50": 4187.88,
-   "vw": 4177.07,
-   "dl": 261.0
-  },
-  {
-   "t": 1791878100,
-   "o": 4188.86,
-   "h": 4190.41,
-   "l": 4188.48,
-   "c": 4188.83,
-   "e20": 4189.52,
-   "e50": 4187.92,
-   "vw": 4177.12,
-   "dl": -119.0
-  },
   {
    "t": 1791878400,
    "o": 4188.91,
@@ -2317,8 +2295,8 @@
    "c": 4162.49,
    "e20": 4163.04,
    "e50": 4162.5,
-   "vw": 4172.88,
-   "dl": -0.0
+   "vw": 4172.87,
+   "dl": -44.0
   },
   {
    "t": 1791922500,
@@ -2328,8 +2306,30 @@
    "c": 4160.51,
    "e20": 4162.8,
    "e50": 4162.42,
-   "vw": 4172.88,
+   "vw": 4172.84,
+   "dl": -331.0
+  },
+  {
+   "t": 1791922800,
+   "o": 4160.63,
+   "h": 4161.15,
+   "l": 4157.76,
+   "c": 4158.22,
+   "e20": 4162.36,
+   "e50": 4162.26,
+   "vw": 4172.84,
    "dl": -0.0
+  },
+  {
+   "t": 1791923100,
+   "o": 4158.08,
+   "h": 4159.56,
+   "l": 4157.66,
+   "c": 4159.53,
+   "e20": 4162.09,
+   "e50": 4162.15,
+   "vw": 4172.84,
+   "dl": 0.0
   }
  ],
  "journal": {
