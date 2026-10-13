@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-13T08:30:48.970260+00:00",
- "dubai_time": "Tue 13 Oct 2026, 12:30",
+ "generated_utc": "2026-10-13T08:40:32.106905+00:00",
+ "dubai_time": "Tue 13 Oct 2026, 12:40",
  "session": "London",
- "price": 4192.1,
+ "price": 4188.51,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-10-13T08:25:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-10-13T08:35:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4177.46,
+  "value": 4177.65,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 61.6,
- "rsi14": 55.8,
+ "rsi7": 44.5,
+ "rsi14": 47.4,
  "adx14": {
-  "M5": 15.2,
+  "M5": 14.2,
   "M15": 24.8
  },
  "atr14": {
-  "M5": 3.13,
+  "M5": 3.25,
   "M15": 5.74,
-  "percentile": 68
+  "percentile": 70
  },
  "volume": "RVOL 2.70\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -383,35 +383,35 @@
     ],
     [
      4188.75,
-     760.9
+     802.1
     ],
     [
      4189.25,
-     836.6
+     926.2
     ],
     [
      4189.75,
-     960.0
+     1049.6
     ],
     [
      4190.25,
-     883.2
+     972.8
     ],
     [
      4190.75,
-     939.1
+     1028.6
     ],
     [
      4191.25,
-     992.7
+     1082.3
     ],
     [
      4191.75,
-     965.8
+     1055.4
     ],
     [
      4192.25,
-     838.9
+     887.3
     ],
     [
      4192.75,
@@ -483,9 +483,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.299,
-  "session_delta": -206.0,
-  "session_slope": 251.0,
+  "leg_ratio": 0.235,
+  "session_delta": -211.0,
+  "session_slope": 180.0,
   "divergence": true,
   "absorption": false
  },
@@ -529,11 +529,11 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 86,
+ "score": 81,
  "score_parts": {
   "structure": 21,
   "liquidity": 12,
-  "momentum": 11,
+  "momentum": 6,
   "vwap": 8,
   "volume_flow": 15,
   "volatility": 5,
@@ -550,12 +550,12 @@
  "min_score": 80,
  "plan": null,
  "why": [
-  "Structural stop is 3.2\u00d7 ATR away, too wide for a scalp",
+  "Next liquidity target (M15 swing high) gives only 1:0.93",
   "M15 swing low at 4184.24 swept, then displacement",
   "M5 bullish CHOCH through 4190.41",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bullish, M15 bullish",
-  "RSI7 62, RSI14 56, M15 ADX 25, RVOL 2.7\u00d7",
-  "Profile & flow: Accepted above prior VAH 4186.00 (initiative buying); setup-leg delta +0.30, delta divergence at the sweep"
+  "RSI7 45, RSI14 47, M15 ADX 25, RVOL 2.7\u00d7",
+  "Profile & flow: Accepted above prior VAH 4186.00 (initiative buying); setup-leg delta +0.23, delta divergence at the sweep"
  ],
  "invalidation": null,
  "levels": [
@@ -657,28 +657,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791835200,
-   "o": 4169.34,
-   "h": 4169.79,
-   "l": 4167.99,
-   "c": 4168.1,
-   "e20": 4167.66,
-   "e50": 4167.86,
-   "vw": 4179.23,
-   "dl": -216.0
-  },
-  {
-   "t": 1791835500,
-   "o": 4168.24,
-   "h": 4168.72,
-   "l": 4167.71,
-   "c": 4168.56,
-   "e20": 4167.75,
-   "e50": 4167.89,
-   "vw": 4179.21,
-   "dl": 117.0
-  },
   {
    "t": 1791835800,
    "o": 4168.35,
@@ -2293,8 +2271,8 @@
    "c": 4188.97,
    "e20": 4189.36,
    "e50": 4188.13,
-   "vw": 4177.46,
-   "dl": -0.0
+   "vw": 4177.54,
+   "dl": -263.0
   },
   {
    "t": 1791879900,
@@ -2304,8 +2282,30 @@
    "c": 4192.1,
    "e20": 4189.62,
    "e50": 4188.28,
-   "vw": 4177.46,
+   "vw": 4177.65,
+   "dl": 257.0
+  },
+  {
+   "t": 1791880200,
+   "o": 4191.37,
+   "h": 4193.4,
+   "l": 4191.37,
+   "c": 4193.2,
+   "e20": 4189.96,
+   "e50": 4188.48,
+   "vw": 4177.65,
    "dl": 0.0
+  },
+  {
+   "t": 1791880500,
+   "o": 4192.88,
+   "h": 4194.09,
+   "l": 4188.31,
+   "c": 4188.51,
+   "e20": 4189.82,
+   "e50": 4188.48,
+   "vw": 4177.65,
+   "dl": -0.0
   }
  ],
  "journal": {
