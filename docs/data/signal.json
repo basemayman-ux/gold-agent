@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-14T10:15:33.726703+00:00",
- "dubai_time": "Wed 14 Oct 2026, 14:15",
+ "generated_utc": "2026-10-14T10:20:30.974126+00:00",
+ "dubai_time": "Wed 14 Oct 2026, 14:20",
  "session": "London",
- "price": 4143.97,
+ "price": 4144.49,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-10-14T10:10:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-10-14T10:15:00+00:00",
  "warnings": [],
  "regime": "Trend",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4154.29,
+  "value": 4154.26,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 53.6,
- "rsi14": 47.1,
+ "rsi7": 56.5,
+ "rsi14": 48.6,
  "adx14": {
-  "M5": 26.2,
+  "M5": 25.7,
   "M15": 21.4
  },
  "atr14": {
-  "M5": 2.14,
+  "M5": 2.06,
   "M15": 5.01,
-  "percentile": 50
+  "percentile": 49
  },
  "volume": "RVOL 0.92\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -79,27 +79,27 @@
    "bins": [
     [
      4140.75,
-     31.9
+     49.0
     ],
     [
      4141.25,
-     106.9
+     124.0
     ],
     [
      4141.75,
-     464.0
+     481.1
     ],
     [
      4142.25,
-     710.9
+     728.1
     ],
     [
      4142.75,
-     900.4
+     917.6
     ],
     [
      4143.25,
-     909.0
+     926.1
     ],
     [
      4143.75,
@@ -319,9 +319,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.268,
-  "session_delta": -4009.0,
-  "session_slope": 80.0,
+  "leg_ratio": 0.355,
+  "session_delta": -3928.0,
+  "session_slope": 35.0,
   "divergence": null,
   "absorption": null
  },
@@ -392,7 +392,7 @@
   "A LONG signal is still active, manage it before a new one",
   "Range trade: range low 4141.47 swept, then displacement",
   "Gold has ranged 4141.47\u20134169.97 (tested 4\u00d7 low, 2\u00d7 high); target is the top of the range",
-  "RSI7 54, M15 ADX 21, M5 structure has turned"
+  "RSI7 57, M15 ADX 21, M5 structure has turned"
  ],
  "invalidation": null,
  "levels": [
@@ -494,17 +494,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791927900,
-   "o": 4157.95,
-   "h": 4158.13,
-   "l": 4157.89,
-   "c": 4158.04,
-   "e20": 4159.08,
-   "e50": 4160.39,
-   "vw": 4172.73,
-   "dl": 0.0
-  },
   {
    "t": 1791928200,
    "o": 4157.95,
@@ -2130,8 +2119,8 @@
    "c": 4143.01,
    "e20": 4144.19,
    "e50": 4147.94,
-   "vw": 4154.29,
-   "dl": 0.0
+   "vw": 4154.26,
+   "dl": 80.0
   },
   {
    "t": 1791972600,
@@ -2141,7 +2130,18 @@
    "c": 4143.97,
    "e20": 4144.17,
    "e50": 4147.79,
-   "vw": 4154.29,
+   "vw": 4154.26,
+   "dl": 0.0
+  },
+  {
+   "t": 1791972900,
+   "o": 4143.8,
+   "h": 4144.67,
+   "l": 4143.61,
+   "c": 4144.49,
+   "e20": 4144.2,
+   "e50": 4147.66,
+   "vw": 4154.26,
    "dl": 0.0
   }
  ],
