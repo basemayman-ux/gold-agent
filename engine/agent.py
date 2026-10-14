@@ -62,8 +62,96 @@ def fetch_twelve(symbol, interval, size, key):
     return _clean(df)
 
 
-def live_price():
-    """Latest spot price right now (not a closed candle). Twelve Data first, keyless gold-api.com as backup."""
+# ── eToro (optional): prices exactly as the eToro app shows them ──
+ETORO_API = "https://public-api.etoro.com/api/v1/market-data"
+_ETORO_ID = None
+
+
+def etoro_on():
+    return bool(os.getenv("ETORO_API_KEY", "").strip() and os.getenv("ETORO_USER_KEY", "").strip())
+
+
+def _etoro_get(path, params=None):
+    import uuid
+    r = requests.get(f"{ETORO_API}{path}", params=params, timeout=15, headers={
+        "x-request-id": str(uuid.uuid4()),
+        "x-api-key": os.getenv("ETORO_API_KEY", "").strip(),
+        "x-user-key": os.getenv("ETORO_USER_KEY", "").strip()})
+    if r.status_code != 200:
+        raise RuntimeError(f"eToro {path}: HTTP {r.status_code} {r.text[:150]}")
+    return r.json()
+
+
+def _walk(obj):
+    if isinstance(obj, dict):
+        yield obj
+        for v in obj.values():
+            yield from _walk(v)
+    elif isinstance(obj, list):
+        for v in obj:
+            yield from _walk(v)
+
+
+def etoro_gold_id():
+    """eToro's instrument ID for GOLD (looked up once per run; config can pin it)."""
+    global _ETORO_ID
+    if _ETORO_ID:
+        return _ETORO_ID
+    _ETORO_ID = CFG.get("etoro_instrument_id")
+    if not _ETORO_ID:
+        try:
+            js = _etoro_get("/search", {"internalSymbolFull": CFG.get("etoro_symbol", "GOLD"),
+                                         "fields": "instrumentId,internalSymbolFull,displayname", "pageSize": 5})
+            for d in _walk(js):
+                if str(d.get("internalSymbolFull", "")).upper() == CFG.get("etoro_symbol", "GOLD") and d.get("instrumentId"):
+                    _ETORO_ID = int(d["instrumentId"])
+                    break
+        except Exception as e:  # noqa: BLE001
+            print(f"eToro search failed: {e}")
+        _ETORO_ID = _ETORO_ID or 18
+    print(f"eToro GOLD instrument id: {_ETORO_ID}")
+    return _ETORO_ID
+
+
+def fetch_etoro(interval, count=1000):
+    js = _etoro_get(f"/instruments/{etoro_gold_id()}/history/candles/asc/{interval}/{count}")
+    rows = [c for g in js.get("candles", []) for c in g.get("candles", [])]
+    if not rows:
+        raise RuntimeError(f"eToro {interval}: no candles")
+    df = pd.DataFrame(rows)
+    df.index = pd.to_datetime(df.pop("fromDate"), utc=True)
+    return _clean(df.drop(columns=["volume"], errors="ignore"))
+
+
+def etoro_quote():
+    """eToro's live (bid, ask): sell at bid, buy at ask."""
+    js = _etoro_get("/instruments/rates", {"instrumentIds": etoro_gold_id()})
+    for d in _walk(js):
+        if "bid" in d and "ask" in d:
+            return float(d["bid"]), float(d["ask"])
+    raise RuntimeError("eToro rates: no bid/ask")
+
+
+def spread_text():
+    if etoro_on():
+        try:
+            bid, ask = etoro_quote()
+            return f"eToro now: sell {bid:.2f} / buy {ask:.2f} (spread ${ask - bid:.2f})"
+        except Exception:  # noqa: BLE001
+            pass
+    return "Not available from free data — check your broker before entry"
+
+
+def live_price(direction=None):
+    """Latest price right now. eToro first (bid for SHORT, ask for LONG), then Twelve Data, then gold-api.com."""
+    if etoro_on():
+        try:
+            bid, ask = etoro_quote()
+            px = ask if direction == "LONG" else bid if direction == "SHORT" else (bid + ask) / 2
+            return px, "eToro"
+        except Exception as e:  # noqa: BLE001
+            print(f"eToro live price failed: {e}")
+
     key = os.getenv("TWELVE_DATA_KEY", "").strip()
     if key:
         try:
@@ -101,6 +189,18 @@ def load_market(now):
         fut5 = fetch_yf(CFG["futures_symbol"], "5m", "8d")
     except Exception as e:  # noqa: BLE001
         warnings.append(f"Futures 5m unavailable: {e}")
+
+    if etoro_on():
+        try:
+            m5 = fetch_etoro("FiveMinutes")
+            h1 = fetch_etoro("OneHour")
+            if fut5 is not None and "volume" in fut5:
+                m5["volume"] = fut5["volume"].reindex(m5.index, method="nearest",
+                                                      tolerance=pd.Timedelta("4min"))
+            vol_source = "COMEX GC futures (Yahoo, delayed)" if fut5 is not None else "Not available"
+            return finish(m5, h1, now, "eToro GOLD (same prices as your eToro app)", vol_source, warnings)
+        except Exception as e:  # noqa: BLE001
+            warnings.append(f"eToro prices failed, using Twelve Data: {e}")
 
     key = os.getenv("TWELVE_DATA_KEY", "").strip()
     if key:
@@ -980,7 +1080,7 @@ def main():
     trade = decision in ("LONG", "SHORT")
     if trade:
         dd = 1 if decision == "LONG" else -1
-        lp, lsrc = live_price()
+        lp, lsrc = live_price(decision)
         if lp:
             R0 = plan["R"]
             R1 = (lp - plan["sl"]) * dd                      # stop distance from where price is NOW
@@ -1052,7 +1152,7 @@ def main():
         "bos_choch": (lambda e: f"M5 {e['kind']} {e['dir']}ish through {e['level']:.2f} at "
                       f"{e['time'].tz_convert(DUBAI):%H:%M}" if e else "None")(st["M5"]["last_event"]),
         "news": ctx["news"],
-        "spread": "Not available from free data — check your broker before entry",
+        "spread": spread_text(),
         "score": score, "score_parts": sc, "candidate": "LONG" if d > 0 else "SHORT" if d < 0 else None,
         "decision": decision,
         "headline": {"LONG": "Long setup confirmed", "SHORT": "Short setup confirmed", "WAIT": "Wait",
@@ -1088,7 +1188,7 @@ def main():
         journal["signals"].append(rec)
         notify(f"{'🟢' if decision == 'LONG' else '🔴'} XAUUSD {decision} — score {score}/100 ({quality(score)})"
                f"{' · RANGE TRADE' if ctx.get('setup') == 'range' else ''}\n"
-               f"Entry {plan['entry']:.2f} ({'live price' if plan.get('live_src') else 'last candle close'})  SL {plan['sl']:.2f}\n"
+               f"Entry {plan['entry']:.2f} ({('eToro ' + ('buy' if decision == 'LONG' else 'sell') + ' price') if plan.get('live_src') == 'eToro' else 'live price' if plan.get('live_src') else 'last candle close'})  SL {plan['sl']:.2f}\n"
                f"TP1 {plan['tp1']:.2f}  TP2 {plan['tp2']:.2f} (1:{plan['rr']:.1f})\n"
                f"{'Buy only up to' if decision == 'LONG' else 'Sell only down to'} {plan['max_entry']:.2f}. "
                f"Valid until {plan['valid_until'].tz_convert(DUBAI):%H:%M} Dubai.\n"

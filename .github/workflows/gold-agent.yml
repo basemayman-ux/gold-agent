@@ -41,6 +41,8 @@ jobs:
           CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          ETORO_API_KEY: ${{ secrets.ETORO_API_KEY }}
+          ETORO_USER_KEY: ${{ secrets.ETORO_USER_KEY }}
           TEST_ALERT: ${{ inputs.test_alert }}
 
       - name: Commit results
