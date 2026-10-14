@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-14T23:00:47.451910+00:00",
- "dubai_time": "Thu 15 Oct 2026, 03:00",
+ "generated_utc": "2026-10-14T23:05:33.594349+00:00",
+ "dubai_time": "Thu 15 Oct 2026, 03:05",
  "session": "Late US / off-hours",
- "price": 4106.65,
+ "price": 4103.55,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-10-14T22:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-14T23:00:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4107.06,
+  "value": 4107.08,
   "side": "Below",
   "crosses_2h": 2,
   "volume_weighted": true
  },
- "rsi7": 52.7,
- "rsi14": 58.2,
+ "rsi7": 38.1,
+ "rsi14": 49.8,
  "adx14": {
-  "M5": 29.6,
+  "M5": 28.5,
   "M15": 21.9
  },
  "atr14": {
-  "M5": 2.89,
+  "M5": 2.98,
   "M15": 6.69,
-  "percentile": 44
+  "percentile": 47
  },
  "volume": "RVOL 1.77\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -119,19 +119,19 @@
     ],
     [
      4107.25,
-     252.2
+     277.4
     ],
     [
      4107.75,
-     252.2
+     277.4
     ],
     [
      4108.25,
-     251.0
+     276.2
     ],
     [
      4108.75,
-     192.4
+     217.6
     ],
     [
      4109.25,
@@ -159,13 +159,13 @@
     ]
    ]
   },
-  "context": "Selling right above a POC/VAL (demand below)"
+  "context": "Price inside value, no edge from the profile"
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.172,
-  "session_delta": -2.0,
-  "session_slope": 1138.0,
+  "leg_ratio": 0.157,
+  "session_delta": -51.0,
+  "session_slope": 70.0,
   "divergence": null,
   "absorption": null
  },
@@ -208,14 +208,14 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4106.06 / buy 4106.26 (spread $0.20)",
- "score": 77,
+ "spread": "eToro now: sell 4101.50 / buy 4101.88 (spread $0.38)",
+ "score": 71,
  "score_parts": {
   "structure": 17,
-  "liquidity": 20,
-  "momentum": 6,
+  "liquidity": 16,
+  "momentum": 8,
   "vwap": 4,
-  "volume_flow": 15,
+  "volume_flow": 11,
   "volatility": 5,
   "session": 0,
   "news": 10
@@ -227,16 +227,16 @@
  "setup": "range",
  "range": {
   "lo": 4073.46,
-  "hi": 4108.98
+  "hi": 4110.53
  },
  "mode": "active",
  "min_score": 80,
  "plan": null,
  "why": [
   "A SHORT signal is still active, manage it before a new one",
-  "Range trade: range high 4108.98 swept, then rejection wick",
-  "Gold has ranged 4073.46\u20134108.98 (tested 2\u00d7 low, 2\u00d7 high); target is the bottom of the range",
-  "RSI7 53, M15 ADX 22"
+  "Range trade: range high 4110.53 tested, then displacement",
+  "Gold has ranged 4073.46\u20134110.53 (tested 2\u00d7 low, 2\u00d7 high); target is the bottom of the range",
+  "RSI7 38, M15 ADX 22"
  ],
  "invalidation": null,
  "levels": [
@@ -338,17 +338,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791970200,
-   "o": 4141.72,
-   "h": 4144.52,
-   "l": 4141.36,
-   "c": 4142.65,
-   "e20": 4145.53,
-   "e50": 4149.44,
-   "vw": 4154.4,
-   "dl": -84.0
-  },
   {
    "t": 1791970500,
    "o": 4142.65,
@@ -1974,8 +1963,8 @@
    "c": 4107.66,
    "e20": 4104.73,
    "e50": 4100.46,
-   "vw": 4107.06,
-   "dl": -0.0
+   "vw": 4107.08,
+   "dl": -49.0
   },
   {
    "t": 1792018500,
@@ -1985,7 +1974,18 @@
    "c": 4106.65,
    "e20": 4104.91,
    "e50": 4100.7,
-   "vw": 4107.06,
+   "vw": 4107.08,
+   "dl": -0.0
+  },
+  {
+   "t": 1792018800,
+   "o": 4106.65,
+   "h": 4107.12,
+   "l": 4103.0,
+   "c": 4103.55,
+   "e20": 4104.78,
+   "e50": 4100.82,
+   "vw": 4107.08,
    "dl": -0.0
   }
  ],
@@ -2057,9 +2057,10 @@
    "regime": "Breakout",
    "reason": "Range trade: range high 4108.98 swept, then rejection wick; Gold has ranged 4073.46\u20134108.98 (tested 2\u00d7 low, 2\u00d7 high); target is the bottom of the range; RSI7 59, M15 ADX 21",
    "status": "open",
-   "tp1_hit": false,
+   "tp1_hit": true,
    "setup": "range",
-   "mgmt": "half_tp1_be"
+   "mgmt": "half_tp1_be",
+   "tp1_utc": "2026-10-14T23:00:00+00:00"
   },
   {
    "time_utc": "2026-10-14T18:00:47.637174+00:00",
