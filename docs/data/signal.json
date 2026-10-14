@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-14T01:40:34.174452+00:00",
- "dubai_time": "Wed 14 Oct 2026, 05:40",
+ "generated_utc": "2026-10-14T01:50:33.072542+00:00",
+ "dubai_time": "Wed 14 Oct 2026, 05:50",
  "session": "Asia",
- "price": 4148.08,
+ "price": 4144.35,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-10-14T01:35:00+00:00",
+ "last_bar_utc": "2026-10-14T01:45:00+00:00",
  "warnings": [],
  "regime": "High Volatility",
  "bias": {
@@ -29,7 +29,7 @@
    "LL"
   ],
   "M5": [
-   "LH",
+   "HH",
    "LL"
   ]
  },
@@ -42,23 +42,23 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4157.65,
+  "value": 4157.11,
   "side": "Choppy",
   "crosses_2h": 6,
   "volume_weighted": true
  },
- "rsi7": 36.1,
- "rsi14": 39.8,
+ "rsi7": 31.2,
+ "rsi14": 36.4,
  "adx14": {
-  "M5": 22.9,
+  "M5": 23.2,
   "M15": 12.1
  },
  "atr14": {
-  "M5": 5.32,
-  "M15": 5.02,
+  "M5": 5.34,
+  "M15": 6.23,
   "percentile": 99
  },
- "volume": "RVOL 4.55\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "RVOL 8.04\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -74,182 +74,214 @@
   ],
   "developing": {
    "poc": 4156.75,
-   "vah": 4162.0,
-   "val": 4155.0,
+   "vah": 4162.5,
+   "val": 4154.5,
    "bins": [
     [
-     4147.75,
+     4143.75,
      0.0
+    ],
+    [
+     4144.25,
+     0.0
+    ],
+    [
+     4144.75,
+     0.0
+    ],
+    [
+     4145.25,
+     0.0
+    ],
+    [
+     4145.75,
+     0.0
+    ],
+    [
+     4146.25,
+     0.0
+    ],
+    [
+     4146.75,
+     0.0
+    ],
+    [
+     4147.25,
+     0.0
+    ],
+    [
+     4147.75,
+     63.3
     ],
     [
      4148.25,
-     47.2
+     110.6
     ],
     [
      4148.75,
-     47.2
+     110.6
     ],
     [
      4149.25,
-     47.2
+     110.6
     ],
     [
      4149.75,
-     47.2
+     110.6
     ],
     [
      4150.25,
-     86.8
+     150.1
     ],
     [
      4150.75,
-     86.8
+     150.1
     ],
     [
      4151.25,
-     165.8
+     229.1
     ],
     [
      4151.75,
-     165.8
+     229.1
     ],
     [
      4152.25,
-     211.4
+     274.7
     ],
     [
      4152.75,
-     211.4
+     274.7
     ],
     [
      4153.25,
-     211.4
+     274.7
     ],
     [
      4153.75,
-     211.4
+     274.7
     ],
     [
      4154.25,
-     211.4
+     274.7
     ],
     [
      4154.75,
-     275.8
+     339.1
     ],
     [
      4155.25,
-     411.8
+     475.1
     ],
     [
      4155.75,
-     665.1
+     728.4
     ],
     [
      4156.25,
-     743.9
+     844.7
     ],
     [
      4156.75,
-     801.6
+     902.4
     ],
     [
      4157.25,
-     762.8
+     863.7
     ],
     [
      4157.75,
-     548.4
+     649.2
     ],
     [
      4158.25,
-     552.6
+     653.5
     ],
     [
      4158.75,
-     412.5
+     513.3
     ],
     [
      4159.25,
-     331.5
+     369.0
     ],
     [
      4159.75,
-     333.6
+     371.1
     ],
     [
      4160.25,
-     449.1
+     486.6
     ],
     [
      4160.75,
-     653.8
+     691.3
     ],
     [
      4161.25,
-     652.7
+     690.2
     ],
     [
      4161.75,
-     420.0
+     457.6
     ],
     [
      4162.25,
-     348.0
+     385.6
     ],
     [
      4162.75,
-     267.7
+     305.2
     ],
     [
      4163.25,
-     168.2
+     205.7
     ],
     [
      4163.75,
-     74.4
+     111.9
     ],
     [
      4164.25,
-     45.9
+     83.4
     ],
     [
      4164.75,
-     0.0
+     37.5
     ],
     [
      4165.25,
-     0.0
+     37.5
     ],
     [
      4165.75,
-     0.0
+     37.5
     ],
     [
      4166.25,
-     0.0
+     37.5
     ],
     [
      4166.75,
-     0.0
+     37.5
     ],
     [
      4167.25,
-     0.0
+     37.5
     ]
    ]
   },
-  "context": "Sweep happened at the value-area high (responsive selling)"
+  "context": "Accepted below prior VAL 4161.00 (initiative selling)"
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.048,
-  "session_delta": 148.0,
-  "session_slope": 48.0,
-  "divergence": true,
-  "absorption": false
+  "leg_ratio": -0.287,
+  "session_delta": -1988.0,
+  "session_slope": -1864.0,
+  "divergence": null,
+  "absorption": null
  },
- "liquidity_event": "M15 swing high 4166.75 swept (buy-side), displacement",
+ "liquidity_event": "Previous day low 4147.48 swept (sell-side), rejection wick",
  "bos_choch": "M5 CHOCH bearish through 4148.17 at 05:35",
  "news": {
   "risk": "Low",
@@ -289,13 +321,13 @@
   "detail": "No high-impact USD event in the next 3 hours"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 69,
+ "score": 60,
  "score_parts": {
   "structure": 21,
-  "liquidity": 12,
+  "liquidity": 0,
   "momentum": 9,
   "vwap": 5,
-  "volume_flow": 11,
+  "volume_flow": 14,
   "volatility": 0,
   "session": 1,
   "news": 10
@@ -311,7 +343,7 @@
  "plan": null,
  "why": [
   "MARKET CHOP \u2014 ADX weak, VWAP crossed 6\u00d7 in 2h",
-  "Setup score would be 69/100 (not tradable while blocked)"
+  "Setup score would be 60/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -336,6 +368,12 @@
   {
    "name": "Previous day high",
    "price": 4200.45,
+   "side": "buy",
+   "swept": false
+  },
+  {
+   "name": "Equal highs",
+   "price": 4194.51,
    "side": "buy",
    "swept": false
   },
@@ -382,59 +420,31 @@
    "swept": false
   },
   {
-   "name": "M15 swing high",
-   "price": 4164.22,
-   "side": "buy",
-   "swept": false
-  },
-  {
    "name": "Prior VAL",
    "price": 4161.0,
    "side": "buy",
    "swept": false
   },
   {
-   "name": "Previous day low",
+   "name": "H1 swing low",
    "price": 4147.48,
    "side": "sell",
    "swept": false
+  },
+  {
+   "name": "Previous day low",
+   "price": 4147.48,
+   "side": "sell",
+   "swept": true
   },
   {
    "name": "M15 swing low",
    "price": 4138.99,
    "side": "sell",
    "swept": false
-  },
-  {
-   "name": "M15 swing low",
-   "price": 4133.85,
-   "side": "sell",
-   "swept": false
   }
  ],
  "chart": [
-  {
-   "t": 1791897000,
-   "o": 4178.02,
-   "h": 4178.02,
-   "l": 4176.59,
-   "c": 4176.71,
-   "e20": 4182.72,
-   "e50": 4184.36,
-   "vw": 4179.92,
-   "dl": -276.0
-  },
-  {
-   "t": 1791897300,
-   "o": 4176.9,
-   "h": 4179.73,
-   "l": 4175.17,
-   "c": 4179.64,
-   "e20": 4182.43,
-   "e50": 4184.17,
-   "vw": 4179.91,
-   "dl": 592.0
-  },
   {
    "t": 1791897600,
    "o": 4179.35,
@@ -2049,8 +2059,8 @@
    "c": 4156.45,
    "e20": 4157.27,
    "e50": 4158.32,
-   "vw": 4157.65,
-   "dl": -0.0
+   "vw": 4157.81,
+   "dl": -808.0
   },
   {
    "t": 1791941700,
@@ -2060,7 +2070,29 @@
    "c": 4148.08,
    "e20": 4156.39,
    "e50": 4157.92,
-   "vw": 4157.65,
+   "vw": 4157.11,
+   "dl": -1328.0
+  },
+  {
+   "t": 1791942000,
+   "o": 4148.8,
+   "h": 4151.27,
+   "l": 4144.97,
+   "c": 4148.05,
+   "e20": 4155.6,
+   "e50": 4157.53,
+   "vw": 4157.11,
+   "dl": -0.0
+  },
+  {
+   "t": 1791942300,
+   "o": 4148.46,
+   "h": 4148.46,
+   "l": 4143.76,
+   "c": 4144.35,
+   "e20": 4154.53,
+   "e50": 4157.02,
+   "vw": 4157.11,
    "dl": -0.0
   }
  ],
