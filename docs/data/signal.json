@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-14T09:40:31.744054+00:00",
- "dubai_time": "Wed 14 Oct 2026, 13:40",
+ "generated_utc": "2026-10-14T09:50:32.808711+00:00",
+ "dubai_time": "Wed 14 Oct 2026, 13:50",
  "session": "London",
- "price": 4142.21,
+ "price": 4143.21,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.5,
- "last_bar_utc": "2026-10-14T09:35:00+00:00",
+ "last_bar_utc": "2026-10-14T09:45:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -30,7 +30,7 @@
   ],
   "M5": [
    "LH",
-   "LL"
+   "HL"
   ]
  },
  "ema200": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4154.7,
+  "value": 4154.51,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 37.6,
- "rsi14": 39.7,
+ "rsi7": 44.7,
+ "rsi14": 42.5,
  "adx14": {
-  "M5": 27.5,
-  "M15": 20.6
+  "M5": 26.6,
+  "M15": 20.8
  },
  "atr14": {
-  "M5": 2.54,
-  "M15": 5.75,
-  "percentile": 57
+  "M5": 2.32,
+  "M15": 5.45,
+  "percentile": 53
  },
  "volume": "RVOL 2.37\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -83,15 +83,15 @@
     ],
     [
      4141.75,
-     120.4
+     355.1
     ],
     [
      4142.25,
-     367.4
+     602.1
     ],
     [
      4142.75,
-     505.4
+     740.1
     ],
     [
      4143.25,
@@ -315,9 +315,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.276,
-  "session_delta": -4495.0,
-  "session_slope": -1263.0,
+  "leg_ratio": -0.177,
+  "session_delta": -4276.0,
+  "session_slope": -374.0,
   "divergence": null,
   "absorption": null
  },
@@ -361,34 +361,34 @@
   "detail": "Core CPI m/m at 16:30 Dubai (score reduced, not blocked)"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 72,
+ "score": 73,
  "score_parts": {
-  "structure": 25,
-  "liquidity": 0,
-  "momentum": 12,
+  "structure": 22,
+  "liquidity": 16,
+  "momentum": 8,
   "vwap": 8,
-  "volume_flow": 14,
+  "volume_flow": 6,
   "volatility": 5,
   "session": 4,
   "news": 4
  },
- "candidate": "SHORT",
+ "candidate": "LONG",
  "decision": "WAIT",
  "headline": "Wait",
  "quality": "WATCH",
- "setup": "trend",
- "range": null,
+ "setup": "range",
+ "range": {
+  "lo": 4141.47,
+  "hi": 4169.97
+ },
  "mode": "active",
  "min_score": 80,
  "plan": null,
  "why": [
   "A LONG signal is still active, manage it before a new one",
-  "No liquidity sweep or clean continuation setup",
-  "M5 bearish CHOCH through 4143.88",
-  "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 38, RSI14 40, M15 ADX 21, RVOL 2.4\u00d7",
-  "Profile & flow: Accepted below prior VAL 4161.00 (initiative selling); setup-leg delta -0.28",
-  "Weak components: liquidity"
+  "Range trade: range low 4141.47 tested, then displacement",
+  "Gold has ranged 4141.47\u20134169.97 (tested 3\u00d7 low, 2\u00d7 high); target is the top of the range",
+  "RSI7 45, M15 ADX 21"
  ],
  "invalidation": null,
  "levels": [
@@ -490,28 +490,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791925800,
-   "o": 4158.01,
-   "h": 4158.13,
-   "l": 4157.93,
-   "c": 4157.93,
-   "e20": 4160.17,
-   "e50": 4161.16,
-   "vw": 4172.73,
-   "dl": -0.0
-  },
-  {
-   "t": 1791926100,
-   "o": 4157.96,
-   "h": 4158.14,
-   "l": 4157.89,
-   "c": 4157.99,
-   "e20": 4159.96,
-   "e50": 4161.04,
-   "vw": 4172.73,
-   "dl": -0.0
-  },
   {
    "t": 1791926400,
    "o": 4157.95,
@@ -2126,8 +2104,8 @@
    "c": 4142.59,
    "e20": 4145.62,
    "e50": 4149.6,
-   "vw": 4154.7,
-   "dl": 0.0
+   "vw": 4154.57,
+   "dl": 185.0
   },
   {
    "t": 1791970500,
@@ -2137,7 +2115,29 @@
    "c": 4142.21,
    "e20": 4145.3,
    "e50": 4149.31,
-   "vw": 4154.7,
+   "vw": 4154.51,
+   "dl": 34.0
+  },
+  {
+   "t": 1791970800,
+   "o": 4142.25,
+   "h": 4143.31,
+   "l": 4141.99,
+   "c": 4143.2,
+   "e20": 4145.1,
+   "e50": 4149.07,
+   "vw": 4154.51,
+   "dl": 0.0
+  },
+  {
+   "t": 1791971100,
+   "o": 4143.11,
+   "h": 4143.37,
+   "l": 4142.85,
+   "c": 4143.21,
+   "e20": 4144.92,
+   "e50": 4148.84,
+   "vw": 4154.51,
    "dl": 0.0
   }
  ],
