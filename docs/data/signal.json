@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-14T11:00:47.397776+00:00",
- "dubai_time": "Wed 14 Oct 2026, 15:00",
+ "generated_utc": "2026-10-14T11:05:32.597811+00:00",
+ "dubai_time": "Wed 14 Oct 2026, 15:05",
  "session": "London",
- "price": 4141.31,
+ "price": 4136.75,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-10-14T10:55:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-10-14T11:00:00+00:00",
  "warnings": [],
  "regime": "Trend",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4153.85,
+  "value": 4153.82,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 41.8,
- "rsi14": 43.6,
+ "rsi7": 28.4,
+ "rsi14": 35.5,
  "adx14": {
-  "M5": 22.9,
+  "M5": 24.1,
   "M15": 21.8
  },
  "atr14": {
-  "M5": 2.5,
+  "M5": 2.74,
   "M15": 4.97,
-  "percentile": 57
+  "percentile": 62
  },
  "volume": "RVOL 0.93\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -77,6 +77,34 @@
    "vah": 4163.0,
    "val": 4146.0,
    "bins": [
+    [
+     4136.25,
+     0.0
+    ],
+    [
+     4136.75,
+     0.0
+    ],
+    [
+     4137.25,
+     0.0
+    ],
+    [
+     4137.75,
+     0.0
+    ],
+    [
+     4138.25,
+     0.0
+    ],
+    [
+     4138.75,
+     0.0
+    ],
+    [
+     4139.25,
+     0.0
+    ],
     [
      4139.75,
      0.0
@@ -107,19 +135,19 @@
     ],
     [
      4143.25,
-     1118.7
+     1146.2
     ],
     [
      4143.75,
-     1371.5
+     1399.0
     ],
     [
      4144.25,
-     1225.2
+     1252.7
     ],
     [
      4144.75,
-     1064.4
+     1091.9
     ],
     [
      4145.25,
@@ -327,14 +355,14 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.023,
-  "session_delta": -3406.0,
-  "session_slope": 392.0,
+  "leg_ratio": 0.038,
+  "session_delta": -3505.0,
+  "session_slope": 504.0,
   "divergence": null,
   "absorption": null
  },
  "liquidity_event": "M15 swing low 4141.47 swept (sell-side), displacement",
- "bos_choch": "M5 CHOCH bearish through 4140.62 at 14:25",
+ "bos_choch": "M5 BOS bearish through 4140.10 at 15:00",
  "news": {
   "risk": "Medium",
   "status": "live",
@@ -373,10 +401,10 @@
   "detail": "Core CPI m/m at 16:30 Dubai (score reduced, not blocked)"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 70,
+ "score": 63,
  "score_parts": {
   "structure": 25,
-  "liquidity": 7,
+  "liquidity": 0,
   "momentum": 12,
   "vwap": 8,
   "volume_flow": 5,
@@ -385,21 +413,20 @@
   "news": 4
  },
  "candidate": "SHORT",
- "decision": "WAIT",
- "headline": "Wait",
- "quality": "WATCH",
+ "decision": "NO TRADE",
+ "headline": "No trade",
+ "quality": "NO TRADE",
  "setup": "trend",
  "range": null,
  "mode": "active",
  "min_score": 80,
  "plan": null,
  "why": [
-  "A LONG signal is still active, manage it before a new one",
-  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
-  "M5 bearish CHOCH through 4140.62",
+  "No liquidity sweep or clean continuation setup",
+  "M5 bearish BOS through 4140.10",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 42, RSI14 44, M15 ADX 22, RVOL 0.9\u00d7",
-  "Profile & flow: Accepted below prior VAL 4161.00 (initiative selling); setup-leg delta +0.02",
+  "RSI7 28, RSI14 36, M15 ADX 22, RVOL 0.9\u00d7",
+  "Profile & flow: Accepted below prior VAL 4161.00 (initiative selling); setup-leg delta +0.04",
   "Weak components: liquidity, volume & flow"
  ],
  "invalidation": null,
@@ -502,17 +529,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791930600,
-   "o": 4160.85,
-   "h": 4161.12,
-   "l": 4160.52,
-   "c": 4160.89,
-   "e20": 4159.98,
-   "e50": 4160.44,
-   "vw": 4160.92,
-   "dl": 16.0
-  },
   {
    "t": 1791930900,
    "o": 4160.83,
@@ -2138,8 +2154,8 @@
    "c": 4143.22,
    "e20": 4143.51,
    "e50": 4146.45,
-   "vw": 4153.85,
-   "dl": -0.0
+   "vw": 4153.82,
+   "dl": -99.0
   },
   {
    "t": 1791975300,
@@ -2149,18 +2165,29 @@
    "c": 4141.31,
    "e20": 4143.3,
    "e50": 4146.25,
-   "vw": 4153.85,
+   "vw": 4153.82,
+   "dl": -0.0
+  },
+  {
+   "t": 1791975600,
+   "o": 4140.63,
+   "h": 4142.29,
+   "l": 4136.33,
+   "c": 4136.75,
+   "e20": 4142.67,
+   "e50": 4145.88,
+   "vw": 4153.82,
    "dl": -0.0
   }
  ],
  "journal": {
-  "trades": 20,
-  "win_rate": 55.0,
-  "avg_r": -0.17,
-  "expectancy_r": -0.17,
-  "profit_factor": 0.61,
-  "total_r": -3.5,
-  "max_drawdown_r": 5.0,
+  "trades": 21,
+  "win_rate": 52.4,
+  "avg_r": -0.21,
+  "expectancy_r": -0.21,
+  "profit_factor": 0.55,
+  "total_r": -4.5,
+  "max_drawdown_r": 5.5,
   "max_consec_wins": 4,
   "max_consec_losses": 2,
   "by_session": {
@@ -2170,9 +2197,9 @@
     "avg_r": 0.5
    },
    "London": {
-    "n": 9,
-    "win_rate": 56,
-    "avg_r": -0.17
+    "n": 10,
+    "win_rate": 50,
+    "avg_r": -0.25
    },
    "New York": {
     "n": 3,
@@ -2187,9 +2214,9 @@
   },
   "by_score": {
    "85-89": {
-    "n": 20,
-    "win_rate": 55,
-    "avg_r": -0.17
+    "n": 21,
+    "win_rate": 52,
+    "avg_r": -0.21
    }
   },
   "by_direction": {
@@ -2199,9 +2226,9 @@
     "avg_r": 0.0
    },
    "LONG": {
-    "n": 8,
-    "win_rate": 38,
-    "avg_r": -0.44
+    "n": 9,
+    "win_rate": 33,
+    "avg_r": -0.5
    }
   }
  },
@@ -2220,10 +2247,13 @@
    "risk_pct": 0.5,
    "regime": "Breakout",
    "reason": "Range trade: range low 4142.67 swept, then displacement; Gold has ranged 4142.67\u20134169.97 (tested 4\u00d7 low, 3\u00d7 high); target is the top of the range; RSI7 42, M15 ADX 20",
-   "status": "open",
+   "status": "closed",
    "tp1_hit": false,
    "setup": "range",
-   "mgmt": "half_tp1_be"
+   "mgmt": "half_tp1_be",
+   "result": "Loss",
+   "r": -1.0,
+   "closed_utc": "2026-10-14T11:00:00+00:00"
   },
   {
    "time_utc": "2026-10-14T07:15:37.225361+00:00",
