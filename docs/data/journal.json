@@ -526,11 +526,14 @@
    "risk_pct": 0.5,
    "regime": "Breakout",
    "reason": "Range trade: range high 4108.98 swept, then rejection wick; Gold has ranged 4073.46\u20134108.98 (tested 2\u00d7 low, 2\u00d7 high); target is the bottom of the range; RSI7 59, M15 ADX 21",
-   "status": "open",
+   "status": "closed",
    "tp1_hit": true,
    "setup": "range",
    "mgmt": "half_tp1_be",
-   "tp1_utc": "2026-10-14T23:00:00+00:00"
+   "tp1_utc": "2026-10-14T23:00:00+00:00",
+   "result": "TP1 then breakeven",
+   "r": 0.5,
+   "closed_utc": "2026-10-14T23:45:00+00:00"
   }
  ],
  "watch": {
