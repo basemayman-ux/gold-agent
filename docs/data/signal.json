@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-14T09:25:27.586629+00:00",
- "dubai_time": "Wed 14 Oct 2026, 13:25",
+ "generated_utc": "2026-10-14T09:30:40.891993+00:00",
+ "dubai_time": "Wed 14 Oct 2026, 13:30",
  "session": "London",
- "price": 4143.54,
+ "price": 4142.38,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.5,
- "last_bar_utc": "2026-10-14T09:20:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-10-14T09:25:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4154.88,
+  "value": 4154.85,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 42.2,
- "rsi14": 41.8,
+ "rsi7": 38.0,
+ "rsi14": 39.8,
  "adx14": {
-  "M5": 27.5,
-  "M15": 20.4
+  "M5": 27.4,
+  "M15": 20.6
  },
  "atr14": {
-  "M5": 2.89,
-  "M15": 5.93,
-  "percentile": 67
+  "M5": 2.82,
+  "M15": 5.75,
+  "percentile": 64
  },
  "volume": "RVOL 2.37\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -99,19 +99,19 @@
     ],
     [
      4143.75,
-     753.9
+     789.1
     ],
     [
      4144.25,
-     794.3
+     829.6
     ],
     [
      4144.75,
-     824.0
+     859.3
     ],
     [
      4145.25,
-     730.2
+     765.5
     ],
     [
      4145.75,
@@ -315,16 +315,16 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.202,
-  "session_delta": -4089.0,
-  "session_slope": -1575.0,
+  "leg_ratio": -0.149,
+  "session_delta": -3963.0,
+  "session_slope": -1475.0,
   "divergence": null,
   "absorption": null
  },
  "liquidity_event": "M15 swing low 4146.45 swept (sell-side), rejection wick",
  "bos_choch": "M5 CHOCH bearish through 4143.88 at 12:45",
  "news": {
-  "risk": "Low",
+  "risk": "Medium",
   "status": "live",
   "upcoming": [
    {
@@ -358,57 +358,39 @@
     "time": "Thu 16:30"
    }
   ],
-  "detail": "No high-impact USD event in the next 3 hours"
+  "detail": "Core CPI m/m at 16:30 Dubai (score reduced, not blocked)"
  },
  "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 82,
+ "score": 78,
  "score_parts": {
-  "structure": 22,
-  "liquidity": 20,
-  "momentum": 8,
+  "structure": 25,
+  "liquidity": 7,
+  "momentum": 12,
   "vwap": 8,
-  "volume_flow": 5,
+  "volume_flow": 13,
   "volatility": 5,
   "session": 4,
-  "news": 10
+  "news": 4
  },
- "candidate": "LONG",
- "decision": "LONG",
- "headline": "Long setup confirmed",
- "quality": "B+",
- "setup": "range",
- "range": {
-  "lo": 4142.67,
-  "hi": 4169.97
- },
+ "candidate": "SHORT",
+ "decision": "WAIT",
+ "headline": "Wait",
+ "quality": "WATCH",
+ "setup": "trend",
+ "range": null,
  "mode": "active",
  "min_score": 80,
- "plan": {
-  "entry": 4143.53,
-  "sl": 4139.2,
-  "tp1": 4147.86,
-  "tp2": 4169.37,
-  "tp2_name": "opposite edge of the range",
-  "rr": "1:5.97",
-  "risk_pct": 0.5,
-  "size": {
-   "risk_cash": 37.0,
-   "oz": 8.54,
-   "lots_std": 0.08,
-   "lots": 8.54,
-   "unit": "oz (eToro units)"
-  },
-  "max_entry": 4144.61,
-  "valid_until": "2026-10-14T09:35:27.586629+00:00",
-  "valid_until_dubai": "13:35",
-  "live_src": "Twelve Data"
- },
+ "plan": null,
  "why": [
-  "Range trade: range low 4142.67 swept, then displacement",
-  "Gold has ranged 4142.67\u20134169.97 (tested 4\u00d7 low, 3\u00d7 high); target is the top of the range",
-  "RSI7 42, M15 ADX 20"
+  "A LONG signal is still active, manage it before a new one",
+  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
+  "M5 bearish CHOCH through 4143.88",
+  "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
+  "RSI7 38, RSI14 40, M15 ADX 21, RVOL 2.4\u00d7",
+  "Profile & flow: Accepted below prior VAL 4161.00 (initiative selling); setup-leg delta -0.15",
+  "Weak components: liquidity"
  ],
- "invalidation": "Trade through 4139.20 (beyond the range low sweep), or a 15-minute close below the range edge (4142.67) before TP1.",
+ "invalidation": null,
  "levels": [
   {
    "name": "H1 swing high",
@@ -508,17 +490,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791924900,
-   "o": 4159.7,
-   "h": 4161.98,
-   "l": 4159.56,
-   "c": 4160.85,
-   "e20": 4160.9,
-   "e50": 4161.55,
-   "vw": 4172.73,
-   "dl": 20.0
-  },
   {
    "t": 1791925200,
    "o": 4160.97,
@@ -2144,8 +2115,8 @@
    "c": 4145.2,
    "e20": 4146.61,
    "e50": 4150.47,
-   "vw": 4154.88,
-   "dl": 0.0
+   "vw": 4154.85,
+   "dl": 126.0
   },
   {
    "t": 1791969600,
@@ -2155,7 +2126,18 @@
    "c": 4143.54,
    "e20": 4146.32,
    "e50": 4150.2,
-   "vw": 4154.88,
+   "vw": 4154.85,
+   "dl": -0.0
+  },
+  {
+   "t": 1791969900,
+   "o": 4144.21,
+   "h": 4144.21,
+   "l": 4142.33,
+   "c": 4142.38,
+   "e20": 4145.94,
+   "e50": 4149.89,
+   "vw": 4154.85,
    "dl": -0.0
   }
  ],
@@ -2228,7 +2210,8 @@
    "reason": "Range trade: range low 4142.67 swept, then displacement; Gold has ranged 4142.67\u20134169.97 (tested 4\u00d7 low, 3\u00d7 high); target is the top of the range; RSI7 42, M15 ADX 20",
    "status": "open",
    "tp1_hit": false,
-   "setup": "range"
+   "setup": "range",
+   "mgmt": "half_tp1_be"
   },
   {
    "time_utc": "2026-10-14T07:15:37.225361+00:00",
