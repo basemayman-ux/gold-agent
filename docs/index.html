@@ -151,6 +151,7 @@ footer{margin-top:24px;font-size:12px;color:var(--muted);max-width:75ch}
     <div class="tools">
       <span class="status" id="status"><span class="dot"></span><span id="fresh">Loading</span></span>
       <a class="xl" href="data/XAUUSD_daily_log.xlsx" download>Daily log (Excel)</a>
+      <a class="xl xl-pl" href="data/Gold_PL_tracker.xlsx" download>My P/L (Excel)</a>
       <div class="swatches" id="swatches" role="group" aria-label="Colour theme"></div>
     </div>
   </header>
@@ -462,7 +463,7 @@ async function getSignal(){
   if (!r.ok) throw new Error("signal.json returned " + r.status);
   return r.json();
 }
-if (location.protocol === "file:") document.querySelector(".xl").href = SITE + "data/XAUUSD_daily_log.xlsx";
+if (location.protocol === "file:") { document.querySelector(".xl").href = SITE + "data/XAUUSD_daily_log.xlsx"; document.querySelector(".xl-pl").href = SITE + "data/Gold_PL_tracker.xlsx"; }
 async function load(first){
   try{
     const d = await getSignal();

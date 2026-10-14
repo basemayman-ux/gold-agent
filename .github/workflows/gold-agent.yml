@@ -45,6 +45,13 @@ jobs:
           ETORO_USER_KEY: ${{ secrets.ETORO_USER_KEY }}
           TEST_ALERT: ${{ inputs.test_alert }}
 
+      - name: Update eToro P/L workbook
+        run: python engine/etoro_trades.py || true
+        env:
+          ETORO_API_KEY: ${{ secrets.ETORO_API_KEY }}
+          ETORO_USER_KEY: ${{ secrets.ETORO_USER_KEY }}
+          XLSX_PASSWORD: ${{ secrets.XLSX_PASSWORD }}
+
       - name: Commit results
         run: |
           # Runs every 5 min. Publish to the website every 10 min (GitHub Pages limit),
