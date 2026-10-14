@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-14T07:45:32.271745+00:00",
- "dubai_time": "Wed 14 Oct 2026, 11:45",
+ "generated_utc": "2026-10-14T07:50:31.736204+00:00",
+ "dubai_time": "Wed 14 Oct 2026, 11:50",
  "session": "London",
- "price": 4146.18,
+ "price": 4148.35,
  "source": "Spot XAU/USD (Twelve Data)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.5,
- "last_bar_utc": "2026-10-14T07:40:00+00:00",
+ "last_bar_utc": "2026-10-14T07:45:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,15 +42,15 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4156.49,
+  "value": 4156.44,
   "side": "Below",
   "crosses_2h": 2,
   "volume_weighted": true
  },
- "rsi7": 38.9,
- "rsi14": 39.6,
+ "rsi7": 50.1,
+ "rsi14": 44.4,
  "adx14": {
-  "M5": 36.3,
+  "M5": 36.4,
   "M15": 21.3
  },
  "atr14": {
@@ -103,19 +103,19 @@
     ],
     [
      4146.75,
-     604.7
+     646.4
     ],
     [
      4147.25,
-     561.0
+     602.8
     ],
     [
      4147.75,
-     624.3
+     666.1
     ],
     [
      4148.25,
-     777.3
+     819.1
     ],
     [
      4148.75,
@@ -295,9 +295,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.064,
-  "session_delta": -3190.0,
-  "session_slope": 251.0,
+  "leg_ratio": -0.07,
+  "session_delta": -3262.0,
+  "session_slope": 428.0,
   "divergence": null,
   "absorption": null
  },
@@ -368,7 +368,7 @@
   "A LONG signal is still active, manage it before a new one",
   "Range trade: range low 4143.76 tested, then displacement",
   "Gold has ranged 4143.76\u20134169.97 (tested 3\u00d7 low, 3\u00d7 high); target is the top of the range",
-  "RSI7 39, M15 ADX 21"
+  "RSI7 50, M15 ADX 21"
  ],
  "invalidation": null,
  "levels": [
@@ -470,17 +470,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1791918900,
-   "o": 4162.24,
-   "h": 4163.72,
-   "l": 4162.24,
-   "c": 4162.63,
-   "e20": 4160.6,
-   "e50": 4161.46,
-   "vw": 4173.13,
-   "dl": -51.0
-  },
   {
    "t": 1791919200,
    "o": 4162.79,
@@ -2106,8 +2095,8 @@
    "c": 4147.21,
    "e20": 4150.42,
    "e50": 4154.74,
-   "vw": 4156.49,
-   "dl": -0.0
+   "vw": 4156.44,
+   "dl": -72.0
   },
   {
    "t": 1791963600,
@@ -2117,8 +2106,19 @@
    "c": 4146.18,
    "e20": 4150.02,
    "e50": 4154.4,
-   "vw": 4156.49,
+   "vw": 4156.44,
    "dl": -0.0
+  },
+  {
+   "t": 1791963900,
+   "o": 4146.29,
+   "h": 4149.58,
+   "l": 4146.11,
+   "c": 4148.35,
+   "e20": 4149.86,
+   "e50": 4154.17,
+   "vw": 4156.44,
+   "dl": 0.0
   }
  ],
  "journal": {
