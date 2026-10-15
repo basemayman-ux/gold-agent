@@ -385,7 +385,7 @@ def update_journal(journal, m5):
     closed_now, tp1_now = [], []
     for s in journal["signals"]:
         # one-time rescore of signals closed under the old all-or-nothing method
-        if s.get("status") == "closed" and s.get("mgmt") != "half_tp1_be":
+        if s.get("status") == "closed" and s.get("mgmt") is None:
             if s.get("tp1_hit") and s.get("result") == "Loss":
                 s.update(result="TP1 then breakeven", r=0.5)
             elif s.get("tp1_hit") and s.get("result") == "Win":
@@ -393,6 +393,10 @@ def update_journal(journal, m5):
             s["mgmt"] = "half_tp1_be"
             continue
         if s["status"] != "open":
+            continue
+        if s.get("mgmt") == "1R_be07":
+            if _track_1r(s, m5, tp1_now):
+                closed_now.append(s)
             continue
         s["mgmt"] = "half_tp1_be"
         t0 = pd.Timestamp(s["time_utc"])
@@ -423,6 +427,38 @@ def update_journal(journal, m5):
                 closed_now.append(s)
                 break
     return closed_now, tp1_now
+
+
+def _track_1r(s, m5, be_now):
+    """Current management: the whole trade closes at 1R (TP1). Once price reaches 0.7R the stop
+    moves to entry. Results: stop = -1R, target = +1R, back to entry after 0.7R = 0R.
+    A bar touching both stop and target counts as the worse outcome (conservative)."""
+    t0 = pd.Timestamp(s["time_utc"])
+    long = s["direction"] == "LONG"
+    R = abs(s["entry"] - s["sl"])
+    be_px = s["entry"] + (0.7 * R if long else -0.7 * R)
+    def hit(b, px, up):
+        return b["high"] >= px if up else b["low"] <= px
+    for k, (ts, b) in enumerate(m5[m5.index > t0].iterrows()):
+        stop = s["entry"] if s.get("tp1_hit") else s["sl"]
+        if hit(b, stop, not long):
+            if s.get("tp1_hit"):
+                s.update(status="closed", result="Breakeven", r=0.0, closed_utc=ts.isoformat())
+            else:
+                s.update(status="closed", result="Loss", r=-1.0, closed_utc=ts.isoformat())
+        elif hit(b, s["tp1"], long):
+            s.update(status="closed", result="Win", r=1.0, closed_utc=ts.isoformat())
+        elif not s.get("tp1_hit") and hit(b, be_px, long):
+            s["tp1_hit"] = True                      # here "tp1_hit" = stop moved to entry
+            s["be_utc"] = ts.isoformat()
+            be_now.append(s)
+        if s["status"] == "open" and k + 1 >= CFG["signal_expiry_bars"]:
+            move = ((b["close"] - s["entry"]) if long else (s["entry"] - b["close"])) / R
+            r = max(move, 0) if s.get("tp1_hit") else move
+            s.update(status="closed", result="Expired", r=round(float(r), 2), closed_utc=ts.isoformat())
+        if s["status"] == "closed":
+            return True
+    return False
 
 
 def journal_stats(journal):
@@ -561,7 +597,7 @@ def plan_trade(ctx, d):
         base = cands[-1]
         why = "beyond the last M5 swing " + ("low" if d > 0 else "high")
     sl = base - d * 0.25 * a5
-    min_r = CFG.get("min_stop_atr", 1.5) * a5          # stops inside normal 5-minute noise get hit too often
+    min_r = max(CFG.get("min_stop_atr", 1.5) * a5, CFG.get("min_stop_usd", 0))          # stops inside normal 5-minute noise get hit too often
     if abs(price - sl) < min_r:
         sl = price - d * min_r
     R = abs(price - sl)
@@ -846,6 +882,23 @@ def decide(ctx, journal):
                 ctx["setup"], ctx["range"] = "range", rs["range"]
                 ctx["conflict_only"] = False
 
+    # ── Quality gates (from the replay of the first 22 live signals) ──
+    if decision in ("LONG", "SHORT"):
+        gate = None
+        h0, h1_ = CFG.get("trade_hours_dubai", [0, 24])
+        hr = (now + timedelta(hours=4)).hour
+        want = "Bullish" if d > 0 else "Bearish"
+        oppose = "Bearish" if d > 0 else "Bullish"
+        if not (h0 <= hr < h1_):
+            gate = f"Outside trading hours ({h0:02d}:00–{h1_:02d}:00 UAE): signals here won less often"
+        elif CFG.get("require_h4_trend") and ctx.get("setup") != "range" and ctx["h4_bias"] != want:
+            gate = f"H4 trend is {ctx['h4_bias'].lower()}; a {decision} needs H4 {want.lower()} (trades without it won only ~47%)"
+        elif CFG.get("require_h4_trend") and ctx.get("setup") == "range" and ctx["h4_bias"] == oppose:
+            gate = f"H4 trend is {oppose.lower()}, against this range {decision}"
+        if gate:
+            decision = "WAIT"
+            why.insert(0, gate)
+
     return decision, d, plan, score, sc, why
 
 
@@ -916,7 +969,7 @@ def range_setup(ctx, rng):
        (d < 0 and not (rng["hi"] - third <= price < rng["hi"] + rng["zone"])):
         return None                                   # already run toward the middle of the range
     sl = sw["extreme"] - d * 0.25 * a5
-    min_r = CFG.get("min_stop_atr", 1.5) * a5          # stops inside normal 5-minute noise get hit too often
+    min_r = max(CFG.get("min_stop_atr", 1.5) * a5, CFG.get("min_stop_usd", 0))          # stops inside normal 5-minute noise get hit too often
     if abs(price - sl) < min_r:
         sl = price - d * min_r
     R = abs(price - sl)
@@ -1043,6 +1096,17 @@ def fmt(x, n=2):
     return None if x is None or (isinstance(x, float) and math.isnan(x)) else round(float(x), n)
 
 
+def _autotrade():
+    """The auto-trader module, sharing this running engine (None if unavailable)."""
+    try:
+        import autotrade
+        autotrade.agent = sys.modules[__name__]
+        return autotrade
+    except Exception as e:  # noqa: BLE001
+        print(f"Auto-trade unavailable: {e}")
+        return None
+
+
 def main():
     now = pd.Timestamp(datetime.now(timezone.utc))
     OUT.mkdir(parents=True, exist_ok=True)
@@ -1068,13 +1132,23 @@ def main():
         return
 
     closed, tp1_hits = update_journal(journal, ctx["m5"])
+    at = _autotrade()
+    if at:
+        try:
+            at.manage(journal)
+        except Exception as e:  # noqa: BLE001
+            print(f"Auto-trade manage failed: {e}")
     for s in tp1_hits:
         if s["status"] == "open":
-            notify(kind="update", text=f"🎯 XAUUSD {s['direction']} hit Target 1 ({s['tp1']:.2f})\n"
-                   f"Take half the position and move your stop to entry ({s['entry']:.2f}).\n"
-                   f"The rest aims for Target 2 ({s['tp2']:.2f}).")
+            if s.get("mgmt") == "1R_be07":
+                notify(kind="update", text=f"📍 XAUUSD {s['direction']} is 0.7R in profit.\n"
+                       f"Move your stop to entry ({s['entry']:.2f}). Target stays {s['tp1']:.2f}.")
+            else:
+                notify(kind="update", text=f"🎯 XAUUSD {s['direction']} hit Target 1 ({s['tp1']:.2f})\n"
+                       f"Take half the position and move your stop to entry ({s['entry']:.2f}).\n"
+                       f"The rest aims for Target 2 ({s['tp2']:.2f}).")
     for s in closed:
-        notify(kind="update", text=f"{'✅' if s['r'] > 0 else '❌'} XAUUSD {s['direction']} closed: {s['result']} ({s['r']:+.2f}R)")
+        notify(kind="update", text=f"{'✅' if s['r'] > 0 else '➖' if s['r'] == 0 else '❌'} XAUUSD {s['direction']} closed: {s['result']} ({s['r']:+.2f}R)")
 
     decision, d, plan, score, sc, why = decide(ctx, journal)
     trade = decision in ("LONG", "SHORT")
@@ -1086,7 +1160,7 @@ def main():
             R1 = (lp - plan["sl"]) * dd                      # stop distance from where price is NOW
             rr1 = (plan["tp2"] - lp) * dd / R1 if R1 > 0 else 0
             problem = None
-            if R1 < max(0.4 * R0, 1.0 * ctx["a5"]):
+            if R1 < max(0.4 * R0, 1.0 * ctx["a5"], 0.8 * CFG.get("min_stop_usd", 0)):
                 problem = f"price has moved to {lp:.2f}, too close to the stop at {plan['sl']:.2f}"
             elif R1 > 1.5 * R0:
                 problem = f"price has run to {lp:.2f}; the stop would be {R1 / R0:.1f}x wider than planned"
@@ -1162,7 +1236,8 @@ def main():
         "range": ({"lo": fmt(ctx["range"]["lo"]), "hi": fmt(ctx["range"]["hi"])} if ctx.get("setup") == "range" else None),
         "mode": ctx.get("mode", "strict"), "min_score": ctx.get("min_score", 85),
         "plan": ({"entry": fmt(plan["entry"]), "sl": fmt(plan["sl"]), "tp1": fmt(plan["tp1"]),
-                  "tp2": fmt(plan["tp2"]), "tp2_name": plan["tp2_name"], "rr": f"1:{plan['rr']:.2f}",
+                  "tp2": fmt(plan["tp2"]), "tp2_name": plan["tp2_name"], "rr": "1:1 (all out at target)",
+                  "be": fmt(plan["entry"] + (0.7 if decision == "LONG" else -0.7) * plan["R"]),
                   "risk_pct": CFG["risk_pct"], "size": size,
                   "max_entry": fmt(plan.get("max_entry")),
                   "valid_until": plan["valid_until"].isoformat() if plan.get("valid_until") is not None else None,
@@ -1183,21 +1258,28 @@ def main():
         rec = {"time_utc": now.isoformat(), "dubai": base["dubai_time"], "session": ctx["session"],
                "direction": decision, "entry": fmt(plan["entry"]), "sl": fmt(plan["sl"]), "tp1": fmt(plan["tp1"]),
                "tp2": fmt(plan["tp2"]), "rr": round(plan["rr"], 2), "score": score, "risk_pct": CFG["risk_pct"],
-               "regime": regime, "reason": "; ".join(why[:3]), "status": "open", "tp1_hit": False,
+               "regime": regime, "reason": "; ".join(why[:3]), "status": "open", "tp1_hit": False, "mgmt": "1R_be07",
                "setup": ctx.get("setup", "trend")}
         journal["signals"].append(rec)
         notify(f"{'🟢' if decision == 'LONG' else '🔴'} XAUUSD {decision} — score {score}/100 ({quality(score)})"
                f"{' · RANGE TRADE' if ctx.get('setup') == 'range' else ''}\n"
                f"Entry {plan['entry']:.2f} ({('eToro ' + ('buy' if decision == 'LONG' else 'sell') + ' price') if plan.get('live_src') == 'eToro' else 'live price' if plan.get('live_src') else 'last candle close'})  SL {plan['sl']:.2f}\n"
-               f"TP1 {plan['tp1']:.2f}  TP2 {plan['tp2']:.2f} (1:{plan['rr']:.1f})\n"
+               f"Target {plan['tp1']:.2f} (1R, close it all)\n"
                f"{'Buy only up to' if decision == 'LONG' else 'Sell only down to'} {plan['max_entry']:.2f}. "
                f"Valid until {plan['valid_until'].tz_convert(DUBAI):%H:%M} Dubai.\n"
                f"Use a limit order. Skip if price is past that level or the time has passed.\n"
                + (f"Size {size['oz']:.2f} oz (eToro units), risk ${size['risk_cash']:.0f}.\n" if size else "")
-               + "At TP1: take half and move the stop to entry.")
+               + f"When price reaches {plan['entry'] + (0.7 if decision == 'LONG' else -0.7) * plan['R']:.2f} (0.7R), move the stop to entry.")
+        if at:
+            try:
+                at.on_signal(rec, plan, size, now)
+            except Exception as e:  # noqa: BLE001
+                notify(f"⚠️ Auto-trade error: {e}. Check eToro.", kind="signal")
 
     # 🟡 heads-up: a setup is close (score 75+) but not tradable yet. At most once an hour per direction.
-    if (decision == "WAIT" or ctx.get("conflict_only")) and score >= CFG.get("watch_min_score", 75) and d:
+    _h0, _h1 = CFG.get("trade_hours_dubai", [0, 24])
+    in_hours = _h0 <= (now + timedelta(hours=4)).hour < _h1
+    if (decision == "WAIT" or ctx.get("conflict_only")) and score >= CFG.get("watch_min_score", 75) and d and in_hours:
         side = "LONG" if d > 0 else "SHORT"
         last = journal.get("watch", {}).get(side)
         if not last or now - pd.Timestamp(last) >= timedelta(minutes=CFG.get("watch_cooldown_minutes", 60)):
