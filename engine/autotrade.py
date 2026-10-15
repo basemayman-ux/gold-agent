@@ -79,34 +79,64 @@ def save(st):
         pass
 
 
-def open_ids(p):
+def positions(p):
     js = call("GET", p["pnl"])
     pos = (js.get("clientPortfolio") or js).get("positions", [])
-    return {int(x.get("positionID", x.get("positionId", 0))) for x in pos}
+    out = {}
+    for x in pos:
+        pid = int(x.get("positionID", x.get("positionId", 0)) or 0)
+        if pid:
+            out[pid] = x
+    return out
+
+
+def open_ids(p):
+    return set(positions(p))
 
 
 def place(p, mode, gold, direction, units, sl, tp, lev):
+    """Market order; returns (positionId, fill price, units).
+    Confirms the fill two ways: eToro's order lookup, and a new GOLD position appearing in the portfolio."""
     ref = str(uuid.uuid4())
     body = {"action": "open", "transaction": "buy" if direction == "LONG" else "sellShort",
             "instrumentId": gold, "settlementType": "cfd",          # eToro: symbol OR instrumentId, not both
             "orderType": "mkt", "leverage": lev, "units": units, "orderCurrency": "usd",
             "stopLossRate": round(sl, 2), "takeProfitRate": round(tp, 2), "stopLossType": "fixed"}
-    call("POST", p["open"], body=body, ref=ref)
-    for _ in range(8):                                  # wait for the fill
+    try:
+        before = open_ids(p)
+    except Exception:  # noqa: BLE001
+        before = None
+    resp = call("POST", p["open"], body=body, ref=ref) or {}
+    oid = resp.get("orderId") or resp.get("orderID")
+    last = f"order accepted (orderId {oid})"
+    for _ in range(15):                                 # up to ~30 s
         time.sleep(2)
+        # 1) order lookup (by orderId when eToro gave one, else by our request id)
         try:
-            o = call("GET", p["lookup"], params={"referenceId": ref})
-        except Exception:  # noqa: BLE001
-            continue
-        status = (o.get("status") or {}).get("name", "")
-        ex = o.get("positionExecutions") or []
-        if ex:
-            od = ex[0].get("openingData") or {}
-            return int(ex[0]["positionId"]), float(od.get("avgPrice") or 0), float(od.get("units") or units)
-        if status.lower() in ("rejected", "canceled", "expired"):
-            err = (o.get("status") or {}).get("errorMessage") or status
-            raise RuntimeError(f"order {status}: {err}")
-    raise RuntimeError("order not confirmed within 16 s")
+            o = call("GET", p["lookup"], params={"orderId": oid} if oid else {"referenceId": ref})
+            st = o.get("status") or {}
+            name = str(st.get("name", st.get("id", "")))
+            ex = o.get("positionExecutions") or []
+            if ex:
+                od = ex[0].get("openingData") or {}
+                return int(ex[0]["positionId"]), float(od.get("avgPrice") or 0), float(od.get("units") or units)
+            if name.lower() in ("rejected", "canceled", "cancelled", "expired", "4", "7", "8"):
+                raise RuntimeError(f"order {name}: {st.get('errorMessage') or st.get('errorCode') or ''}")
+            last = f"lookup status '{name}'"
+        except RuntimeError as e:
+            if str(e).startswith("order "):
+                raise
+            last = f"lookup error: {e}"
+        # 2) portfolio: a new GOLD position that was not there before the order
+        if before is not None:
+            try:
+                for pid, x in positions(p).items():
+                    inst = int(x.get("instrumentID", x.get("instrumentId", -1)) or -1)
+                    if pid not in before and inst == gold:
+                        return pid, float(x.get("openRate") or 0), float(x.get("units") or units)
+            except Exception as e:  # noqa: BLE001
+                last += f" | portfolio error: {e}"
+    raise RuntimeError(f"order not confirmed within 30 s ({last[:400]})")
 
 
 def tag(mode):
