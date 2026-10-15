@@ -109,8 +109,10 @@ def build(trades, stamp):
     cols = [("Position ID", 13), ("Direction", 9), ("Units (oz)", 10), ("Leverage", 8), ("Amount invested ($)", 12),
             ("Open time (UTC)", 17), ("Close time (UTC)", 17), ("Open time (Dubai)", 17), ("Date (Dubai)", 11),
             ("Minutes held", 9), ("Open price", 10), ("Close price", 10), ("Stop loss", 10), ("Take profit", 10),
-            ("Price move ($/oz)", 11), ("Gross P/L ($)", 11), ("Net P/L from eToro ($)", 12), ("of which fees ($)", 11),
-            ("Costs: net − gross ($)", 12), ("Result", 8), ("Engine signal?", 9)]
+            ("Price move ($/oz)", 11), ("Gross P/L ($)", 11), ("eToro profit, before spread ($)", 13),
+            ("Spread (estimated) ($)", 12), ("Fees shown by eToro ($)", 11), ("Net P/L after spread ($)", 13),
+            ("Result", 8), ("Engine signal?", 9)]
+    RATE = "Summary!$H$4"
     for i, (h, w) in enumerate(cols, 1):
         c = tr.cell(row=1, column=i, value=h)
         c.font, c.fill = HF, HFILL
@@ -122,12 +124,12 @@ def build(trades, stamp):
         vals = {1: t["id"], 2: t["dir"], 3: t["units"], 4: t["lev"], 5: t["inv"],
                 6: t["open_t"].tz_localize(None).to_pydatetime(), 7: t["close_t"].tz_localize(None).to_pydatetime(),
                 11: t["open"], 12: t["close"], 13: t["sl"] or None, 14: t["tp"] or None,
-                17: t["net"], 18: t["fees"], 21: t["engine"]}
+                17: t["net"], 19: t["fees"], 22: t["engine"]}
         for col, v in vals.items():
             tr.cell(row=x, column=col, value=v).font = BLUE
         f = {8: f"=F{x}+4/24", 9: f"=INT(H{x})", 10: f"=ROUND((G{x}-F{x})*1440,1)",
-             15: f'=(L{x}-K{x})*IF(B{x}="Short",-1,1)', 16: f"=O{x}*C{x}", 19: f"=Q{x}-P{x}",
-             20: f'=IF(Q{x}>0,"Win","Loss")'}
+             15: f'=(L{x}-K{x})*IF(B{x}="Short",-1,1)', 16: f"=O{x}*C{x}", 18: f"=-C{x}*{RATE}",
+             20: f"=Q{x}+R{x}", 21: f'=IF(T{x}>0,"Win","Loss")'}
         for col, v in f.items():
             tr.cell(row=x, column=col, value=v).font = BLACK
         for col in range(1, len(cols) + 1):
@@ -137,13 +139,13 @@ def build(trades, stamp):
         tr.cell(row=x, column=9).number_format = "dd mmm yyyy"
         for col in (11, 12, 13, 14, 15):
             tr.cell(row=x, column=col).number_format = PRICE
-        for col in (5, 16, 17, 18, 19):
+        for col in (5, 16, 17, 18, 19, 20):
             tr.cell(row=x, column=col).number_format = USD
         tr.cell(row=x, column=3).number_format = "0.000000"
     tr.freeze_panes = "C2"
-    tr.auto_filter.ref = f"A1:U{n + 1}"
-    tr.conditional_formatting.add(f"Q2:Q{n + 1}", CellIsRule(operator="greaterThan", formula=["0"], fill=GF))
-    tr.conditional_formatting.add(f"Q2:Q{n + 1}", CellIsRule(operator="lessThan", formula=["0"], fill=RF))
+    tr.auto_filter.ref = f"A1:V{n + 1}"
+    tr.conditional_formatting.add(f"T2:T{n + 1}", CellIsRule(operator="greaterThan", formula=["0"], fill=GF))
+    tr.conditional_formatting.add(f"T2:T{n + 1}", CellIsRule(operator="lessThan", formula=["0"], fill=RF))
 
     # Summary
     for col, w in zip("ABCDE", (40, 16, 16, 16, 52)):
@@ -159,23 +161,33 @@ def build(trades, stamp):
             c.font, c.fill = HF, HFILL
 
     items = [
-        ("Trades", f'=COUNT({T("Q")})', "0", ""),
-        ("Gross P/L (price moves)", f'=SUM({T("P")})', USD, "Units × price move"),
-        ("Costs (net − gross)", f'=SUM({T("S")})', USD, "Spread, fees and overnight charges eToro deducted"),
-        ("Net P/L", f'=SUM({T("Q")})', USD, "What actually reached your account"),
-        ("Winning trades", f'=COUNTIF({T("T")},"Win")', "0", ""),
-        ("Losing trades", f'=COUNTIF({T("T")},"Loss")', "0", ""),
+        ("Trades", f'=COUNT({T("T")})', "0", ""),
+        ("Gross P/L (price moves)", f'=SUM({T("P")})', USD, "Units × price move (= eToro's profit figure)"),
+        ("Spread (estimated)", f'=SUM({T("R")})', USD, "Units × spread rate in H4. eToro charges this separately."),
+        ("Net P/L after spread", f'=SUM({T("T")})', USD, "Best estimate of what really reached your account"),
+        ("Winning trades", f'=COUNTIF({T("U")},"Win")', "0", "After spread"),
+        ("Losing trades", f'=COUNTIF({T("U")},"Loss")', "0", "After spread"),
         ("Win rate", "=IFERROR(B8/B4,0)", "0.0%", ""),
-        ("Average win", f'=IFERROR(AVERAGEIF({T("Q")},">0"),0)', USD, ""),
-        ("Average loss", f'=IFERROR(AVERAGEIF({T("Q")},"<0"),0)', USD, ""),
-        ("Profit factor", f'=IFERROR(SUMIF({T("Q")},">0")/-SUMIF({T("Q")},"<0"),0)', "0.00", "Above 1.0 = profitable"),
-        ("Largest win", f'=MAX({T("Q")})', USD, ""),
-        ("Largest loss", f'=MIN({T("Q")})', USD, ""),
-        ("Average cost per trade", "=IFERROR(B6/B4,0)", USD, ""),
-        ("Costs as % of gross P/L", "=IFERROR(-B6/B5,0)", "0%", "How much of the profit the costs took"),
+        ("Average win", f'=IFERROR(AVERAGEIF({T("T")},">0"),0)', USD, ""),
+        ("Average loss", f'=IFERROR(AVERAGEIF({T("T")},"<0"),0)', USD, ""),
+        ("Profit factor", f'=IFERROR(SUMIF({T("T")},">0")/-SUMIF({T("T")},"<0"),0)', "0.00", "Above 1.0 = profitable"),
+        ("Largest win", f'=MAX({T("T")})', USD, ""),
+        ("Largest loss", f'=MIN({T("T")})', USD, ""),
+        ("Average spread per trade", "=IFERROR(B6/B4,0)", USD, ""),
+        ("Spread as % of gross P/L", '=IF(B5>0,-B6/B5,"gross ≤ 0")', "0%", "How much of the profit the spread took"),
         ("Average minutes held", f'=IFERROR(AVERAGE({T("J")}),0)', "0.0", ""),
     ]
     hdr(3, ["Measure", "Value", "", "", "Note"])
+    sm.column_dimensions["G"].width = 24
+    sm["G3"], sm["H3"] = "Setting", "Value"
+    for c in ("G3", "H3"):
+        sm[c].font, sm[c].fill = HF, HFILL
+    sm["G4"] = "Spread per oz ($)"
+    sm["H4"] = agent.CFG.get("etoro_spread_per_oz", 0.83)
+    sm["H4"].font, sm["H4"].number_format = BLUE, "$0.00"
+    sm["H4"].fill = PatternFill("solid", fgColor="FFF2CC")
+    sm["G5"] = "From your eToro statement (open + close). Change it and everything recalculates."
+    sm["G5"].font = SMALL
     for i, (lab, f, fmt, note) in enumerate(items):
         r = 4 + i
         sm.cell(row=r, column=1, value=lab).font = BOLD if lab == "Net P/L" else BLACK
@@ -187,15 +199,15 @@ def build(trades, stamp):
     sm.conditional_formatting.add("B7", CellIsRule(operator="greaterThan", formula=["0"], fill=GF))
     sm.conditional_formatting.add("B7", CellIsRule(operator="lessThan", formula=["0"], fill=RF))
     r0 = 4 + len(items) + 1
-    hdr(r0, ["By group", "Trades", "Net P/L ($)", "Win rate", ""])
+    hdr(r0, ["By group", "Trades", "Net after spread ($)", "Win rate", ""])
     groups = [("Long trades", "B", "Long"), ("Short trades", "B", "Short"),
-              ("Engine signals (Yes)", "U", "Yes"), ("Own trades (No)", "U", "No")]
+              ("Engine signals (Yes)", "V", "Yes"), ("Own trades (No)", "V", "No")]
     for i, (lab, col, val) in enumerate(groups):
         r = r0 + 1 + i
         sm.cell(row=r, column=1, value=lab).font = BLACK
         sm.cell(row=r, column=2, value=f'=COUNTIFS({T(col)},"{val}")').number_format = "0"
-        sm.cell(row=r, column=3, value=f'=SUMIFS({T("Q")},{T(col)},"{val}")').number_format = USD
-        sm.cell(row=r, column=4, value=f'=IFERROR(COUNTIFS({T(col)},"{val}",{T("T")},"Win")/B{r},0)').number_format = "0%"
+        sm.cell(row=r, column=3, value=f'=SUMIFS({T("T")},{T(col)},"{val}")').number_format = USD
+        sm.cell(row=r, column=4, value=f'=IFERROR(COUNTIFS({T(col)},"{val}",{T("U")},"Win")/B{r},0)').number_format = "0%"
         for c in range(1, 6):
             sm.cell(row=r, column=c).border = THIN
     sm.conditional_formatting.add(f"C{r0 + 1}:C{r0 + 4}", CellIsRule(operator="greaterThan", formula=["0"], fill=GF))
@@ -205,7 +217,7 @@ def build(trades, stamp):
     # Daily
     for col, w in zip("ABCDEF", (16, 8, 13, 13, 13, 13)):
         dy.column_dimensions[col].width = w
-    for i, h in enumerate(["Date (Dubai)", "Trades", "Gross P/L ($)", "Costs ($)", "Net P/L ($)", "Running net ($)"], 1):
+    for i, h in enumerate(["Date (Dubai)", "Trades", "Gross P/L ($)", "Spread est. ($)", "Net after spread ($)", "Running net ($)"], 1):
         c = dy.cell(row=1, column=i, value=h)
         c.font, c.fill = HF, HFILL
     if trades:
@@ -215,7 +227,7 @@ def build(trades, stamp):
             x = i + 2
             dy.cell(row=x, column=1, value=d.to_pydatetime()).number_format = "ddd dd mmm yyyy"
             dy.cell(row=x, column=2, value=f'=COUNTIFS({T("I")},A{x})')
-            for col, s in ((3, "P"), (4, "S"), (5, "Q")):
+            for col, s in ((3, "P"), (4, "R"), (5, "T")):
                 dy.cell(row=x, column=col, value=f'=SUMIFS({T(s)},{T("I")},A{x})').number_format = USD
             dy.cell(row=x, column=6, value=f"=E{x}" if i == 0 else f"=F{x - 1}+E{x}").number_format = USD
             for col in range(1, 7):
@@ -229,7 +241,7 @@ def build(trades, stamp):
     rm.column_dimensions["B"].width = 100
     info = [("What this is", "Every closed GOLD trade on your eToro account, read automatically, with the true result after costs."),
             ("Updates", "Rebuilt by your gold agent whenever a trade closes. Download it again from the website to see new trades."),
-            ("Net P/L from eToro", "eToro's own net profit for the trade. Gross P/L is units × price move; the difference is costs."),
+            ("Spread", "eToro's trade profit does NOT include the spread; it is charged separately. The workbook subtracts units × the spread rate on Summary (H4). Adjust H4 if eToro's spread changes."),
             ("Engine signal?", "Yes = opened in the same direction within 20 minutes after one of your 🟢/🔴 alerts."),
             ("Times", "eToro uses UTC. 'Open time (Dubai)' adds 4 hours; daily totals use the Dubai date."),
             ("Privacy", "This file is password-protected because the website is public.")]
@@ -265,7 +277,7 @@ def main():
         print(f"P/L tracker: could not read eToro trades: {e}")
         return
     engine_match(trades)
-    key = hashlib.sha256(json.dumps([[t["id"], t["net"], t["engine"]] for t in trades]).encode()).hexdigest()
+    key = hashlib.sha256(json.dumps(["v2-spread", agent.CFG.get("etoro_spread_per_oz", 0.83)] + [[t["id"], t["net"], t["engine"]] for t in trades]).encode()).hexdigest()
     if HASH.exists() and HASH.read_text().strip() == key and OUT.exists():
         print(f"P/L tracker: {len(trades)} gold trades, no change")
         return
