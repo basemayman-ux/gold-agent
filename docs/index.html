@@ -254,8 +254,8 @@ function hero(d, age, animate){
       <div><div class="k">Entry</div><div class="v">${n2(p.entry)}</div></div>
       <div class="sl"><div class="k">Stop loss</div><div class="v">${n2(p.sl)}</div></div>
       <div><div class="k">R:R</div><div class="v">${esc(p.rr)}</div></div>
-      <div class="tp"><div class="k">Target 1</div><div class="v">${n2(p.tp1)}</div></div>
-      <div class="tp"><div class="k">Target 2</div><div class="v">${n2(p.tp2)}</div></div>
+      <div class="tp"><div class="k">Target (close all)</div><div class="v">${n2(p.tp1)}</div></div>
+      <div><div class="k">Stop → entry at</div><div class="v">${p.be != null ? n2(p.be) : "—"}</div></div>
       <div><div class="k">Risk</div><div class="v">${p.risk_pct}%${p.size ? `, ${p.size.lots} lots` : ""}</div></div>
     </div>
     ${p.max_entry != null ? (() => {
@@ -265,7 +265,7 @@ function hero(d, age, animate){
           ? `<p class="inval"><strong>Entry window closed at ${esc(p.valid_until_dubai)} Dubai.</strong> Skip this trade unless you are already in it.</p>`
           : `<p class="inval" style="border-color:color-mix(in srgb,var(--long) 50%,var(--line));background:color-mix(in srgb,var(--long) 9%,transparent)"><strong>${lim}.</strong> Valid until ${esc(p.valid_until_dubai)} Dubai. Use a limit order; skip if price is past that level.</p>`;
       })() : ""}
-    <p class="note">Entry is ${p.live_src ? "the live price when the signal was sent" : "the last candle close"}. Target 2 is the ${esc(p.tp2_name)}. Confirm price and spread with your broker before entering.</p>`
+    <p class="note">Entry is ${p.live_src ? "the live price when the signal was sent" : "the last candle close"}. Close the whole trade at the target (1R). When price reaches the "stop → entry" level (0.7R), move your stop to the entry price. Confirm price and spread with your broker before entering.</p>`
     : `<p class="empty">No entry right now. A plan appears here only when a setup scores ${MIN_SCORE} or more and passes every safety check.</p>`;
   const why = (d.why||[]).map(w => `<li>${esc(w)}</li>`).join("");
   const side = `<section><h2>Trade plan</h2>${plan}
@@ -404,8 +404,8 @@ function drawChart(d){
   if (p && (d.decision==="LONG"||d.decision==="SHORT") && ageOf(d) <= STALE_MIN){
     c.createPriceLine({price:p.entry,color:v("--ink"),lineWidth:1,title:"Entry"});
     c.createPriceLine({price:p.sl,color:v("--short"),lineWidth:1,title:"Stop"});
-    c.createPriceLine({price:p.tp1,color:v("--long"),lineWidth:1,lineStyle:2,title:"T1"});
-    c.createPriceLine({price:p.tp2,color:v("--long"),lineWidth:1,title:"T2"});
+    c.createPriceLine({price:p.tp1,color:v("--long"),lineWidth:1,title:"Target"});
+    if (p.be != null) c.createPriceLine({price:p.be,color:v("--ink"),lineWidth:1,lineStyle:2,title:"Stop→entry"});
   } else if (d.profile?.developing){
     c.createPriceLine({price:d.profile.developing.poc,color:v("--a1"),lineWidth:1,lineStyle:1,title:"POC"});
   }

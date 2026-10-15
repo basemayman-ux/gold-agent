@@ -43,6 +43,7 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           ETORO_API_KEY: ${{ secrets.ETORO_API_KEY }}
           ETORO_USER_KEY: ${{ secrets.ETORO_USER_KEY }}
+          ETORO_ALLOW_REAL: ${{ secrets.ETORO_ALLOW_REAL }}
           TEST_ALERT: ${{ inputs.test_alert }}
 
       - name: Update eToro P/L workbook

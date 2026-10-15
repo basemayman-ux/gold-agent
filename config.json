@@ -16,5 +16,21 @@
   "watch_cooldown_minutes": 60,
   "asia_min_score": 90,
   "mode": "active",
-  "entry_valid_minutes": 10
+  "entry_valid_minutes": 10,
+  "min_stop_usd": 5.0,
+  "require_h4_trend": true,
+  "trade_hours_dubai": [
+    11,
+    18
+  ],
+  "management": "all out at 1R, stop to entry after 0.7R",
+  "etoro_symbol": "GOLD",
+  "autotrade": {
+    "mode": "demo",
+    "leverage": 20,
+    "max_trades_per_day": 4,
+    "daily_loss_stop_r": 2.0,
+    "max_units": 10.0,
+    "max_spread": 1.0
+  }
 }
