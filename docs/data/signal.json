@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-15T21:10:34.536935+00:00",
- "dubai_time": "Fri 16 Oct 2026, 01:10",
+ "generated_utc": "2026-10-15T21:20:38.051108+00:00",
+ "dubai_time": "Fri 16 Oct 2026, 01:20",
  "session": "Late US / off-hours",
  "price": 4171.36,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 10.6,
+ "data_age_min": 20.6,
  "last_bar_utc": "2026-10-15T20:55:00+00:00",
  "warnings": [],
  "regime": "Breakout",
@@ -42,7 +42,7 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4148.52,
+  "value": 4148.53,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
@@ -635,35 +635,35 @@
     ],
     [
      4168.75,
-     277.7
+     287.0
     ],
     [
      4169.25,
-     382.5
+     391.8
     ],
     [
      4169.75,
-     406.0
+     415.3
     ],
     [
      4170.25,
-     406.0
+     415.3
     ],
     [
      4170.75,
-     289.1
+     298.3
     ],
     [
      4171.25,
-     227.0
+     236.2
     ],
     [
      4171.75,
-     154.8
+     164.0
     ],
     [
      4172.25,
-     399.2
+     408.4
     ],
     [
      4172.75,
@@ -711,9 +711,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.135,
-  "session_delta": 5006.0,
-  "session_slope": -1065.0,
+  "leg_ratio": 0.139,
+  "session_delta": 5049.0,
+  "session_slope": -1022.0,
   "divergence": null,
   "absorption": null
  },
@@ -731,7 +731,7 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4167.76 / buy 4167.96 (spread $0.20)",
+ "spread": "eToro now: sell 4173.56 / buy 4173.76 (spread $0.20)",
  "score": 65,
  "score_parts": {
   "structure": 18,
@@ -753,13 +753,8 @@
  "min_score": 80,
  "plan": null,
  "why": [
-  "No liquidity sweep or clean continuation setup",
-  "M5 bullish BOS through 4162.63",
-  "Early trend turn: H1 and M15 turned up before H4 (allowed in active mode)",
-  "H4 bearish (Price clearly below H4 EMA200), H1 bullish, M15 bullish",
-  "RSI7 61, RSI14 63, M15 ADX 21, RVOL 3.2\u00d7",
-  "Profile & flow: Accepted above prior VAH 4143.50 (initiative buying); setup-leg delta +0.14",
-  "Weak components: liquidity, session"
+  "STALE DATA \u2014 last closed M5 bar is 21 min old",
+  "Setup score would be 65/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -2508,8 +2503,8 @@
    "c": 4171.36,
    "e20": 4168.27,
    "e50": 4162.85,
-   "vw": 4148.52,
-   "dl": 109.0
+   "vw": 4148.53,
+   "dl": 153.0
   }
  ],
  "journal": {
