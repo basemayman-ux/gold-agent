@@ -59,7 +59,7 @@ def call(method, path, body=None, params=None, ref=None):
         "x-api-key": os.getenv("ETORO_API_KEY", "").strip(),
         "x-user-key": os.getenv("ETORO_USER_KEY", "").strip()})
     if r.status_code not in (200, 201, 202):
-        raise RuntimeError(f"{method} {path}: HTTP {r.status_code} {r.text[:200]}")
+        raise RuntimeError(f"{method} {path}: HTTP {r.status_code} {r.text[:700]}")
     return r.json() if r.text else {}
 
 
@@ -88,7 +88,7 @@ def open_ids(p):
 def place(p, mode, gold, direction, units, sl, tp, lev):
     ref = str(uuid.uuid4())
     body = {"action": "open", "transaction": "buy" if direction == "LONG" else "sellShort",
-            "symbol": agent.CFG.get("etoro_symbol", "GOLD"), "instrumentId": gold, "settlementType": "cfd",
+            "instrumentId": gold, "settlementType": "cfd",          # eToro: symbol OR instrumentId, not both
             "orderType": "mkt", "leverage": lev, "units": units, "orderCurrency": "usd",
             "stopLossRate": round(sl, 2), "takeProfitRate": round(tp, 2), "stopLossType": "fixed"}
     call("POST", p["open"], body=body, ref=ref)
