@@ -1,0 +1,28 @@
+name: Demo test trade
+
+on:
+  workflow_dispatch:
+    inputs:
+      keep_open:
+        description: "Leave the demo trade open so you can see it in eToro"
+        type: boolean
+        default: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Open, edit and close a DEMO trade
+        working-directory: engine
+        run: python demo_test.py ${{ inputs.keep_open && 'keep' || '' }}
+        env:
+          ETORO_API_KEY: ${{ secrets.ETORO_API_KEY }}
+          ETORO_USER_KEY: ${{ secrets.ETORO_USER_KEY }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
