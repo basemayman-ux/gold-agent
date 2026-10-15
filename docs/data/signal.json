@@ -1,14 +1,14 @@
 {
- "generated_utc": "2026-10-15T18:10:36.725501+00:00",
- "dubai_time": "Thu 15 Oct 2026, 22:10",
+ "generated_utc": "2026-10-15T18:20:34.981648+00:00",
+ "dubai_time": "Thu 15 Oct 2026, 22:20",
  "session": "New York",
- "price": 4154.53,
+ "price": 4156.72,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-10-15T18:05:00+00:00",
+ "last_bar_utc": "2026-10-15T18:15:00+00:00",
  "warnings": [],
- "regime": "Trend",
+ "regime": "Breakout",
  "bias": {
   "H4": "Bearish",
   "H1": "Bullish",
@@ -42,23 +42,23 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4146.85,
+  "value": 4146.93,
   "side": "Above",
-  "crosses_2h": 1,
+  "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 62.0,
- "rsi14": 57.7,
+ "rsi7": 70.2,
+ "rsi14": 62.1,
  "adx14": {
-  "M5": 16.2,
-  "M15": 16.0
+  "M5": 19.2,
+  "M15": 15.0
  },
  "atr14": {
-  "M5": 3.44,
-  "M15": 7.14,
-  "percentile": 54
+  "M5": 3.24,
+  "M15": 6.99,
+  "percentile": 45
  },
- "volume": "RVOL 1.38\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "RVOL 1.65\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -511,47 +511,47 @@
     ],
     [
      4153.25,
-     2989.3
+     3112.9
     ],
     [
      4153.75,
-     3377.9
+     3501.5
     ],
     [
      4154.25,
-     3367.2
+     3490.8
     ],
     [
      4154.75,
-     3497.9
+     3621.5
     ],
     [
      4155.25,
-     3548.1
+     3671.7
     ],
     [
      4155.75,
-     3306.1
+     3429.7
     ],
     [
      4156.25,
-     3224.5
+     3348.1
     ],
     [
      4156.75,
-     3445.5
+     3569.1
     ],
     [
      4157.25,
-     2888.8
+     3012.4
     ],
     [
      4157.75,
-     2930.4
+     3020.7
     ],
     [
      4158.25,
-     2687.6
+     2777.9
     ],
     [
      4158.75,
@@ -639,9 +639,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.054,
-  "session_delta": 2719.0,
-  "session_slope": 752.0,
+  "leg_ratio": 0.066,
+  "session_delta": 2941.0,
+  "session_slope": 433.0,
   "divergence": false,
   "absorption": false
  },
@@ -659,14 +659,14 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4147.82 / buy 4148.02 (spread $0.20)",
- "score": 71,
+ "spread": "eToro now: sell 4146.63 / buy 4146.83 (spread $0.20)",
+ "score": 72,
  "score_parts": {
   "structure": 12,
   "liquidity": 12,
   "momentum": 8,
   "vwap": 8,
-  "volume_flow": 12,
+  "volume_flow": 13,
   "volatility": 5,
   "session": 4,
   "news": 10
@@ -682,7 +682,7 @@
  "plan": null,
  "why": [
   "H4 (Bearish) and H1 (Bullish) conflict",
-  "Setup score would be 71/100 (not tradable while blocked)"
+  "Setup score would be 72/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -784,28 +784,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792042800,
-   "o": 4141.13,
-   "h": 4143.38,
-   "l": 4139.12,
-   "c": 4140.69,
-   "e20": 4144.17,
-   "e50": 4142.26,
-   "vw": 4137.1,
-   "dl": -77.0
-  },
-  {
-   "t": 1792043100,
-   "o": 4140.68,
-   "h": 4141.69,
-   "l": 4138.64,
-   "c": 4140.56,
-   "e20": 4143.83,
-   "e50": 4142.19,
-   "vw": 4137.11,
-   "dl": 55.0
-  },
   {
    "t": 1792043400,
    "o": 4140.45,
@@ -2420,8 +2398,8 @@
    "c": 4156.61,
    "e20": 4151.44,
    "e50": 4151.44,
-   "vw": 4146.85,
-   "dl": 0.0
+   "vw": 4146.92,
+   "dl": 335.0
   },
   {
    "t": 1792087500,
@@ -2431,8 +2409,30 @@
    "c": 4154.53,
    "e20": 4151.73,
    "e50": 4151.56,
-   "vw": 4146.85,
+   "vw": 4146.93,
+   "dl": -113.0
+  },
+  {
+   "t": 1792087800,
+   "o": 4154.53,
+   "h": 4156.24,
+   "l": 4154.42,
+   "c": 4155.19,
+   "e20": 4152.06,
+   "e50": 4151.71,
+   "vw": 4146.93,
    "dl": -0.0
+  },
+  {
+   "t": 1792088100,
+   "o": 4155.13,
+   "h": 4157.11,
+   "l": 4154.91,
+   "c": 4156.72,
+   "e20": 4152.5,
+   "e50": 4151.9,
+   "vw": 4146.93,
+   "dl": 0.0
   }
  ],
  "journal": {
