@@ -67,6 +67,11 @@ jobs:
           git add docs/data
           if ! git diff --cached --quiet; then
             git commit -m "signal $(date -u +%Y-%m-%dT%H:%MZ)"
-            git pull --rebase
-            git push
+            # Another run may have saved at the same moment: skip quietly, the next run (5 min) publishes.
+            if ! git pull --rebase; then
+              git rebase --abort || true
+              echo "Another run published at the same time; skipping this save."
+              exit 0
+            fi
+            git push || echo "Push raced with another run; the next run will publish."
           fi
