@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-10-16T13:40:36.595377+00:00",
- "dubai_time": "Fri 16 Oct 2026, 17:40",
+ "generated_utc": "2026-10-16T13:50:37.625478+00:00",
+ "dubai_time": "Fri 16 Oct 2026, 17:50",
  "session": "London/NY overlap",
- "price": 4173.15,
+ "price": 4178.97,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-10-16T13:35:00+00:00",
+ "last_bar_utc": "2026-10-16T13:45:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
   "H4": "Bearish",
   "H1": "Neutral",
-  "M15": "Bearish",
+  "M15": "Neutral",
   "M5": "Bearish"
  },
  "swings": {
@@ -42,23 +42,23 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4172.07,
+  "value": 4171.8,
   "side": "Choppy",
   "crosses_2h": 4,
   "volume_weighted": true
  },
- "rsi7": 62.3,
- "rsi14": 52.9,
+ "rsi7": 70.0,
+ "rsi14": 59.0,
  "adx14": {
-  "M5": 24.9,
-  "M15": 19.6
+  "M5": 23.0,
+  "M15": 19.2
  },
  "atr14": {
-  "M5": 4.74,
-  "M15": 6.91,
-  "percentile": 81
+  "M5": 5.0,
+  "M15": 8.01,
+  "percentile": 86
  },
- "volume": "RVOL 5.80\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "Not available \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -74,8 +74,8 @@
   ],
   "developing": {
    "poc": 4175.75,
-   "vah": 4187.0,
-   "val": 4164.0,
+   "vah": 4186.5,
+   "val": 4163.0,
    "bins": [
     [
      4147.25,
@@ -163,135 +163,135 @@
     ],
     [
      4157.75,
-     760.4
+     874.7
     ],
     [
      4158.25,
-     544.6
+     659.0
     ],
     [
      4158.75,
-     555.3
+     669.6
     ],
     [
      4159.25,
-     586.5
+     700.8
     ],
     [
      4159.75,
-     533.4
+     647.7
     ],
     [
      4160.25,
-     459.1
+     573.4
     ],
     [
      4160.75,
-     454.3
+     568.7
     ],
     [
      4161.25,
-     438.4
+     552.7
     ],
     [
      4161.75,
-     438.4
+     552.7
     ],
     [
      4162.25,
-     382.2
+     496.5
     ],
     [
      4162.75,
-     400.0
+     588.2
     ],
     [
      4163.25,
-     579.8
+     768.0
     ],
     [
      4163.75,
-     658.3
+     732.2
     ],
     [
      4164.25,
-     665.0
+     738.9
     ],
     [
      4164.75,
-     643.7
+     717.5
     ],
     [
      4165.25,
-     749.3
+     823.2
     ],
     [
      4165.75,
-     579.2
+     653.0
     ],
     [
      4166.25,
-     660.4
+     734.3
     ],
     [
      4166.75,
-     615.0
+     688.9
     ],
     [
      4167.25,
-     733.4
+     807.3
     ],
     [
      4167.75,
-     778.5
+     852.4
     ],
     [
      4168.25,
-     676.1
+     749.9
     ],
     [
      4168.75,
-     679.0
+     752.9
     ],
     [
      4169.25,
-     759.7
+     833.5
     ],
     [
      4169.75,
-     695.8
+     769.7
     ],
     [
      4170.25,
-     526.2
+     600.1
     ],
     [
      4170.75,
-     658.0
+     731.9
     ],
     [
      4171.25,
-     694.7
+     768.6
     ],
     [
      4171.75,
-     736.2
+     810.1
     ],
     [
      4172.25,
-     781.3
+     855.1
     ],
     [
      4172.75,
-     937.6
+     1011.5
     ],
     [
      4173.25,
-     987.6
+     1061.4
     ],
     [
      4173.75,
-     1207.6
+     1281.5
     ],
     [
      4174.25,
@@ -443,15 +443,10 @@
     ]
    ]
   },
-  "context": "Price inside value, no edge from the profile"
+  "context": null
  },
  "orderflow": {
-  "available": true,
-  "leg_ratio": -0.33,
-  "session_delta": 860.0,
-  "session_slope": -2367.0,
-  "divergence": null,
-  "absorption": null
+  "available": true
  },
  "liquidity_event": "M15 swing low 4163.38 swept (sell-side), rejection wick",
  "bos_choch": "M5 BOS bearish through 4163.13 at 17:15",
@@ -461,19 +456,10 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4175.50 / buy 4175.70 (spread $0.20)",
- "score": 61,
- "score_parts": {
-  "structure": 20,
-  "liquidity": 7,
-  "momentum": 3,
-  "vwap": 0,
-  "volume_flow": 11,
-  "volatility": 5,
-  "session": 5,
-  "news": 10
- },
- "candidate": "SHORT",
+ "spread": "eToro now: sell 4179.28 / buy 4179.68 (spread $0.40)",
+ "score": 0,
+ "score_parts": {},
+ "candidate": null,
  "decision": "NO TRADE",
  "headline": "No trade",
  "quality": "NO TRADE",
@@ -483,13 +469,7 @@
  "min_score": 80,
  "plan": null,
  "why": [
-  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
-  "M5 bearish BOS through 4163.13",
-  "H1 is in transition; H4, M15 and M5 all agree on the direction",
-  "H4 bearish (Price clearly below H4 EMA200), H1 neutral, M15 bearish",
-  "RSI7 62, RSI14 53, M15 ADX 20, RVOL 5.8\u00d7",
-  "Profile & flow: Price inside value, no edge from the profile; setup-leg delta -0.33",
-  "Weak components: liquidity, momentum, vwap"
+  "No clear direction: H1 is neutral and H4, M15 and M5 do not all agree"
  ],
  "invalidation": null,
  "levels": [
@@ -591,28 +571,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792113000,
-   "o": 4157.29,
-   "h": 4160.8,
-   "l": 4156.33,
-   "c": 4157.83,
-   "e20": 4157.32,
-   "e50": 4159.73,
-   "vw": 4158.26,
-   "dl": -155.0
-  },
-  {
-   "t": 1792113300,
-   "o": 4157.8,
-   "h": 4159.83,
-   "l": 4156.58,
-   "c": 4157.09,
-   "e20": 4157.3,
-   "e50": 4159.62,
-   "vw": 4158.24,
-   "dl": -228.0
-  },
   {
    "t": 1792113600,
    "o": 4156.94,
@@ -2227,8 +2185,8 @@
    "c": 4162.97,
    "e20": 4168.9,
    "e50": 4173.93,
-   "vw": 4172.07,
-   "dl": 0.0
+   "vw": 4171.84,
+   "dl": 1275.0
   },
   {
    "t": 1792157700,
@@ -2238,7 +2196,29 @@
    "c": 4173.15,
    "e20": 4169.31,
    "e50": 4173.9,
-   "vw": 4172.07,
+   "vw": 4171.8,
+   "dl": 1538.0
+  },
+  {
+   "t": 1792158000,
+   "o": 4172.97,
+   "h": 4179.8,
+   "l": 4172.83,
+   "c": 4177.74,
+   "e20": 4170.11,
+   "e50": 4174.05,
+   "vw": 4171.8,
+   "dl": 0.0
+  },
+  {
+   "t": 1792158300,
+   "o": 4177.71,
+   "h": 4179.53,
+   "l": 4173.29,
+   "c": 4178.97,
+   "e20": 4170.95,
+   "e50": 4174.24,
+   "vw": 4171.8,
    "dl": 0.0
   }
  ],
