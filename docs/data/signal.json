@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-16T04:00:46.613516+00:00",
- "dubai_time": "Fri 16 Oct 2026, 08:00",
+ "generated_utc": "2026-10-16T04:10:34.959841+00:00",
+ "dubai_time": "Fri 16 Oct 2026, 08:10",
  "session": "Asia",
- "price": 4183.14,
+ "price": 4177.7,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-10-16T03:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-16T04:05:00+00:00",
  "warnings": [],
  "regime": "Trend",
  "bias": {
@@ -47,16 +47,16 @@
   "crosses_2h": 1,
   "volume_weighted": true
  },
- "rsi7": 77.9,
- "rsi14": 72.1,
+ "rsi7": 56.2,
+ "rsi14": 60.4,
  "adx14": {
-  "M5": 37.9,
+  "M5": 38.1,
   "M15": 22.9
  },
  "atr14": {
-  "M5": 4.81,
+  "M5": 5.22,
   "M15": 6.96,
-  "percentile": 83
+  "percentile": 88
  },
  "volume": "RVOL 0.84\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -67,10 +67,6 @@
    "val": 4141.0
   },
   "naked_pocs": [
-   {
-    "price": 4184.75,
-    "day": "Tue 13 Oct"
-   },
    {
     "price": 4093.75,
     "day": "Wed 14 Oct"
@@ -376,6 +372,26 @@
     [
      4183.75,
      0.0
+    ],
+    [
+     4184.25,
+     0.0
+    ],
+    [
+     4184.75,
+     0.0
+    ],
+    [
+     4185.25,
+     0.0
+    ],
+    [
+     4185.75,
+     0.0
+    ],
+    [
+     4186.25,
+     0.0
     ]
    ]
   },
@@ -385,7 +401,7 @@
   "available": true,
   "leg_ratio": -0.386,
   "session_delta": 1125.0,
-  "session_slope": -599.0,
+  "session_slope": -310.0,
   "divergence": null,
   "absorption": null
  },
@@ -397,12 +413,12 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4182.73 / buy 4183.08 (spread $0.35)",
- "score": 59,
+ "spread": "eToro now: sell 4178.94 / buy 4179.16 (spread $0.22)",
+ "score": 58,
  "score_parts": {
   "structure": 18,
   "liquidity": 0,
-  "momentum": 12,
+  "momentum": 11,
   "vwap": 8,
   "volume_flow": 5,
   "volatility": 5,
@@ -423,7 +439,7 @@
   "M5 bullish BOS through 4179.61",
   "Early trend turn: H1 and M15 turned up before H4 (allowed in active mode)",
   "H4 bearish (Price clearly below H4 EMA200), H1 bullish, M15 bullish",
-  "RSI7 78, RSI14 72, M15 ADX 23, RVOL 0.8\u00d7",
+  "RSI7 56, RSI14 60, M15 ADX 23, RVOL 0.8\u00d7",
   "Profile & flow: Accepted above prior VAH 4160.00 (initiative buying); setup-leg delta -0.39",
   "Weak components: liquidity, volume & flow, session"
  ],
@@ -484,12 +500,6 @@
    "swept": false
   },
   {
-   "name": "Naked POC (Tue 13 Oct)",
-   "price": 4184.75,
-   "side": "buy",
-   "swept": false
-  },
-  {
    "name": "Previous day high",
    "price": 4177.37,
    "side": "buy",
@@ -524,31 +534,15 @@
    "price": 4143.73,
    "side": "sell",
    "swept": false
+  },
+  {
+   "name": "Prior VAL",
+   "price": 4141.0,
+   "side": "sell",
+   "swept": false
   }
  ],
  "chart": [
-  {
-   "t": 1792074600,
-   "o": 4156.67,
-   "h": 4161.31,
-   "l": 4156.51,
-   "c": 4158.9,
-   "e20": 4153.73,
-   "e50": 4152.71,
-   "vw": 4145.65,
-   "dl": -3.0
-  },
-  {
-   "t": 1792074900,
-   "o": 4158.9,
-   "h": 4163.81,
-   "l": 4157.95,
-   "c": 4163.76,
-   "e20": 4154.69,
-   "e50": 4153.14,
-   "vw": 4145.8,
-   "dl": 1040.0
-  },
   {
    "t": 1792075200,
    "o": 4163.7,
@@ -2176,6 +2170,28 @@
    "e50": 4164.97,
    "vw": 4160.78,
    "dl": 0.0
+  },
+  {
+   "t": 1792123200,
+   "o": 4183.18,
+   "h": 4185.41,
+   "l": 4180.39,
+   "c": 4184.65,
+   "e20": 4171.74,
+   "e50": 4165.74,
+   "vw": 4160.78,
+   "dl": 0.0
+  },
+  {
+   "t": 1792123500,
+   "o": 4184.51,
+   "h": 4186.26,
+   "l": 4175.87,
+   "c": 4177.7,
+   "e20": 4172.31,
+   "e50": 4166.21,
+   "vw": 4160.78,
+   "dl": -0.0
   }
  ],
  "journal": {
