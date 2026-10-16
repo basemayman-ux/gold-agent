@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-16T02:00:46.673819+00:00",
- "dubai_time": "Fri 16 Oct 2026, 06:00",
+ "generated_utc": "2026-10-16T02:10:34.898619+00:00",
+ "dubai_time": "Fri 16 Oct 2026, 06:10",
  "session": "Asia",
- "price": 4152.89,
+ "price": 4155.08,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-10-16T01:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-16T02:05:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4156.98,
+  "value": 4156.84,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 48.1,
- "rsi14": 43.5,
+ "rsi7": 57.8,
+ "rsi14": 49.6,
  "adx14": {
-  "M5": 35.6,
+  "M5": 30.9,
   "M15": 19.3
  },
  "atr14": {
-  "M5": 3.18,
+  "M5": 3.31,
   "M15": 5.13,
-  "percentile": 42
+  "percentile": 50
  },
  "volume": "RVOL 3.82\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -79,7 +79,7 @@
   "developing": {
    "poc": 4154.75,
    "vah": 4160.0,
-   "val": 4149.0,
+   "val": 4149.5,
    "bins": [
     [
      4147.25,
@@ -123,27 +123,27 @@
     ],
     [
      4152.25,
-     200.5
+     236.7
     ],
     [
      4152.75,
-     307.6
+     343.8
     ],
     [
      4153.25,
-     542.0
+     641.7
     ],
     [
      4153.75,
-     499.6
+     599.3
     ],
     [
      4154.25,
-     559.6
+     659.3
     ],
     [
      4154.75,
-     619.5
+     683.0
     ],
     [
      4155.25,
@@ -291,13 +291,13 @@
     ]
    ]
   },
-  "context": "Buying in the lower half of developing value"
+  "context": "Buying right under a POC/VAH (supply overhead)"
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.022,
-  "session_delta": -358.0,
-  "session_slope": -328.0,
+  "leg_ratio": -0.063,
+  "session_delta": -559.0,
+  "session_slope": -807.0,
   "divergence": null,
   "absorption": null
  },
@@ -315,35 +315,30 @@
   ],
   "detail": "Fed Chairman Warsh Speaks at 07:30 Dubai (score reduced, not blocked)"
  },
- "spread": "eToro now: sell 4155.12 / buy 4155.32 (spread $0.20)",
- "score": 77,
+ "spread": "eToro now: sell 4154.50 / buy 4154.70 (spread $0.20)",
+ "score": 41,
  "score_parts": {
-  "structure": 20,
-  "liquidity": 16,
-  "momentum": 8,
-  "vwap": 8,
-  "volume_flow": 15,
+  "structure": 10,
+  "liquidity": 7,
+  "momentum": 5,
+  "vwap": 3,
+  "volume_flow": 6,
   "volatility": 5,
   "session": 1,
   "news": 4
  },
  "candidate": "LONG",
- "decision": "WAIT",
- "headline": "Wait",
- "quality": "WATCH",
- "setup": "range",
- "range": {
-  "lo": 4145.23,
-  "hi": 4177.37
- },
+ "decision": "NO TRADE",
+ "headline": "No trade",
+ "quality": "NO TRADE",
+ "setup": "trend",
+ "range": null,
  "mode": "active",
  "min_score": 80,
  "plan": null,
  "why": [
-  "Range setup score 77/100 is below the 80 minimum",
-  "Range trade: range low 4145.23 tested, then displacement",
-  "Gold has ranged 4145.23\u20134177.37 (tested 2\u00d7 low, 2\u00d7 high); target is the top of the range",
-  "RSI7 48, M15 ADX 19"
+  "H4 (Bearish) and H1 (Bullish) conflict",
+  "Setup score would be 41/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -445,28 +440,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792067400,
-   "o": 4153.96,
-   "h": 4154.34,
-   "l": 4130.99,
-   "c": 4137.55,
-   "e20": 4150.68,
-   "e50": 4151.33,
-   "vw": 4142.21,
-   "dl": -2083.0
-  },
-  {
-   "t": 1792067700,
-   "o": 4137.51,
-   "h": 4159.34,
-   "l": 4137.51,
-   "c": 4156.95,
-   "e20": 4151.28,
-   "e50": 4151.55,
-   "vw": 4142.59,
-   "dl": 2785.0
-  },
   {
    "t": 1792068000,
    "o": 4156.78,
@@ -2081,8 +2054,8 @@
    "c": 4153.43,
    "e20": 4154.34,
    "e50": 4157.6,
-   "vw": 4156.98,
-   "dl": -0.0
+   "vw": 4156.9,
+   "dl": -143.0
   },
   {
    "t": 1792115700,
@@ -2092,7 +2065,29 @@
    "c": 4152.89,
    "e20": 4154.21,
    "e50": 4157.41,
-   "vw": 4156.98,
+   "vw": 4156.84,
+   "dl": -58.0
+  },
+  {
+   "t": 1792116000,
+   "o": 4152.89,
+   "h": 4157.62,
+   "l": 4152.89,
+   "c": 4155.35,
+   "e20": 4154.32,
+   "e50": 4157.33,
+   "vw": 4156.84,
+   "dl": 0.0
+  },
+  {
+   "t": 1792116300,
+   "o": 4155.35,
+   "h": 4157.73,
+   "l": 4154.05,
+   "c": 4155.08,
+   "e20": 4154.39,
+   "e50": 4157.24,
+   "vw": 4156.84,
    "dl": -0.0
   }
  ],
