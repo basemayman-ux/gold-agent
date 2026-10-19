@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-19T20:50:34.581691+00:00",
- "dubai_time": "Tue 20 Oct 2026, 00:50",
- "session": "New York",
- "price": 4138.16,
+ "generated_utc": "2026-10-19T21:00:49.715072+00:00",
+ "dubai_time": "Tue 20 Oct 2026, 01:00",
+ "session": "Late US / off-hours",
+ "price": 4141.0,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-10-19T20:45:00+00:00",
+ "data_age_min": 0.8,
+ "last_bar_utc": "2026-10-19T20:55:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -42,20 +42,20 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4163.01,
+  "value": 4162.96,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 30.4,
- "rsi14": 35.8,
+ "rsi7": 61.1,
+ "rsi14": 49.6,
  "adx14": {
-  "M5": 24.9,
-  "M15": 36.5
+  "M5": 23.5,
+  "M15": 35.9
  },
  "atr14": {
-  "M5": 1.63,
-  "M15": 4.04,
+  "M5": 1.66,
+  "M15": 3.99,
   "percentile": 54
  },
  "volume": "RVOL 2.02\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
@@ -82,15 +82,15 @@
     ],
     [
      4137.75,
-     427.9
+     466.9
     ],
     [
      4138.25,
-     507.3
+     591.3
     ],
     [
      4138.75,
-     736.3
+     820.3
     ],
     [
      4139.25,
@@ -510,9 +510,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.528,
-  "session_delta": -5346.0,
-  "session_slope": -858.0,
+  "leg_ratio": -0.546,
+  "session_delta": -5484.0,
+  "session_slope": -877.0,
   "divergence": null,
   "absorption": null
  },
@@ -530,16 +530,16 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4137.94 / buy 4138.14 (spread $0.20)",
- "score": 78,
+ "spread": "eToro now: sell 4141.00 / buy 4141.40 (spread $0.40)",
+ "score": 77,
  "score_parts": {
   "structure": 25,
-  "liquidity": 0,
-  "momentum": 12,
+  "liquidity": 7,
+  "momentum": 8,
   "vwap": 8,
   "volume_flow": 14,
   "volatility": 5,
-  "session": 4,
+  "session": 0,
   "news": 10
  },
  "candidate": "SHORT",
@@ -552,13 +552,13 @@
  "min_score": 77,
  "plan": null,
  "why": [
-  "Structural stop is 3.8\u00d7 ATR away, too wide for a scalp",
-  "No liquidity sweep or clean continuation setup",
+  "Structural stop is 3.0\u00d7 ATR away, too wide for a scalp",
+  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bearish BOS through 4141.56",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 30, RSI14 36, M15 ADX 37, RVOL 2.0\u00d7",
-  "Profile & flow: Accepted below prior VAL 4157.00 (initiative selling); setup-leg delta -0.53",
-  "Weak components: liquidity"
+  "RSI7 61, RSI14 50, M15 ADX 36, RVOL 2.0\u00d7",
+  "Profile & flow: Accepted below prior VAL 4157.00 (initiative selling); setup-leg delta -0.55",
+  "Weak components: liquidity, session"
  ],
  "invalidation": null,
  "levels": [
@@ -660,28 +660,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792398000,
-   "o": 4177.07,
-   "h": 4178.15,
-   "l": 4174.82,
-   "c": 4175.57,
-   "e20": 4179.64,
-   "e50": 4179.59,
-   "vw": 4178.48,
-   "dl": -107.0
-  },
-  {
-   "t": 1792398300,
-   "o": 4175.57,
-   "h": 4178.25,
-   "l": 4175.32,
-   "c": 4177.61,
-   "e20": 4179.45,
-   "e50": 4179.52,
-   "vw": 4178.47,
-   "dl": 93.0
-  },
   {
    "t": 1792398600,
    "o": 4177.64,
@@ -2296,8 +2274,8 @@
    "c": 4138.14,
    "e20": 4140.86,
    "e50": 4143.2,
-   "vw": 4163.01,
-   "dl": -0.0
+   "vw": 4162.99,
+   "dl": -90.0
   },
   {
    "t": 1792442700,
@@ -2307,8 +2285,30 @@
    "c": 4138.16,
    "e20": 4140.61,
    "e50": 4143.01,
-   "vw": 4163.01,
-   "dl": -0.0
+   "vw": 4162.96,
+   "dl": -49.0
+  },
+  {
+   "t": 1792443000,
+   "o": 4138.16,
+   "h": 4139.43,
+   "l": 4137.76,
+   "c": 4139.16,
+   "e20": 4140.47,
+   "e50": 4142.86,
+   "vw": 4162.96,
+   "dl": 0.0
+  },
+  {
+   "t": 1792443300,
+   "o": 4139.1,
+   "h": 4141.12,
+   "l": 4139.1,
+   "c": 4141.0,
+   "e20": 4140.52,
+   "e50": 4142.78,
+   "vw": 4162.96,
+   "dl": 0.0
   }
  ],
  "journal": {
