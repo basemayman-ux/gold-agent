@@ -715,6 +715,8 @@ MODES = {
 def mode_cfg():
     m = MODES.get(CFG.get("mode", "strict"), MODES["strict"]).copy()
     m["name"] = CFG.get("mode", "strict") if CFG.get("mode") in MODES else "strict"
+    if CFG.get("min_score_override"):                  # e.g. 77 during the demo trial
+        m["min_score"] = int(CFG["min_score_override"])
     return m
 
 
