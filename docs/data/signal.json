@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-19T15:10:35.739873+00:00",
- "dubai_time": "Mon 19 Oct 2026, 19:10",
+ "generated_utc": "2026-10-19T15:20:46.101485+00:00",
+ "dubai_time": "Mon 19 Oct 2026, 19:20",
  "session": "London/NY overlap",
- "price": 4146.84,
+ "price": 4144.76,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-10-19T15:05:00+00:00",
+ "data_age_min": 0.8,
+ "last_bar_utc": "2026-10-19T15:15:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4168.29,
+  "value": 4168.07,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 47.2,
- "rsi14": 40.6,
+ "rsi7": 38.0,
+ "rsi14": 37.3,
  "adx14": {
-  "M5": 36.5,
-  "M15": 35.4
+  "M5": 37.4,
+  "M15": 37.3
  },
  "atr14": {
-  "M5": 4.26,
-  "M15": 7.17,
-  "percentile": 89
+  "M5": 4.13,
+  "M15": 6.9,
+  "percentile": 88
  },
  "volume": "RVOL 7.43\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -86,35 +86,35 @@
     ],
     [
      4144.25,
-     700.2
+     770.2
     ],
     [
      4144.75,
-     700.2
+     821.0
     ],
     [
      4145.25,
-     700.2
+     821.0
     ],
     [
      4145.75,
-     809.0
+     929.8
     ],
     [
      4146.25,
-     1106.2
+     1227.0
     ],
     [
      4146.75,
-     1106.2
+     1227.0
     ],
     [
      4147.25,
-     1106.2
+     1227.0
     ],
     [
      4147.75,
-     767.9
+     888.8
     ],
     [
      4148.25,
@@ -462,9 +462,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.102,
-  "session_delta": -6563.0,
-  "session_slope": 120.0,
+  "leg_ratio": -0.103,
+  "session_delta": -6688.0,
+  "session_slope": 160.0,
   "divergence": null,
   "absorption": null
  },
@@ -482,7 +482,7 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4145.94 / buy 4146.14 (spread $0.20)",
+ "spread": "eToro now: sell 4143.65 / buy 4143.85 (spread $0.20)",
  "score": 76,
  "score_parts": {
   "structure": 25,
@@ -508,7 +508,7 @@
   "No liquidity sweep or clean continuation setup",
   "M5 bearish BOS through 4158.76",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 47, RSI14 41, M15 ADX 35, RVOL 7.4\u00d7",
+  "RSI7 38, RSI14 37, M15 ADX 37, RVOL 7.4\u00d7",
   "Profile & flow: Accepted below prior VAL 4164.50 (initiative selling); setup-leg delta -0.10",
   "Weak components: liquidity"
  ],
@@ -612,28 +612,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792377600,
-   "o": 4175.68,
-   "h": 4178.51,
-   "l": 4174.86,
-   "c": 4177.1,
-   "e20": 4174.92,
-   "e50": 4172.32,
-   "vw": 4176.16,
-   "dl": 103.0
-  },
-  {
-   "t": 1792377900,
-   "o": 4177.1,
-   "h": 4177.99,
-   "l": 4172.98,
-   "c": 4173.48,
-   "e20": 4174.79,
-   "e50": 4172.36,
-   "vw": 4176.13,
-   "dl": -257.0
-  },
   {
    "t": 1792378200,
    "o": 4173.48,
@@ -2248,8 +2226,8 @@
    "c": 4144.92,
    "e20": 4149.73,
    "e50": 4157.05,
-   "vw": 4168.29,
-   "dl": -0.0
+   "vw": 4168.2,
+   "dl": -356.0
   },
   {
    "t": 1792422300,
@@ -2259,8 +2237,30 @@
    "c": 4146.84,
    "e20": 4149.45,
    "e50": 4156.65,
-   "vw": 4168.29,
+   "vw": 4168.07,
+   "dl": 231.0
+  },
+  {
+   "t": 1792422600,
+   "o": 4147.01,
+   "h": 4147.81,
+   "l": 4145.67,
+   "c": 4146.92,
+   "e20": 4149.21,
+   "e50": 4156.27,
+   "vw": 4168.07,
    "dl": 0.0
+  },
+  {
+   "t": 1792422900,
+   "o": 4146.84,
+   "h": 4147.48,
+   "l": 4142.97,
+   "c": 4144.76,
+   "e20": 4148.79,
+   "e50": 4155.82,
+   "vw": 4168.07,
+   "dl": -0.0
   }
  ],
  "journal": {
