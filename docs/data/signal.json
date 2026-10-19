@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-19T18:20:32.688679+00:00",
- "dubai_time": "Mon 19 Oct 2026, 22:20",
+ "generated_utc": "2026-10-19T18:30:39.884709+00:00",
+ "dubai_time": "Mon 19 Oct 2026, 22:30",
  "session": "New York",
- "price": 4147.84,
+ "price": 4145.94,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.5,
- "last_bar_utc": "2026-10-19T18:15:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-10-19T18:25:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -42,20 +42,20 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4164.06,
+  "value": 4164.01,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 74.0,
- "rsi14": 61.8,
+ "rsi7": 55.2,
+ "rsi14": 54.8,
  "adx14": {
-  "M5": 28.2,
-  "M15": 44.6
+  "M5": 25.2,
+  "M15": 43.2
  },
  "atr14": {
-  "M5": 2.47,
-  "M15": 5.42,
+  "M5": 2.4,
+  "M15": 5.3,
   "percentile": 57
  },
  "volume": "RVOL 1.87\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
@@ -150,27 +150,27 @@
     ],
     [
      4146.25,
-     1841.6
+     1869.2
     ],
     [
      4146.75,
-     1617.2
+     1644.8
     ],
     [
      4147.25,
-     1639.6
+     1707.0
     ],
     [
      4147.75,
-     1243.0
+     1310.3
     ],
     [
      4148.25,
-     1073.7
+     1141.1
     ],
     [
      4148.75,
-     753.3
+     793.1
     ],
     [
      4149.25,
@@ -510,13 +510,13 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.437,
-  "session_delta": -4177.0,
-  "session_slope": 2539.0,
+  "leg_ratio": 0.409,
+  "session_delta": -4197.0,
+  "session_slope": 1508.0,
   "divergence": null,
   "absorption": null
  },
- "liquidity_event": "Previous day low 4139.91 swept (sell-side), displacement",
+ "liquidity_event": "No valid sweep in the last 2.5 hours",
  "bos_choch": "M5 CHOCH bullish through 4146.01 at 22:00",
  "news": {
   "risk": "Low",
@@ -530,12 +530,12 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4146.90 / buy 4147.10 (spread $0.20)",
- "score": 82,
+ "spread": "eToro now: sell 4145.33 / buy 4145.53 (spread $0.20)",
+ "score": 80,
  "score_parts": {
   "structure": 25,
-  "liquidity": 15,
-  "momentum": 5,
+  "liquidity": 12,
+  "momentum": 6,
   "vwap": 8,
   "volume_flow": 10,
   "volatility": 5,
@@ -556,9 +556,8 @@
   "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bearish BOS through 4137.29",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 74, RSI14 62, M15 ADX 45, RVOL 1.9\u00d7",
-  "Profile & flow: Accepted below prior VAL 4163.50 (initiative selling); setup-leg delta +0.44",
-  "Weak components: momentum"
+  "RSI7 55, RSI14 55, M15 ADX 43, RVOL 1.9\u00d7",
+  "Profile & flow: Accepted below prior VAL 4163.50 (initiative selling); setup-leg delta +0.41"
  ],
  "invalidation": null,
  "levels": [
@@ -660,28 +659,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792389000,
-   "o": 4184.24,
-   "h": 4185.91,
-   "l": 4181.16,
-   "c": 4181.28,
-   "e20": 4180.11,
-   "e50": 4178.09,
-   "vw": 4177.34,
-   "dl": -288.0
-  },
-  {
-   "t": 1792389300,
-   "o": 4181.11,
-   "h": 4185.89,
-   "l": 4180.87,
-   "c": 4184.7,
-   "e20": 4180.55,
-   "e50": 4178.35,
-   "vw": 4177.4,
-   "dl": 146.0
-  },
   {
    "t": 1792389600,
    "o": 4184.67,
@@ -2296,8 +2273,8 @@
    "c": 4147.3,
    "e20": 4144.02,
    "e50": 4146.22,
-   "vw": 4164.06,
-   "dl": -0.0
+   "vw": 4164.03,
+   "dl": -102.0
   },
   {
    "t": 1792433700,
@@ -2307,7 +2284,29 @@
    "c": 4147.84,
    "e20": 4144.39,
    "e50": 4146.28,
-   "vw": 4164.06,
+   "vw": 4164.01,
+   "dl": 81.0
+  },
+  {
+   "t": 1792434000,
+   "o": 4147.83,
+   "h": 4147.97,
+   "l": 4145.7,
+   "c": 4145.79,
+   "e20": 4144.52,
+   "e50": 4146.26,
+   "vw": 4164.01,
+   "dl": -0.0
+  },
+  {
+   "t": 1792434300,
+   "o": 4145.79,
+   "h": 4146.18,
+   "l": 4144.54,
+   "c": 4145.94,
+   "e20": 4144.65,
+   "e50": 4146.25,
+   "vw": 4164.01,
    "dl": 0.0
   }
  ],
