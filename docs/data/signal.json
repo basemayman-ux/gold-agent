@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-19T21:00:49.715072+00:00",
- "dubai_time": "Tue 20 Oct 2026, 01:00",
+ "generated_utc": "2026-10-19T21:10:36.663967+00:00",
+ "dubai_time": "Tue 20 Oct 2026, 01:10",
  "session": "Late US / off-hours",
  "price": 4141.0,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
+ "data_age_min": 10.6,
  "last_bar_utc": "2026-10-19T20:55:00+00:00",
  "warnings": [],
  "regime": "Breakout",
@@ -42,7 +42,7 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4162.96,
+  "value": 4162.91,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
@@ -82,35 +82,35 @@
     ],
     [
      4137.75,
-     466.9
+     496.4
     ],
     [
      4138.25,
-     591.3
+     620.8
     ],
     [
      4138.75,
-     820.3
+     849.8
     ],
     [
      4139.25,
-     792.0
+     849.7
     ],
     [
      4139.75,
-     1114.9
+     1143.1
     ],
     [
      4140.25,
-     1022.4
+     1050.6
     ],
     [
      4140.75,
-     1270.9
+     1299.1
     ],
     [
      4141.25,
-     1326.7
+     1354.9
     ],
     [
      4141.75,
@@ -510,9 +510,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.546,
-  "session_delta": -5484.0,
-  "session_slope": -877.0,
+  "leg_ratio": -0.361,
+  "session_delta": -5280.0,
+  "session_slope": -673.0,
   "divergence": null,
   "absorption": null
  },
@@ -557,7 +557,7 @@
   "M5 bearish BOS through 4141.56",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
   "RSI7 61, RSI14 50, M15 ADX 36, RVOL 2.0\u00d7",
-  "Profile & flow: Accepted below prior VAL 4157.00 (initiative selling); setup-leg delta -0.55",
+  "Profile & flow: Accepted below prior VAL 4157.00 (initiative selling); setup-leg delta -0.36",
   "Weak components: liquidity, session"
  ],
  "invalidation": null,
@@ -2296,8 +2296,8 @@
    "c": 4139.16,
    "e20": 4140.47,
    "e50": 4142.86,
-   "vw": 4162.96,
-   "dl": 0.0
+   "vw": 4162.94,
+   "dl": 80.0
   },
   {
    "t": 1792443300,
@@ -2307,8 +2307,8 @@
    "c": 4141.0,
    "e20": 4140.52,
    "e50": 4142.78,
-   "vw": 4162.96,
-   "dl": 0.0
+   "vw": 4162.91,
+   "dl": 124.0
   }
  ],
  "journal": {
