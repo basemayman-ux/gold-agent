@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-20T10:20:35.843871+00:00",
- "dubai_time": "Tue 20 Oct 2026, 14:20",
+ "generated_utc": "2026-10-20T10:30:38.888647+00:00",
+ "dubai_time": "Tue 20 Oct 2026, 14:30",
  "session": "London",
- "price": 4114.09,
+ "price": 4118.86,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-10-20T10:15:00+00:00",
+ "last_bar_utc": "2026-10-20T10:25:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4128.55,
+  "value": 4128.35,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 39.0,
- "rsi14": 39.0,
+ "rsi7": 61.5,
+ "rsi14": 49.9,
  "adx14": {
-  "M5": 29.0,
-  "M15": 25.5
+  "M5": 27.3,
+  "M15": 25.2
  },
  "atr14": {
-  "M5": 3.52,
-  "M15": 6.65,
-  "percentile": 79
+  "M5": 3.41,
+  "M15": 6.68,
+  "percentile": 77
  },
  "volume": "RVOL 3.09\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -69,7 +69,7 @@
   "naked_pocs": [],
   "developing": {
    "poc": 4121.25,
-   "vah": 4137.0,
+   "vah": 4137.5,
    "val": 4118.5,
    "bins": [
     [
@@ -78,31 +78,31 @@
     ],
     [
      4111.75,
-     392.0
+     455.0
     ],
     [
      4112.25,
-     605.0
+     725.2
     ],
     [
      4112.75,
-     605.0
+     725.2
     ],
     [
      4113.25,
-     605.0
+     725.2
     ],
     [
      4113.75,
-     446.6
+     566.8
     ],
     [
      4114.25,
-     383.8
+     504.0
     ],
     [
      4114.75,
-     383.8
+     504.0
     ],
     [
      4115.25,
@@ -370,9 +370,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.418,
-  "session_delta": -4210.0,
-  "session_slope": -2996.0,
+  "leg_ratio": -0.307,
+  "session_delta": -3755.0,
+  "session_slope": -2060.0,
   "divergence": null,
   "absorption": null
  },
@@ -390,12 +390,12 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4115.49 / buy 4115.69 (spread $0.20)",
- "score": 85,
+ "spread": "eToro now: sell 4118.42 / buy 4118.62 (spread $0.20)",
+ "score": 90,
  "score_parts": {
   "structure": 25,
-  "liquidity": 8,
-  "momentum": 11,
+  "liquidity": 15,
+  "momentum": 9,
   "vwap": 8,
   "volume_flow": 14,
   "volatility": 5,
@@ -403,23 +403,42 @@
   "news": 10
  },
  "candidate": "SHORT",
- "decision": "NO TRADE",
- "headline": "No trade",
- "quality": "NO TRADE",
+ "decision": "SHORT",
+ "headline": "Short setup confirmed",
+ "quality": "A+",
  "setup": "trend",
  "range": null,
  "mode": "active",
  "min_score": 77,
- "plan": null,
+ "plan": {
+  "entry": 4118.42,
+  "sl": 4127.44,
+  "tp1": 4109.4,
+  "tp2": 4073.46,
+  "tp2_name": "H1 swing low",
+  "rr": "1:1 (all out at target)",
+  "be": 4112.1,
+  "risk_pct": 0.5,
+  "size": {
+   "risk_cash": 37.0,
+   "oz": 4.1,
+   "lots_std": 0.04,
+   "lots": 4.1,
+   "unit": "oz (eToro units)"
+  },
+  "max_entry": 4116.16,
+  "valid_until": "2026-10-20T10:40:38.888647+00:00",
+  "valid_until_dubai": "14:40",
+  "live_src": "eToro"
+ },
  "why": [
-  "Structural stop is 3.8\u00d7 ATR away, too wide for a scalp",
-  "No liquidity sweep or clean continuation setup",
+  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bearish CHOCH through 4115.40",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 39, RSI14 39, M15 ADX 26, RVOL 3.1\u00d7",
-  "Profile & flow: Accepted below prior VAL 4136.50 (initiative selling); setup-leg delta -0.42"
+  "RSI7 62, RSI14 50, M15 ADX 25, RVOL 3.1\u00d7",
+  "Profile & flow: Accepted below prior VAL 4136.50 (initiative selling); setup-leg delta -0.31"
  ],
- "invalidation": null,
+ "invalidation": "Trade through 4127.44 (beyond the last M5 swing high), or an M15 close above the M15 EMA50 (4131.13) before TP1.",
  "levels": [
   {
    "name": "H1 swing high",
@@ -519,28 +538,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792443000,
-   "o": 4138.16,
-   "h": 4139.43,
-   "l": 4137.76,
-   "c": 4139.16,
-   "e20": 4140.47,
-   "e50": 4142.86,
-   "vw": 4162.95,
-   "dl": 80.0
-  },
-  {
-   "t": 1792443300,
-   "o": 4139.1,
-   "h": 4141.12,
-   "l": 4139.1,
-   "c": 4141.0,
-   "e20": 4140.52,
-   "e50": 4142.78,
-   "vw": 4162.91,
-   "dl": 159.0
-  },
   {
    "t": 1792447200,
    "o": 4142.97,
@@ -2155,8 +2152,8 @@
    "c": 4114.21,
    "e20": 4118.11,
    "e50": 4123.19,
-   "vw": 4128.55,
-   "dl": 0.0
+   "vw": 4128.44,
+   "dl": 257.0
   },
   {
    "t": 1792491300,
@@ -2166,7 +2163,29 @@
    "c": 4114.09,
    "e20": 4117.72,
    "e50": 4122.83,
-   "vw": 4128.55,
+   "vw": 4128.35,
+   "dl": 197.0
+  },
+  {
+   "t": 1792491600,
+   "o": 4114.14,
+   "h": 4116.14,
+   "l": 4113.88,
+   "c": 4115.95,
+   "e20": 4117.56,
+   "e50": 4122.56,
+   "vw": 4128.35,
+   "dl": 0.0
+  },
+  {
+   "t": 1792491900,
+   "o": 4115.93,
+   "h": 4119.06,
+   "l": 4115.9,
+   "c": 4118.86,
+   "e20": 4117.68,
+   "e50": 4122.41,
+   "vw": 4128.35,
    "dl": 0.0
   }
  ],
@@ -2228,6 +2247,25 @@
   }
  },
  "recent_signals": [
+  {
+   "time_utc": "2026-10-20T10:30:38.888647+00:00",
+   "dubai": "Tue 20 Oct 2026, 14:30",
+   "session": "London",
+   "direction": "SHORT",
+   "entry": 4118.42,
+   "sl": 4127.44,
+   "tp1": 4109.4,
+   "tp2": 4073.46,
+   "rr": 4.98,
+   "score": 90,
+   "risk_pct": 0.5,
+   "regime": "Breakout",
+   "reason": "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP; M5 bearish CHOCH through 4115.40; H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
+   "status": "open",
+   "tp1_hit": false,
+   "mgmt": "1R_be07",
+   "setup": "trend"
+  },
   {
    "time_utc": "2026-10-20T07:10:32.403726+00:00",
    "dubai": "Tue 20 Oct 2026, 11:10",
@@ -2431,28 +2469,6 @@
    "result": "TP1 then breakeven",
    "r": 0.5,
    "closed_utc": "2026-10-14T12:00:00+00:00"
-  },
-  {
-   "time_utc": "2026-10-14T09:25:27.586629+00:00",
-   "dubai": "Wed 14 Oct 2026, 13:25",
-   "session": "London",
-   "direction": "LONG",
-   "entry": 4143.53,
-   "sl": 4139.2,
-   "tp1": 4147.86,
-   "tp2": 4169.37,
-   "rr": 5.97,
-   "score": 82,
-   "risk_pct": 0.5,
-   "regime": "Breakout",
-   "reason": "Range trade: range low 4142.67 swept, then displacement; Gold has ranged 4142.67\u20134169.97 (tested 4\u00d7 low, 3\u00d7 high); target is the top of the range; RSI7 42, M15 ADX 20",
-   "status": "closed",
-   "tp1_hit": false,
-   "setup": "range",
-   "mgmt": "half_tp1_be",
-   "result": "Loss",
-   "r": -1.0,
-   "closed_utc": "2026-10-14T11:00:00+00:00"
   }
  ]
 }
