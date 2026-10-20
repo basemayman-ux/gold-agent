@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-20T13:45:32.571908+00:00",
- "dubai_time": "Tue 20 Oct 2026, 17:45",
+ "generated_utc": "2026-10-20T13:50:33.514128+00:00",
+ "dubai_time": "Tue 20 Oct 2026, 17:50",
  "session": "London/NY overlap",
- "price": 4129.71,
+ "price": 4128.78,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.5,
- "last_bar_utc": "2026-10-20T13:40:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-20T13:45:00+00:00",
  "warnings": [],
  "regime": "High Volatility",
  "bias": {
@@ -38,23 +38,23 @@
   "H1": "below"
  },
  "ema20_50": {
-  "M5": "EMA20 below EMA50",
+  "M5": "EMA20 above EMA50",
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4125.48,
+  "value": 4125.46,
   "side": "Above",
   "crosses_2h": 1,
   "volume_weighted": true
  },
- "rsi7": 67.6,
- "rsi14": 60.2,
+ "rsi7": 64.9,
+ "rsi14": 58.9,
  "adx14": {
-  "M5": 11.6,
+  "M5": 12.9,
   "M15": 15.8
  },
  "atr14": {
-  "M5": 5.72,
+  "M5": 5.73,
   "M15": 8.28,
   "percentile": 100
  },
@@ -69,7 +69,7 @@
   "naked_pocs": [],
   "developing": {
    "poc": 4120.75,
-   "vah": 4130.5,
+   "vah": 4130.0,
    "val": 4112.5,
    "bins": [
     [
@@ -126,83 +126,83 @@
     ],
     [
      4117.75,
-     1655.5
+     1720.1
     ],
     [
      4118.25,
-     1831.0
+     1895.6
     ],
     [
      4118.75,
-     2177.0
+     2241.6
     ],
     [
      4119.25,
-     2640.2
+     2704.8
     ],
     [
      4119.75,
-     3012.4
+     3077.0
     ],
     [
      4120.25,
-     2980.8
+     3045.4
     ],
     [
      4120.75,
-     3052.5
+     3117.1
     ],
     [
      4121.25,
-     2975.2
+     3039.8
     ],
     [
      4121.75,
-     2900.3
+     2964.9
     ],
     [
      4122.25,
-     2703.6
+     2768.2
     ],
     [
      4122.75,
-     2805.5
+     2870.1
     ],
     [
      4123.25,
-     2807.8
+     2872.4
     ],
     [
      4123.75,
-     2701.5
+     2766.1
     ],
     [
      4124.25,
-     2167.7
+     2232.3
     ],
     [
      4124.75,
-     2100.4
+     2165.0
     ],
     [
      4125.25,
-     1223.3
+     1287.9
     ],
     [
      4125.75,
-     1185.5
+     1250.1
     ],
     [
      4126.25,
-     1283.9
+     1348.5
     ],
     [
      4126.75,
-     1245.7
+     1310.3
     ],
     [
      4127.25,
-     860.2
+     924.8
     ],
     [
      4127.75,
@@ -370,9 +370,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.052,
-  "session_delta": -3143.0,
-  "session_slope": -628.0,
+  "leg_ratio": -0.002,
+  "session_delta": -2007.0,
+  "session_slope": 795.0,
   "divergence": true,
   "absorption": true
  },
@@ -390,34 +390,33 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4130.46 / buy 4130.66 (spread $0.20)",
- "score": 72,
+ "spread": "eToro now: sell 4128.61 / buy 4128.81 (spread $0.20)",
+ "score": 67,
  "score_parts": {
   "structure": 20,
   "liquidity": 17,
-  "momentum": 3,
+  "momentum": 1,
   "vwap": 3,
-  "volume_flow": 14,
+  "volume_flow": 11,
   "volatility": 0,
   "session": 5,
   "news": 10
  },
  "candidate": "SHORT",
- "decision": "WAIT",
- "headline": "Wait",
- "quality": "WATCH",
+ "decision": "NO TRADE",
+ "headline": "No trade",
+ "quality": "NO TRADE",
  "setup": "trend",
  "range": null,
  "mode": "active",
  "min_score": 77,
  "plan": null,
  "why": [
-  "Score 72/100 is below the 77 live-trade minimum",
   "M15 swing high at 4126.59 swept, then displacement",
   "M5 bearish CHOCH through 4119.34",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bullish",
-  "RSI7 68, RSI14 60, M15 ADX 16, RVOL 4.5\u00d7",
-  "Profile & flow: Accepted below prior VAL 4136.50 (initiative selling); setup-leg delta -0.05, delta divergence at the sweep, absorption at the sweep",
+  "RSI7 65, RSI14 59, M15 ADX 16, RVOL 4.5\u00d7",
+  "Profile & flow: Accepted below prior VAL 4136.50 (initiative selling); setup-leg delta -0.00, delta divergence at the sweep, absorption at the sweep",
   "Weak components: momentum, vwap, volatility"
  ],
  "invalidation": null,
@@ -520,17 +519,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792458900,
-   "o": 4121.95,
-   "h": 4122.62,
-   "l": 4115.77,
-   "c": 4117.15,
-   "e20": 4130.37,
-   "e50": 4134.83,
-   "vw": 4130.56,
-   "dl": -843.0
-  },
   {
    "t": 1792459200,
    "o": 4117.22,
@@ -2156,8 +2144,8 @@
    "c": 4126.85,
    "e20": 4120.32,
    "e50": 4120.92,
-   "vw": 4125.48,
-   "dl": 0.0
+   "vw": 4125.46,
+   "dl": 1136.0
   },
   {
    "t": 1792503600,
@@ -2167,8 +2155,19 @@
    "c": 4129.71,
    "e20": 4121.21,
    "e50": 4121.26,
-   "vw": 4125.48,
+   "vw": 4125.46,
    "dl": 0.0
+  },
+  {
+   "t": 1792503900,
+   "o": 4129.6,
+   "h": 4134.1,
+   "l": 4128.17,
+   "c": 4128.78,
+   "e20": 4121.93,
+   "e50": 4121.56,
+   "vw": 4125.46,
+   "dl": -0.0
   }
  ],
  "journal": {
