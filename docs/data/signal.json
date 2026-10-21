@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-21T23:21:20.217858+00:00",
- "dubai_time": "Thu 22 Oct 2026, 03:21",
+ "generated_utc": "2026-10-21T23:30:43.481529+00:00",
+ "dubai_time": "Thu 22 Oct 2026, 03:30",
  "session": "Late US / off-hours",
- "price": 4126.88,
+ "price": 4127.05,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 1.3,
- "last_bar_utc": "2026-10-21T23:15:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-10-21T23:25:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4133.84,
+  "value": 4132.96,
   "side": "Below",
   "crosses_2h": 1,
   "volume_weighted": true
  },
- "rsi7": 25.0,
- "rsi14": 35.7,
+ "rsi7": 36.0,
+ "rsi14": 39.1,
  "adx14": {
-  "M5": 21.7,
-  "M15": 13.5
+  "M5": 24.8,
+  "M15": 13.9
  },
  "atr14": {
-  "M5": 2.57,
-  "M15": 5.85,
-  "percentile": 29
+  "M5": 2.62,
+  "M15": 5.7,
+  "percentile": 30
  },
  "volume": "Not available \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -68,37 +68,45 @@
   },
   "naked_pocs": [],
   "developing": {
-   "poc": 4137.75,
-   "vah": 4141.5,
-   "val": 4131.0,
+   "poc": 4127.25,
+   "vah": 4137.0,
+   "val": 4125.5,
    "bins": [
+    [
+     4124.75,
+     0.0
+    ],
+    [
+     4125.25,
+     0.0
+    ],
     [
      4125.75,
      32.7
     ],
     [
      4126.25,
-     36.5
+     72.0
     ],
     [
      4126.75,
-     36.5
+     119.0
     ],
     [
      4127.25,
-     88.9
+     171.4
     ],
     [
      4127.75,
-     88.9
+     171.4
     ],
     [
      4128.25,
-     88.9
+     171.4
     ],
     [
      4128.75,
-     56.3
+     91.8
     ],
     [
      4129.25,
@@ -208,7 +216,7 @@
   "available": true
  },
  "liquidity_event": "No valid sweep in the last 2.5 hours",
- "bos_choch": "M5 CHOCH bearish through 4132.44 at 02:45",
+ "bos_choch": "M5 BOS bearish through 4125.74 at 03:20",
  "news": {
   "risk": "Low",
   "status": "live",
@@ -221,7 +229,7 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4127.56 / buy 4127.76 (spread $0.20)",
+ "spread": "eToro now: sell 4127.45 / buy 4127.65 (spread $0.20)",
  "score": 0,
  "score_parts": {},
  "candidate": null,
@@ -336,28 +344,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792576200,
-   "o": 4121.73,
-   "h": 4122.36,
-   "l": 4120.01,
-   "c": 4120.49,
-   "e20": 4121.58,
-   "e50": 4120.58,
-   "vw": 4118.83,
-   "dl": -105.0
-  },
-  {
-   "t": 1792576500,
-   "o": 4120.49,
-   "h": 4122.2,
-   "l": 4117.3,
-   "c": 4118.47,
-   "e20": 4121.29,
-   "e50": 4120.5,
-   "vw": 4118.83,
-   "dl": -206.0
-  },
   {
    "t": 1792576800,
    "o": 4118.38,
@@ -1972,8 +1958,8 @@
    "c": 4128.16,
    "e20": 4132.62,
    "e50": 4132.87,
-   "vw": 4133.84,
-   "dl": 13.0
+   "vw": 4133.35,
+   "dl": 135.0
   },
   {
    "t": 1792624500,
@@ -1983,8 +1969,30 @@
    "c": 4126.88,
    "e20": 4132.07,
    "e50": 4132.63,
-   "vw": 4133.84,
+   "vw": 4132.96,
+   "dl": -130.0
+  },
+  {
+   "t": 1792624800,
+   "o": 4126.89,
+   "h": 4128.11,
+   "l": 4124.68,
+   "c": 4124.84,
+   "e20": 4131.38,
+   "e50": 4132.33,
+   "vw": 4132.96,
    "dl": -0.0
+  },
+  {
+   "t": 1792625100,
+   "o": 4124.83,
+   "h": 4127.24,
+   "l": 4124.83,
+   "c": 4127.05,
+   "e20": 4130.97,
+   "e50": 4132.12,
+   "vw": 4132.96,
+   "dl": 0.0
   }
  ],
  "journal": {
