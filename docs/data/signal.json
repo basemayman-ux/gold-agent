@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-10-21T01:10:35.685349+00:00",
- "dubai_time": "Wed 21 Oct 2026, 05:10",
+ "generated_utc": "2026-10-21T01:20:32.629971+00:00",
+ "dubai_time": "Wed 21 Oct 2026, 05:20",
  "session": "Asia",
- "price": 4108.31,
+ "price": 4109.96,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-10-21T01:05:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-10-21T01:15:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
   "H4": "Bearish",
   "H1": "Bearish",
   "M15": "Bearish",
-  "M5": "Neutral"
+  "M5": "Bearish"
  },
  "swings": {
   "H4": [
@@ -30,7 +30,7 @@
   ],
   "M5": [
    "HH",
-   "HL"
+   "LL"
   ]
  },
  "ema200": {
@@ -42,23 +42,23 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4120.42,
+  "value": 4117.98,
   "side": "Below",
   "crosses_2h": 2,
   "volume_weighted": true
  },
- "rsi7": 17.9,
- "rsi14": 26.9,
+ "rsi7": 27.7,
+ "rsi14": 32.4,
  "adx14": {
-  "M5": 26.3,
-  "M15": 11.0
+  "M5": 30.3,
+  "M15": 12.4
  },
  "atr14": {
-  "M5": 3.34,
-  "M15": 4.62,
-  "percentile": 69
+  "M5": 3.57,
+  "M15": 5.16,
+  "percentile": 73
  },
- "volume": "RVOL 1.91\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "RVOL 9.21\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -69,108 +69,108 @@
   "naked_pocs": [],
   "developing": {
    "poc": 4117.25,
-   "vah": 4122.5,
-   "val": 4113.5,
+   "vah": 4121.5,
+   "val": 4110.5,
    "bins": [
     [
      4106.25,
-     0.0
+     100.2
     ],
     [
      4106.75,
-     0.0
+     100.2
     ],
     [
      4107.25,
-     0.0
+     100.2
     ],
     [
      4107.75,
-     0.0
+     100.2
     ],
     [
      4108.25,
-     0.0
+     100.2
     ],
     [
      4108.75,
-     0.0
+     100.2
     ],
     [
      4109.25,
-     0.0
+     100.2
     ],
     [
      4109.75,
-     0.0
+     100.2
     ],
     [
      4110.25,
-     0.0
+     100.2
     ],
     [
      4110.75,
-     0.0
+     100.2
     ],
     [
      4111.25,
-     0.0
+     100.2
     ],
     [
      4111.75,
-     0.0
+     100.2
     ],
     [
      4112.25,
-     48.2
+     270.5
     ],
     [
      4112.75,
-     48.2
+     270.5
     ],
     [
      4113.25,
-     48.2
+     270.5
     ],
     [
      4113.75,
-     91.5
+     313.7
     ],
     [
      4114.25,
-     119.6
+     341.9
     ],
     [
      4114.75,
-     261.5
+     383.5
     ],
     [
      4115.25,
-     325.6
+     447.6
     ],
     [
      4115.75,
-     322.3
+     444.3
     ],
     [
      4116.25,
-     434.0
+     556.0
     ],
     [
      4116.75,
-     446.1
+     568.1
     ],
     [
      4117.25,
-     468.8
+     590.8
     ],
     [
      4117.75,
-     465.3
+     587.3
     ],
     [
      4118.25,
-     429.9
+     551.9
     ],
     [
      4118.75,
@@ -282,13 +282,13 @@
     ]
    ]
   },
-  "context": "Price outside value without confirmed acceptance"
+  "context": "Accepted below prior VAL 4116.50 (initiative selling)"
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.078,
-  "session_delta": 337.0,
-  "session_slope": 730.0,
+  "leg_ratio": -0.284,
+  "session_delta": -906.0,
+  "session_slope": -858.0,
   "divergence": null,
   "absorption": null
  },
@@ -306,14 +306,14 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4107.94 / buy 4108.14 (spread $0.20)",
- "score": 73,
+ "spread": "eToro now: sell 4110.70 / buy 4110.90 (spread $0.20)",
+ "score": 80,
  "score_parts": {
   "structure": 25,
   "liquidity": 8,
   "momentum": 9,
   "vwap": 8,
-  "volume_flow": 7,
+  "volume_flow": 14,
   "volatility": 5,
   "session": 1,
   "news": 10
@@ -321,19 +321,19 @@
  "candidate": "SHORT",
  "decision": "WAIT",
  "headline": "Wait",
- "quality": "WATCH",
+ "quality": "B+",
  "setup": "trend",
  "range": null,
  "mode": "active",
  "min_score": 77,
  "plan": null,
  "why": [
-  "Score 73/100 is below the 77 live-trade minimum",
+  "Asian session needs 85+ (score 80/100); liquidity is thinner before London",
   "No liquidity sweep or clean continuation setup",
   "M5 bearish CHOCH through 4116.57",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 18, RSI14 27, M15 ADX 11, RVOL 1.9\u00d7",
-  "Profile & flow: Price outside value without confirmed acceptance; setup-leg delta +0.08",
+  "RSI7 28, RSI14 32, M15 ADX 12, RVOL 9.2\u00d7",
+  "Profile & flow: Accepted below prior VAL 4116.50 (initiative selling); setup-leg delta -0.28",
   "Weak components: session"
  ],
  "invalidation": null,
@@ -405,12 +405,6 @@
    "swept": false
   },
   {
-   "name": "M15 swing low",
-   "price": 4112.04,
-   "side": "sell",
-   "swept": false
-  },
-  {
    "name": "H1 swing low",
    "price": 4111.44,
    "side": "sell",
@@ -436,28 +430,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792496400,
-   "o": 4124.66,
-   "h": 4124.79,
-   "l": 4120.85,
-   "c": 4121.38,
-   "e20": 4121.42,
-   "e50": 4122.33,
-   "vw": 4127.67,
-   "dl": -370.0
-  },
-  {
-   "t": 1792496700,
-   "o": 4121.38,
-   "h": 4121.45,
-   "l": 4120.1,
-   "c": 4120.59,
-   "e20": 4121.34,
-   "e50": 4122.26,
-   "vw": 4127.64,
-   "dl": -64.0
-  },
   {
    "t": 1792497000,
    "o": 4120.58,
@@ -2072,8 +2044,8 @@
    "c": 4114.38,
    "e20": 4118.35,
    "e50": 4120.11,
-   "vw": 4120.42,
-   "dl": -0.0
+   "vw": 4119.5,
+   "dl": -448.0
   },
   {
    "t": 1792544700,
@@ -2083,8 +2055,30 @@
    "c": 4108.31,
    "e20": 4117.4,
    "e50": 4119.65,
-   "vw": 4120.42,
+   "vw": 4117.98,
+   "dl": -795.0
+  },
+  {
+   "t": 1792545000,
+   "o": 4108.11,
+   "h": 4112.35,
+   "l": 4106.9,
+   "c": 4109.25,
+   "e20": 4116.62,
+   "e50": 4119.24,
+   "vw": 4117.98,
    "dl": -0.0
+  },
+  {
+   "t": 1792545300,
+   "o": 4109.12,
+   "h": 4111.8,
+   "l": 4107.25,
+   "c": 4109.96,
+   "e20": 4115.99,
+   "e50": 4118.88,
+   "vw": 4117.98,
+   "dl": 0.0
   }
  ],
  "journal": {
