@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-21T05:00:44.838568+00:00",
- "dubai_time": "Wed 21 Oct 2026, 09:00",
+ "generated_utc": "2026-10-21T05:10:30.286573+00:00",
+ "dubai_time": "Wed 21 Oct 2026, 09:10",
  "session": "Asia",
- "price": 4114.69,
+ "price": 4119.77,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-10-21T04:55:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-10-21T05:05:00+00:00",
  "warnings": [],
  "regime": "Range",
  "bias": {
@@ -42,19 +42,19 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4120.21,
+  "value": 4120.03,
   "side": "Choppy",
   "crosses_2h": 4,
   "volume_weighted": true
  },
- "rsi7": 35.1,
- "rsi14": 42.1,
+ "rsi7": 58.7,
+ "rsi14": 52.9,
  "adx14": {
-  "M5": 16.0,
+  "M5": 14.8,
   "M15": 11.7
  },
  "atr14": {
-  "M5": 3.43,
+  "M5": 3.41,
   "M15": 5.99,
   "percentile": 66
  },
@@ -138,19 +138,19 @@
     ],
     [
      4114.25,
-     119.6
+     209.9
     ],
     [
      4114.75,
-     379.4
+     469.7
     ],
     [
      4115.25,
-     498.0
+     588.2
     ],
     [
      4115.75,
-     494.7
+     584.9
     ],
     [
      4116.25,
@@ -282,13 +282,13 @@
     ]
    ]
   },
-  "context": "Accepted below prior VAL 4116.50 (initiative selling)"
+  "context": "Sweep happened at the value-area high (responsive selling)"
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.167,
-  "session_delta": -324.0,
-  "session_slope": -617.0,
+  "leg_ratio": -0.188,
+  "session_delta": -470.0,
+  "session_slope": -858.0,
   "divergence": false,
   "absorption": false
  },
@@ -306,12 +306,12 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4115.25 / buy 4115.45 (spread $0.20)",
- "score": 76,
+ "spread": "eToro now: sell 4120.04 / buy 4120.26 (spread $0.22)",
+ "score": 71,
  "score_parts": {
   "structure": 25,
   "liquidity": 12,
-  "momentum": 9,
+  "momentum": 4,
   "vwap": 5,
   "volume_flow": 9,
   "volatility": 5,
@@ -329,7 +329,7 @@
  "plan": null,
  "why": [
   "MARKET CHOP \u2014 ADX weak, VWAP crossed 4\u00d7 in 2h",
-  "Setup score would be 76/100 (not tradable while blocked)"
+  "Setup score would be 71/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -390,7 +390,7 @@
   {
    "name": "Prior VAL",
    "price": 4116.5,
-   "side": "buy",
+   "side": "sell",
    "swept": false
   },
   {
@@ -425,28 +425,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792510200,
-   "o": 4134.42,
-   "h": 4135.06,
-   "l": 4131.55,
-   "c": 4132.29,
-   "e20": 4136.37,
-   "e50": 4131.16,
-   "vw": 4129.63,
-   "dl": -397.0
-  },
-  {
-   "t": 1792510500,
-   "o": 4132.29,
-   "h": 4132.79,
-   "l": 4130.66,
-   "c": 4132.42,
-   "e20": 4136.0,
-   "e50": 4131.21,
-   "vw": 4129.65,
-   "dl": 527.0
-  },
   {
    "t": 1792510800,
    "o": 4132.37,
@@ -2061,8 +2039,8 @@
    "c": 4114.63,
    "e20": 4118.51,
    "e50": 4118.79,
-   "vw": 4120.21,
-   "dl": -0.0
+   "vw": 4120.1,
+   "dl": -103.0
   },
   {
    "t": 1792558500,
@@ -2072,8 +2050,30 @@
    "c": 4114.69,
    "e20": 4118.14,
    "e50": 4118.63,
-   "vw": 4120.21,
-   "dl": -0.0
+   "vw": 4120.03,
+   "dl": -43.0
+  },
+  {
+   "t": 1792558800,
+   "o": 4114.66,
+   "h": 4117.27,
+   "l": 4113.98,
+   "c": 4116.94,
+   "e20": 4118.03,
+   "e50": 4118.56,
+   "vw": 4120.03,
+   "dl": 0.0
+  },
+  {
+   "t": 1792559100,
+   "o": 4116.93,
+   "h": 4119.8,
+   "l": 4116.46,
+   "c": 4119.77,
+   "e20": 4118.19,
+   "e50": 4118.61,
+   "vw": 4120.03,
+   "dl": 0.0
   }
  ],
  "journal": {
