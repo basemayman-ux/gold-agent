@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-22T17:00:47.198018+00:00",
- "dubai_time": "Thu 22 Oct 2026, 21:00",
+ "generated_utc": "2026-10-22T17:10:37.955765+00:00",
+ "dubai_time": "Thu 22 Oct 2026, 21:10",
  "session": "New York",
- "price": 4038.19,
+ "price": 4039.75,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-10-22T16:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-22T17:05:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4078.87,
+  "value": 4078.29,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 29.5,
- "rsi14": 32.4,
+ "rsi7": 41.1,
+ "rsi14": 37.6,
  "adx14": {
-  "M5": 34.1,
+  "M5": 36.2,
   "M15": 33.0
  },
  "atr14": {
-  "M5": 4.88,
+  "M5": 4.78,
   "M15": 9.18,
-  "percentile": 84
+  "percentile": 83
  },
  "volume": "RVOL 2.02\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -70,47 +70,47 @@
   "developing": {
    "poc": 4090.75,
    "vah": 4095.5,
-   "val": 4051.0,
+   "val": 4050.5,
    "bins": [
     [
      4034.75,
-     147.9
+     273.2
     ],
     [
      4035.25,
-     147.9
+     419.6
     ],
     [
      4035.75,
-     147.9
+     419.6
     ],
     [
      4036.25,
-     147.9
+     419.6
     ],
     [
      4036.75,
-     147.9
+     419.6
     ],
     [
      4037.25,
-     147.9
+     419.6
     ],
     [
      4037.75,
-     147.9
+     419.6
     ],
     [
      4038.25,
-     147.9
+     419.6
     ],
     [
      4038.75,
-     147.9
+     419.6
     ],
     [
      4039.25,
-     147.9
+     273.2
     ],
     [
      4039.75,
@@ -934,9 +934,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.211,
-  "session_delta": -12085.0,
-  "session_slope": -1864.0,
+  "leg_ratio": -0.296,
+  "session_delta": -11844.0,
+  "session_slope": -1541.0,
   "divergence": null,
   "absorption": null
  },
@@ -948,7 +948,7 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4048.14 / buy 4048.36 (spread $0.22)",
+ "spread": "eToro now: sell 4044.34 / buy 4044.62 (spread $0.28)",
  "score": 85,
  "score_parts": {
   "structure": 25,
@@ -961,23 +961,42 @@
   "news": 10
  },
  "candidate": "SHORT",
- "decision": "WAIT",
- "headline": "Wait",
+ "decision": "SHORT",
+ "headline": "Short setup confirmed",
  "quality": "A",
  "setup": "trend",
  "range": null,
  "mode": "active",
  "min_score": 77,
- "plan": null,
+ "plan": {
+  "entry": 4044.34,
+  "sl": 4051.83,
+  "tp1": 4036.85,
+  "tp2": 4015.58,
+  "tp2_name": "2R projection (no mapped liquidity ahead)",
+  "rr": "1:1 (all out at target)",
+  "be": 4039.09,
+  "risk_pct": 0.5,
+  "size": {
+   "risk_cash": 37.0,
+   "oz": 4.93,
+   "lots_std": 0.04,
+   "lots": 4.93,
+   "unit": "oz (eToro units)"
+  },
+  "max_entry": 4042.47,
+  "valid_until": "2026-10-22T17:20:37.955765+00:00",
+  "valid_until_dubai": "21:20",
+  "live_src": "eToro"
+ },
  "why": [
-  "Price is 1.7\u00d7 ATR from M5 EMA20, wait for a pullback",
   "No liquidity sweep or clean continuation setup",
   "M5 bearish BOS through 4043.19",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 29, RSI14 32, M15 ADX 33, RVOL 2.0\u00d7",
-  "Profile & flow: Accepted below prior VAL 4120.00 (initiative selling); setup-leg delta -0.21"
+  "RSI7 41, RSI14 38, M15 ADX 33, RVOL 2.0\u00d7",
+  "Profile & flow: Accepted below prior VAL 4120.00 (initiative selling); setup-leg delta -0.30"
  ],
- "invalidation": null,
+ "invalidation": "Trade through 4051.83 (beyond the last M5 swing high), or an M15 close above the M15 EMA50 (4073.57) before TP1.",
  "levels": [
   {
    "name": "H1 swing high",
@@ -1077,28 +1096,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792643400,
-   "o": 4090.49,
-   "h": 4090.64,
-   "l": 4088.68,
-   "c": 4090.05,
-   "e20": 4096.66,
-   "e50": 4106.27,
-   "vw": 4110.26,
-   "dl": 242.0
-  },
-  {
-   "t": 1792643700,
-   "o": 4089.96,
-   "h": 4091.08,
-   "l": 4088.97,
-   "c": 4089.21,
-   "e20": 4095.95,
-   "e50": 4105.6,
-   "vw": 4110.0,
-   "dl": -371.0
-  },
   {
    "t": 1792644000,
    "o": 4089.21,
@@ -2713,8 +2710,8 @@
    "c": 4035.84,
    "e20": 4047.37,
    "e50": 4055.9,
-   "vw": 4078.87,
-   "dl": -0.0
+   "vw": 4078.56,
+   "dl": -521.0
   },
   {
    "t": 1792688100,
@@ -2724,7 +2721,29 @@
    "c": 4038.19,
    "e20": 4046.49,
    "e50": 4055.21,
-   "vw": 4078.87,
+   "vw": 4078.29,
+   "dl": 763.0
+  },
+  {
+   "t": 1792688400,
+   "o": 4038.04,
+   "h": 4038.64,
+   "l": 4034.84,
+   "c": 4036.42,
+   "e20": 4045.53,
+   "e50": 4054.47,
+   "vw": 4078.29,
+   "dl": -0.0
+  },
+  {
+   "t": 1792688700,
+   "o": 4036.55,
+   "h": 4039.81,
+   "l": 4035.35,
+   "c": 4039.75,
+   "e20": 4044.98,
+   "e50": 4053.89,
+   "vw": 4078.29,
    "dl": 0.0
   }
  ],
@@ -2791,6 +2810,25 @@
   }
  },
  "recent_signals": [
+  {
+   "time_utc": "2026-10-22T17:10:37.955765+00:00",
+   "dubai": "Thu 22 Oct 2026, 21:10",
+   "session": "New York",
+   "direction": "SHORT",
+   "entry": 4044.34,
+   "sl": 4051.83,
+   "tp1": 4036.85,
+   "tp2": 4015.58,
+   "rr": 3.84,
+   "score": 85,
+   "risk_pct": 0.5,
+   "regime": "Breakout",
+   "reason": "No liquidity sweep or clean continuation setup; M5 bearish BOS through 4043.19; H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
+   "status": "open",
+   "tp1_hit": false,
+   "mgmt": "1R_be07",
+   "setup": "trend"
+  },
   {
    "time_utc": "2026-10-22T16:35:36.116679+00:00",
    "dubai": "Thu 22 Oct 2026, 20:35",
@@ -2994,28 +3032,6 @@
    "result": "Breakeven",
    "r": 0.0,
    "closed_utc": "2026-10-20T07:15:00+00:00"
-  },
-  {
-   "time_utc": "2026-10-19T17:35:30.999616+00:00",
-   "dubai": "Mon 19 Oct 2026, 21:35",
-   "session": "New York",
-   "direction": "SHORT",
-   "entry": 4143.96,
-   "sl": 4148.67,
-   "tp1": 4139.25,
-   "tp2": 4135.9,
-   "rr": 1.71,
-   "score": 77,
-   "risk_pct": 0.5,
-   "regime": "Trend",
-   "reason": "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP; M5 bearish BOS through 4137.29; H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-   "status": "closed",
-   "tp1_hit": false,
-   "mgmt": "1R_be07",
-   "setup": "trend",
-   "result": "Loss",
-   "r": -1.0,
-   "closed_utc": "2026-10-19T18:45:00+00:00"
   }
  ]
 }
