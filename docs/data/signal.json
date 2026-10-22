@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-22T17:10:37.955765+00:00",
- "dubai_time": "Thu 22 Oct 2026, 21:10",
+ "generated_utc": "2026-10-22T17:20:41.854389+00:00",
+ "dubai_time": "Thu 22 Oct 2026, 21:20",
  "session": "New York",
- "price": 4039.75,
+ "price": 4045.81,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-10-22T17:05:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-10-22T17:15:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4078.29,
+  "value": 4077.9,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 41.1,
- "rsi14": 37.6,
+ "rsi7": 60.7,
+ "rsi14": 48.5,
  "adx14": {
-  "M5": 36.2,
-  "M15": 33.0
+  "M5": 34.5,
+  "M15": 34.0
  },
  "atr14": {
-  "M5": 4.78,
-  "M15": 9.18,
-  "percentile": 83
+  "M5": 4.73,
+  "M15": 8.95,
+  "percentile": 82
  },
  "volume": "RVOL 2.02\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -70,51 +70,51 @@
   "developing": {
    "poc": 4090.75,
    "vah": 4095.5,
-   "val": 4050.5,
+   "val": 4050.0,
    "bins": [
     [
      4034.75,
-     273.2
+     385.5
     ],
     [
      4035.25,
-     419.6
+     597.1
     ],
     [
      4035.75,
-     419.6
+     597.1
     ],
     [
      4036.25,
-     419.6
+     597.1
     ],
     [
      4036.75,
-     419.6
+     597.1
     ],
     [
      4037.25,
-     419.6
+     597.1
     ],
     [
      4037.75,
-     419.6
+     597.1
     ],
     [
      4038.25,
-     419.6
+     597.1
     ],
     [
      4038.75,
-     419.6
+     597.1
     ],
     [
      4039.25,
-     273.2
+     338.4
     ],
     [
      4039.75,
-     147.9
+     213.1
     ],
     [
      4040.25,
@@ -934,9 +934,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.296,
-  "session_delta": -11844.0,
-  "session_slope": -1541.0,
+  "leg_ratio": -0.095,
+  "session_delta": -11379.0,
+  "session_slope": -697.0,
   "divergence": null,
   "absorption": null
  },
@@ -948,55 +948,36 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4044.34 / buy 4044.62 (spread $0.28)",
- "score": 85,
+ "spread": "eToro now: sell 4036.28 / buy 4036.48 (spread $0.20)",
+ "score": 89,
  "score_parts": {
   "structure": 25,
-  "liquidity": 8,
-  "momentum": 11,
+  "liquidity": 15,
+  "momentum": 9,
   "vwap": 8,
-  "volume_flow": 14,
+  "volume_flow": 13,
   "volatility": 5,
   "session": 4,
   "news": 10
  },
  "candidate": "SHORT",
- "decision": "SHORT",
- "headline": "Short setup confirmed",
+ "decision": "WAIT",
+ "headline": "Wait",
  "quality": "A",
  "setup": "trend",
  "range": null,
  "mode": "active",
  "min_score": 77,
- "plan": {
-  "entry": 4044.34,
-  "sl": 4051.83,
-  "tp1": 4036.85,
-  "tp2": 4015.58,
-  "tp2_name": "2R projection (no mapped liquidity ahead)",
-  "rr": "1:1 (all out at target)",
-  "be": 4039.09,
-  "risk_pct": 0.5,
-  "size": {
-   "risk_cash": 37.0,
-   "oz": 4.93,
-   "lots_std": 0.04,
-   "lots": 4.93,
-   "unit": "oz (eToro units)"
-  },
-  "max_entry": 4042.47,
-  "valid_until": "2026-10-22T17:20:37.955765+00:00",
-  "valid_until_dubai": "21:20",
-  "live_src": "eToro"
- },
+ "plan": null,
  "why": [
-  "No liquidity sweep or clean continuation setup",
+  "A SHORT signal is still active, manage it before a new one",
+  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bearish BOS through 4043.19",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 41, RSI14 38, M15 ADX 33, RVOL 2.0\u00d7",
-  "Profile & flow: Accepted below prior VAL 4120.00 (initiative selling); setup-leg delta -0.30"
+  "RSI7 61, RSI14 48, M15 ADX 34, RVOL 2.0\u00d7",
+  "Profile & flow: Accepted below prior VAL 4120.00 (initiative selling); setup-leg delta -0.10"
  ],
- "invalidation": "Trade through 4051.83 (beyond the last M5 swing high), or an M15 close above the M15 EMA50 (4073.57) before TP1.",
+ "invalidation": null,
  "levels": [
   {
    "name": "H1 swing high",
@@ -1096,28 +1077,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792644000,
-   "o": 4089.21,
-   "h": 4091.78,
-   "l": 4089.07,
-   "c": 4090.84,
-   "e20": 4095.46,
-   "e50": 4105.02,
-   "vw": 4109.79,
-   "dl": 131.0
-  },
-  {
-   "t": 1792644300,
-   "o": 4090.83,
-   "h": 4092.55,
-   "l": 4090.26,
-   "c": 4091.42,
-   "e20": 4095.08,
-   "e50": 4104.49,
-   "vw": 4109.6,
-   "dl": 5.0
-  },
   {
    "t": 1792644600,
    "o": 4091.42,
@@ -2732,8 +2691,8 @@
    "c": 4036.42,
    "e20": 4045.53,
    "e50": 4054.47,
-   "vw": 4078.29,
-   "dl": -0.0
+   "vw": 4078.05,
+   "dl": -170.0
   },
   {
    "t": 1792688700,
@@ -2743,7 +2702,29 @@
    "c": 4039.75,
    "e20": 4044.98,
    "e50": 4053.89,
-   "vw": 4078.29,
+   "vw": 4077.9,
+   "dl": 634.0
+  },
+  {
+   "t": 1792689000,
+   "o": 4039.7,
+   "h": 4040.92,
+   "l": 4038.77,
+   "c": 4040.04,
+   "e20": 4044.51,
+   "e50": 4053.35,
+   "vw": 4077.9,
+   "dl": 0.0
+  },
+  {
+   "t": 1792689300,
+   "o": 4040.06,
+   "h": 4046.61,
+   "l": 4040.06,
+   "c": 4045.81,
+   "e20": 4044.64,
+   "e50": 4053.05,
+   "vw": 4077.9,
    "dl": 0.0
   }
  ],
