@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-10-22T10:12:59.020208+00:00",
- "dubai_time": "Thu 22 Oct 2026, 14:12",
+ "generated_utc": "2026-10-22T10:20:35.739369+00:00",
+ "dubai_time": "Thu 22 Oct 2026, 14:20",
  "session": "London",
- "price": 4088.32,
+ "price": 4087.94,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 3.0,
- "last_bar_utc": "2026-10-22T10:05:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-22T10:15:00+00:00",
  "warnings": [],
  "regime": "Trend",
  "bias": {
   "H4": "Bearish",
   "H1": "Bearish",
   "M15": "Bearish",
-  "M5": "Bearish"
+  "M5": "Neutral"
  },
  "swings": {
   "H4": [
@@ -29,7 +29,7 @@
    "LL"
   ],
   "M5": [
-   "LH",
+   "HH",
    "HL"
   ]
  },
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4098.72,
+  "value": 4098.63,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 57.2,
- "rsi14": 52.1,
+ "rsi7": 55.4,
+ "rsi14": 51.4,
  "adx14": {
-  "M5": 11.7,
-  "M15": 41.3
+  "M5": 12.6,
+  "M15": 40.5
  },
  "atr14": {
-  "M5": 4.3,
-  "M15": 8.08,
-  "percentile": 80
+  "M5": 4.15,
+  "M15": 7.87,
+  "percentile": 74
  },
  "volume": "RVOL 1.21\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -68,7 +68,7 @@
   },
   "naked_pocs": [],
   "developing": {
-   "poc": 4091.25,
+   "poc": 4090.75,
    "vah": 4112.5,
    "val": 4078.0,
    "bins": [
@@ -222,51 +222,51 @@
     ],
     [
      4085.25,
-     989.3
+     1008.8
     ],
     [
      4085.75,
-     1120.0
+     1191.2
     ],
     [
      4086.25,
-     1142.9
+     1214.1
     ],
     [
      4086.75,
-     1310.0
+     1381.1
     ],
     [
      4087.25,
-     1373.0
+     1444.2
     ],
     [
      4087.75,
-     1445.9
+     1517.0
     ],
     [
      4088.25,
-     1653.7
+     1724.9
     ],
     [
      4088.75,
-     1616.1
+     1667.8
     ],
     [
      4089.25,
-     1925.8
+     1977.5
     ],
     [
      4089.75,
-     1945.9
+     1997.6
     ],
     [
      4090.25,
-     2123.1
+     2174.8
     ],
     [
      4090.75,
-     2336.3
+     2388.0
     ],
     [
      4091.25,
@@ -678,9 +678,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.103,
-  "session_delta": -1561.0,
-  "session_slope": 868.0,
+  "leg_ratio": 0.087,
+  "session_delta": -1587.0,
+  "session_slope": 692.0,
   "divergence": null,
   "absorption": null
  },
@@ -698,12 +698,12 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "Not available from free data \u2014 check your broker before entry",
- "score": 75,
+ "spread": "eToro now: sell 4090.50 / buy 4090.70 (spread $0.20)",
+ "score": 74,
  "score_parts": {
   "structure": 25,
   "liquidity": 7,
-  "momentum": 7,
+  "momentum": 6,
   "vwap": 8,
   "volume_flow": 9,
   "volatility": 5,
@@ -724,8 +724,8 @@
   "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bearish BOS through 4086.00",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 57, RSI14 52, M15 ADX 41, RVOL 1.2\u00d7",
-  "Profile & flow: Accepted below prior VAL 4120.00 (initiative selling); setup-leg delta +0.10",
+  "RSI7 55, RSI14 51, M15 ADX 41, RVOL 1.2\u00d7",
+  "Profile & flow: Accepted below prior VAL 4120.00 (initiative selling); setup-leg delta +0.09",
   "Weak components: liquidity"
  ],
  "invalidation": null,
@@ -828,28 +828,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792615200,
-   "o": 4133.48,
-   "h": 4138.47,
-   "l": 4133.21,
-   "c": 4138.13,
-   "e20": 4132.49,
-   "e50": 4131.73,
-   "vw": 4126.31,
-   "dl": 218.0
-  },
-  {
-   "t": 1792615500,
-   "o": 4138.13,
-   "h": 4142.15,
-   "l": 4138.1,
-   "c": 4140.78,
-   "e20": 4133.28,
-   "e50": 4132.08,
-   "vw": 4126.38,
-   "dl": 228.0
-  },
   {
    "t": 1792615800,
    "o": 4140.78,
@@ -2464,8 +2442,8 @@
    "c": 4086.05,
    "e20": 4086.52,
    "e50": 4089.03,
-   "vw": 4098.72,
-   "dl": -32.0
+   "vw": 4098.7,
+   "dl": -113.0
   },
   {
    "t": 1792663500,
@@ -2475,7 +2453,29 @@
    "c": 4088.32,
    "e20": 4086.69,
    "e50": 4089.0,
-   "vw": 4098.72,
+   "vw": 4098.63,
+   "dl": 54.0
+  },
+  {
+   "t": 1792663800,
+   "o": 4088.29,
+   "h": 4089.77,
+   "l": 4086.96,
+   "c": 4087.21,
+   "e20": 4086.74,
+   "e50": 4088.93,
+   "vw": 4098.63,
+   "dl": -0.0
+  },
+  {
+   "t": 1792664100,
+   "o": 4087.21,
+   "h": 4088.29,
+   "l": 4084.66,
+   "c": 4087.94,
+   "e20": 4086.86,
+   "e50": 4088.9,
+   "vw": 4098.63,
    "dl": 0.0
   }
  ],
