@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-10-23T04:00:43.438565+00:00",
- "dubai_time": "Fri 23 Oct 2026, 08:00",
+ "generated_utc": "2026-10-23T04:10:36.630239+00:00",
+ "dubai_time": "Fri 23 Oct 2026, 08:10",
  "session": "Asia",
- "price": 4015.87,
+ "price": 4011.01,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-10-23T03:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-23T04:05:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
   "H4": "Bearish",
   "H1": "Bearish",
   "M15": "Bearish",
-  "M5": "Bullish"
+  "M5": "Bearish"
  },
  "swings": {
   "H4": [
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4015.98,
+  "value": 4011.03,
   "side": "Choppy",
   "crosses_2h": 11,
   "volume_weighted": true
  },
- "rsi7": 49.0,
- "rsi14": 49.9,
+ "rsi7": 33.3,
+ "rsi14": 43.0,
  "adx14": {
-  "M5": 10.4,
+  "M5": 10.8,
   "M15": 30.3
  },
  "atr14": {
-  "M5": 4.58,
+  "M5": 4.44,
   "M15": 8.88,
-  "percentile": 77
+  "percentile": 74
  },
  "volume": "RVOL 1.69\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -84,14 +84,14 @@
   "absorption": null
  },
  "liquidity_event": "No valid sweep in the last 2.5 hours",
- "bos_choch": "M5 BOS bullish through 4023.05 at 06:50",
+ "bos_choch": "M5 CHOCH bearish through 4014.02 at 08:00",
  "news": {
   "risk": "Low",
   "status": "live",
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4014.10 / buy 4014.32 (spread $0.22)",
+ "spread": "eToro now: sell 4010.10 / buy 4010.31 (spread $0.21)",
  "score": 77,
  "score_parts": {
   "structure": 25,
@@ -115,9 +115,9 @@
  "why": [
   "Asian session needs 85+ (score 77/100); liquidity is thinner before London",
   "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
-  "M5 bearish BOS through 4010.09",
+  "M5 bearish CHOCH through 4014.02",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 49, RSI14 50, M15 ADX 30, RVOL 1.7\u00d7",
+  "RSI7 33, RSI14 43, M15 ADX 30, RVOL 1.7\u00d7",
   "Profile & flow: Profile unavailable; setup-leg delta +0.01",
   "Weak components: volume & flow, session"
  ],
@@ -221,28 +221,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792679400,
-   "o": 4050.1,
-   "h": 4056.23,
-   "l": 4050.1,
-   "c": 4055.57,
-   "e20": 4060.9,
-   "e50": 4069.28,
-   "vw": 4112.82,
-   "dl": 0.0
-  },
-  {
-   "t": 1792679700,
-   "o": 4055.57,
-   "h": 4057.75,
-   "l": 4050.11,
-   "c": 4057.75,
-   "e20": 4060.6,
-   "e50": 4068.82,
-   "vw": 4112.82,
-   "dl": 0.0
-  },
   {
    "t": 1792680000,
    "o": 4057.75,
@@ -1869,6 +1847,28 @@
    "e20": 4015.87,
    "e50": 4017.59,
    "vw": 4015.98,
+   "dl": -0.0
+  },
+  {
+   "t": 1792728000,
+   "o": 4015.74,
+   "h": 4015.74,
+   "l": 4010.91,
+   "c": 4011.26,
+   "e20": 4015.43,
+   "e50": 4017.34,
+   "vw": 4012.64,
+   "dl": -0.0
+  },
+  {
+   "t": 1792728300,
+   "o": 4011.39,
+   "h": 4012.16,
+   "l": 4009.93,
+   "c": 4011.01,
+   "e20": 4015.01,
+   "e50": 4017.09,
+   "vw": 4011.03,
    "dl": -0.0
   }
  ],
