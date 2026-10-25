@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-25T22:00:47.971803+00:00",
- "dubai_time": "Mon 26 Oct 2026, 02:00",
+ "generated_utc": "2026-10-25T22:10:37.722721+00:00",
+ "dubai_time": "Mon 26 Oct 2026, 02:10",
  "session": "Late US / off-hours",
- "price": 3996.08,
+ "price": 3996.56,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 60.8,
- "last_bar_utc": "2026-10-25T20:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-25T22:05:00+00:00",
  "warnings": [],
  "regime": "Trend",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 3996.27,
+  "value": 3997.53,
   "side": "Choppy",
-  "crosses_2h": 16,
+  "crosses_2h": 15,
   "volume_weighted": true
  },
- "rsi7": 77.9,
- "rsi14": 68.6,
+ "rsi7": 61.4,
+ "rsi14": 62.8,
  "adx14": {
-  "M5": 31.4,
+  "M5": 36.5,
   "M15": 33.7
  },
  "atr14": {
-  "M5": 0.74,
+  "M5": 1.22,
   "M15": 1.37,
-  "percentile": 24
+  "percentile": 47
  },
  "volume": "RVOL 0.97\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -126,12 +126,12 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3996.08 / buy 4003.85 (spread $7.77)",
- "score": 45,
+ "spread": "eToro now: sell 3996.43 / buy 3996.83 (spread $0.40)",
+ "score": 51,
  "score_parts": {
   "structure": 15,
-  "liquidity": 0,
-  "momentum": 12,
+  "liquidity": 7,
+  "momentum": 11,
   "vwap": 0,
   "volume_flow": 3,
   "volatility": 5,
@@ -148,8 +148,13 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "STALE DATA \u2014 last closed M5 bar is 61 min old",
-  "Setup score would be 45/100 (not tradable while blocked)"
+  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
+  "M5 bullish BOS through 3995.90",
+  "Early trend turn: H1 and M15 turned up before H4 (allowed in active mode)",
+  "H4 bearish (Price clearly below H4 EMA200), H1 bullish, M15 bullish",
+  "RSI7 61, RSI14 63, M15 ADX 34, RVOL 1.0\u00d7",
+  "Profile & flow: Profile unavailable; setup-leg delta +0.18",
+  "Weak components: liquidity, vwap, volume & flow, session"
  ],
  "invalidation": null,
  "levels": [
@@ -251,28 +256,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792917000,
-   "o": 3982.2,
-   "h": 3982.2,
-   "l": 3982.11,
-   "c": 3982.2,
-   "e20": 3983.94,
-   "e50": 3984.54,
-   "vw": 3982.17,
-   "dl": 0.0
-  },
-  {
-   "t": 1792917300,
-   "o": 3982.2,
-   "h": 3982.2,
-   "l": 3982.11,
-   "c": 3982.11,
-   "e20": 3983.76,
-   "e50": 3984.45,
-   "vw": 3982.14,
-   "dl": -0.0
-  },
   {
    "t": 1792917600,
    "o": 3982.11,
@@ -1899,6 +1882,28 @@
    "e20": 3994.61,
    "e50": 3993.16,
    "vw": 3996.27,
+   "dl": -0.0
+  },
+  {
+   "t": 1792965600,
+   "o": 3996.51,
+   "h": 4000.8,
+   "l": 3996.39,
+   "c": 3998.07,
+   "e20": 3994.94,
+   "e50": 3993.35,
+   "vw": 3998.42,
+   "dl": -0.0
+  },
+  {
+   "t": 1792965900,
+   "o": 3998.07,
+   "h": 3999.85,
+   "l": 3996.18,
+   "c": 3996.56,
+   "e20": 3995.09,
+   "e50": 3993.48,
+   "vw": 3997.53,
    "dl": -0.0
   }
  ],
