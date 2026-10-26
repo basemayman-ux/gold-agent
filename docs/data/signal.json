@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-10-26T10:50:34.897417+00:00",
- "dubai_time": "Mon 26 Oct 2026, 14:50",
+ "generated_utc": "2026-10-26T11:00:43.383007+00:00",
+ "dubai_time": "Mon 26 Oct 2026, 15:00",
  "session": "London",
- "price": 4011.92,
+ "price": 4015.12,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-10-26T10:45:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-10-26T10:55:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
   "H4": "Bearish",
   "H1": "Bullish",
-  "M15": "Bearish",
+  "M15": "Neutral",
   "M5": "Bearish"
  },
  "swings": {
@@ -42,20 +42,20 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4004.11,
+  "value": 4004.23,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 24.3,
- "rsi14": 38.6,
+ "rsi7": 52.9,
+ "rsi14": 50.6,
  "adx14": {
-  "M5": 18.9,
-  "M15": 30.2
+  "M5": 17.5,
+  "M15": 29.0
  },
  "atr14": {
-  "M5": 2.45,
-  "M15": 4.98,
+  "M5": 2.41,
+  "M15": 4.95,
   "percentile": 58
  },
  "volume": "RVOL 3.63\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
@@ -339,31 +339,31 @@
     ],
     [
      4010.75,
-     793.3
+     863.4
     ],
     [
      4011.25,
-     787.1
+     901.1
     ],
     [
      4011.75,
-     787.7
+     901.7
     ],
     [
      4012.25,
-     852.6
+     966.6
     ],
     [
      4012.75,
-     931.9
+     1045.9
     ],
     [
      4013.25,
-     1048.1
+     1162.1
     ],
     [
      4013.75,
-     1056.4
+     1100.2
     ],
     [
      4014.25,
@@ -435,13 +435,13 @@
     ]
    ]
   },
-  "context": "Buying in the lower half of developing value"
+  "context": "Buying right under a POC/VAH (supply overhead)"
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.046,
-  "session_delta": 715.0,
-  "session_slope": -743.0,
+  "leg_ratio": -0.07,
+  "session_delta": 490.0,
+  "session_slope": -836.0,
   "divergence": null,
   "absorption": null
  },
@@ -484,14 +484,14 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4011.83 / buy 4012.03 (spread $0.20)",
- "score": 57,
+ "spread": "eToro now: sell 4015.86 / buy 4016.06 (spread $0.20)",
+ "score": 63,
  "score_parts": {
-  "structure": 10,
+  "structure": 12,
   "liquidity": 7,
-  "momentum": 5,
+  "momentum": 11,
   "vwap": 8,
-  "volume_flow": 8,
+  "volume_flow": 6,
   "volatility": 5,
   "session": 4,
   "news": 10
@@ -507,7 +507,7 @@
  "plan": null,
  "why": [
   "H4 (Bearish) and H1 (Bullish) conflict",
-  "Setup score would be 57/100 (not tradable while blocked)"
+  "Setup score would be 63/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -584,7 +584,7 @@
    "swept": true
   },
   {
-   "name": "M15 swing low",
+   "name": "H1 swing low",
    "price": 4003.31,
    "side": "sell",
    "swept": false
@@ -609,28 +609,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1792966800,
-   "o": 4002.69,
-   "h": 4002.99,
-   "l": 3994.42,
-   "c": 3997.01,
-   "e20": 3995.81,
-   "e50": 3993.97,
-   "vw": 3998.12,
-   "dl": -102.0
-  },
-  {
-   "t": 1792967100,
-   "o": 3996.99,
-   "h": 4000.56,
-   "l": 3996.35,
-   "c": 3997.93,
-   "e20": 3996.01,
-   "e50": 3994.12,
-   "vw": 3998.15,
-   "dl": -46.0
-  },
   {
    "t": 1792967400,
    "o": 3998.03,
@@ -2245,8 +2223,8 @@
    "c": 4011.68,
    "e20": 4015.41,
    "e50": 4013.83,
-   "vw": 4004.11,
-   "dl": -0.0
+   "vw": 4004.16,
+   "dl": -199.0
   },
   {
    "t": 1793011500,
@@ -2256,8 +2234,30 @@
    "c": 4011.92,
    "e20": 4015.08,
    "e50": 4013.75,
-   "vw": 4004.11,
-   "dl": -0.0
+   "vw": 4004.23,
+   "dl": -25.0
+  },
+  {
+   "t": 1793011800,
+   "o": 4011.91,
+   "h": 4014.62,
+   "l": 4011.45,
+   "c": 4014.36,
+   "e20": 4015.01,
+   "e50": 4013.78,
+   "vw": 4004.23,
+   "dl": 0.0
+  },
+  {
+   "t": 1793012100,
+   "o": 4014.36,
+   "h": 4015.48,
+   "l": 4014.29,
+   "c": 4015.12,
+   "e20": 4015.02,
+   "e50": 4013.83,
+   "vw": 4004.23,
+   "dl": 0.0
   }
  ],
  "journal": {
