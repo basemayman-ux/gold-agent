@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-27T18:50:33.709121+00:00",
- "dubai_time": "Tue 27 Oct 2026, 22:50",
+ "generated_utc": "2026-10-27T19:00:49.024140+00:00",
+ "dubai_time": "Tue 27 Oct 2026, 23:00",
  "session": "New York",
- "price": 4056.13,
+ "price": 4056.58,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-10-27T18:45:00+00:00",
+ "data_age_min": 0.8,
+ "last_bar_utc": "2026-10-27T18:55:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4025.7,
+  "value": 4025.77,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 39.9,
- "rsi14": 45.3,
+ "rsi7": 46.5,
+ "rsi14": 47.4,
  "adx14": {
-  "M5": 26.2,
-  "M15": 56.7
+  "M5": 25.5,
+  "M15": 55.7
  },
  "atr14": {
-  "M5": 2.21,
-  "M15": 5.7,
-  "percentile": 50
+  "M5": 2.08,
+  "M15": 5.43,
+  "percentile": 49
  },
  "volume": "RVOL 2.42\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -594,23 +594,23 @@
     ],
     [
      4054.25,
-     468.7
+     504.1
     ],
     [
      4054.75,
-     545.7
+     581.1
     ],
     [
      4055.25,
-     633.9
+     704.0
     ],
     [
      4055.75,
-     893.3
+     963.4
     ],
     [
      4056.25,
-     1095.7
+     1165.7
     ],
     [
      4056.75,
@@ -694,9 +694,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.273,
-  "session_delta": 13830.0,
-  "session_slope": -118.0,
+  "leg_ratio": 0.274,
+  "session_delta": 13910.0,
+  "session_slope": 423.0,
   "divergence": null,
   "absorption": null
  },
@@ -739,14 +739,14 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4056.31 / buy 4056.51 (spread $0.20)",
- "score": 79,
+ "spread": "eToro now: sell 4058.46 / buy 4058.66 (spread $0.20)",
+ "score": 75,
  "score_parts": {
   "structure": 21,
-  "liquidity": 12,
+  "liquidity": 7,
   "momentum": 6,
   "vwap": 8,
-  "volume_flow": 13,
+  "volume_flow": 14,
   "volatility": 5,
   "session": 4,
   "news": 10
@@ -761,12 +761,13 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "Score 79/100 is below the 85 live-trade minimum",
+  "Score 75/100 is below the 85 live-trade minimum",
   "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bullish CHOCH through 4061.01",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bullish, M15 bullish",
-  "RSI7 40, RSI14 45, M15 ADX 57, RVOL 2.4\u00d7",
-  "Profile & flow: Accepted above prior VAH 4025.50 (initiative buying); setup-leg delta +0.27"
+  "RSI7 47, RSI14 47, M15 ADX 56, RVOL 2.4\u00d7",
+  "Profile & flow: Accepted above prior VAH 4025.50 (initiative buying); setup-leg delta +0.27",
+  "Weak components: liquidity"
  ],
  "invalidation": null,
  "levels": [
@@ -868,28 +869,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1793082000,
-   "o": 4004.42,
-   "h": 4004.84,
-   "l": 4001.91,
-   "c": 4004.51,
-   "e20": 4008.86,
-   "e50": 4011.2,
-   "vw": 4011.38,
-   "dl": 264.0
-  },
-  {
-   "t": 1793082300,
-   "o": 4004.46,
-   "h": 4005.39,
-   "l": 4002.07,
-   "c": 4003.0,
-   "e20": 4008.3,
-   "e50": 4010.87,
-   "vw": 4011.29,
-   "dl": -151.0
-  },
   {
    "t": 1793082600,
    "o": 4003.1,
@@ -2504,8 +2483,8 @@
    "c": 4055.39,
    "e20": 4057.78,
    "e50": 4053.54,
-   "vw": 4025.7,
-   "dl": 0.0
+   "vw": 4025.74,
+   "dl": 34.0
   },
   {
    "t": 1793126700,
@@ -2515,7 +2494,29 @@
    "c": 4056.13,
    "e20": 4057.62,
    "e50": 4053.64,
-   "vw": 4025.7,
+   "vw": 4025.77,
+   "dl": 46.0
+  },
+  {
+   "t": 1793127000,
+   "o": 4056.13,
+   "h": 4056.49,
+   "l": 4055.29,
+   "c": 4055.78,
+   "e20": 4057.44,
+   "e50": 4053.72,
+   "vw": 4025.77,
+   "dl": -0.0
+  },
+  {
+   "t": 1793127300,
+   "o": 4055.91,
+   "h": 4057.13,
+   "l": 4055.83,
+   "c": 4056.58,
+   "e20": 4057.36,
+   "e50": 4053.83,
+   "vw": 4025.77,
    "dl": 0.0
   }
  ],
