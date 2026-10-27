@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-10-27T09:00:44.467337+00:00",
- "dubai_time": "Tue 27 Oct 2026, 13:00",
+ "generated_utc": "2026-10-27T09:10:35.224293+00:00",
+ "dubai_time": "Tue 27 Oct 2026, 13:10",
  "session": "London",
- "price": 3994.7,
+ "price": 4001.44,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-10-27T08:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-27T09:05:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
   "H4": "Bearish",
   "H1": "Bearish",
   "M15": "Bearish",
-  "M5": "Bearish"
+  "M5": "Neutral"
  },
  "swings": {
   "H4": [
@@ -42,23 +42,23 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4008.39,
+  "value": 4007.76,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 44.6,
- "rsi14": 41.2,
+ "rsi7": 65.8,
+ "rsi14": 54.7,
  "adx14": {
-  "M5": 27.4,
+  "M5": 25.5,
   "M15": 24.3
  },
  "atr14": {
-  "M5": 3.71,
+  "M5": 3.8,
   "M15": 6.4,
-  "percentile": 85
+  "percentile": 86
  },
- "volume": "RVOL 2.67\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "RVOL 2.93\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -70,55 +70,55 @@
   "developing": {
    "poc": 4007.25,
    "vah": 4018.0,
-   "val": 4003.5,
+   "val": 4002.0,
    "bins": [
     [
      3989.25,
-     0.0
+     75.7
     ],
     [
      3989.75,
-     0.0
+     75.7
     ],
     [
      3990.25,
-     0.0
+     149.6
     ],
     [
      3990.75,
-     0.0
+     149.6
     ],
     [
      3991.25,
-     0.0
+     149.6
     ],
     [
      3991.75,
-     130.0
+     279.6
     ],
     [
      3992.25,
-     213.3
+     362.9
     ],
     [
      3992.75,
-     213.3
+     362.9
     ],
     [
      3993.25,
-     213.3
+     362.9
     ],
     [
      3993.75,
-     213.3
+     362.9
     ],
     [
      3994.25,
-     294.6
+     444.2
     ],
     [
      3994.75,
-     294.6
+     444.2
     ],
     [
      3995.25,
@@ -370,14 +370,14 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.077,
-  "session_delta": 851.0,
-  "session_slope": -10.0,
+  "leg_ratio": 0.087,
+  "session_delta": 1371.0,
+  "session_slope": 447.0,
   "divergence": null,
   "absorption": null
  },
  "liquidity_event": "No valid sweep in the last 2.5 hours",
- "bos_choch": "M5 BOS bearish through 3992.47 at 12:40",
+ "bos_choch": "M5 CHOCH bullish through 3998.99 at 13:05",
  "news": {
   "risk": "Low",
   "status": "live",
@@ -415,35 +415,35 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3995.36 / buy 3995.56 (spread $0.20)",
- "score": 74,
+ "spread": "eToro now: sell 4001.47 / buy 4001.67 (spread $0.20)",
+ "score": 86,
  "score_parts": {
-  "structure": 25,
-  "liquidity": 0,
-  "momentum": 11,
+  "structure": 17,
+  "liquidity": 20,
+  "momentum": 12,
   "vwap": 8,
-  "volume_flow": 11,
+  "volume_flow": 10,
   "volatility": 5,
   "session": 4,
   "news": 10
  },
- "candidate": "SHORT",
+ "candidate": "LONG",
  "decision": "WAIT",
  "headline": "Wait",
- "quality": "WATCH",
- "setup": "trend",
- "range": null,
+ "quality": "A",
+ "setup": "range",
+ "range": {
+  "lo": 3992.47,
+  "hi": 4025.44
+ },
  "mode": "active",
  "min_score": 85,
  "plan": null,
  "why": [
-  "Score 74/100 is below the 85 live-trade minimum",
-  "No liquidity sweep or clean continuation setup",
-  "M5 bearish BOS through 3992.47",
-  "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 45, RSI14 41, M15 ADX 24, RVOL 2.7\u00d7",
-  "Profile & flow: Accepted below prior VAL 4004.50 (initiative selling); setup-leg delta +0.08",
-  "Weak components: liquidity"
+  "H4 trend is bearish, against this range LONG",
+  "Range trade: range low 3992.47 swept, then displacement",
+  "Gold has ranged 3992.47\u20134025.44 (tested 2\u00d7 low, 2\u00d7 high); target is the top of the range",
+  "RSI7 66, M15 ADX 24, M5 structure has turned"
  ],
  "invalidation": null,
  "levels": [
@@ -539,28 +539,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1793043000,
-   "o": 4011.96,
-   "h": 4011.99,
-   "l": 4008.88,
-   "c": 4010.5,
-   "e20": 4014.19,
-   "e50": 4016.19,
-   "vw": 4010.14,
-   "dl": 8.0
-  },
-  {
-   "t": 1793043300,
-   "o": 4010.42,
-   "h": 4014.28,
-   "l": 4009.4,
-   "c": 4013.73,
-   "e20": 4014.15,
-   "e50": 4016.1,
-   "vw": 4010.15,
-   "dl": 634.0
-  },
   {
    "t": 1793043600,
    "o": 4013.64,
@@ -2175,8 +2153,8 @@
    "c": 3991.7,
    "e20": 3997.9,
    "e50": 4002.61,
-   "vw": 4008.39,
-   "dl": -0.0
+   "vw": 4008.03,
+   "dl": -130.0
   },
   {
    "t": 1793091300,
@@ -2186,7 +2164,29 @@
    "c": 3994.7,
    "e20": 3997.6,
    "e50": 4002.3,
-   "vw": 4008.39,
+   "vw": 4007.76,
+   "dl": 649.0
+  },
+  {
+   "t": 1793091600,
+   "o": 3994.63,
+   "h": 3996.72,
+   "l": 3994.03,
+   "c": 3996.08,
+   "e20": 3997.45,
+   "e50": 4002.05,
+   "vw": 4007.76,
+   "dl": 0.0
+  },
+  {
+   "t": 1793091900,
+   "o": 3996.08,
+   "h": 4001.98,
+   "l": 3996.08,
+   "c": 4001.44,
+   "e20": 3997.83,
+   "e50": 4002.03,
+   "vw": 4007.76,
    "dl": 0.0
   }
  ],
