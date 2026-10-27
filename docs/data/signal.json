@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-27T21:30:44.646818+00:00",
- "dubai_time": "Wed 28 Oct 2026, 01:30",
+ "generated_utc": "2026-10-27T21:40:35.939649+00:00",
+ "dubai_time": "Wed 28 Oct 2026, 01:40",
  "session": "Late US / off-hours",
  "price": 4060.08,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 30.7,
+ "data_age_min": 40.6,
  "last_bar_utc": "2026-10-27T20:55:00+00:00",
  "warnings": [],
  "regime": "Transition",
@@ -42,7 +42,7 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4027.14,
+  "value": 4027.15,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
@@ -638,19 +638,19 @@
     ],
     [
      4059.75,
-     2387.4
+     2396.6
     ],
     [
      4060.25,
-     2451.1
+     2460.4
     ],
     [
      4060.75,
-     2277.4
+     2286.7
     ],
     [
      4061.25,
-     2183.7
+     2192.9
     ],
     [
      4061.75,
@@ -694,9 +694,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.068,
-  "session_delta": 14272.0,
-  "session_slope": 142.0,
+  "leg_ratio": 0.059,
+  "session_delta": 14245.0,
+  "session_slope": 115.0,
   "divergence": null,
   "absorption": null
  },
@@ -761,7 +761,7 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "STALE DATA \u2014 last closed M5 bar is 31 min old",
+  "STALE DATA \u2014 last closed M5 bar is 41 min old",
   "Setup score would be 69/100 (not tradable while blocked)"
  ],
  "invalidation": null,
@@ -2511,8 +2511,8 @@
    "c": 4060.08,
    "e20": 4060.1,
    "e50": 4057.98,
-   "vw": 4027.14,
-   "dl": -67.0
+   "vw": 4027.15,
+   "dl": -94.0
   }
  ],
  "journal": {
