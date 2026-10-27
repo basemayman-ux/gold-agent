@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-10-27T00:40:37.541813+00:00",
- "dubai_time": "Tue 27 Oct 2026, 04:40",
+ "generated_utc": "2026-10-27T00:50:34.452206+00:00",
+ "dubai_time": "Tue 27 Oct 2026, 04:50",
  "session": "Asia",
- "price": 4010.96,
+ "price": 4010.81,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-10-27T00:35:00+00:00",
+ "last_bar_utc": "2026-10-27T00:45:00+00:00",
  "warnings": [],
  "regime": "Range",
  "bias": {
   "H4": "Bearish",
   "H1": "Neutral",
-  "M15": "Bearish",
+  "M15": "Neutral",
   "M5": "Bullish"
  },
  "swings": {
@@ -25,12 +25,12 @@
    "HL"
   ],
   "M15": [
-   "LH",
+   "HH",
    "LL"
   ],
   "M5": [
    "HH",
-   "LL"
+   "HL"
   ]
  },
  "ema200": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4011.45,
-  "side": "Below",
-  "crosses_2h": 2,
+  "value": 4011.38,
+  "side": "Choppy",
+  "crosses_2h": 4,
   "volume_weighted": true
  },
- "rsi7": 47.3,
- "rsi14": 47.5,
+ "rsi7": 46.5,
+ "rsi14": 47.4,
  "adx14": {
-  "M5": 18.8,
-  "M15": 12.2
+  "M5": 17.0,
+  "M15": 11.8
  },
  "atr14": {
-  "M5": 3.11,
-  "M15": 4.97,
-  "percentile": 74
+  "M5": 3.35,
+  "M15": 5.05,
+  "percentile": 78
  },
  "volume": "Not available \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -70,7 +70,7 @@
   "developing": {
    "poc": 4011.75,
    "vah": 4017.5,
-   "val": 4008.0,
+   "val": 4008.5,
    "bins": [
     [
      4004.25,
@@ -106,43 +106,43 @@
     ],
     [
      4008.25,
-     80.1
+     120.1
     ],
     [
      4008.75,
-     131.3
+     171.3
     ],
     [
      4009.25,
-     131.3
+     171.3
     ],
     [
      4009.75,
-     153.1
+     193.1
     ],
     [
      4010.25,
-     95.0
+     134.9
     ],
     [
      4010.75,
-     168.5
+     208.4
     ],
     [
      4011.25,
-     295.1
+     335.0
     ],
     [
      4011.75,
-     420.2
+     460.2
     ],
     [
      4012.25,
-     403.6
+     443.6
     ],
     [
      4012.75,
-     412.3
+     432.7
     ],
     [
      4013.25,
@@ -246,7 +246,7 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4010.77 / buy 4011.00 (spread $0.23)",
+ "spread": "eToro now: sell 4010.75 / buy 4010.95 (spread $0.20)",
  "score": 0,
  "score_parts": {},
  "candidate": null,
@@ -260,7 +260,7 @@
  "plan": null,
  "why": [
   "No clear direction: H1 is neutral and H4, M15 and M5 do not all agree",
-  "MARKET CHOP \u2014 ADX weak, EMA20/50 flat"
+  "MARKET CHOP \u2014 ADX weak, VWAP crossed 4\u00d7 in 2h, EMA20/50 flat"
  ],
  "invalidation": null,
  "levels": [
@@ -313,8 +313,14 @@
    "swept": false
   },
   {
-   "name": "Prior VAL",
+   "name": "Equal lows",
    "price": 4004.5,
+   "side": "sell",
+   "swept": false
+  },
+  {
+   "name": "Equal lows",
+   "price": 4004.01,
    "side": "sell",
    "swept": false
   },
@@ -344,28 +350,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1793013000,
-   "o": 4012.04,
-   "h": 4012.38,
-   "l": 4010.56,
-   "c": 4011.52,
-   "e20": 4014.36,
-   "e50": 4013.68,
-   "vw": 4004.46,
-   "dl": 15.0
-  },
-  {
-   "t": 1793013300,
-   "o": 4011.52,
-   "h": 4011.67,
-   "l": 4010.47,
-   "c": 4010.87,
-   "e20": 4014.03,
-   "e50": 4013.57,
-   "vw": 4004.49,
-   "dl": -66.0
-  },
   {
    "t": 1793013600,
    "o": 4010.87,
@@ -1980,8 +1964,8 @@
    "c": 4008.75,
    "e20": 4011.87,
    "e50": 4012.96,
-   "vw": 4011.45,
-   "dl": -0.0
+   "vw": 4011.4,
+   "dl": -157.0
   },
   {
    "t": 1793061300,
@@ -1991,8 +1975,30 @@
    "c": 4010.96,
    "e20": 4011.78,
    "e50": 4012.88,
-   "vw": 4011.45,
+   "vw": 4011.38,
+   "dl": 66.0
+  },
+  {
+   "t": 1793061600,
+   "o": 4010.95,
+   "h": 4014.24,
+   "l": 4009.29,
+   "c": 4013.94,
+   "e20": 4011.99,
+   "e50": 4012.92,
+   "vw": 4011.38,
    "dl": 0.0
+  },
+  {
+   "t": 1793061900,
+   "o": 4013.95,
+   "h": 4014.83,
+   "l": 4010.15,
+   "c": 4010.81,
+   "e20": 4011.87,
+   "e50": 4012.84,
+   "vw": 4011.38,
+   "dl": -0.0
   }
  ],
  "journal": {
