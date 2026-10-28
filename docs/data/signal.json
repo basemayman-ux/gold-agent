@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-28T13:05:30.516910+00:00",
- "dubai_time": "Wed 28 Oct 2026, 17:05",
+ "generated_utc": "2026-10-28T13:10:36.310025+00:00",
+ "dubai_time": "Wed 28 Oct 2026, 17:10",
  "session": "London/NY overlap",
- "price": 4054.55,
+ "price": 4056.21,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.5,
- "last_bar_utc": "2026-10-28T13:00:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-28T13:05:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,19 +42,19 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4049.13,
+  "value": 4049.15,
   "side": "Above",
   "crosses_2h": 3,
   "volume_weighted": true
  },
- "rsi7": 60.2,
- "rsi14": 58.9,
+ "rsi7": 66.9,
+ "rsi14": 62.3,
  "adx14": {
-  "M5": 20.2,
+  "M5": 20.3,
   "M15": 21.3
  },
  "atr14": {
-  "M5": 3.18,
+  "M5": 3.16,
   "M15": 4.95,
   "percentile": 61
  },
@@ -254,31 +254,31 @@
     ],
     [
      4050.75,
-     1064.4
+     1099.2
     ],
     [
      4051.25,
-     966.8
+     1001.7
     ],
     [
      4051.75,
-     1025.8
+     1060.7
     ],
     [
      4052.25,
-     1052.7
+     1087.6
     ],
     [
      4052.75,
-     1033.4
+     1068.2
     ],
     [
      4053.25,
-     1103.6
+     1138.4
     ],
     [
      4053.75,
-     1061.9
+     1096.7
     ],
     [
      4054.25,
@@ -462,35 +462,20 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4054.27 / buy 4054.47 (spread $0.20)",
- "score": 71,
- "score_parts": {
-  "structure": 22,
-  "liquidity": 16,
-  "momentum": 3,
-  "vwap": 8,
-  "volume_flow": 2,
-  "volatility": 5,
-  "session": 5,
-  "news": 10
- },
- "candidate": "SHORT",
- "decision": "WAIT",
- "headline": "Wait",
- "quality": "WATCH",
- "setup": "range",
- "range": {
-  "lo": 4028.14,
-  "hi": 4059.95
- },
+ "spread": "eToro now: sell 4056.83 / buy 4057.03 (spread $0.20)",
+ "score": 0,
+ "score_parts": {},
+ "candidate": null,
+ "decision": "NO TRADE",
+ "headline": "No trade",
+ "quality": "NO TRADE",
+ "setup": "trend",
+ "range": null,
  "mode": "active",
  "min_score": 85,
  "plan": null,
  "why": [
-  "Range setup score 71/100 is below the 85 minimum",
-  "Range trade: range high 4059.95 tested, then rejection wick",
-  "Gold has ranged 4028.14\u20134059.95 (tested 4\u00d7 low, 5\u00d7 high); target is the bottom of the range",
-  "RSI7 60, M15 ADX 21"
+  "No clear direction: H1 is neutral and H4, M15 and M5 do not all agree"
  ],
  "invalidation": null,
  "levels": [
@@ -592,17 +577,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1793147700,
-   "o": 4062.06,
-   "h": 4063.97,
-   "l": 4061.29,
-   "c": 4063.97,
-   "e20": 4063.28,
-   "e50": 4061.58,
-   "vw": 4063.79,
-   "dl": 119.0
-  },
   {
    "t": 1793148000,
    "o": 4064.01,
@@ -2228,8 +2202,8 @@
    "c": 4053.34,
    "e20": 4051.73,
    "e50": 4049.49,
-   "vw": 4049.13,
-   "dl": 0.0
+   "vw": 4049.15,
+   "dl": 201.0
   },
   {
    "t": 1793192400,
@@ -2239,8 +2213,19 @@
    "c": 4054.55,
    "e20": 4052.0,
    "e50": 4049.68,
-   "vw": 4049.13,
+   "vw": 4049.15,
    "dl": -0.0
+  },
+  {
+   "t": 1793192700,
+   "o": 4054.55,
+   "h": 4056.83,
+   "l": 4053.93,
+   "c": 4056.21,
+   "e20": 4052.4,
+   "e50": 4049.94,
+   "vw": 4049.15,
+   "dl": 0.0
   }
  ],
  "journal": {
