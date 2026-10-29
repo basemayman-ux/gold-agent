@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-10-29T09:15:34.932991+00:00",
- "dubai_time": "Thu 29 Oct 2026, 13:15",
+ "generated_utc": "2026-10-29T09:20:31.719018+00:00",
+ "dubai_time": "Thu 29 Oct 2026, 13:20",
  "session": "London",
- "price": 4030.56,
+ "price": 4025.38,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-10-29T09:10:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-10-29T09:15:00+00:00",
  "warnings": [],
- "regime": "Transition",
+ "regime": "High Volatility",
  "bias": {
   "H4": "Neutral",
   "H1": "Bearish",
   "M15": "Bearish",
-  "M5": "Neutral"
+  "M5": "Bullish"
  },
  "swings": {
   "H4": [
@@ -29,7 +29,7 @@
    "HL"
   ],
   "M5": [
-   "LH",
+   "HH",
    "LL"
   ]
  },
@@ -42,23 +42,23 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4040.84,
+  "value": 4040.65,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 56.3,
- "rsi14": 52.5,
+ "rsi7": 45.6,
+ "rsi14": 46.0,
  "adx14": {
-  "M5": 19.0,
+  "M5": 17.7,
   "M15": 14.3
  },
  "atr14": {
-  "M5": 5.24,
+  "M5": 5.38,
   "M15": 8.43,
-  "percentile": 89
+  "percentile": 92
  },
- "volume": "RVOL 3.49\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "RVOL 3.61\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -69,7 +69,7 @@
   "naked_pocs": [],
   "developing": {
    "poc": 4027.75,
-   "vah": 4048.5,
+   "vah": 4048.0,
    "val": 4022.0,
    "bins": [
     [
@@ -150,107 +150,107 @@
     ],
     [
      4025.25,
-     668.5
+     714.6
     ],
     [
      4025.75,
-     732.7
+     778.8
     ],
     [
      4026.25,
-     732.7
+     778.8
     ],
     [
      4026.75,
-     873.3
+     919.4
     ],
     [
      4027.25,
-     899.5
+     945.6
     ],
     [
      4027.75,
-     936.4
+     982.6
     ],
     [
      4028.25,
-     861.4
+     907.5
     ],
     [
      4028.75,
-     896.4
+     942.5
     ],
     [
      4029.25,
-     825.9
+     872.0
     ],
     [
      4029.75,
-     759.3
+     805.4
     ],
     [
      4030.25,
-     739.1
+     785.2
     ],
     [
      4030.75,
-     631.2
+     677.3
     ],
     [
      4031.25,
-     552.1
+     598.2
     ],
     [
      4031.75,
-     501.2
+     547.3
     ],
     [
      4032.25,
-     563.4
+     609.5
     ],
     [
      4032.75,
-     427.2
+     473.3
     ],
     [
      4033.25,
-     525.6
+     571.7
     ],
     [
      4033.75,
-     490.6
+     536.7
     ],
     [
      4034.25,
-     537.2
+     583.3
     ],
     [
      4034.75,
-     460.3
+     506.4
     ],
     [
      4035.25,
-     413.7
+     459.8
     ],
     [
      4035.75,
-     467.9
+     514.0
     ],
     [
      4036.25,
-     500.8
+     546.9
     ],
     [
      4036.75,
-     899.4
+     945.5
     ],
     [
      4037.25,
-     734.6
+     780.8
     ],
     [
      4037.75,
-     930.5
+     976.6
     ],
     [
      4038.25,
@@ -506,9 +506,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.354,
-  "session_delta": -5536.0,
-  "session_slope": -1827.0,
+  "leg_ratio": -0.137,
+  "session_delta": -4833.0,
+  "session_slope": -904.0,
   "divergence": null,
   "absorption": null
  },
@@ -546,37 +546,56 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4029.97 / buy 4030.17 (spread $0.20)",
- "score": 89,
+ "spread": "eToro now: sell 4025.79 / buy 4026.01 (spread $0.22)",
+ "score": 88,
  "score_parts": {
   "structure": 25,
   "liquidity": 20,
-  "momentum": 12,
+  "momentum": 9,
   "vwap": 8,
-  "volume_flow": 5,
-  "volatility": 5,
+  "volume_flow": 10,
+  "volatility": 2,
   "session": 4,
   "news": 10
  },
  "candidate": "LONG",
- "decision": "WAIT",
- "headline": "Wait",
+ "decision": "LONG",
+ "headline": "Long setup confirmed",
  "quality": "A",
  "setup": "range",
  "range": {
-  "lo": 4022.06,
+  "lo": 4020.2,
   "hi": 4068.67
  },
  "mode": "active",
  "min_score": 85,
- "plan": null,
+ "plan": {
+  "entry": 4025.99,
+  "sl": 4014.54,
+  "tp1": 4037.44,
+  "tp2": 4067.83,
+  "tp2_name": "opposite edge of the range",
+  "rr": "1:1 (all out at target)",
+  "be": 4034.0,
+  "risk_pct": 0.5,
+  "size": {
+   "risk_cash": 37.0,
+   "oz": 3.23,
+   "lots_std": 0.03,
+   "lots": 3.23,
+   "unit": "oz (eToro units)"
+  },
+  "max_entry": 4028.85,
+  "valid_until": "2026-10-29T09:30:31.719018+00:00",
+  "valid_until_dubai": "13:30",
+  "live_src": "eToro"
+ },
  "why": [
-  "A LONG signal is still active, manage it before a new one",
-  "Range trade: range low 4022.06 swept, then displacement",
-  "Gold has ranged 4022.06\u20134068.67 (tested 5\u00d7 low, 2\u00d7 high); target is the top of the range",
-  "RSI7 56, M15 ADX 14, M5 structure has turned"
+  "Range trade: range low 4020.20 swept, then displacement",
+  "Gold has ranged 4020.20\u20134068.67 (tested 4\u00d7 low, 2\u00d7 high); target is the top of the range",
+  "RSI7 46, M15 ADX 14, M5 structure has turned"
  ],
- "invalidation": null,
+ "invalidation": "Trade through 4014.54 (beyond the range low sweep), or a 15-minute close below the range edge (4020.20) before TP1.",
  "levels": [
   {
    "name": "H1 swing high",
@@ -676,17 +695,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1793216700,
-   "o": 4059.97,
-   "h": 4062.86,
-   "l": 4058.93,
-   "c": 4062.7,
-   "e20": 4050.21,
-   "e50": 4046.11,
-   "vw": 4046.82,
-   "dl": 656.0
-  },
   {
    "t": 1793217000,
    "o": 4062.7,
@@ -2312,8 +2320,8 @@
    "c": 4035.26,
    "e20": 4027.89,
    "e50": 4031.26,
-   "vw": 4040.84,
-   "dl": 0.0
+   "vw": 4040.65,
+   "dl": 703.0
   },
   {
    "t": 1793265000,
@@ -2323,13 +2331,24 @@
    "c": 4030.56,
    "e20": 4028.15,
    "e50": 4031.23,
-   "vw": 4040.84,
+   "vw": 4040.65,
+   "dl": -0.0
+  },
+  {
+   "t": 1793265300,
+   "o": 4030.54,
+   "h": 4032.67,
+   "l": 4025.38,
+   "c": 4025.38,
+   "e20": 4027.88,
+   "e50": 4031.0,
+   "vw": 4040.65,
    "dl": -0.0
   }
  ],
  "journal": {
-  "trades": 42,
-  "win_rate": 40.5,
+  "trades": 43,
+  "win_rate": 39.5,
   "avg_r": -0.15,
   "expectancy_r": -0.15,
   "profit_factor": 0.62,
@@ -2344,9 +2363,9 @@
     "avg_r": 0.5
    },
    "London": {
-    "n": 18,
-    "win_rate": 44,
-    "avg_r": -0.22
+    "n": 19,
+    "win_rate": 42,
+    "avg_r": -0.21
    },
    "New York": {
     "n": 8,
@@ -2366,8 +2385,8 @@
   },
   "by_score": {
    "85-89": {
-    "n": 41,
-    "win_rate": 41,
+    "n": 42,
+    "win_rate": 40,
     "avg_r": -0.13
    },
    "90+": {
@@ -2383,13 +2402,32 @@
     "avg_r": -0.06
    },
    "LONG": {
-    "n": 9,
-    "win_rate": 33,
-    "avg_r": -0.5
+    "n": 10,
+    "win_rate": 30,
+    "avg_r": -0.45
    }
   }
  },
  "recent_signals": [
+  {
+   "time_utc": "2026-10-29T09:20:31.719018+00:00",
+   "dubai": "Thu 29 Oct 2026, 13:20",
+   "session": "London",
+   "direction": "LONG",
+   "entry": 4025.99,
+   "sl": 4014.54,
+   "tp1": 4037.44,
+   "tp2": 4067.83,
+   "rr": 3.66,
+   "score": 88,
+   "risk_pct": 0.5,
+   "regime": "High Volatility",
+   "reason": "Range trade: range low 4020.20 swept, then displacement; Gold has ranged 4020.20\u20134068.67 (tested 4\u00d7 low, 2\u00d7 high); target is the top of the range; RSI7 46, M15 ADX 14, M5 structure has turned",
+   "status": "open",
+   "tp1_hit": false,
+   "mgmt": "1R_be07",
+   "setup": "range"
+  },
   {
    "time_utc": "2026-10-29T09:05:26.746258+00:00",
    "dubai": "Thu 29 Oct 2026, 13:05",
@@ -2404,11 +2442,14 @@
    "risk_pct": 0.5,
    "regime": "Transition",
    "reason": "Range trade: range low 4022.06 swept, then displacement; Gold has ranged 4022.06\u20134068.67 (tested 5\u00d7 low, 2\u00d7 high); target is the top of the range; RSI7 51, M15 ADX 15",
-   "status": "open",
+   "status": "closed",
    "tp1_hit": true,
    "mgmt": "1R_be07",
    "setup": "range",
-   "be_utc": "2026-10-29T09:10:00+00:00"
+   "be_utc": "2026-10-29T09:10:00+00:00",
+   "result": "Breakeven",
+   "r": 0.0,
+   "closed_utc": "2026-10-29T09:15:00+00:00"
   },
   {
    "time_utc": "2026-10-28T12:40:36.693003+00:00",
@@ -2589,29 +2630,6 @@
    "result": "Win",
    "r": 1.0,
    "closed_utc": "2026-10-22T11:00:00+00:00"
-  },
-  {
-   "time_utc": "2026-10-21T13:35:29.132075+00:00",
-   "dubai": "Wed 21 Oct 2026, 17:35",
-   "session": "London/NY overlap",
-   "direction": "SHORT",
-   "entry": 4134.13,
-   "sl": 4141.48,
-   "tp1": 4126.78,
-   "tp2": 4111.49,
-   "rr": 3.08,
-   "score": 78,
-   "risk_pct": 0.5,
-   "regime": "Breakout",
-   "reason": "Range trade: range high 4141.73 tested, then displacement; Gold has ranged 4110.86\u20134141.73 (tested 3\u00d7 low, 2\u00d7 high); target is the bottom of the range; RSI7 48, M15 ADX 17",
-   "status": "closed",
-   "tp1_hit": true,
-   "mgmt": "1R_be07",
-   "setup": "range",
-   "be_utc": "2026-10-21T13:55:00+00:00",
-   "result": "Breakeven",
-   "r": 0.0,
-   "closed_utc": "2026-10-21T13:40:00+00:00"
   }
  ]
 }
