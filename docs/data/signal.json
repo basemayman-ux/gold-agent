@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-29T11:00:48.476409+00:00",
- "dubai_time": "Thu 29 Oct 2026, 15:00",
+ "generated_utc": "2026-10-29T11:05:31.720200+00:00",
+ "dubai_time": "Thu 29 Oct 2026, 15:05",
  "session": "London",
- "price": 4031.05,
+ "price": 4034.73,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-10-29T10:55:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-10-29T11:00:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4039.3,
+  "value": 4039.24,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 62.4,
- "rsi14": 55.1,
+ "rsi7": 73.7,
+ "rsi14": 61.4,
  "adx14": {
-  "M5": 10.3,
+  "M5": 11.5,
   "M15": 11.5
  },
  "atr14": {
-  "M5": 3.55,
+  "M5": 3.66,
   "M15": 7.19,
-  "percentile": 55
+  "percentile": 60
  },
  "volume": "RVOL 3.64\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -70,7 +70,7 @@
   "developing": {
    "poc": 4027.25,
    "vah": 4046.5,
-   "val": 4023.0,
+   "val": 4023.5,
    "bins": [
     [
      4015.75,
@@ -162,31 +162,31 @@
     ],
     [
      4026.75,
-     1453.8
+     1504.2
     ],
     [
      4027.25,
-     1480.0
+     1530.4
     ],
     [
      4027.75,
-     1442.6
+     1493.0
     ],
     [
      4028.25,
-     1424.6
+     1475.0
     ],
     [
      4028.75,
-     1366.0
+     1416.5
     ],
     [
      4029.25,
-     1163.6
+     1214.0
     ],
     [
      4029.75,
-     1029.9
+     1080.3
     ],
     [
      4030.25,
@@ -506,14 +506,14 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.13,
-  "session_delta": -6000.0,
-  "session_slope": -36.0,
+  "leg_ratio": -0.097,
+  "session_delta": -5647.0,
+  "session_slope": -32.0,
   "divergence": null,
   "absorption": null
  },
  "liquidity_event": "Asian low 4022.06 swept (sell-side), displacement",
- "bos_choch": "M5 CHOCH bullish through 4034.52 at 13:05",
+ "bos_choch": "M5 BOS bullish through 4033.59 at 15:00",
  "news": {
   "risk": "Medium",
   "status": "live",
@@ -546,7 +546,7 @@
   ],
   "detail": "Advance GDP q/q at 16:30 Dubai (score reduced, not blocked)"
  },
- "spread": "eToro now: sell 4033.21 / buy 4033.45 (spread $0.24)",
+ "spread": "eToro now: sell 4033.99 / buy 4034.21 (spread $0.22)",
  "score": 73,
  "score_parts": {
   "structure": 21,
@@ -572,8 +572,8 @@
   "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bearish BOS through 4027.92",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bearish, M15 bearish",
-  "RSI7 62, RSI14 55, M15 ADX 12, RVOL 3.6\u00d7",
-  "Profile & flow: Accepted below prior VAL 4037.00 (initiative selling); setup-leg delta -0.13",
+  "RSI7 74, RSI14 61, M15 ADX 12, RVOL 3.6\u00d7",
+  "Profile & flow: Accepted below prior VAL 4037.00 (initiative selling); setup-leg delta -0.10",
   "Weak components: momentum"
  ],
  "invalidation": null,
@@ -676,17 +676,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1793226600,
-   "o": 4054.82,
-   "h": 4056.62,
-   "l": 4053.96,
-   "c": 4053.99,
-   "e20": 4060.96,
-   "e50": 4056.17,
-   "vw": 4058.71,
-   "dl": -239.0
-  },
   {
    "t": 1793226900,
    "o": 4053.95,
@@ -2312,8 +2301,8 @@
    "c": 4029.82,
    "e20": 4028.54,
    "e50": 4029.71,
-   "vw": 4039.3,
-   "dl": 0.0
+   "vw": 4039.24,
+   "dl": 353.0
   },
   {
    "t": 1793271300,
@@ -2323,7 +2312,18 @@
    "c": 4031.05,
    "e20": 4028.78,
    "e50": 4029.76,
-   "vw": 4039.3,
+   "vw": 4039.24,
+   "dl": 0.0
+  },
+  {
+   "t": 1793271600,
+   "o": 4031.05,
+   "h": 4035.33,
+   "l": 4030.21,
+   "c": 4034.73,
+   "e20": 4029.35,
+   "e50": 4029.95,
+   "vw": 4039.24,
    "dl": 0.0
   }
  ],
@@ -2405,9 +2405,10 @@
    "regime": "High Volatility",
    "reason": "Range trade: range low 4020.20 swept, then displacement; Gold has ranged 4020.20\u20134068.67 (tested 4\u00d7 low, 2\u00d7 high); target is the top of the range; RSI7 46, M15 ADX 14, M5 structure has turned",
    "status": "open",
-   "tp1_hit": false,
+   "tp1_hit": true,
    "mgmt": "1R_be07",
-   "setup": "range"
+   "setup": "range",
+   "be_utc": "2026-10-29T11:00:00+00:00"
   },
   {
    "time_utc": "2026-10-29T09:05:26.746258+00:00",
