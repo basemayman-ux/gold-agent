@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-29T11:30:44.842261+00:00",
- "dubai_time": "Thu 29 Oct 2026, 15:30",
+ "generated_utc": "2026-10-29T11:32:19.733521+00:00",
+ "dubai_time": "Thu 29 Oct 2026, 15:32",
  "session": "London",
  "price": 4032.45,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
+ "data_age_min": 2.3,
  "last_bar_utc": "2026-10-29T11:25:00+00:00",
  "warnings": [],
  "regime": "Transition",
@@ -42,7 +42,7 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4039.05,
+  "value": 4039.04,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
@@ -214,35 +214,35 @@
     ],
     [
      4033.25,
-     879.8
+     895.7
     ],
     [
      4033.75,
-     818.2
+     834.1
     ],
     [
      4034.25,
-     808.9
+     824.7
     ],
     [
      4034.75,
-     731.9
+     747.8
     ],
     [
      4035.25,
-     685.3
+     701.2
     ],
     [
      4035.75,
-     636.0
+     651.9
     ],
     [
      4036.25,
-     669.0
+     684.9
     ],
     [
      4036.75,
-     1067.6
+     1083.5
     ],
     [
      4037.25,
@@ -506,9 +506,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.419,
-  "session_delta": -4546.0,
-  "session_slope": 918.0,
+  "leg_ratio": 0.287,
+  "session_delta": -4607.0,
+  "session_slope": 857.0,
   "divergence": false,
   "absorption": false
  },
@@ -546,7 +546,7 @@
   ],
   "detail": "Advance GDP q/q at 16:30 Dubai (score reduced, not blocked)"
  },
- "spread": "eToro now: sell 4031.29 / buy 4031.68 (spread $0.39)",
+ "spread": "eToro now: sell 4032.06 / buy 4032.26 (spread $0.20)",
  "score": 61,
  "score_parts": {
   "structure": 13,
@@ -571,7 +571,7 @@
   "M15 swing high at 4037.88 swept, then displacement",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bearish, M15 bullish",
   "RSI7 50, RSI14 53, M15 ADX 12, RVOL 1.7\u00d7",
-  "Profile & flow: Accepted below prior VAL 4037.00 (initiative selling); setup-leg delta +0.42",
+  "Profile & flow: Accepted below prior VAL 4037.00 (initiative selling); setup-leg delta +0.29",
   "Weak components: momentum"
  ],
  "invalidation": null,
@@ -2310,8 +2310,8 @@
    "c": 4034.16,
    "e20": 4031.52,
    "e50": 4030.85,
-   "vw": 4039.05,
-   "dl": -0.0
+   "vw": 4039.04,
+   "dl": -61.0
   },
   {
    "t": 1793273100,
@@ -2321,7 +2321,7 @@
    "c": 4032.45,
    "e20": 4031.61,
    "e50": 4030.91,
-   "vw": 4039.05,
+   "vw": 4039.04,
    "dl": -0.0
   }
  ],
