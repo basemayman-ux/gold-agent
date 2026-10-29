@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-29T12:30:39.750201+00:00",
- "dubai_time": "Thu 29 Oct 2026, 16:30",
+ "generated_utc": "2026-10-29T12:40:36.063823+00:00",
+ "dubai_time": "Thu 29 Oct 2026, 16:40",
  "session": "London/NY overlap",
- "price": 4025.06,
+ "price": 4030.39,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-10-29T12:25:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-10-29T12:35:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -30,7 +30,7 @@
   ],
   "M5": [
    "LH",
-   "LL"
+   "HL"
   ]
  },
  "ema200": {
@@ -42,23 +42,23 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4037.93,
+  "value": 4037.63,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 45.2,
- "rsi14": 45.6,
+ "rsi7": 59.5,
+ "rsi14": 53.6,
  "adx14": {
-  "M5": 16.2,
+  "M5": 14.9,
   "M15": 11.0
  },
  "atr14": {
-  "M5": 4.51,
+  "M5": 5.11,
   "M15": 8.02,
-  "percentile": 78
+  "percentile": 87
  },
- "volume": "RVOL 2.37\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "RVOL 2.71\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -69,8 +69,8 @@
   "naked_pocs": [],
   "developing": {
    "poc": 4028.25,
-   "vah": 4046.0,
-   "val": 4023.5,
+   "vah": 4045.0,
+   "val": 4022.5,
    "bins": [
     [
      4015.75,
@@ -122,71 +122,71 @@
     ],
     [
      4021.75,
-     329.5
+     388.9
     ],
     [
      4022.25,
-     443.4
+     502.8
     ],
     [
      4022.75,
-     555.9
+     615.3
     ],
     [
      4023.25,
-     606.0
+     747.9
     ],
     [
      4023.75,
-     638.0
+     779.9
     ],
     [
      4024.25,
-     828.4
+     970.4
     ],
     [
      4024.75,
-     845.1
+     987.0
     ],
     [
      4025.25,
-     1116.6
+     1258.5
     ],
     [
      4025.75,
-     1212.3
+     1354.2
     ],
     [
      4026.25,
-     1407.9
+     1549.8
     ],
     [
      4026.75,
-     1628.0
+     1687.4
     ],
     [
      4027.25,
-     1728.9
+     1788.3
     ],
     [
      4027.75,
-     1719.3
+     1778.6
     ],
     [
      4028.25,
-     1775.9
+     1835.2
     ],
     [
      4028.75,
-     1717.3
+     1776.6
     ],
     [
      4029.25,
-     1490.7
+     1550.0
     ],
     [
      4029.75,
-     1357.0
+     1416.4
     ],
     [
      4030.25,
@@ -506,9 +506,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.054,
-  "session_delta": -5533.0,
-  "session_slope": -357.0,
+  "leg_ratio": -0.081,
+  "session_delta": -5863.0,
+  "session_slope": -939.0,
   "divergence": false,
   "absorption": false
  },
@@ -546,12 +546,12 @@
   ],
   "detail": "Advance GDP q/q at 16:30 Dubai"
  },
- "spread": "eToro now: sell 4030.81 / buy 4031.01 (spread $0.20)",
- "score": 73,
+ "spread": "eToro now: sell 4026.07 / buy 4026.27 (spread $0.20)",
+ "score": 68,
  "score_parts": {
   "structure": 21,
   "liquidity": 12,
-  "momentum": 9,
+  "momentum": 4,
   "vwap": 8,
   "volume_flow": 13,
   "volatility": 5,
@@ -569,7 +569,7 @@
  "plan": null,
  "why": [
   "High-impact news window: Advance GDP q/q at 16:30 Dubai",
-  "Setup score would be 73/100 (not tradable while blocked)"
+  "Setup score would be 68/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -671,28 +671,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1793232000,
-   "o": 4054.3,
-   "h": 4055.49,
-   "l": 4047.28,
-   "c": 4047.7,
-   "e20": 4054.23,
-   "e50": 4054.57,
-   "vw": 4054.67,
-   "dl": -483.0
-  },
-  {
-   "t": 1793232300,
-   "o": 4047.7,
-   "h": 4049.51,
-   "l": 4045.32,
-   "c": 4045.43,
-   "e20": 4053.4,
-   "e50": 4054.22,
-   "vw": 4054.28,
-   "dl": -230.0
-  },
   {
    "t": 1793232600,
    "o": 4045.43,
@@ -2307,8 +2285,8 @@
    "c": 4023.86,
    "e20": 4027.71,
    "e50": 4029.15,
-   "vw": 4037.93,
-   "dl": -0.0
+   "vw": 4037.74,
+   "dl": -518.0
   },
   {
    "t": 1793276700,
@@ -2318,7 +2296,29 @@
    "c": 4025.06,
    "e20": 4027.46,
    "e50": 4028.99,
-   "vw": 4037.93,
+   "vw": 4037.63,
+   "dl": 187.0
+  },
+  {
+   "t": 1793277000,
+   "o": 4024.8,
+   "h": 4031.88,
+   "l": 4022.87,
+   "c": 4026.8,
+   "e20": 4027.4,
+   "e50": 4028.9,
+   "vw": 4037.63,
+   "dl": -0.0
+  },
+  {
+   "t": 1793277300,
+   "o": 4026.8,
+   "h": 4032.5,
+   "l": 4023.84,
+   "c": 4030.39,
+   "e20": 4027.68,
+   "e50": 4028.96,
+   "vw": 4037.63,
    "dl": 0.0
   }
  ],
