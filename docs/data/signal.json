@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-30T18:00:44.480322+00:00",
- "dubai_time": "Fri 30 Oct 2026, 22:00",
+ "generated_utc": "2026-10-30T18:01:49.408074+00:00",
+ "dubai_time": "Fri 30 Oct 2026, 22:01",
  "session": "New York",
  "price": 3883.78,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
+ "data_age_min": 1.8,
  "last_bar_utc": "2026-10-30T17:55:00+00:00",
  "warnings": [],
  "regime": "Breakout",
@@ -42,7 +42,7 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 3948.71,
+  "value": 3948.61,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
@@ -69,44 +69,44 @@
   "naked_pocs": [],
   "developing": {
    "poc": 3897.25,
-   "vah": 3985.0,
+   "vah": 3985.5,
    "val": 3886.0,
    "bins": [
     [
      3879.25,
-     0.0
+     36.3
     ],
     [
      3879.75,
-     122.2
+     158.5
     ],
     [
      3880.25,
-     246.2
+     282.5
     ],
     [
      3880.75,
-     337.2
+     373.5
     ],
     [
      3881.25,
-     337.2
+     373.5
     ],
     [
      3881.75,
-     337.2
+     373.5
     ],
     [
      3882.25,
-     337.2
+     373.5
     ],
     [
      3882.75,
-     337.2
+     373.5
     ],
     [
      3883.25,
-     454.4
+     490.8
     ],
     [
      3883.75,
@@ -1258,9 +1258,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.157,
-  "session_delta": -22255.0,
-  "session_slope": -2325.0,
+  "leg_ratio": -0.189,
+  "session_delta": -21969.0,
+  "session_slope": -2039.0,
   "divergence": null,
   "absorption": null
  },
@@ -1272,7 +1272,7 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3895.12 / buy 3895.32 (spread $0.20)",
+ "spread": "eToro now: sell 3894.35 / buy 3894.55 (spread $0.20)",
  "score": 85,
  "score_parts": {
   "structure": 25,
@@ -1299,7 +1299,7 @@
   "M5 bearish BOS through 3886.09",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
   "RSI7 33, RSI14 33, M15 ADX 52, RVOL 2.9\u00d7",
-  "Profile & flow: Accepted below prior VAL 4016.00 (initiative selling); setup-leg delta -0.16"
+  "Profile & flow: Accepted below prior VAL 4016.00 (initiative selling); setup-leg delta -0.19"
  ],
  "invalidation": null,
  "levels": [
@@ -3031,8 +3031,8 @@
    "c": 3882.84,
    "e20": 3890.99,
    "e50": 3905.31,
-   "vw": 3948.71,
-   "dl": 0.0
+   "vw": 3948.61,
+   "dl": 286.0
   },
   {
    "t": 1793382900,
@@ -3042,7 +3042,7 @@
    "c": 3883.78,
    "e20": 3890.3,
    "e50": 3904.47,
-   "vw": 3948.71,
+   "vw": 3948.61,
    "dl": 0.0
   }
  ],
