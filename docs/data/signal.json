@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-02T14:00:46.845254+00:00",
- "dubai_time": "Mon 02 Nov 2026, 18:00",
+ "generated_utc": "2026-11-02T14:10:37.939167+00:00",
+ "dubai_time": "Mon 02 Nov 2026, 18:10",
  "session": "London/NY overlap",
- "price": 3937.53,
+ "price": 3950.4,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-11-02T13:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-11-02T14:05:00+00:00",
  "warnings": [],
  "regime": "High Volatility",
  "bias": {
@@ -29,7 +29,7 @@
    "LL"
   ],
   "M5": [
-   "LH",
+   "HH",
    "HL"
   ]
  },
@@ -42,19 +42,19 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 3909.39,
+  "value": 3910.41,
   "side": "Above",
-  "crosses_2h": 3,
+  "crosses_2h": 2,
   "volume_weighted": true
  },
- "rsi7": 72.8,
- "rsi14": 73.1,
+ "rsi7": 81.3,
+ "rsi14": 78.8,
  "adx14": {
-  "M5": 31.8,
+  "M5": 34.4,
   "M15": 18.3
  },
  "atr14": {
-  "M5": 7.2,
+  "M5": 7.59,
   "M15": 8.95,
   "percentile": 98
  },
@@ -63,13 +63,13 @@
   "type": "volume",
   "prior": {
    "poc": 3879.75,
-   "vah": 3973.5,
+   "vah": 3973.0,
    "val": 3870.5
   },
   "naked_pocs": [],
   "developing": {
    "poc": 3899.75,
-   "vah": 3912.0,
+   "vah": 3913.0,
    "val": 3894.0,
    "bins": [
     [
@@ -518,115 +518,115 @@
     ],
     [
      3936.75,
-     125.0
+     171.2
     ],
     [
      3937.25,
-     125.0
+     171.2
     ],
     [
      3937.75,
-     125.0
+     171.2
     ],
     [
      3938.25,
-     125.0
+     171.2
     ],
     [
      3938.75,
-     125.0
+     171.2
     ],
     [
      3939.25,
-     125.0
+     171.2
     ],
     [
      3939.75,
-     125.0
+     171.2
     ],
     [
      3940.25,
-     125.0
+     263.2
     ],
     [
      3940.75,
-     125.0
+     263.2
     ],
     [
      3941.25,
-     125.0
+     263.2
     ],
     [
      3941.75,
-     360.2
+     498.3
     ],
     [
      3942.25,
-     360.2
+     498.3
     ],
     [
      3942.75,
-     360.2
+     498.3
     ],
     [
      3943.25,
-     360.2
+     498.3
     ],
     [
      3943.75,
-     360.2
+     498.3
     ],
     [
      3944.25,
-     360.2
+     498.3
     ],
     [
      3944.75,
-     360.2
+     498.3
     ],
     [
      3945.25,
-     360.2
+     498.3
     ],
     [
      3945.75,
-     360.2
+     452.1
     ],
     [
      3946.25,
-     360.2
+     452.1
     ],
     [
      3946.75,
-     360.2
+     452.1
     ],
     [
      3947.25,
-     360.2
+     452.1
     ],
     [
      3947.75,
-     360.2
+     452.1
     ],
     [
      3948.25,
-     360.2
+     452.1
     ],
     [
      3948.75,
-     360.2
+     452.1
     ],
     [
      3949.25,
-     360.2
+     452.1
     ],
     [
      3949.75,
-     235.2
+     327.1
     ],
     [
      3950.25,
-     235.2
+     327.1
     ]
    ]
   },
@@ -634,14 +634,14 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.383,
-  "session_delta": 11256.0,
-  "session_slope": 9325.0,
+  "leg_ratio": 0.26,
+  "session_delta": 8974.0,
+  "session_slope": 6759.0,
   "divergence": false,
   "absorption": false
  },
  "liquidity_event": "M15 swing low 3898.62 swept (sell-side), rejection wick",
- "bos_choch": "M5 BOS bullish through 3903.38 at 17:25",
+ "bos_choch": "M5 BOS bullish through 3950.29 at 18:05",
  "news": {
   "risk": "Low",
   "status": "live",
@@ -679,34 +679,35 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3937.13 / buy 3937.43 (spread $0.30)",
- "score": 68,
+ "spread": "eToro now: sell 3945.29 / buy 3945.49 (spread $0.20)",
+ "score": 70,
  "score_parts": {
   "structure": 15,
   "liquidity": 12,
   "momentum": 9,
-  "vwap": 6,
+  "vwap": 8,
   "volume_flow": 11,
   "volatility": 0,
   "session": 5,
   "news": 10
  },
  "candidate": "LONG",
- "decision": "NO TRADE",
- "headline": "No trade",
- "quality": "NO TRADE",
+ "decision": "WAIT",
+ "headline": "Wait",
+ "quality": "WATCH",
  "setup": "trend",
  "range": null,
  "mode": "active",
  "min_score": 85,
  "plan": null,
  "why": [
+  "Score 70/100 is below the 85 live-trade minimum",
   "M15 swing low at 3898.62 swept, then rejection wick",
-  "M5 bullish BOS through 3903.38",
+  "M5 bullish BOS through 3950.29",
   "Early trend turn: H1 and M15 turned up before H4 (allowed in active mode)",
   "H4 bearish (Price clearly below H4 EMA200), H1 bullish, M15 bullish",
-  "RSI7 73, RSI14 73, M15 ADX 18, RVOL 24.9\u00d7",
-  "Profile & flow: Price inside value, no edge from the profile; setup-leg delta +0.38",
+  "RSI7 81, RSI14 79, M15 ADX 18, RVOL 24.9\u00d7",
+  "Profile & flow: Price inside value, no edge from the profile; setup-leg delta +0.26",
   "Weak components: volatility"
  ],
  "invalidation": null,
@@ -755,7 +756,7 @@
   },
   {
    "name": "Prior VAH",
-   "price": 3973.5,
+   "price": 3973.0,
    "side": "buy",
    "swept": false
   },
@@ -809,28 +810,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1793583000,
-   "o": 3907.05,
-   "h": 3914.85,
-   "l": 3906.76,
-   "c": 3912.37,
-   "e20": 3903.03,
-   "e50": 3895.83,
-   "vw": 3901.13,
-   "dl": 315.0
-  },
-  {
-   "t": 1793583300,
-   "o": 3912.45,
-   "h": 3913.87,
-   "l": 3907.49,
-   "c": 3907.54,
-   "e20": 3903.46,
-   "e50": 3896.29,
-   "vw": 3901.44,
-   "dl": -579.0
-  },
   {
    "t": 1793583600,
    "o": 3907.45,
@@ -2445,8 +2424,8 @@
    "c": 3941.35,
    "e20": 3915.7,
    "e50": 3907.97,
-   "vw": 3909.39,
-   "dl": -0.0
+   "vw": 3910.14,
+   "dl": -1564.0
   },
   {
    "t": 1793627700,
@@ -2456,8 +2435,30 @@
    "c": 3937.53,
    "e20": 3917.78,
    "e50": 3909.13,
-   "vw": 3909.39,
-   "dl": -0.0
+   "vw": 3910.41,
+   "dl": -719.0
+  },
+  {
+   "t": 1793628000,
+   "o": 3937.49,
+   "h": 3946.74,
+   "l": 3934.9,
+   "c": 3942.22,
+   "e20": 3920.11,
+   "e50": 3910.43,
+   "vw": 3910.41,
+   "dl": 0.0
+  },
+  {
+   "t": 1793628300,
+   "o": 3942.23,
+   "h": 3950.4,
+   "l": 3941.95,
+   "c": 3950.4,
+   "e20": 3922.99,
+   "e50": 3911.99,
+   "vw": 3910.41,
+   "dl": 0.0
   }
  ],
  "journal": {
