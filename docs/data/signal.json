@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-03T21:20:39.616993+00:00",
- "dubai_time": "Wed 04 Nov 2026, 01:20",
+ "generated_utc": "2026-11-03T21:30:48.587273+00:00",
+ "dubai_time": "Wed 04 Nov 2026, 01:30",
  "session": "Late US / off-hours",
- "price": 3923.45,
+ "price": 3927.79,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-11-03T21:15:00+00:00",
+ "data_age_min": 0.8,
+ "last_bar_utc": "2026-11-03T21:25:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,20 +42,20 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 3931.87,
+  "value": 3931.85,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 61.3,
- "rsi14": 50.5,
+ "rsi7": 79.5,
+ "rsi14": 62.7,
  "adx14": {
-  "M5": 37.4,
-  "M15": 20.2
+  "M5": 33.8,
+  "M15": 19.3
  },
  "atr14": {
-  "M5": 2.21,
-  "M15": 5.13,
+  "M5": 2.3,
+  "M15": 5.18,
   "percentile": 46
  },
  "volume": "Not available \u2014 COMEX GC futures (Yahoo, delayed)",
@@ -282,31 +282,31 @@
     ],
     [
      3921.75,
-     1367.9
+     1400.9
     ],
     [
      3922.25,
-     1247.4
+     1317.7
     ],
     [
      3922.75,
-     1250.1
+     1320.4
     ],
     [
      3923.25,
-     962.4
+     999.7
     ],
     [
      3923.75,
-     1081.7
+     1119.0
     ],
     [
      3924.25,
-     1182.8
+     1220.2
     ],
     [
      3924.75,
-     1382.7
+     1420.0
     ],
     [
      3925.25,
@@ -717,22 +717,22 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3921.83 / buy 3922.05 (spread $0.22)",
- "score": 78,
+ "spread": "eToro now: sell 3921.66 / buy 3921.87 (spread $0.21)",
+ "score": 79,
  "score_parts": {
-  "structure": 19,
+  "structure": 22,
   "liquidity": 16,
   "momentum": 12,
   "vwap": 8,
-  "volume_flow": 8,
+  "volume_flow": 6,
   "volatility": 5,
   "session": 0,
   "news": 10
  },
  "candidate": "LONG",
- "decision": "WAIT",
- "headline": "Wait",
- "quality": "WATCH",
+ "decision": "NO TRADE",
+ "headline": "No trade",
+ "quality": "NO TRADE",
  "setup": "range",
  "range": {
   "lo": 3917.47,
@@ -742,10 +742,10 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "Range setup score 78/100 is below the 85 minimum",
+  "Range stop is 3.7\u00d7 ATR away, too wide",
   "Range trade: range low 3917.47 tested, then displacement",
   "Gold has ranged 3917.47\u20133970.70 (tested 4\u00d7 low, 2\u00d7 high); target is the top of the range",
-  "RSI7 61, M15 ADX 20, M5 structure has turned"
+  "RSI7 80, M15 ADX 19, M5 structure has turned"
  ],
  "invalidation": null,
  "levels": [
@@ -847,28 +847,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1793695800,
-   "o": 3898.15,
-   "h": 3899.02,
-   "l": 3897.5,
-   "c": 3898.51,
-   "e20": 3907.54,
-   "e50": 3915.06,
-   "vw": 3929.83,
-   "dl": 220.0
-  },
-  {
-   "t": 1793696100,
-   "o": 3898.37,
-   "h": 3899.42,
-   "l": 3896.35,
-   "c": 3897.02,
-   "e20": 3906.54,
-   "e50": 3914.35,
-   "vw": 3929.35,
-   "dl": -384.0
-  },
   {
    "t": 1793696400,
    "o": 3897.05,
@@ -2483,8 +2461,8 @@
    "c": 3922.59,
    "e20": 3922.56,
    "e50": 3925.4,
-   "vw": 3931.87,
-   "dl": 0.0
+   "vw": 3931.86,
+   "dl": 67.0
   },
   {
    "t": 1793740500,
@@ -2494,7 +2472,29 @@
    "c": 3923.45,
    "e20": 3922.64,
    "e50": 3925.33,
-   "vw": 3931.87,
+   "vw": 3931.85,
+   "dl": 2.0
+  },
+  {
+   "t": 1793740800,
+   "o": 3923.45,
+   "h": 3924.96,
+   "l": 3923.07,
+   "c": 3924.49,
+   "e20": 3922.82,
+   "e50": 3925.29,
+   "vw": 3931.85,
+   "dl": 0.0
+  },
+  {
+   "t": 1793741100,
+   "o": 3924.49,
+   "h": 3927.79,
+   "l": 3924.02,
+   "c": 3927.79,
+   "e20": 3923.29,
+   "e50": 3925.39,
+   "vw": 3931.85,
    "dl": 0.0
   }
  ],
