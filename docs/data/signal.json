@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-03T22:10:31.054609+00:00",
- "dubai_time": "Wed 04 Nov 2026, 02:10",
+ "generated_utc": "2026-11-03T22:20:31.921121+00:00",
+ "dubai_time": "Wed 04 Nov 2026, 02:20",
  "session": "Late US / off-hours",
  "price": 3930.59,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 10.5,
+ "data_age_min": 20.5,
  "last_bar_utc": "2026-11-03T21:55:00+00:00",
  "warnings": [],
  "regime": "Range",
@@ -744,6 +744,7 @@
  "min_score": 85,
  "plan": null,
  "why": [
+  "STALE DATA \u2014 last closed M5 bar is 21 min old",
   "H4 (Bearish) and H1 (Bullish) conflict",
   "MARKET CHOP \u2014 ADX weak, EMA20/50 flat",
   "Setup score would be 48/100 (not tradable while blocked)"
