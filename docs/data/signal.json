@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-03T21:40:36.360632+00:00",
- "dubai_time": "Wed 04 Nov 2026, 01:40",
+ "generated_utc": "2026-11-03T21:50:30.704948+00:00",
+ "dubai_time": "Wed 04 Nov 2026, 01:50",
  "session": "Late US / off-hours",
- "price": 3928.47,
+ "price": 3928.22,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-11-03T21:35:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-11-03T21:45:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,20 +42,20 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 3931.83,
+  "value": 3931.82,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 81.3,
- "rsi14": 64.2,
+ "rsi7": 71.3,
+ "rsi14": 61.7,
  "adx14": {
-  "M5": 32.3,
-  "M15": 19.3
+  "M5": 31.7,
+  "M15": 18.1
  },
  "atr14": {
-  "M5": 2.2,
-  "M15": 5.18,
+  "M5": 2.14,
+  "M15": 4.96,
   "percentile": 45
  },
  "volume": "Not available \u2014 COMEX GC futures (Yahoo, delayed)",
@@ -69,7 +69,7 @@
   "naked_pocs": [],
   "developing": {
    "poc": 3927.75,
-   "vah": 3963.0,
+   "vah": 3962.5,
    "val": 3918.0,
    "bins": [
     [
@@ -326,19 +326,19 @@
     ],
     [
      3927.25,
-     2093.1
+     2187.6
     ],
     [
      3927.75,
-     2609.1
+     2703.6
     ],
     [
      3928.25,
-     2364.1
+     2458.6
     ],
     [
      3928.75,
-     2165.9
+     2260.4
     ],
     [
      3929.25,
@@ -683,7 +683,7 @@
  "orderflow": {
   "available": true
  },
- "liquidity_event": "M15 swing low 3925.89 swept (sell-side), rejection wick",
+ "liquidity_event": "No valid sweep in the last 2.5 hours",
  "bos_choch": "M5 CHOCH bullish through 3922.86 at 01:15",
  "news": {
   "risk": "Low",
@@ -717,7 +717,7 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3922.44 / buy 3922.65 (spread $0.21)",
+ "spread": "eToro now: sell 3928.42 / buy 3928.62 (spread $0.20)",
  "score": 0,
  "score_parts": {},
  "candidate": null,
@@ -832,28 +832,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1793697000,
-   "o": 3901.4,
-   "h": 3904.58,
-   "l": 3900.53,
-   "c": 3900.62,
-   "e20": 3904.87,
-   "e50": 3912.73,
-   "vw": 3927.41,
-   "dl": -649.0
-  },
-  {
-   "t": 1793697300,
-   "o": 3900.62,
-   "h": 3901.37,
-   "l": 3899.11,
-   "c": 3901.18,
-   "e20": 3904.52,
-   "e50": 3912.28,
-   "vw": 3927.21,
-   "dl": 300.0
-  },
   {
    "t": 1793697600,
    "o": 3901.18,
@@ -2469,7 +2447,7 @@
    "e20": 3923.77,
    "e50": 3925.5,
    "vw": 3931.83,
-   "dl": 0.0
+   "dl": 84.0
   },
   {
    "t": 1793741700,
@@ -2479,8 +2457,30 @@
    "c": 3928.47,
    "e20": 3924.22,
    "e50": 3925.62,
-   "vw": 3931.83,
+   "vw": 3931.82,
+   "dl": 78.0
+  },
+  {
+   "t": 1793742000,
+   "o": 3928.47,
+   "h": 3929.28,
+   "l": 3927.68,
+   "c": 3929.21,
+   "e20": 3924.69,
+   "e50": 3925.76,
+   "vw": 3931.82,
    "dl": 0.0
+  },
+  {
+   "t": 1793742300,
+   "o": 3929.21,
+   "h": 3929.91,
+   "l": 3927.96,
+   "c": 3928.22,
+   "e20": 3925.03,
+   "e50": 3925.86,
+   "vw": 3931.82,
+   "dl": -0.0
   }
  ],
  "journal": {
