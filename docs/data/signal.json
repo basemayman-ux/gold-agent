@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-04T22:10:39.004771+00:00",
- "dubai_time": "Thu 05 Nov 2026, 02:10",
+ "generated_utc": "2026-11-04T22:20:35.720724+00:00",
+ "dubai_time": "Thu 05 Nov 2026, 02:20",
  "session": "Late US / off-hours",
  "price": 4061.76,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 10.7,
+ "data_age_min": 20.6,
  "last_bar_utc": "2026-11-04T21:55:00+00:00",
  "warnings": [],
  "regime": "Transition",
@@ -1321,7 +1321,7 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4062.26 / buy 4062.46 (spread $0.20)",
+ "spread": "eToro now: sell 4060.42 / buy 4060.62 (spread $0.20)",
  "score": 74,
  "score_parts": {
   "structure": 21,
@@ -1334,22 +1334,17 @@
   "news": 10
  },
  "candidate": "LONG",
- "decision": "WAIT",
- "headline": "Wait",
- "quality": "WATCH",
+ "decision": "NO TRADE",
+ "headline": "No trade",
+ "quality": "NO TRADE",
  "setup": "trend",
  "range": null,
  "mode": "active",
  "min_score": 85,
  "plan": null,
  "why": [
-  "Score 74/100 is below the 85 live-trade minimum",
-  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
-  "M5 bullish CHOCH through 4063.37",
-  "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bullish, M15 bullish",
-  "RSI7 53, RSI14 51, M15 ADX 33, RVOL 1.6\u00d7",
-  "Profile & flow: Accepted above prior VAH 3962.50 (initiative buying); setup-leg delta +0.05",
-  "Weak components: liquidity, session"
+  "STALE DATA \u2014 last closed M5 bar is 21 min old",
+  "Setup score would be 74/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
