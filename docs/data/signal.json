@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-04T12:30:36.177195+00:00",
- "dubai_time": "Wed 04 Nov 2026, 16:30",
+ "generated_utc": "2026-11-04T12:40:35.264280+00:00",
+ "dubai_time": "Wed 04 Nov 2026, 16:40",
  "session": "London/NY overlap",
- "price": 4046.44,
+ "price": 4039.01,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-11-04T12:25:00+00:00",
+ "last_bar_utc": "2026-11-04T12:35:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 3989.66,
+  "value": 3990.54,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 69.2,
- "rsi14": 60.6,
+ "rsi7": 43.9,
+ "rsi14": 47.0,
  "adx14": {
-  "M5": 25.0,
+  "M5": 24.6,
   "M15": 59.4
  },
  "atr14": {
-  "M5": 4.15,
+  "M5": 4.53,
   "M15": 8.77,
-  "percentile": 69
+  "percentile": 74
  },
  "volume": "RVOL 3.93\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -70,7 +70,7 @@
   "developing": {
    "poc": 4043.25,
    "vah": 4049.5,
-   "val": 3950.5,
+   "val": 3951.0,
    "bins": [
     [
      3919.75,
@@ -1006,99 +1006,99 @@
     ],
     [
      4036.25,
-     767.6
+     830.7
     ],
     [
      4036.75,
-     767.6
+     830.7
     ],
     [
      4037.25,
-     719.9
+     783.0
     ],
     [
      4037.75,
-     378.4
+     441.6
     ],
     [
      4038.25,
-     343.6
+     406.7
     ],
     [
      4038.75,
-     257.1
+     320.2
     ],
     [
      4039.25,
-     267.9
+     331.0
     ],
     [
      4039.75,
-     458.2
+     521.3
     ],
     [
      4040.25,
-     561.3
+     624.4
     ],
     [
      4040.75,
-     727.8
+     842.3
     ],
     [
      4041.25,
-     1081.3
+     1195.8
     ],
     [
      4041.75,
-     1292.3
+     1406.9
     ],
     [
      4042.25,
-     1334.8
+     1449.3
     ],
     [
      4042.75,
-     1374.9
+     1489.5
     ],
     [
      4043.25,
-     1576.8
+     1691.3
     ],
     [
      4043.75,
-     1393.8
+     1508.3
     ],
     [
      4044.25,
-     1393.8
+     1508.3
     ],
     [
      4044.75,
-     1357.9
+     1472.4
     ],
     [
      4045.25,
-     1295.1
+     1346.5
     ],
     [
      4045.75,
-     1124.4
+     1175.8
     ],
     [
      4046.25,
-     871.5
+     922.9
     ],
     [
      4046.75,
-     837.8
+     889.2
     ],
     [
      4047.25,
-     643.8
+     695.2
     ],
     [
      4047.75,
-     643.8
+     695.2
     ],
     [
      4048.25,
@@ -1111,6 +1111,22 @@
     [
      4049.25,
      160.2
+    ],
+    [
+     4049.75,
+     0.0
+    ],
+    [
+     4050.25,
+     0.0
+    ],
+    [
+     4050.75,
+     0.0
+    ],
+    [
+     4051.25,
+     0.0
     ]
    ]
   },
@@ -1118,13 +1134,13 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.033,
-  "session_delta": 8972.0,
-  "session_slope": -112.0,
+  "leg_ratio": 0.245,
+  "session_delta": 10173.0,
+  "session_slope": 1208.0,
   "divergence": null,
   "absorption": null
  },
- "liquidity_event": "M15 swing high 4048.65 swept (buy-side), displacement",
+ "liquidity_event": "London high 4049.46 swept (buy-side), displacement",
  "bos_choch": "M5 CHOCH bullish through 4042.63 at 16:20",
  "news": {
   "risk": "Low",
@@ -1158,14 +1174,14 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4046.22 / buy 4046.42 (spread $0.20)",
- "score": 77,
+ "spread": "eToro now: sell 4036.57 / buy 4036.77 (spread $0.20)",
+ "score": 76,
  "score_parts": {
   "structure": 21,
   "liquidity": 7,
-  "momentum": 11,
+  "momentum": 6,
   "vwap": 8,
-  "volume_flow": 10,
+  "volume_flow": 14,
   "volatility": 5,
   "session": 5,
   "news": 10
@@ -1180,12 +1196,12 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "Score 77/100 is below the 85 live-trade minimum",
+  "Score 76/100 is below the 85 live-trade minimum",
   "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bullish CHOCH through 4042.63",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bullish, M15 bullish",
-  "RSI7 69, RSI14 61, M15 ADX 59, RVOL 3.9\u00d7",
-  "Profile & flow: Accepted above prior VAH 3962.50 (initiative buying); setup-leg delta +0.03",
+  "RSI7 44, RSI14 47, M15 ADX 59, RVOL 3.9\u00d7",
+  "Profile & flow: Accepted above prior VAH 3962.50 (initiative buying); setup-leg delta +0.24",
   "Weak components: liquidity"
  ],
  "invalidation": null,
@@ -1227,10 +1243,16 @@
    "swept": false
   },
   {
-   "name": "London high",
+   "name": "M15 swing high",
    "price": 4049.46,
    "side": "buy",
    "swept": false
+  },
+  {
+   "name": "London high",
+   "price": 4049.46,
+   "side": "buy",
+   "swept": true
   },
   {
    "name": "Asian high",
@@ -1279,37 +1301,9 @@
    "price": 3919.92,
    "side": "sell",
    "swept": false
-  },
-  {
-   "name": "Equal lows",
-   "price": 3918.0,
-   "side": "sell",
-   "swept": false
   }
  ],
  "chart": [
-  {
-   "t": 1793750400,
-   "o": 3938.14,
-   "h": 3939.85,
-   "l": 3935.9,
-   "c": 3937.1,
-   "e20": 3930.85,
-   "e50": 3928.62,
-   "vw": 3931.96,
-   "dl": -64.0
-  },
-  {
-   "t": 1793750700,
-   "o": 3937.2,
-   "h": 3940.16,
-   "l": 3936.24,
-   "c": 3936.74,
-   "e20": 3931.41,
-   "e50": 3928.94,
-   "vw": 3932.12,
-   "dl": -107.0
-  },
   {
    "t": 1793751000,
    "o": 3936.86,
@@ -2924,8 +2918,8 @@
    "c": 4043.3,
    "e20": 4040.53,
    "e50": 4035.44,
-   "vw": 3989.66,
-   "dl": 0.0
+   "vw": 3990.17,
+   "dl": 747.0
   },
   {
    "t": 1793795100,
@@ -2935,8 +2929,30 @@
    "c": 4046.44,
    "e20": 4041.09,
    "e50": 4035.87,
-   "vw": 3989.66,
-   "dl": 0.0
+   "vw": 3990.54,
+   "dl": 455.0
+  },
+  {
+   "t": 1793795400,
+   "o": 4046.44,
+   "h": 4051.32,
+   "l": 4043.56,
+   "c": 4043.56,
+   "e20": 4041.33,
+   "e50": 4036.17,
+   "vw": 3990.54,
+   "dl": -0.0
+  },
+  {
+   "t": 1793795700,
+   "o": 4043.48,
+   "h": 4044.38,
+   "l": 4038.28,
+   "c": 4039.01,
+   "e20": 4041.1,
+   "e50": 4036.29,
+   "vw": 3990.54,
+   "dl": -0.0
   }
  ],
  "journal": {
