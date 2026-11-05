@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-05T13:10:32.932889+00:00",
- "dubai_time": "Thu 05 Nov 2026, 17:10",
+ "generated_utc": "2026-11-05T13:13:25.433310+00:00",
+ "dubai_time": "Thu 05 Nov 2026, 17:13",
  "session": "London/NY overlap",
  "price": 4117.22,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.5,
+ "data_age_min": 3.4,
  "last_bar_utc": "2026-11-05T13:05:00+00:00",
  "warnings": [],
  "regime": "Breakout",
@@ -42,7 +42,7 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4117.76,
+  "value": 4117.79,
   "side": "Below",
   "crosses_2h": 1,
   "volume_weighted": true
@@ -75,7 +75,7 @@
   "developing": {
    "poc": 4125.75,
    "vah": 4139.5,
-   "val": 4113.5,
+   "val": 4114.0,
    "bins": [
     [
      4057.75,
@@ -567,55 +567,55 @@
     ],
     [
      4118.75,
-     1046.8
+     1098.7
     ],
     [
      4119.25,
-     1006.8
+     1058.7
     ],
     [
      4119.75,
-     1070.7
+     1122.6
     ],
     [
      4120.25,
-     1118.9
+     1170.8
     ],
     [
      4120.75,
-     1112.2
+     1164.2
     ],
     [
      4121.25,
-     1221.2
+     1273.1
     ],
     [
      4121.75,
-     1079.7
+     1131.7
     ],
     [
      4122.25,
-     1037.3
+     1089.2
     ],
     [
      4122.75,
-     1184.2
+     1236.1
     ],
     [
      4123.25,
-     1529.6
+     1581.6
     ],
     [
      4123.75,
-     2041.0
+     2092.9
     ],
     [
      4124.25,
-     2192.9
+     2244.8
     ],
     [
      4124.75,
-     2139.1
+     2191.0
     ],
     [
      4125.25,
@@ -799,9 +799,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.127,
-  "session_delta": 8022.0,
-  "session_slope": -747.0,
+  "leg_ratio": -0.153,
+  "session_delta": 7668.0,
+  "session_slope": -1100.0,
   "divergence": null,
   "absorption": null
  },
@@ -834,7 +834,7 @@
   ],
   "detail": "Unemployment Claims at 17:30 Dubai (score reduced, not blocked)"
  },
- "spread": "eToro now: sell 4117.34 / buy 4117.54 (spread $0.20)",
+ "spread": "eToro now: sell 4119.84 / buy 4120.04 (spread $0.20)",
  "score": 65,
  "score_parts": {
   "structure": 22,
@@ -860,7 +860,7 @@
   "M5 bullish BOS through 4131.73",
   "H4 bullish (Price clearly above H4 EMA200), H1 bullish, M15 neutral",
   "RSI7 23, RSI14 33, M15 ADX 20, RVOL 2.8\u00d7",
-  "Profile & flow: Accepted above prior VAH 4066.50 (initiative buying); setup-leg delta -0.13",
+  "Profile & flow: Accepted above prior VAH 4066.50 (initiative buying); setup-leg delta -0.15",
   "Weak components: momentum, vwap"
  ],
  "invalidation": null,
@@ -2599,8 +2599,8 @@
    "c": 4120.04,
    "e20": 4124.81,
    "e50": 4126.47,
-   "vw": 4117.76,
-   "dl": -0.0
+   "vw": 4117.79,
+   "dl": -353.0
   },
   {
    "t": 1793883900,
@@ -2610,7 +2610,7 @@
    "c": 4117.22,
    "e20": 4124.09,
    "e50": 4126.11,
-   "vw": 4117.76,
+   "vw": 4117.79,
    "dl": -0.0
   }
  ],
