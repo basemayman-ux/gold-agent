@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-05T22:00:40.110038+00:00",
- "dubai_time": "Fri 06 Nov 2026, 02:00",
+ "generated_utc": "2026-11-05T22:10:35.331894+00:00",
+ "dubai_time": "Fri 06 Nov 2026, 02:10",
  "session": "Late US / off-hours",
  "price": 4088.44,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
+ "data_age_min": 10.6,
  "last_bar_utc": "2026-11-05T21:55:00+00:00",
  "warnings": [],
  "regime": "Breakout",
@@ -42,7 +42,7 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4111.73,
+  "value": 4111.71,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
@@ -75,7 +75,7 @@
   "developing": {
    "poc": 4125.25,
    "vah": 4130.5,
-   "val": 4098.5,
+   "val": 4098.0,
    "bins": [
     [
      4057.75,
@@ -307,35 +307,35 @@
     ],
     [
      4086.25,
-     776.8
+     797.0
     ],
     [
      4086.75,
-     807.1
+     827.3
     ],
     [
      4087.25,
-     807.1
+     827.3
     ],
     [
      4087.75,
-     852.7
+     891.9
     ],
     [
      4088.25,
-     976.5
+     1015.7
     ],
     [
      4088.75,
-     976.5
+     995.5
     ],
     [
      4089.25,
-     958.8
+     977.8
     ],
     [
      4089.75,
-     938.5
+     957.5
     ],
     [
      4090.25,
@@ -799,9 +799,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.269,
-  "session_delta": 9300.0,
-  "session_slope": -1018.0,
+  "leg_ratio": -0.244,
+  "session_delta": 9346.0,
+  "session_slope": -972.0,
   "divergence": null,
   "absorption": null
  },
@@ -829,7 +829,7 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4100.35 / buy 4100.55 (spread $0.20)",
+ "spread": "eToro now: sell 4101.56 / buy 4101.76 (spread $0.20)",
  "score": 60,
  "score_parts": {
   "structure": 15,
@@ -856,7 +856,7 @@
   "Early trend turn: H1 and M15 turned down before H4 (allowed in active mode)",
   "H4 bullish (Price clearly above H4 EMA200), H1 bearish, M15 bearish",
   "RSI7 37, RSI14 38, M15 ADX 26, RVOL 1.9\u00d7",
-  "Profile & flow: Price inside value, no edge from the profile; setup-leg delta -0.27",
+  "Profile & flow: Price inside value, no edge from the profile; setup-leg delta -0.24",
   "Weak components: liquidity, session"
  ],
  "invalidation": null,
@@ -2595,8 +2595,8 @@
    "c": 4088.03,
    "e20": 4093.62,
    "e50": 4099.81,
-   "vw": 4111.73,
-   "dl": 0.0
+   "vw": 4111.72,
+   "dl": 77.0
   },
   {
    "t": 1793915700,
@@ -2606,8 +2606,8 @@
    "c": 4088.44,
    "e20": 4093.12,
    "e50": 4099.37,
-   "vw": 4111.73,
-   "dl": -0.0
+   "vw": 4111.71,
+   "dl": -31.0
   }
  ],
  "journal": {
