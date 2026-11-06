@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-06T20:40:34.863031+00:00",
- "dubai_time": "Sat 07 Nov 2026, 00:40",
+ "generated_utc": "2026-11-06T20:50:31.415261+00:00",
+ "dubai_time": "Sat 07 Nov 2026, 00:50",
  "session": "New York",
- "price": 4063.43,
+ "price": 4065.3,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-11-06T20:35:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-11-06T20:45:00+00:00",
  "warnings": [],
  "regime": "Range",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4059.66,
+  "value": 4059.67,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 46.2,
- "rsi14": 47.9,
+ "rsi7": 53.9,
+ "rsi14": 51.6,
  "adx14": {
-  "M5": 14.3,
-  "M15": 13.0
+  "M5": 13.7,
+  "M15": 13.1
  },
  "atr14": {
-  "M5": 3.68,
-  "M15": 7.19,
-  "percentile": 24
+  "M5": 3.56,
+  "M15": 7.18,
+  "percentile": 23
  },
  "volume": "RVOL 1.02\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -339,63 +339,63 @@
     ],
     [
      4062.25,
-     2561.8
+     2571.9
     ],
     [
      4062.75,
-     2987.5
+     2997.6
     ],
     [
      4063.25,
-     3441.1
+     3451.2
     ],
     [
      4063.75,
-     3331.0
+     3363.1
     ],
     [
      4064.25,
-     3176.8
+     3208.9
     ],
     [
      4064.75,
-     2576.6
+     2608.7
     ],
     [
      4065.25,
-     2987.8
+     3019.9
     ],
     [
      4065.75,
-     2648.2
+     2680.3
     ],
     [
      4066.25,
-     2382.2
+     2414.3
     ],
     [
      4066.75,
-     2554.6
+     2586.7
     ],
     [
      4067.25,
-     1973.7
+     1995.7
     ],
     [
      4067.75,
-     1963.9
+     1985.9
     ],
     [
      4068.25,
-     1987.1
+     2009.1
     ],
     [
      4068.75,
-     1832.9
+     1854.9
     ],
     [
      4069.25,
-     1605.1
+     1627.1
     ],
     [
      4069.75,
@@ -703,9 +703,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.056,
-  "session_delta": 3918.0,
-  "session_slope": -196.0,
+  "leg_ratio": -0.053,
+  "session_delta": 3925.0,
+  "session_slope": -36.0,
   "divergence": true,
   "absorption": false
  },
@@ -717,12 +717,12 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4043.77 / buy 4043.97 (spread $0.20)",
- "score": 63,
+ "spread": "eToro now: sell 4048.55 / buy 4048.75 (spread $0.20)",
+ "score": 59,
  "score_parts": {
   "structure": 13,
   "liquidity": 12,
-  "momentum": 5,
+  "momentum": 1,
   "vwap": 3,
   "volume_flow": 11,
   "volatility": 5,
@@ -740,7 +740,7 @@
  "plan": null,
  "why": [
   "MARKET CHOP \u2014 ADX weak, EMA20/50 flat",
-  "Setup score would be 63/100 (not tradable while blocked)"
+  "Setup score would be 59/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -842,28 +842,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1793952600,
-   "o": 4054.14,
-   "h": 4056.78,
-   "l": 4051.95,
-   "c": 4056.74,
-   "e20": 4049.82,
-   "e50": 4050.32,
-   "vw": 4064.51,
-   "dl": 365.0
-  },
-  {
-   "t": 1793952900,
-   "o": 4056.68,
-   "h": 4066.49,
-   "l": 4056.68,
-   "c": 4066.12,
-   "e20": 4051.37,
-   "e50": 4050.94,
-   "vw": 4064.48,
-   "dl": 1055.0
-  },
   {
    "t": 1793953200,
    "o": 4066.04,
@@ -2478,8 +2456,8 @@
    "c": 4066.99,
    "e20": 4064.76,
    "e50": 4063.27,
-   "vw": 4059.66,
-   "dl": 0.0
+   "vw": 4059.67,
+   "dl": 54.0
   },
   {
    "t": 1793997300,
@@ -2489,8 +2467,30 @@
    "c": 4063.43,
    "e20": 4064.63,
    "e50": 4063.28,
-   "vw": 4059.66,
-   "dl": -0.0
+   "vw": 4059.67,
+   "dl": -46.0
+  },
+  {
+   "t": 1793997600,
+   "o": 4063.38,
+   "h": 4064.96,
+   "l": 4062.52,
+   "c": 4063.86,
+   "e20": 4064.56,
+   "e50": 4063.3,
+   "vw": 4059.67,
+   "dl": 0.0
+  },
+  {
+   "t": 1793997900,
+   "o": 4063.86,
+   "h": 4066.61,
+   "l": 4063.43,
+   "c": 4065.3,
+   "e20": 4064.63,
+   "e50": 4063.38,
+   "vw": 4059.67,
+   "dl": 0.0
   }
  ],
  "journal": {
