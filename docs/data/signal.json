@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-06T20:10:35.064590+00:00",
- "dubai_time": "Sat 07 Nov 2026, 00:10",
+ "generated_utc": "2026-11-06T20:20:30.094838+00:00",
+ "dubai_time": "Sat 07 Nov 2026, 00:20",
  "session": "New York",
- "price": 4065.39,
+ "price": 4062.05,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-11-06T20:05:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-11-06T20:15:00+00:00",
  "warnings": [],
  "regime": "Range",
  "bias": {
@@ -29,8 +29,8 @@
    "HL"
   ],
   "M5": [
-   "LH",
-   "HL"
+   "HH",
+   "LL"
   ]
  },
  "ema200": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4059.63,
+  "value": 4059.64,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 52.1,
- "rsi14": 51.1,
+ "rsi7": 39.7,
+ "rsi14": 44.9,
  "adx14": {
-  "M5": 16.8,
-  "M15": 14.3
+  "M5": 15.5,
+  "M15": 13.6
  },
  "atr14": {
-  "M5": 3.55,
-  "M15": 7.6,
-  "percentile": 21
+  "M5": 3.46,
+  "M15": 7.45,
+  "percentile": 18
  },
  "volume": "RVOL 1.02\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -327,51 +327,51 @@
     ],
     [
      4060.75,
-     2737.9
+     2772.6
     ],
     [
      4061.25,
-     2764.9
+     2799.6
     ],
     [
      4061.75,
-     2644.4
+     2679.1
     ],
     [
      4062.25,
-     2442.9
+     2477.5
     ],
     [
      4062.75,
-     2868.6
+     2903.2
     ],
     [
      4063.25,
-     3322.2
+     3356.8
     ],
     [
      4063.75,
-     3160.6
+     3195.3
     ],
     [
      4064.25,
-     3030.0
+     3064.6
     ],
     [
      4064.75,
-     2510.5
+     2525.2
     ],
     [
      4065.25,
-     2921.8
+     2936.4
     ],
     [
      4065.75,
-     2582.1
+     2596.8
     ],
     [
      4066.25,
-     2367.5
+     2382.2
     ],
     [
      4066.75,
@@ -703,9 +703,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.095,
-  "session_delta": 3739.0,
-  "session_slope": -1309.0,
+  "leg_ratio": -0.08,
+  "session_delta": 3810.0,
+  "session_slope": -522.0,
   "divergence": true,
   "absorption": false
  },
@@ -717,12 +717,12 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4034.61 / buy 4034.81 (spread $0.20)",
- "score": 59,
+ "spread": "eToro now: sell 4035.80 / buy 4036.00 (spread $0.20)",
+ "score": 63,
  "score_parts": {
   "structure": 13,
   "liquidity": 12,
-  "momentum": 1,
+  "momentum": 5,
   "vwap": 3,
   "volume_flow": 11,
   "volatility": 5,
@@ -740,7 +740,7 @@
  "plan": null,
  "why": [
   "MARKET CHOP \u2014 ADX weak, EMA20/50 flat",
-  "Setup score would be 59/100 (not tradable while blocked)"
+  "Setup score would be 63/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -842,28 +842,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1793950800,
-   "o": 4043.83,
-   "h": 4047.17,
-   "l": 4043.7,
-   "c": 4046.4,
-   "e20": 4046.39,
-   "e50": 4049.39,
-   "vw": 4065.14,
-   "dl": 199.0
-  },
-  {
-   "t": 1793951100,
-   "o": 4046.4,
-   "h": 4046.89,
-   "l": 4043.75,
-   "c": 4046.28,
-   "e20": 4046.38,
-   "e50": 4049.27,
-   "vw": 4065.04,
-   "dl": 152.0
-  },
   {
    "t": 1793951400,
    "o": 4046.28,
@@ -2479,7 +2457,7 @@
    "e20": 4065.12,
    "e50": 4063.01,
    "vw": 4059.63,
-   "dl": -0.0
+   "dl": -52.0
   },
   {
    "t": 1793995500,
@@ -2489,8 +2467,30 @@
    "c": 4065.39,
    "e20": 4065.15,
    "e50": 4063.1,
-   "vw": 4059.63,
-   "dl": 0.0
+   "vw": 4059.64,
+   "dl": 122.0
+  },
+  {
+   "t": 1793995800,
+   "o": 4065.31,
+   "h": 4065.78,
+   "l": 4063.6,
+   "c": 4064.49,
+   "e20": 4065.09,
+   "e50": 4063.15,
+   "vw": 4059.64,
+   "dl": -0.0
+  },
+  {
+   "t": 1793996100,
+   "o": 4064.45,
+   "h": 4064.45,
+   "l": 4060.89,
+   "c": 4062.05,
+   "e20": 4064.8,
+   "e50": 4063.11,
+   "vw": 4059.64,
+   "dl": -0.0
   }
  ],
  "journal": {
