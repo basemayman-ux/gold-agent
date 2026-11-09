@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-09T16:30:43.013668+00:00",
- "dubai_time": "Mon 09 Nov 2026, 20:30",
+ "generated_utc": "2026-11-09T16:35:30.124960+00:00",
+ "dubai_time": "Mon 09 Nov 2026, 20:35",
  "session": "New York",
- "price": 4114.48,
+ "price": 4117.45,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-11-09T16:25:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-11-09T16:30:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4111.58,
+  "value": 4111.64,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 31.0,
- "rsi14": 40.5,
+ "rsi7": 41.7,
+ "rsi14": 45.7,
  "adx14": {
-  "M5": 16.9,
+  "M5": 16.7,
   "M15": 23.5
  },
  "atr14": {
-  "M5": 4.61,
+  "M5": 4.59,
   "M15": 8.01,
-  "percentile": 83
+  "percentile": 84
  },
  "volume": "RVOL 2.15\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -590,63 +590,63 @@
     ],
     [
      4118.75,
-     2165.7
+     2218.5
     ],
     [
      4119.25,
-     2309.4
+     2362.2
     ],
     [
      4119.75,
-     2410.4
+     2463.1
     ],
     [
      4120.25,
-     2732.3
+     2785.0
     ],
     [
      4120.75,
-     2752.5
+     2805.2
     ],
     [
      4121.25,
-     2195.9
+     2248.7
     ],
     [
      4121.75,
-     2367.0
+     2419.7
     ],
     [
      4122.25,
-     2063.9
+     2116.6
     ],
     [
      4122.75,
-     2007.2
+     2059.9
     ],
     [
      4123.25,
-     2237.6
+     2290.3
     ],
     [
      4123.75,
-     2382.3
+     2435.1
     ],
     [
      4124.25,
-     2397.8
+     2450.6
     ],
     [
      4124.75,
-     2798.9
+     2851.7
     ],
     [
      4125.25,
-     2713.9
+     2766.6
     ],
     [
      4125.75,
-     2551.7
+     2604.5
     ],
     [
      4126.25,
@@ -722,9 +722,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.12,
-  "session_delta": 7731.0,
-  "session_slope": 1307.0,
+  "leg_ratio": -0.266,
+  "session_delta": 6940.0,
+  "session_slope": -1616.0,
   "divergence": null,
   "absorption": null
  },
@@ -767,35 +767,35 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4126.27 / buy 4126.48 (spread $0.21)",
- "score": 79,
+ "spread": "eToro now: sell 4126.66 / buy 4126.86 (spread $0.20)",
+ "score": 88,
  "score_parts": {
-  "structure": 21,
-  "liquidity": 15,
-  "momentum": 5,
+  "structure": 22,
+  "liquidity": 17,
+  "momentum": 12,
   "vwap": 8,
-  "volume_flow": 11,
+  "volume_flow": 10,
   "volatility": 5,
   "session": 4,
   "news": 10
  },
- "candidate": "LONG",
+ "candidate": "SHORT",
  "decision": "WAIT",
  "headline": "Wait",
- "quality": "WATCH",
- "setup": "trend",
- "range": null,
+ "quality": "A",
+ "setup": "range",
+ "range": {
+  "lo": 4091.38,
+  "hi": 4130.45
+ },
  "mode": "active",
  "min_score": 85,
  "plan": null,
  "why": [
-  "A SHORT signal is still active, manage it before a new one",
-  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
-  "M5 bullish BOS through 4120.92",
-  "H4 neutral (Price crossed H4 EMA200 5\u00d7 in 30 bars (transition)), H1 bullish, M15 bullish",
-  "RSI7 31, RSI14 40, M15 ADX 23, RVOL 2.1\u00d7",
-  "Profile & flow: Accepted above prior VAH 4073.00 (initiative buying); setup-leg delta -0.12",
-  "Weak components: momentum"
+  "Cooling down after the last signal",
+  "Range trade: range high 4130.45 swept, then displacement",
+  "Gold has ranged 4091.38\u20134130.45 (tested 5\u00d7 low, 5\u00d7 high); target is the bottom of the range",
+  "RSI7 42, M15 ADX 23, M5 structure has turned"
  ],
  "invalidation": null,
  "levels": [
@@ -897,17 +897,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1794196800,
-   "o": 4115.68,
-   "h": 4119.32,
-   "l": 4115.14,
-   "c": 4118.02,
-   "e20": 4118.5,
-   "e50": 4108.39,
-   "vw": 4103.78,
-   "dl": 77.0
-  },
   {
    "t": 1794197100,
    "o": 4118.08,
@@ -2533,8 +2522,8 @@
    "c": 4118.84,
    "e20": 4121.26,
    "e50": 4118.76,
-   "vw": 4111.58,
-   "dl": -0.0
+   "vw": 4111.64,
+   "dl": -791.0
   },
   {
    "t": 1794241500,
@@ -2544,17 +2533,28 @@
    "c": 4114.48,
    "e20": 4120.61,
    "e50": 4118.59,
-   "vw": 4111.58,
+   "vw": 4111.64,
    "dl": -0.0
+  },
+  {
+   "t": 1794241800,
+   "o": 4114.48,
+   "h": 4118.89,
+   "l": 4114.46,
+   "c": 4117.45,
+   "e20": 4120.31,
+   "e50": 4118.55,
+   "vw": 4111.64,
+   "dl": 0.0
   }
  ],
  "journal": {
-  "trades": 49,
-  "win_rate": 38.8,
-  "avg_r": -0.13,
-  "expectancy_r": -0.13,
-  "profit_factor": 0.66,
-  "total_r": -6.5,
+  "trades": 50,
+  "win_rate": 40.0,
+  "avg_r": -0.11,
+  "expectancy_r": -0.11,
+  "profit_factor": 0.71,
+  "total_r": -5.5,
   "max_drawdown_r": 8.5,
   "max_consec_wins": 4,
   "max_consec_losses": 7,
@@ -2570,9 +2570,9 @@
     "avg_r": -0.16
    },
    "New York": {
-    "n": 8,
-    "win_rate": 38,
-    "avg_r": -0.19
+    "n": 9,
+    "win_rate": 44,
+    "avg_r": -0.06
    },
    "London/NY overlap": {
     "n": 14,
@@ -2587,9 +2587,9 @@
   },
   "by_score": {
    "85-89": {
-    "n": 48,
-    "win_rate": 40,
-    "avg_r": -0.11
+    "n": 49,
+    "win_rate": 41,
+    "avg_r": -0.09
    },
    "90+": {
     "n": 1,
@@ -2599,9 +2599,9 @@
   },
   "by_direction": {
    "SHORT": {
-    "n": 36,
-    "win_rate": 42,
-    "avg_r": -0.06
+    "n": 37,
+    "win_rate": 43,
+    "avg_r": -0.03
    },
    "LONG": {
     "n": 13,
@@ -2625,10 +2625,13 @@
    "risk_pct": 0.5,
    "regime": "Transition",
    "reason": "Range trade: range high 4130.45 swept, then displacement; Gold has ranged 4091.38\u20134130.45 (tested 5\u00d7 low, 5\u00d7 high); target is the bottom of the range; RSI7 40, M15 ADX 25",
-   "status": "open",
+   "status": "closed",
    "tp1_hit": false,
    "mgmt": "1R_be07",
-   "setup": "range"
+   "setup": "range",
+   "result": "Win",
+   "r": 1.0,
+   "closed_utc": "2026-11-09T16:30:00+00:00"
   },
   {
    "time_utc": "2026-11-05T09:25:32.511559+00:00",
