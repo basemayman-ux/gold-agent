@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-09T22:10:37.427199+00:00",
- "dubai_time": "Tue 10 Nov 2026, 02:10",
+ "generated_utc": "2026-11-09T22:20:36.194681+00:00",
+ "dubai_time": "Tue 10 Nov 2026, 02:20",
  "session": "Late US / off-hours",
  "price": 4140.48,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 10.6,
+ "data_age_min": 20.6,
  "last_bar_utc": "2026-11-09T21:55:00+00:00",
  "warnings": [],
  "regime": "Transition",
@@ -896,22 +896,17 @@
   "news": 10
  },
  "candidate": "LONG",
- "decision": "WAIT",
- "headline": "Wait",
- "quality": "WATCH",
+ "decision": "NO TRADE",
+ "headline": "No trade",
+ "quality": "NO TRADE",
  "setup": "trend",
  "range": null,
  "mode": "active",
  "min_score": 85,
  "plan": null,
  "why": [
-  "Score 76/100 is below the 85 live-trade minimum",
-  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
-  "M5 bullish BOS through 4142.79",
-  "H4 neutral (Price crossed H4 EMA200 8\u00d7 in 30 bars (transition)), H1 bullish, M15 bullish",
-  "RSI7 54, RSI14 57, M15 ADX 35, RVOL 1.3\u00d7",
-  "Profile & flow: Accepted above prior VAH 4071.00 (initiative buying); setup-leg delta +0.16",
-  "Weak components: liquidity, session"
+  "STALE DATA \u2014 last closed M5 bar is 21 min old",
+  "Setup score would be 76/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
