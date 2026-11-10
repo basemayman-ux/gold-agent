@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-10T09:30:42.532478+00:00",
- "dubai_time": "Tue 10 Nov 2026, 13:30",
+ "generated_utc": "2026-11-10T09:40:35.386798+00:00",
+ "dubai_time": "Tue 10 Nov 2026, 13:40",
  "session": "London",
- "price": 4090.33,
+ "price": 4083.59,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-11-10T09:25:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-11-10T09:35:00+00:00",
  "warnings": [],
  "regime": "High Volatility",
  "bias": {
@@ -42,19 +42,19 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4116.9,
+  "value": 4116.3,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 7.4,
- "rsi14": 16.9,
+ "rsi7": 4.9,
+ "rsi14": 13.5,
  "adx14": {
-  "M5": 30.8,
+  "M5": 36.5,
   "M15": 18.6
  },
  "atr14": {
-  "M5": 5.46,
+  "M5": 5.47,
   "M15": 7.78,
   "percentile": 95
  },
@@ -69,9 +69,61 @@
   "naked_pocs": [],
   "developing": {
    "poc": 4117.25,
-   "vah": 4135.0,
-   "val": 4108.5,
+   "vah": 4136.5,
+   "val": 4108.0,
    "bins": [
+    [
+     4081.75,
+     0.0
+    ],
+    [
+     4082.25,
+     0.0
+    ],
+    [
+     4082.75,
+     0.0
+    ],
+    [
+     4083.25,
+     0.0
+    ],
+    [
+     4083.75,
+     0.0
+    ],
+    [
+     4084.25,
+     0.0
+    ],
+    [
+     4084.75,
+     0.0
+    ],
+    [
+     4085.25,
+     0.0
+    ],
+    [
+     4085.75,
+     0.0
+    ],
+    [
+     4086.25,
+     0.0
+    ],
+    [
+     4086.75,
+     0.0
+    ],
+    [
+     4087.25,
+     0.0
+    ],
+    [
+     4087.75,
+     0.0
+    ],
     [
      4088.25,
      147.5
@@ -86,79 +138,79 @@
     ],
     [
      4089.75,
-     257.7
+     315.4
     ],
     [
      4090.25,
-     257.7
+     315.4
     ],
     [
      4090.75,
-     257.7
+     315.4
     ],
     [
      4091.25,
-     257.7
+     315.4
     ],
     [
      4091.75,
-     257.7
+     315.4
     ],
     [
      4092.25,
-     395.0
+     452.6
     ],
     [
      4092.75,
-     395.0
+     500.2
     ],
     [
      4093.25,
-     395.0
+     500.2
     ],
     [
      4093.75,
-     395.0
+     500.2
     ],
     [
      4094.25,
-     395.0
+     500.2
     ],
     [
      4094.75,
-     467.0
+     572.2
     ],
     [
      4095.25,
-     467.0
+     572.2
     ],
     [
      4095.75,
-     467.0
+     514.5
     ],
     [
      4096.25,
-     467.0
+     514.5
     ],
     [
      4096.75,
-     467.0
+     514.5
     ],
     [
      4097.25,
-     319.5
+     367.0
     ],
     [
      4097.75,
-     319.5
+     367.0
     ],
     [
      4098.25,
-     182.2
+     229.8
     ],
     [
      4098.75,
-     182.2
+     229.8
     ],
     [
      4099.25,
@@ -546,14 +598,14 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.081,
-  "session_delta": -2157.0,
-  "session_slope": -858.0,
+  "leg_ratio": -0.101,
+  "session_delta": -2910.0,
+  "session_slope": -1631.0,
   "divergence": null,
   "absorption": null
  },
  "liquidity_event": "No valid sweep in the last 2.5 hours",
- "bos_choch": "M5 BOS bearish through 4114.72 at 12:55",
+ "bos_choch": "M5 BOS bearish through 4088.39 at 13:35",
  "news": {
   "risk": "Low",
   "status": "live",
@@ -586,11 +638,11 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4090.05 / buy 4090.28 (spread $0.23)",
- "score": 55,
+ "spread": "eToro now: sell 4085.48 / buy 4085.68 (spread $0.20)",
+ "score": 43,
  "score_parts": {
-  "structure": 20,
-  "liquidity": 7,
+  "structure": 15,
+  "liquidity": 0,
   "momentum": 1,
   "vwap": 3,
   "volume_flow": 8,
@@ -608,11 +660,11 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
-  "M5 bullish BOS through 4125.75",
+  "No logical structural stop available",
+  "No liquidity sweep or clean continuation setup",
   "H4 bullish (Price clearly above H4 EMA200), H1 bullish, M15 bearish",
-  "RSI7 7, RSI14 17, M15 ADX 19, RVOL 18.2\u00d7",
-  "Profile & flow: Buying in the lower half of developing value; setup-leg delta -0.08",
+  "RSI7 5, RSI14 13, M15 ADX 19, RVOL 18.2\u00d7",
+  "Profile & flow: Buying in the lower half of developing value; setup-leg delta -0.10",
   "Weak components: liquidity, momentum, vwap"
  ],
  "invalidation": null,
@@ -715,28 +767,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1794254400,
-   "o": 4136.39,
-   "h": 4139.88,
-   "l": 4133.63,
-   "c": 4135.3,
-   "e20": 4117.92,
-   "e50": 4113.74,
-   "vw": 4112.56,
-   "dl": -1292.0
-  },
-  {
-   "t": 1794254700,
-   "o": 4135.3,
-   "h": 4140.25,
-   "l": 4135.3,
-   "c": 4138.81,
-   "e20": 4119.91,
-   "e50": 4114.72,
-   "vw": 4112.71,
-   "dl": 410.0
-  },
   {
    "t": 1794255000,
    "o": 4138.8,
@@ -2351,8 +2381,8 @@
    "c": 4094.74,
    "e20": 4108.42,
    "e50": 4113.95,
-   "vw": 4116.9,
-   "dl": -0.0
+   "vw": 4116.64,
+   "dl": -215.0
   },
   {
    "t": 1794302700,
@@ -2362,7 +2392,29 @@
    "c": 4090.33,
    "e20": 4106.69,
    "e50": 4113.03,
-   "vw": 4116.9,
+   "vw": 4116.3,
+   "dl": -537.0
+  },
+  {
+   "t": 1794303000,
+   "o": 4090.33,
+   "h": 4090.91,
+   "l": 4086.48,
+   "c": 4088.46,
+   "e20": 4104.96,
+   "e50": 4112.06,
+   "vw": 4116.3,
+   "dl": -0.0
+  },
+  {
+   "t": 1794303300,
+   "o": 4088.02,
+   "h": 4088.02,
+   "l": 4081.94,
+   "c": 4083.59,
+   "e20": 4102.92,
+   "e50": 4110.95,
+   "vw": 4116.3,
    "dl": -0.0
   }
  ],
