@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-10T12:10:37.035245+00:00",
- "dubai_time": "Tue 10 Nov 2026, 16:10",
+ "generated_utc": "2026-11-10T12:20:30.779473+00:00",
+ "dubai_time": "Tue 10 Nov 2026, 16:20",
  "session": "London/NY overlap",
- "price": 4074.86,
+ "price": 4076.71,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-11-10T12:05:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-11-10T12:15:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4107.25,
+  "value": 4106.78,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 52.5,
- "rsi14": 41.8,
+ "rsi7": 57.8,
+ "rsi14": 46.6,
  "adx14": {
-  "M5": 51.6,
-  "M15": 38.8
+  "M5": 46.7,
+  "M15": 39.2
  },
  "atr14": {
-  "M5": 3.6,
-  "M15": 6.92,
-  "percentile": 64
+  "M5": 3.53,
+  "M15": 6.82,
+  "percentile": 63
  },
  "volume": "RVOL 1.92\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -70,7 +70,7 @@
   "developing": {
    "poc": 4117.25,
    "vah": 4146.5,
-   "val": 4093.5,
+   "val": 4092.5,
    "bins": [
     [
      4068.75,
@@ -110,43 +110,43 @@
     ],
     [
      4073.25,
-     772.6
+     829.9
     ],
     [
      4073.75,
-     815.9
+     873.2
     ],
     [
      4074.25,
-     738.0
+     858.4
     ],
     [
      4074.75,
-     477.6
+     597.9
     ],
     [
      4075.25,
-     549.8
+     670.1
     ],
     [
      4075.75,
-     549.8
+     670.1
     ],
     [
      4076.25,
-     521.6
+     641.9
     ],
     [
      4076.75,
-     406.0
+     526.3
     ],
     [
      4077.25,
-     440.3
+     560.7
     ],
     [
      4077.75,
-     398.9
+     461.9
     ],
     [
      4078.25,
@@ -702,9 +702,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.24,
-  "session_delta": -3862.0,
-  "session_slope": 1313.0,
+  "leg_ratio": 0.145,
+  "session_delta": -4117.0,
+  "session_slope": 403.0,
   "divergence": null,
   "absorption": null
  },
@@ -742,7 +742,7 @@
   ],
   "detail": "Core CPI m/m at 17:30 Dubai (score reduced, not blocked)"
  },
- "spread": "eToro now: sell 4076.04 / buy 4076.26 (spread $0.22)",
+ "spread": "eToro now: sell 4075.65 / buy 4075.88 (spread $0.23)",
  "score": 63,
  "score_parts": {
   "structure": 15,
@@ -768,8 +768,8 @@
   "M5 bearish BOS through 4073.42",
   "Early trend turn: H1 and M15 turned down before H4 (allowed in active mode)",
   "H4 bullish (Price clearly above H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 53, RSI14 42, M15 ADX 39, RVOL 1.9\u00d7",
-  "Profile & flow: Accepted below prior VAL 4101.00 (initiative selling); setup-leg delta +0.24",
+  "RSI7 58, RSI14 47, M15 ADX 39, RVOL 1.9\u00d7",
+  "Profile & flow: Accepted below prior VAL 4101.00 (initiative selling); setup-leg delta +0.14",
   "Weak components: liquidity"
  ],
  "invalidation": null,
@@ -872,28 +872,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1794267600,
-   "o": 4137.37,
-   "h": 4138.06,
-   "l": 4136.85,
-   "c": 4137.9,
-   "e20": 4139.14,
-   "e50": 4132.92,
-   "vw": 4141.82,
-   "dl": 48.0
-  },
-  {
-   "t": 1794267900,
-   "o": 4137.9,
-   "h": 4140.48,
-   "l": 4137.9,
-   "c": 4139.39,
-   "e20": 4139.17,
-   "e50": 4133.18,
-   "vw": 4141.73,
-   "dl": 17.0
-  },
   {
    "t": 1794268200,
    "o": 4139.39,
@@ -2508,8 +2486,8 @@
    "c": 4075.79,
    "e20": 4076.17,
    "e50": 4086.82,
-   "vw": 4107.25,
-   "dl": 0.0
+   "vw": 4107.01,
+   "dl": 114.0
   },
   {
    "t": 1794312300,
@@ -2519,7 +2497,29 @@
    "c": 4074.86,
    "e20": 4076.05,
    "e50": 4086.36,
-   "vw": 4107.25,
+   "vw": 4106.78,
+   "dl": -368.0
+  },
+  {
+   "t": 1794312600,
+   "o": 4075.03,
+   "h": 4078.88,
+   "l": 4074.85,
+   "c": 4077.96,
+   "e20": 4076.23,
+   "e50": 4086.03,
+   "vw": 4106.78,
+   "dl": 0.0
+  },
+  {
+   "t": 1794312900,
+   "o": 4078.0,
+   "h": 4078.38,
+   "l": 4076.19,
+   "c": 4076.71,
+   "e20": 4076.28,
+   "e50": 4085.66,
+   "vw": 4106.78,
    "dl": -0.0
   }
  ],
