@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-11T18:20:36.970152+00:00",
- "dubai_time": "Wed 11 Nov 2026, 22:20",
+ "generated_utc": "2026-11-11T18:30:43.033722+00:00",
+ "dubai_time": "Wed 11 Nov 2026, 22:30",
  "session": "New York",
- "price": 3991.38,
+ "price": 3992.32,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-11-11T18:15:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-11-11T18:25:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -29,7 +29,7 @@
    "LL"
   ],
   "M5": [
-   "HH",
+   "LH",
    "LL"
   ]
  },
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4031.46,
+  "value": 4030.91,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 31.8,
- "rsi14": 32.2,
+ "rsi7": 36.6,
+ "rsi14": 34.7,
  "adx14": {
-  "M5": 31.7,
-  "M15": 52.9
+  "M5": 32.1,
+  "M15": 53.6
  },
  "atr14": {
-  "M5": 3.57,
-  "M15": 6.52,
-  "percentile": 50
+  "M5": 3.32,
+  "M15": 6.27,
+  "percentile": 41
  },
  "volume": "RVOL 1.85\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -69,7 +69,7 @@
   "naked_pocs": [],
   "developing": {
    "poc": 4004.25,
-   "vah": 4049.0,
+   "vah": 4049.5,
    "val": 3998.0,
    "bins": [
     [
@@ -102,35 +102,35 @@
     ],
     [
      3990.75,
-     165.7
+     340.3
     ],
     [
      3991.25,
-     165.7
+     408.6
     ],
     [
      3991.75,
-     165.7
+     408.6
     ],
     [
      3992.25,
-     165.7
+     408.6
     ],
     [
      3992.75,
-     212.5
+     455.5
     ],
     [
      3993.25,
-     212.5
+     455.5
     ],
     [
      3993.75,
-     212.5
+     280.8
     ],
     [
      3994.25,
-     110.2
+     178.5
     ],
     [
      3994.75,
@@ -722,9 +722,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.52,
-  "session_delta": -9185.0,
-  "session_slope": -2718.0,
+  "leg_ratio": -0.426,
+  "session_delta": -9670.0,
+  "session_slope": -4103.0,
   "divergence": null,
   "absorption": null
  },
@@ -752,7 +752,7 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3991.07 / buy 3991.27 (spread $0.20)",
+ "spread": "eToro now: sell 3993.41 / buy 3993.62 (spread $0.21)",
  "score": 81,
  "score_parts": {
   "structure": 21,
@@ -778,8 +778,8 @@
   "No liquidity sweep or clean continuation setup",
   "M5 bearish CHOCH through 3998.35",
   "H4 neutral (Price crossed H4 EMA200 6\u00d7 in 30 bars (transition)), H1 bearish, M15 bearish",
-  "RSI7 32, RSI14 32, M15 ADX 53, RVOL 1.9\u00d7",
-  "Profile & flow: Accepted below prior VAL 4014.50 (initiative selling); setup-leg delta -0.52"
+  "RSI7 37, RSI14 35, M15 ADX 54, RVOL 1.9\u00d7",
+  "Profile & flow: Accepted below prior VAL 4014.50 (initiative selling); setup-leg delta -0.43"
  ],
  "invalidation": null,
  "levels": [
@@ -881,28 +881,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1794376200,
-   "o": 4062.18,
-   "h": 4062.82,
-   "l": 4057.56,
-   "c": 4057.96,
-   "e20": 4053.57,
-   "e50": 4048.14,
-   "vw": 4044.76,
-   "dl": -169.0
-  },
-  {
-   "t": 1794376500,
-   "o": 4057.96,
-   "h": 4060.73,
-   "l": 4056.14,
-   "c": 4058.46,
-   "e20": 4054.04,
-   "e50": 4048.54,
-   "vw": 4044.94,
-   "dl": 4.0
-  },
   {
    "t": 1794376800,
    "o": 4058.46,
@@ -2517,8 +2495,8 @@
    "c": 3992.84,
    "e20": 3998.86,
    "e50": 4008.29,
-   "vw": 4031.46,
-   "dl": 0.0
+   "vw": 4031.29,
+   "dl": 70.0
   },
   {
    "t": 1794420900,
@@ -2528,7 +2506,29 @@
    "c": 3991.38,
    "e20": 3998.15,
    "e50": 4007.62,
-   "vw": 4031.46,
+   "vw": 4030.91,
+   "dl": -554.0
+  },
+  {
+   "t": 1794421200,
+   "o": 3991.38,
+   "h": 3992.38,
+   "l": 3990.86,
+   "c": 3992.12,
+   "e20": 3997.57,
+   "e50": 4007.01,
+   "vw": 4030.91,
+   "dl": 0.0
+  },
+  {
+   "t": 1794421500,
+   "o": 3992.09,
+   "h": 3993.77,
+   "l": 3991.75,
+   "c": 3992.32,
+   "e20": 3997.07,
+   "e50": 4006.44,
+   "vw": 4030.91,
    "dl": -0.0
   }
  ],
