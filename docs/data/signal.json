@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-11T13:20:32.166981+00:00",
- "dubai_time": "Wed 11 Nov 2026, 17:20",
+ "generated_utc": "2026-11-11T13:25:31.607064+00:00",
+ "dubai_time": "Wed 11 Nov 2026, 17:25",
  "session": "London/NY overlap",
- "price": 4043.57,
+ "price": 4040.11,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.5,
- "last_bar_utc": "2026-11-11T13:15:00+00:00",
+ "last_bar_utc": "2026-11-11T13:20:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 4049.47,
+  "value": 4049.43,
   "side": "Below",
   "crosses_2h": 1,
   "volume_weighted": true
  },
- "rsi7": 49.6,
- "rsi14": 45.0,
+ "rsi7": 36.0,
+ "rsi14": 38.4,
  "adx14": {
-  "M5": 22.7,
+  "M5": 22.0,
   "M15": 18.9
  },
  "atr14": {
-  "M5": 2.98,
+  "M5": 3.11,
   "M15": 4.96,
-  "percentile": 35
+  "percentile": 38
  },
  "volume": "Not available \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -199,35 +199,35 @@
     ],
     [
      4041.75,
-     941.2
+     983.8
     ],
     [
      4042.25,
-     935.9
+     978.5
     ],
     [
      4042.75,
-     824.9
+     867.6
     ],
     [
      4043.25,
-     942.0
+     984.6
     ],
     [
      4043.75,
-     1022.1
+     1064.7
     ],
     [
      4044.25,
-     1103.0
+     1145.6
     ],
     [
      4044.75,
-     1043.9
+     1086.5
     ],
     [
      4045.25,
-     1077.0
+     1119.6
     ],
     [
      4045.75,
@@ -436,7 +436,7 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4042.38 / buy 4042.58 (spread $0.20)",
+ "spread": "eToro now: sell 4040.01 / buy 4040.21 (spread $0.20)",
  "score": 0,
  "score_parts": {},
  "candidate": null,
@@ -551,17 +551,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1794358200,
-   "o": 4033.43,
-   "h": 4034.16,
-   "l": 4032.25,
-   "c": 4032.51,
-   "e20": 4035.94,
-   "e50": 4034.39,
-   "vw": 4036.71,
-   "dl": -155.0
-  },
   {
    "t": 1794358500,
    "o": 4032.51,
@@ -2187,8 +2176,8 @@
    "c": 4043.98,
    "e20": 4044.75,
    "e50": 4048.11,
-   "vw": 4049.47,
-   "dl": 0.0
+   "vw": 4049.43,
+   "dl": 131.0
   },
   {
    "t": 1794402900,
@@ -2198,13 +2187,24 @@
    "c": 4043.57,
    "e20": 4044.63,
    "e50": 4047.93,
-   "vw": 4049.47,
+   "vw": 4049.43,
+   "dl": -0.0
+  },
+  {
+   "t": 1794403200,
+   "o": 4043.53,
+   "h": 4044.55,
+   "l": 4039.77,
+   "c": 4040.11,
+   "e20": 4044.2,
+   "e50": 4047.62,
+   "vw": 4049.43,
    "dl": -0.0
   }
  ],
  "journal": {
-  "trades": 50,
-  "win_rate": 40.0,
+  "trades": 51,
+  "win_rate": 39.2,
   "avg_r": -0.11,
   "expectancy_r": -0.11,
   "profit_factor": 0.71,
@@ -2229,9 +2229,9 @@
     "avg_r": -0.06
    },
    "London/NY overlap": {
-    "n": 14,
-    "win_rate": 29,
-    "avg_r": -0.14
+    "n": 15,
+    "win_rate": 27,
+    "avg_r": -0.13
    },
    "Late US / off-hours": {
     "n": 1,
@@ -2241,8 +2241,8 @@
   },
   "by_score": {
    "85-89": {
-    "n": 49,
-    "win_rate": 41,
+    "n": 50,
+    "win_rate": 40,
     "avg_r": -0.09
    },
    "90+": {
@@ -2258,9 +2258,9 @@
     "avg_r": -0.03
    },
    "LONG": {
-    "n": 13,
-    "win_rate": 31,
-    "avg_r": -0.35
+    "n": 14,
+    "win_rate": 29,
+    "avg_r": -0.32
    }
   }
  },
@@ -2279,11 +2279,14 @@
    "risk_pct": 0.5,
    "regime": "Transition",
    "reason": "Range trade: range low 4043.25 swept, then rejection wick; Gold has ranged 4043.25\u20134067.09 (tested 3\u00d7 low, 3\u00d7 high); target is the top of the range; RSI7 50, M15 ADX 19",
-   "status": "open",
+   "status": "closed",
    "tp1_hit": true,
    "mgmt": "1R_be07",
    "setup": "range",
-   "be_utc": "2026-11-11T13:15:00+00:00"
+   "be_utc": "2026-11-11T13:15:00+00:00",
+   "result": "Breakeven",
+   "r": 0.0,
+   "closed_utc": "2026-11-11T13:05:00+00:00"
   },
   {
    "time_utc": "2026-11-09T16:25:28.105434+00:00",
