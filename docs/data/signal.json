@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-11T08:00:47.612119+00:00",
- "dubai_time": "Wed 11 Nov 2026, 12:00",
+ "generated_utc": "2026-11-11T08:10:33.886930+00:00",
+ "dubai_time": "Wed 11 Nov 2026, 12:10",
  "session": "London",
- "price": 4059.17,
+ "price": 4058.93,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-11-11T07:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-11-11T08:05:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4048.71,
+  "value": 4048.99,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 38.3,
- "rsi14": 50.3,
+ "rsi7": 39.4,
+ "rsi14": 49.7,
  "adx14": {
-  "M5": 35.3,
+  "M5": 31.3,
   "M15": 30.5
  },
  "atr14": {
-  "M5": 3.11,
+  "M5": 3.07,
   "M15": 5.87,
-  "percentile": 41
+  "percentile": 40
  },
  "volume": "RVOL 2.71\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -74,7 +74,7 @@
   ],
   "developing": {
    "poc": 4047.25,
-   "vah": 4058.0,
+   "vah": 4058.5,
    "val": 4029.5,
    "bins": [
     [
@@ -335,23 +335,23 @@
     ],
     [
      4058.75,
-     629.3
+     699.1
     ],
     [
      4059.25,
-     562.7
+     783.4
     ],
     [
      4059.75,
-     512.3
+     733.1
     ],
     [
      4060.25,
-     475.8
+     696.6
     ],
     [
      4060.75,
-     541.7
+     692.7
     ],
     [
      4061.25,
@@ -411,9 +411,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.123,
-  "session_delta": 2101.0,
-  "session_slope": -235.0,
+  "leg_ratio": -0.261,
+  "session_delta": 1453.0,
+  "session_slope": -1081.0,
   "divergence": null,
   "absorption": null
  },
@@ -441,12 +441,12 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4057.88 / buy 4058.09 (spread $0.21)",
- "score": 79,
+ "spread": "eToro now: sell 4058.77 / buy 4058.97 (spread $0.20)",
+ "score": 77,
  "score_parts": {
   "structure": 21,
   "liquidity": 15,
-  "momentum": 9,
+  "momentum": 7,
   "vwap": 8,
   "volume_flow": 7,
   "volatility": 5,
@@ -463,12 +463,12 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "Score 79/100 is below the 85 live-trade minimum",
+  "Score 77/100 is below the 85 live-trade minimum",
   "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bullish BOS through 4065.35",
   "H4 neutral (Price crossed H4 EMA200 7\u00d7 in 30 bars (transition)), H1 bullish, M15 bullish",
-  "RSI7 38, RSI14 50, M15 ADX 30, RVOL 2.7\u00d7",
-  "Profile & flow: Price inside value, no edge from the profile; setup-leg delta -0.12"
+  "RSI7 39, RSI14 50, M15 ADX 30, RVOL 2.7\u00d7",
+  "Profile & flow: Price inside value, no edge from the profile; setup-leg delta -0.26"
  ],
  "invalidation": null,
  "levels": [
@@ -570,28 +570,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1794335400,
-   "o": 4022.66,
-   "h": 4027.1,
-   "l": 4022.66,
-   "c": 4026.9,
-   "e20": 4022.4,
-   "e50": 4032.45,
-   "vw": 4069.11,
-   "dl": 1735.0
-  },
-  {
-   "t": 1794335700,
-   "o": 4026.86,
-   "h": 4030.68,
-   "l": 4025.14,
-   "c": 4029.57,
-   "e20": 4023.08,
-   "e50": 4032.33,
-   "vw": 4068.84,
-   "dl": 661.0
-  },
   {
    "t": 1794336000,
    "o": 4029.57,
@@ -2206,8 +2184,8 @@
    "c": 4059.28,
    "e20": 4060.16,
    "e50": 4055.5,
-   "vw": 4048.71,
-   "dl": -0.0
+   "vw": 4048.8,
+   "dl": -118.0
   },
   {
    "t": 1794383700,
@@ -2217,8 +2195,30 @@
    "c": 4059.17,
    "e20": 4060.07,
    "e50": 4055.64,
-   "vw": 4048.71,
+   "vw": 4048.99,
+   "dl": -529.0
+  },
+  {
+   "t": 1794384000,
+   "o": 4059.22,
+   "h": 4060.22,
+   "l": 4056.92,
+   "c": 4058.39,
+   "e20": 4059.91,
+   "e50": 4055.75,
+   "vw": 4048.99,
    "dl": -0.0
+  },
+  {
+   "t": 1794384300,
+   "o": 4058.39,
+   "h": 4059.43,
+   "l": 4056.98,
+   "c": 4058.93,
+   "e20": 4059.81,
+   "e50": 4055.88,
+   "vw": 4048.99,
+   "dl": 0.0
   }
  ],
  "journal": {
