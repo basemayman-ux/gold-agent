@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-11T12:40:38.177674+00:00",
- "dubai_time": "Wed 11 Nov 2026, 16:40",
+ "generated_utc": "2026-11-11T12:44:04.361704+00:00",
+ "dubai_time": "Wed 11 Nov 2026, 16:44",
  "session": "London/NY overlap",
  "price": 4041.98,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
+ "data_age_min": 4.1,
  "last_bar_utc": "2026-11-11T12:35:00+00:00",
  "warnings": [],
  "regime": "Range",
@@ -42,7 +42,7 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 4049.93,
+  "value": 4049.91,
   "side": "Choppy",
   "crosses_2h": 4,
   "volume_weighted": true
@@ -74,8 +74,8 @@
   ],
   "developing": {
    "poc": 4049.25,
-   "vah": 4062.0,
-   "val": 4042.5,
+   "vah": 4061.0,
+   "val": 4041.5,
    "bins": [
     [
      4026.75,
@@ -203,27 +203,27 @@
     ],
     [
      4042.25,
-     466.5
+     499.5
     ],
     [
      4042.75,
-     510.2
+     543.2
     ],
     [
      4043.25,
-     623.0
+     656.0
     ],
     [
      4043.75,
-     783.4
+     816.4
     ],
     [
      4044.25,
-     889.3
+     922.3
     ],
     [
      4044.75,
-     963.2
+     996.2
     ],
     [
      4045.25,
@@ -436,7 +436,7 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 4041.38 / buy 4041.72 (spread $0.34)",
+ "spread": "eToro now: sell 4042.03 / buy 4042.28 (spread $0.25)",
  "score": 0,
  "score_parts": {},
  "candidate": null,
@@ -2188,8 +2188,8 @@
    "c": 4044.21,
    "e20": 4047.54,
    "e50": 4050.26,
-   "vw": 4049.93,
-   "dl": 0.0
+   "vw": 4049.91,
+   "dl": 110.0
   },
   {
    "t": 1794400500,
@@ -2199,7 +2199,7 @@
    "c": 4041.98,
    "e20": 4047.01,
    "e50": 4049.93,
-   "vw": 4049.93,
+   "vw": 4049.91,
    "dl": -0.0
   }
  ],
