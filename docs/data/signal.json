@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-12T22:10:37.268573+00:00",
- "dubai_time": "Fri 13 Nov 2026, 02:10",
+ "generated_utc": "2026-11-12T22:20:35.033719+00:00",
+ "dubai_time": "Fri 13 Nov 2026, 02:20",
  "session": "Late US / off-hours",
  "price": 3877.5,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 10.6,
+ "data_age_min": 20.6,
  "last_bar_utc": "2026-11-12T21:55:00+00:00",
  "warnings": [],
  "regime": "Transition",
@@ -1296,7 +1296,7 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3882.85 / buy 3883.18 (spread $0.33)",
+ "spread": "eToro now: sell 3883.39 / buy 3883.60 (spread $0.21)",
  "score": 65,
  "score_parts": {
   "structure": 21,
@@ -1318,12 +1318,8 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
-  "M5 bearish CHOCH through 3880.99",
-  "H4 neutral (Price crossed H4 EMA200 5\u00d7 in 30 bars (transition)), H1 bearish, M15 bearish",
-  "RSI7 64, RSI14 51, M15 ADX 20, RVOL 1.8\u00d7",
-  "Profile & flow: Accepted below prior VAL 3998.00 (initiative selling); setup-leg delta -0.17",
-  "Weak components: liquidity, volatility, session"
+  "STALE DATA \u2014 last closed M5 bar is 21 min old",
+  "Setup score would be 65/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
