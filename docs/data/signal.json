@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-11-13T13:00:43.008539+00:00",
- "dubai_time": "Fri 13 Nov 2026, 17:00",
+ "generated_utc": "2026-11-13T13:10:35.799132+00:00",
+ "dubai_time": "Fri 13 Nov 2026, 17:10",
  "session": "London/NY overlap",
- "price": 3889.03,
+ "price": 3887.62,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-11-13T12:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-11-13T13:05:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
   "H4": "Neutral",
   "H1": "Neutral",
   "M15": "Bearish",
-  "M5": "Neutral"
+  "M5": "Bearish"
  },
  "swings": {
   "H4": [
@@ -30,7 +30,7 @@
   ],
   "M5": [
    "HH",
-   "HL"
+   "LL"
   ]
  },
  "ema200": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 3899.4,
+  "value": 3899.29,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 41.2,
- "rsi14": 43.6,
+ "rsi7": 39.6,
+ "rsi14": 42.6,
  "adx14": {
-  "M5": 18.7,
+  "M5": 17.6,
   "M15": 12.8
  },
  "atr14": {
-  "M5": 3.22,
+  "M5": 3.45,
   "M15": 5.87,
-  "percentile": 22
+  "percentile": 35
  },
  "volume": "Not available \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -163,43 +163,43 @@
     ],
     [
      3885.75,
-     687.6
+     737.6
     ],
     [
      3886.25,
-     646.6
+     727.0
     ],
     [
      3886.75,
-     722.7
+     803.2
     ],
     [
      3887.25,
-     600.9
+     681.3
     ],
     [
      3887.75,
-     646.0
+     726.5
     ],
     [
      3888.25,
-     684.6
+     765.1
     ],
     [
      3888.75,
-     769.1
+     849.6
     ],
     [
      3889.25,
-     835.6
+     916.0
     ],
     [
      3889.75,
-     890.9
+     921.4
     ],
     [
      3890.25,
-     948.3
+     978.7
     ],
     [
      3890.75,
@@ -472,7 +472,7 @@
  "orderflow": {
   "available": true
  },
- "liquidity_event": "London low 3886.43 swept (sell-side), rejection wick",
+ "liquidity_event": "London low 3886.43 swept (sell-side), displacement",
  "bos_choch": "M5 CHOCH bearish through 3892.45 at 16:30",
  "news": {
   "risk": "High",
@@ -491,7 +491,7 @@
   ],
   "detail": "Core PPI m/m at 17:30 Dubai"
  },
- "spread": "eToro now: sell 3890.83 / buy 3891.03 (spread $0.20)",
+ "spread": "eToro now: sell 3887.31 / buy 3887.71 (spread $0.40)",
  "score": 0,
  "score_parts": {},
  "candidate": null,
@@ -607,28 +607,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1794529800,
-   "o": 3883.13,
-   "h": 3884.49,
-   "l": 3880.51,
-   "c": 3881.21,
-   "e20": 3881.59,
-   "e50": 3880.41,
-   "vw": 3882.48,
-   "dl": -410.0
-  },
-  {
-   "t": 1794530100,
-   "o": 3881.21,
-   "h": 3886.72,
-   "l": 3881.21,
-   "c": 3885.65,
-   "e20": 3881.98,
-   "e50": 3880.62,
-   "vw": 3882.61,
-   "dl": 293.0
-  },
   {
    "t": 1794530400,
    "o": 3885.64,
@@ -2243,8 +2221,8 @@
    "c": 3886.79,
    "e20": 3891.78,
    "e50": 3893.91,
-   "vw": 3899.4,
-   "dl": -0.0
+   "vw": 3899.36,
+   "dl": -211.0
   },
   {
    "t": 1794574500,
@@ -2254,8 +2232,30 @@
    "c": 3889.03,
    "e20": 3891.51,
    "e50": 3893.72,
-   "vw": 3899.4,
+   "vw": 3899.29,
+   "dl": 374.0
+  },
+  {
+   "t": 1794574800,
+   "o": 3889.03,
+   "h": 3892.59,
+   "l": 3888.52,
+   "c": 3892.48,
+   "e20": 3891.61,
+   "e50": 3893.67,
+   "vw": 3899.29,
    "dl": 0.0
+  },
+  {
+   "t": 1794575100,
+   "o": 3892.48,
+   "h": 3892.6,
+   "l": 3886.95,
+   "c": 3887.62,
+   "e20": 3891.23,
+   "e50": 3893.43,
+   "vw": 3899.29,
+   "dl": -0.0
   }
  ],
  "journal": {
