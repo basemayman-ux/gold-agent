@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-16T23:20:47.039506+00:00",
- "dubai_time": "Tue 17 Nov 2026, 03:20",
+ "generated_utc": "2026-11-16T23:24:20.475497+00:00",
+ "dubai_time": "Tue 17 Nov 2026, 03:24",
  "session": "Late US / off-hours",
  "price": 3855.48,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
+ "data_age_min": 4.3,
  "last_bar_utc": "2026-11-16T23:15:00+00:00",
  "warnings": [],
  "regime": "Trend",
@@ -42,7 +42,7 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 3855.38,
+  "value": 3854.99,
   "side": "Above",
   "crosses_2h": 1,
   "volume_weighted": true
@@ -74,36 +74,36 @@
   ],
   "developing": {
    "poc": 3853.75,
-   "vah": 3858.0,
-   "val": 3853.5,
+   "vah": 3857.5,
+   "val": 3853.0,
    "bins": [
     [
      3852.25,
-     12.8
+     24.3
     ],
     [
      3852.75,
-     12.8
+     24.3
     ],
     [
      3853.25,
-     12.8
+     24.3
     ],
     [
      3853.75,
-     27.8
+     39.3
     ],
     [
      3854.25,
-     27.8
+     39.3
     ],
     [
      3854.75,
-     27.8
+     39.3
     ],
     [
      3855.25,
-     27.8
+     39.3
     ],
     [
      3855.75,
@@ -147,9 +147,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.06,
-  "session_delta": -113.0,
-  "session_slope": 14382.0,
+  "leg_ratio": -0.082,
+  "session_delta": -145.0,
+  "session_slope": 14350.0,
   "divergence": null,
   "absorption": null
  },
@@ -187,7 +187,7 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3854.47 / buy 3854.67 (spread $0.20)",
+ "spread": "eToro now: sell 3854.69 / buy 3855.05 (spread $0.36)",
  "score": 49,
  "score_parts": {
   "structure": 10,
@@ -1948,8 +1948,8 @@
    "c": 3853.07,
    "e20": 3854.99,
    "e50": 3856.6,
-   "vw": 3855.38,
-   "dl": -0.0
+   "vw": 3854.99,
+   "dl": -32.0
   },
   {
    "t": 1794870900,
@@ -1959,7 +1959,7 @@
    "c": 3855.48,
    "e20": 3855.04,
    "e50": 3856.56,
-   "vw": 3855.38,
+   "vw": 3854.99,
    "dl": 0.0
   }
  ],
