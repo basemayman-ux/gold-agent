@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-16T12:35:28.830395+00:00",
- "dubai_time": "Mon 16 Nov 2026, 16:35",
+ "generated_utc": "2026-11-16T12:40:34.245520+00:00",
+ "dubai_time": "Mon 16 Nov 2026, 16:40",
  "session": "London/NY overlap",
- "price": 3867.89,
+ "price": 3867.52,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.5,
- "last_bar_utc": "2026-11-16T12:30:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-11-16T12:35:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -29,7 +29,7 @@
    "HL"
   ],
   "M5": [
-   "HH",
+   "LH",
    "LL"
   ]
  },
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 3865.06,
+  "value": 3865.12,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 37.7,
- "rsi14": 46.5,
+ "rsi7": 36.7,
+ "rsi14": 45.9,
  "adx14": {
-  "M5": 27.3,
+  "M5": 25.4,
   "M15": 14.9
  },
  "atr14": {
-  "M5": 3.36,
+  "M5": 3.35,
   "M15": 7.0,
-  "percentile": 51
+  "percentile": 52
  },
  "volume": "Not available \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -382,47 +382,47 @@
     ],
     [
      3870.75,
-     1569.6
+     1633.8
     ],
     [
      3871.25,
-     1618.9
+     1683.1
     ],
     [
      3871.75,
-     1948.6
+     2012.8
     ],
     [
      3872.25,
-     1931.8
+     1996.0
     ],
     [
      3872.75,
-     1958.2
+     2022.4
     ],
     [
      3873.25,
-     1902.3
+     1966.5
     ],
     [
      3873.75,
-     1901.6
+     1965.7
     ],
     [
      3874.25,
-     1556.9
+     1621.1
     ],
     [
      3874.75,
-     1436.9
+     1501.1
     ],
     [
      3875.25,
-     1244.6
+     1308.8
     ],
     [
      3875.75,
-     1044.0
+     1108.2
     ],
     [
      3876.25,
@@ -674,22 +674,22 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3867.74 / buy 3867.94 (spread $0.20)",
- "score": 80,
+ "spread": "eToro now: sell 3867.51 / buy 3867.71 (spread $0.20)",
+ "score": 87,
  "score_parts": {
   "structure": 25,
   "liquidity": 16,
   "momentum": 8,
   "vwap": 8,
-  "volume_flow": 3,
+  "volume_flow": 10,
   "volatility": 5,
   "session": 5,
   "news": 10
  },
  "candidate": "SHORT",
- "decision": "WAIT",
- "headline": "Wait",
- "quality": "B+",
+ "decision": "SHORT",
+ "headline": "Short setup confirmed",
+ "quality": "A",
  "setup": "range",
  "range": {
   "lo": 3832.43,
@@ -697,14 +697,33 @@
  },
  "mode": "active",
  "min_score": 85,
- "plan": null,
+ "plan": {
+  "entry": 3867.5,
+  "sl": 3876.41,
+  "tp1": 3858.59,
+  "tp2": 3833.13,
+  "tp2_name": "opposite edge of the range",
+  "rr": "1:1 (all out at target)",
+  "be": 3861.27,
+  "risk_pct": 0.5,
+  "size": {
+   "risk_cash": 37.0,
+   "oz": 4.15,
+   "lots_std": 0.04,
+   "lots": 4.15,
+   "unit": "oz (eToro units)"
+  },
+  "max_entry": 3865.27,
+  "valid_until": "2026-11-16T12:50:34.245520+00:00",
+  "valid_until_dubai": "16:50",
+  "live_src": "eToro"
+ },
  "why": [
-  "A SHORT signal is still active, manage it before a new one",
   "Range trade: range high 3878.25 tested, then displacement",
   "Gold has ranged 3832.43\u20133878.25 (tested 2\u00d7 low, 4\u00d7 high); target is the bottom of the range",
-  "RSI7 38, M15 ADX 15"
+  "RSI7 37, M15 ADX 15"
  ],
- "invalidation": null,
+ "invalidation": "Trade through 3876.41 (beyond the range high test), or a 15-minute close above the range edge (3878.25) before TP1.",
  "levels": [
   {
    "name": "H1 swing high",
@@ -804,17 +823,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1794787500,
-   "o": 3897.06,
-   "h": 3897.32,
-   "l": 3892.4,
-   "c": 3892.91,
-   "e20": 3880.65,
-   "e50": 3864.4,
-   "vw": 3890.95,
-   "dl": -316.0
-  },
   {
    "t": 1794787800,
    "o": 3892.91,
@@ -2440,8 +2448,8 @@
    "c": 3871.96,
    "e20": 3870.87,
    "e50": 3867.01,
-   "vw": 3865.06,
-   "dl": -0.0
+   "vw": 3865.12,
+   "dl": -309.0
   },
   {
    "t": 1794832200,
@@ -2451,13 +2459,24 @@
    "c": 3867.89,
    "e20": 3870.59,
    "e50": 3867.05,
-   "vw": 3865.06,
+   "vw": 3865.12,
+   "dl": -0.0
+  },
+  {
+   "t": 1794832500,
+   "o": 3867.82,
+   "h": 3869.82,
+   "l": 3866.67,
+   "c": 3867.52,
+   "e20": 3870.3,
+   "e50": 3867.07,
+   "vw": 3865.12,
    "dl": -0.0
   }
  ],
  "journal": {
-  "trades": 53,
-  "win_rate": 39.6,
+  "trades": 54,
+  "win_rate": 38.9,
   "avg_r": -0.1,
   "expectancy_r": -0.1,
   "profit_factor": 0.72,
@@ -2482,9 +2501,9 @@
     "avg_r": -0.06
    },
    "London/NY overlap": {
-    "n": 15,
-    "win_rate": 27,
-    "avg_r": -0.13
+    "n": 16,
+    "win_rate": 25,
+    "avg_r": -0.12
    },
    "Late US / off-hours": {
     "n": 1,
@@ -2499,15 +2518,15 @@
     "avg_r": -0.09
    },
    "90+": {
-    "n": 1,
+    "n": 2,
     "win_rate": 0,
-    "avg_r": -1.0
+    "avg_r": -0.5
    }
   },
   "by_direction": {
    "SHORT": {
-    "n": 39,
-    "win_rate": 44,
+    "n": 40,
+    "win_rate": 42,
     "avg_r": -0.03
    },
    "LONG": {
@@ -2518,6 +2537,25 @@
   }
  },
  "recent_signals": [
+  {
+   "time_utc": "2026-11-16T12:40:34.245520+00:00",
+   "dubai": "Mon 16 Nov 2026, 16:40",
+   "session": "London/NY overlap",
+   "direction": "SHORT",
+   "entry": 3867.5,
+   "sl": 3876.41,
+   "tp1": 3858.59,
+   "tp2": 3833.13,
+   "rr": 3.86,
+   "score": 87,
+   "risk_pct": 0.5,
+   "regime": "Transition",
+   "reason": "Range trade: range high 3878.25 tested, then displacement; Gold has ranged 3832.43\u20133878.25 (tested 2\u00d7 low, 4\u00d7 high); target is the bottom of the range; RSI7 37, M15 ADX 15",
+   "status": "open",
+   "tp1_hit": false,
+   "mgmt": "1R_be07",
+   "setup": "range"
+  },
   {
    "time_utc": "2026-11-16T12:20:41.721683+00:00",
    "dubai": "Mon 16 Nov 2026, 16:20",
@@ -2532,11 +2570,14 @@
    "risk_pct": 0.5,
    "regime": "Transition",
    "reason": "Range trade: range high 3878.25 tested, then displacement; Gold has ranged 3832.43\u20133878.25 (tested 2\u00d7 low, 4\u00d7 high); target is the bottom of the range; RSI7 55, M15 ADX 15, M5 structure has turned",
-   "status": "open",
+   "status": "closed",
    "tp1_hit": true,
    "mgmt": "1R_be07",
    "setup": "range",
-   "be_utc": "2026-11-16T12:30:00+00:00"
+   "be_utc": "2026-11-16T12:30:00+00:00",
+   "result": "Breakeven",
+   "r": 0.0,
+   "closed_utc": "2026-11-16T12:25:00+00:00"
   },
   {
    "time_utc": "2026-11-16T11:35:31.514945+00:00",
@@ -2714,29 +2755,6 @@
    "result": "Loss",
    "r": -1.0,
    "closed_utc": "2026-10-30T08:50:00+00:00"
-  },
-  {
-   "time_utc": "2026-10-30T08:05:29.357018+00:00",
-   "dubai": "Fri 30 Oct 2026, 12:05",
-   "session": "London",
-   "direction": "SHORT",
-   "entry": 3983.37,
-   "sl": 3992.96,
-   "tp1": 3973.78,
-   "tp2": 3966.89,
-   "rr": 1.72,
-   "score": 85,
-   "risk_pct": 0.5,
-   "regime": "High Volatility",
-   "reason": "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP; M5 bearish BOS through 3979.49; H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-   "status": "closed",
-   "tp1_hit": true,
-   "mgmt": "1R_be07",
-   "setup": "trend",
-   "be_utc": "2026-10-30T08:10:00+00:00",
-   "result": "Breakeven",
-   "r": 0.0,
-   "closed_utc": "2026-10-30T08:10:00+00:00"
   }
  ]
 }

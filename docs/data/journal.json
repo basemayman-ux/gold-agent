@@ -1201,11 +1201,33 @@
    "risk_pct": 0.5,
    "regime": "Transition",
    "reason": "Range trade: range high 3878.25 tested, then displacement; Gold has ranged 3832.43\u20133878.25 (tested 2\u00d7 low, 4\u00d7 high); target is the bottom of the range; RSI7 55, M15 ADX 15, M5 structure has turned",
-   "status": "open",
+   "status": "closed",
    "tp1_hit": true,
    "mgmt": "1R_be07",
    "setup": "range",
-   "be_utc": "2026-11-16T12:30:00+00:00"
+   "be_utc": "2026-11-16T12:30:00+00:00",
+   "result": "Breakeven",
+   "r": 0.0,
+   "closed_utc": "2026-11-16T12:25:00+00:00"
+  },
+  {
+   "time_utc": "2026-11-16T12:40:34.245520+00:00",
+   "dubai": "Mon 16 Nov 2026, 16:40",
+   "session": "London/NY overlap",
+   "direction": "SHORT",
+   "entry": 3867.5,
+   "sl": 3876.41,
+   "tp1": 3858.59,
+   "tp2": 3833.13,
+   "rr": 3.86,
+   "score": 87,
+   "risk_pct": 0.5,
+   "regime": "Transition",
+   "reason": "Range trade: range high 3878.25 tested, then displacement; Gold has ranged 3832.43\u20133878.25 (tested 2\u00d7 low, 4\u00d7 high); target is the bottom of the range; RSI7 37, M15 ADX 15",
+   "status": "open",
+   "tp1_hit": false,
+   "mgmt": "1R_be07",
+   "setup": "range"
   }
  ],
  "watch": {
