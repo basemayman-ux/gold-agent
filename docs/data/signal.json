@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-16T00:00:46.498486+00:00",
- "dubai_time": "Mon 16 Nov 2026, 04:00",
+ "generated_utc": "2026-11-16T00:10:32.831652+00:00",
+ "dubai_time": "Mon 16 Nov 2026, 04:10",
  "session": "Asia",
- "price": 3900.15,
+ "price": 3892.91,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-11-15T23:55:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-11-16T00:05:00+00:00",
  "warnings": [],
  "regime": "Trend",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 3887.66,
+  "value": 3889.48,
   "side": "Choppy",
   "crosses_2h": 9,
   "volume_weighted": true
  },
- "rsi7": 84.9,
- "rsi14": 80.4,
+ "rsi7": 62.6,
+ "rsi14": 69.0,
  "adx14": {
-  "M5": 50.6,
+  "M5": 50.7,
   "M15": 48.9
  },
  "atr14": {
-  "M5": 4.93,
+  "M5": 4.91,
   "M15": 7.54,
-  "percentile": 76
+  "percentile": 75
  },
  "volume": "Not available \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -64,12 +64,12 @@
   "prior": {
    "poc": 3884.25,
    "vah": 3899.5,
-   "val": 3876.0
+   "val": 3876.5
   },
   "naked_pocs": [],
   "developing": {
    "poc": 3881.75,
-   "vah": 3890.5,
+   "vah": 3894.5,
    "val": 3877.5,
    "bins": [
     [
@@ -246,37 +246,37 @@
     ],
     [
      3898.75,
-     42.5
+     116.3
     ],
     [
      3899.25,
-     42.5
+     145.9
     ],
     [
      3899.75,
-     42.5
+     145.9
     ],
     [
      3900.25,
-     42.5
+     145.9
     ],
     [
      3900.75,
-     0.0
+     103.4
     ],
     [
      3901.25,
-     0.0
+     29.6
     ]
    ]
   },
-  "context": "Accepted above prior VAH 3899.50 (initiative buying)"
+  "context": "Buying right under a POC/VAH (supply overhead)"
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.659,
-  "session_delta": 952.0,
-  "session_slope": 952.0,
+  "leg_ratio": 0.703,
+  "session_delta": 1245.0,
+  "session_slope": 1245.0,
   "divergence": null,
   "absorption": null
  },
@@ -319,14 +319,14 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3896.74 / buy 3897.22 (spread $0.48)",
- "score": 57,
+ "spread": "eToro now: sell 3891.20 / buy 3891.60 (spread $0.40)",
+ "score": 52,
  "score_parts": {
   "structure": 15,
   "liquidity": 0,
-  "momentum": 12,
+  "momentum": 11,
   "vwap": 5,
-  "volume_flow": 9,
+  "volume_flow": 5,
   "volatility": 5,
   "session": 1,
   "news": 10
@@ -345,9 +345,9 @@
   "M5 bullish BOS through 3888.70",
   "Early trend turn: H1 and M15 turned up before H4 (allowed in active mode)",
   "H4 bearish (Price clearly below H4 EMA200), H1 bullish, M15 bullish",
-  "RSI7 85, RSI14 80, M15 ADX 49, volume unavailable",
-  "Profile & flow: Accepted above prior VAH 3899.50 (initiative buying); setup-leg delta +0.66",
-  "Weak components: liquidity, session"
+  "RSI7 63, RSI14 69, M15 ADX 49, volume unavailable",
+  "Profile & flow: Buying right under a POC/VAH (supply overhead); setup-leg delta +0.70",
+  "Weak components: liquidity, volume & flow, session"
  ],
  "invalidation": null,
  "levels": [
@@ -408,7 +408,7 @@
   {
    "name": "Prior VAH",
    "price": 3899.5,
-   "side": "sell",
+   "side": "buy",
    "swept": false
   },
   {
@@ -419,7 +419,7 @@
   },
   {
    "name": "Prior VAL",
-   "price": 3876.0,
+   "price": 3876.5,
    "side": "sell",
    "swept": false
   },
@@ -449,28 +449,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1794738600,
-   "o": 3836.75,
-   "h": 3837.02,
-   "l": 3835.42,
-   "c": 3835.42,
-   "e20": 3835.02,
-   "e50": 3832.24,
-   "vw": 3835.95,
-   "dl": -0.0
-  },
-  {
-   "t": 1794738900,
-   "o": 3835.42,
-   "h": 3835.65,
-   "l": 3835.22,
-   "c": 3835.5,
-   "e20": 3835.07,
-   "e50": 3832.37,
-   "vw": 3835.46,
-   "dl": 0.0
-  },
   {
    "t": 1794739200,
    "o": 3835.5,
@@ -2085,8 +2063,8 @@
    "c": 3900.73,
    "e20": 3875.11,
    "e50": 3860.29,
-   "vw": 3887.66,
-   "dl": 0.0
+   "vw": 3889.01,
+   "dl": 317.0
   },
   {
    "t": 1794786900,
@@ -2096,7 +2074,29 @@
    "c": 3900.15,
    "e20": 3877.49,
    "e50": 3861.86,
-   "vw": 3887.66,
+   "vw": 3889.48,
+   "dl": -24.0
+  },
+  {
+   "t": 1794787200,
+   "o": 3900.16,
+   "h": 3900.24,
+   "l": 3895.62,
+   "c": 3897.06,
+   "e20": 3879.36,
+   "e50": 3863.24,
+   "vw": 3889.48,
+   "dl": -0.0
+  },
+  {
+   "t": 1794787500,
+   "o": 3897.06,
+   "h": 3897.32,
+   "l": 3892.4,
+   "c": 3892.91,
+   "e20": 3880.65,
+   "e50": 3864.4,
+   "vw": 3889.48,
    "dl": -0.0
   }
  ],
