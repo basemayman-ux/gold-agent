@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-16T15:00:48.737590+00:00",
- "dubai_time": "Mon 16 Nov 2026, 19:00",
+ "generated_utc": "2026-11-16T15:10:38.550562+00:00",
+ "dubai_time": "Mon 16 Nov 2026, 19:10",
  "session": "London/NY overlap",
- "price": 3878.39,
+ "price": 3874.1,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-11-16T14:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-11-16T15:05:00+00:00",
  "warnings": [],
  "regime": "Range",
  "bias": {
@@ -42,34 +42,34 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 3866.36,
+  "value": 3866.64,
   "side": "Choppy",
   "crosses_2h": 6,
   "volume_weighted": true
  },
- "rsi7": 58.0,
- "rsi14": 57.8,
+ "rsi7": 47.9,
+ "rsi14": 52.0,
  "adx14": {
-  "M5": 23.8,
+  "M5": 24.4,
   "M15": 12.8
  },
  "atr14": {
-  "M5": 6.08,
+  "M5": 6.43,
   "M15": 8.62,
-  "percentile": 86
+  "percentile": 89
  },
  "volume": "RVOL 6.17\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
    "poc": 3882.25,
-   "vah": 3899.0,
+   "vah": 3898.5,
    "val": 3876.0
   },
   "naked_pocs": [],
   "developing": {
    "poc": 3871.75,
-   "vah": 3879.5,
+   "vah": 3880.0,
    "val": 3854.0,
    "bins": [
     [
@@ -434,87 +434,87 @@
     ],
     [
      3877.25,
-     810.9
+     874.4
     ],
     [
      3877.75,
-     747.3
+     810.8
     ],
     [
      3878.25,
-     795.2
+     858.6
     ],
     [
      3878.75,
-     758.1
+     821.6
     ],
     [
      3879.25,
-     680.0
+     743.5
     ],
     [
      3879.75,
-     710.4
+     773.8
     ],
     [
      3880.25,
-     662.3
+     725.7
     ],
     [
      3880.75,
-     650.7
+     714.2
     ],
     [
      3881.25,
-     650.7
+     714.2
     ],
     [
      3881.75,
-     535.9
+     599.3
     ],
     [
      3882.25,
-     544.5
+     694.0
     ],
     [
      3882.75,
-     577.9
+     727.4
     ],
     [
      3883.25,
-     546.9
+     696.5
     ],
     [
      3883.75,
-     488.5
+     638.0
     ],
     [
      3884.25,
-     568.3
+     717.8
     ],
     [
      3884.75,
-     583.9
+     733.4
     ],
     [
      3885.25,
-     583.9
+     670.0
     ],
     [
      3885.75,
-     455.1
+     541.2
     ],
     [
      3886.25,
-     426.8
+     512.9
     ],
     [
      3886.75,
-     399.2
+     485.3
     ],
     [
      3887.25,
-     368.4
+     454.5
     ],
     [
      3887.75,
@@ -634,9 +634,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.248,
-  "session_delta": -4744.0,
-  "session_slope": 982.0,
+  "leg_ratio": 0.075,
+  "session_delta": -6092.0,
+  "session_slope": 540.0,
   "divergence": false,
   "absorption": false
  },
@@ -679,14 +679,14 @@
   ],
   "detail": "Fed Chairman Warsh Speaks at 21:00 Dubai (score reduced, not blocked)"
  },
- "spread": "eToro now: sell 3876.64 / buy 3876.84 (spread $0.20)",
- "score": 68,
+ "spread": "eToro now: sell 3876.78 / buy 3876.98 (spread $0.20)",
+ "score": 65,
  "score_parts": {
   "structure": 15,
   "liquidity": 12,
-  "momentum": 8,
+  "momentum": 6,
   "vwap": 5,
-  "volume_flow": 14,
+  "volume_flow": 13,
   "volatility": 5,
   "session": 5,
   "news": 4
@@ -702,7 +702,7 @@
  "plan": null,
  "why": [
   "MARKET CHOP \u2014 ADX weak, VWAP crossed 6\u00d7 in 2h",
-  "Setup score would be 68/100 (not tradable while blocked)"
+  "Setup score would be 65/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -756,7 +756,7 @@
   },
   {
    "name": "Prior VAH",
-   "price": 3899.0,
+   "price": 3898.5,
    "side": "buy",
    "swept": false
   },
@@ -781,7 +781,7 @@
   {
    "name": "Prior VAL",
    "price": 3876.0,
-   "side": "sell",
+   "side": "buy",
    "swept": false
   },
   {
@@ -804,28 +804,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1794796200,
-   "o": 3885.12,
-   "h": 3885.81,
-   "l": 3877.55,
-   "c": 3877.71,
-   "e20": 3879.72,
-   "e50": 3875.03,
-   "vw": 3879.49,
-   "dl": -462.0
-  },
-  {
-   "t": 1794796500,
-   "o": 3877.68,
-   "h": 3887.1,
-   "l": 3877.68,
-   "c": 3885.31,
-   "e20": 3880.25,
-   "e50": 3875.43,
-   "vw": 3879.56,
-   "dl": 284.0
-  },
   {
    "t": 1794796800,
    "o": 3885.3,
@@ -2440,8 +2418,8 @@
    "c": 3883.32,
    "e20": 3872.14,
    "e50": 3869.36,
-   "vw": 3866.36,
-   "dl": -0.0
+   "vw": 3866.51,
+   "dl": -616.0
   },
   {
    "t": 1794840900,
@@ -2451,7 +2429,29 @@
    "c": 3878.39,
    "e20": 3872.73,
    "e50": 3869.71,
-   "vw": 3866.36,
+   "vw": 3866.64,
+   "dl": -732.0
+  },
+  {
+   "t": 1794841200,
+   "o": 3878.39,
+   "h": 3885.7,
+   "l": 3876.05,
+   "c": 3879.2,
+   "e20": 3873.35,
+   "e50": 3870.08,
+   "vw": 3866.64,
+   "dl": -0.0
+  },
+  {
+   "t": 1794841500,
+   "o": 3879.2,
+   "h": 3881.68,
+   "l": 3874.08,
+   "c": 3874.1,
+   "e20": 3873.42,
+   "e50": 3870.24,
+   "vw": 3866.64,
    "dl": -0.0
   }
  ],
