@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-17T13:20:36.598950+00:00",
- "dubai_time": "Tue 17 Nov 2026, 17:20",
+ "generated_utc": "2026-11-17T13:30:45.706278+00:00",
+ "dubai_time": "Tue 17 Nov 2026, 17:30",
  "session": "London/NY overlap",
- "price": 3855.98,
+ "price": 3857.66,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-11-17T13:15:00+00:00",
+ "data_age_min": 0.8,
+ "last_bar_utc": "2026-11-17T13:25:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 3865.11,
+  "value": 3864.98,
   "side": "Below",
   "crosses_2h": 2,
   "volume_weighted": true
  },
- "rsi7": 33.1,
- "rsi14": 40.2,
+ "rsi7": 44.6,
+ "rsi14": 44.9,
  "adx14": {
   "M5": 16.6,
-  "M15": 16.3
+  "M15": 16.2
  },
  "atr14": {
-  "M5": 3.55,
-  "M15": 6.24,
-  "percentile": 57
+  "M5": 3.61,
+  "M15": 6.26,
+  "percentile": 59
  },
  "volume": "RVOL 4.47\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -170,47 +170,47 @@
     ],
     [
      3855.75,
-     1125.5
+     1189.6
     ],
     [
      3856.25,
-     1132.5
+     1196.6
     ],
     [
      3856.75,
-     1148.8
+     1289.8
     ],
     [
      3857.25,
-     1079.6
+     1220.5
     ],
     [
      3857.75,
-     1246.1
+     1387.1
     ],
     [
      3858.25,
-     1250.9
+     1391.9
     ],
     [
      3858.75,
-     1193.7
+     1334.6
     ],
     [
      3859.25,
-     1112.6
+     1189.4
     ],
     [
      3859.75,
-     1182.2
+     1259.0
     ],
     [
      3860.25,
-     1220.0
+     1296.8
     ],
     [
      3860.75,
-     1345.1
+     1421.9
     ],
     [
      3861.25,
@@ -426,9 +426,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.131,
-  "session_delta": 4911.0,
-  "session_slope": 524.0,
+  "leg_ratio": 0.057,
+  "session_delta": 4034.0,
+  "session_slope": -104.0,
   "divergence": null,
   "absorption": null
  },
@@ -466,14 +466,14 @@
   ],
   "detail": "Core Retail Sales m/m at 17:30 Dubai"
  },
- "spread": "eToro now: sell 3854.40 / buy 3854.65 (spread $0.25)",
- "score": 43,
+ "spread": "eToro now: sell 3854.86 / buy 3855.26 (spread $0.40)",
+ "score": 42,
  "score_parts": {
   "structure": 12,
   "liquidity": 7,
   "momentum": 0,
   "vwap": 3,
-  "volume_flow": 11,
+  "volume_flow": 10,
   "volatility": 5,
   "session": 5,
   "news": 0
@@ -490,7 +490,7 @@
  "why": [
   "High-impact news window: Core Retail Sales m/m at 17:30 Dubai",
   "H4 (Bearish) and H1 (Bullish) conflict",
-  "Setup score would be 43/100 (not tradable while blocked)"
+  "Setup score would be 42/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -592,28 +592,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1794876600,
-   "o": 3860.9,
-   "h": 3860.9,
-   "l": 3853.37,
-   "c": 3853.77,
-   "e20": 3857.6,
-   "e50": 3857.29,
-   "vw": 3858.12,
-   "dl": -222.0
-  },
-  {
-   "t": 1794876900,
-   "o": 3853.74,
-   "h": 3854.48,
-   "l": 3851.86,
-   "c": 3852.76,
-   "e20": 3857.14,
-   "e50": 3857.11,
-   "vw": 3857.94,
-   "dl": -49.0
-  },
   {
    "t": 1794877200,
    "o": 3852.52,
@@ -2228,8 +2206,8 @@
    "c": 3857.46,
    "e20": 3860.8,
    "e50": 3862.3,
-   "vw": 3865.11,
-   "dl": -0.0
+   "vw": 3865.04,
+   "dl": -507.0
   },
   {
    "t": 1794921300,
@@ -2239,8 +2217,30 @@
    "c": 3855.98,
    "e20": 3860.34,
    "e50": 3862.05,
-   "vw": 3865.11,
-   "dl": -0.0
+   "vw": 3864.98,
+   "dl": -370.0
+  },
+  {
+   "t": 1794921600,
+   "o": 3855.97,
+   "h": 3855.97,
+   "l": 3853.0,
+   "c": 3854.91,
+   "e20": 3859.83,
+   "e50": 3861.77,
+   "vw": 3864.98,
+   "dl": 0.0
+  },
+  {
+   "t": 1794921900,
+   "o": 3854.91,
+   "h": 3859.45,
+   "l": 3854.59,
+   "c": 3857.66,
+   "e20": 3859.62,
+   "e50": 3861.61,
+   "vw": 3864.98,
+   "dl": 0.0
   }
  ],
  "journal": {
