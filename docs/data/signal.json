@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-17T22:20:40.878235+00:00",
- "dubai_time": "Wed 18 Nov 2026, 02:20",
+ "generated_utc": "2026-11-17T22:30:43.343301+00:00",
+ "dubai_time": "Wed 18 Nov 2026, 02:30",
  "session": "Late US / off-hours",
  "price": 3849.45,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 20.7,
+ "data_age_min": 30.7,
  "last_bar_utc": "2026-11-17T21:55:00+00:00",
  "warnings": [],
  "regime": "Transition",
@@ -42,7 +42,7 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 3863.67,
+  "value": 3863.66,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
@@ -170,19 +170,19 @@
     ],
     [
      3848.75,
-     1111.7
+     1126.7
     ],
     [
      3849.25,
-     1234.4
+     1249.4
     ],
     [
      3849.75,
-     1236.0
+     1251.0
     ],
     [
      3850.25,
-     1195.3
+     1210.3
     ],
     [
      3850.75,
@@ -539,7 +539,7 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3850.13 / buy 3850.33 (spread $0.20)",
+ "spread": "eToro now: sell 3852.25 / buy 3852.45 (spread $0.20)",
  "score": 0,
  "score_parts": {},
  "candidate": null,
@@ -552,7 +552,7 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "STALE DATA \u2014 last closed M5 bar is 21 min old",
+  "STALE DATA \u2014 last closed M5 bar is 31 min old",
   "No clear direction: H1 is neutral and H4, M15 and M5 do not all agree"
  ],
  "invalidation": null,
@@ -2302,8 +2302,8 @@
    "c": 3849.45,
    "e20": 3850.78,
    "e50": 3853.48,
-   "vw": 3863.67,
-   "dl": 5.0
+   "vw": 3863.66,
+   "dl": 9.0
   }
  ],
  "journal": {
