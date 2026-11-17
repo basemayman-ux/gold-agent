@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-17T13:00:58.049699+00:00",
- "dubai_time": "Tue 17 Nov 2026, 17:00",
+ "generated_utc": "2026-11-17T13:10:39.303607+00:00",
+ "dubai_time": "Tue 17 Nov 2026, 17:10",
  "session": "London/NY overlap",
- "price": 3861.2,
+ "price": 3860.75,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 1.0,
- "last_bar_utc": "2026-11-17T12:55:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-11-17T13:05:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -42,15 +42,15 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 3865.37,
+  "value": 3865.22,
   "side": "Below",
   "crosses_2h": 2,
   "volume_weighted": true
  },
- "rsi7": 52.5,
- "rsi14": 49.8,
+ "rsi7": 49.0,
+ "rsi14": 48.7,
  "adx14": {
-  "M5": 19.4,
+  "M5": 17.2,
   "M15": 17.2
  },
  "atr14": {
@@ -186,39 +186,39 @@
     ],
     [
      3857.75,
-     1142.6
+     1248.0
     ],
     [
      3858.25,
-     1049.6
+     1252.9
     ],
     [
      3858.75,
-     948.7
+     1151.9
     ],
     [
      3859.25,
-     867.6
+     1070.8
     ],
     [
      3859.75,
-     870.5
+     1073.7
     ],
     [
      3860.25,
-     909.0
+     1112.3
     ],
     [
      3860.75,
-     875.2
+     1078.4
     ],
     [
      3861.25,
-     967.0
+     1170.3
     ],
     [
      3861.75,
-     1041.3
+     1139.2
     ],
     [
      3862.25,
@@ -426,9 +426,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.165,
-  "session_delta": 2973.0,
-  "session_slope": -338.0,
+  "leg_ratio": 0.161,
+  "session_delta": 3202.0,
+  "session_slope": -77.0,
   "divergence": null,
   "absorption": null
  },
@@ -466,12 +466,12 @@
   ],
   "detail": "Core Retail Sales m/m at 17:30 Dubai"
  },
- "spread": "eToro now: sell 3861.98 / buy 3862.24 (spread $0.26)",
- "score": 47,
+ "spread": "eToro now: sell 3858.69 / buy 3858.89 (spread $0.20)",
+ "score": 44,
  "score_parts": {
   "structure": 12,
   "liquidity": 7,
-  "momentum": 4,
+  "momentum": 1,
   "vwap": 3,
   "volume_flow": 11,
   "volatility": 5,
@@ -490,7 +490,7 @@
  "why": [
   "High-impact news window: Core Retail Sales m/m at 17:30 Dubai",
   "H4 (Bearish) and H1 (Bullish) conflict",
-  "Setup score would be 47/100 (not tradable while blocked)"
+  "Setup score would be 44/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -592,28 +592,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1794875400,
-   "o": 3856.02,
-   "h": 3859.12,
-   "l": 3854.96,
-   "c": 3857.3,
-   "e20": 3857.12,
-   "e50": 3857.04,
-   "vw": 3858.08,
-   "dl": 22.0
-  },
-  {
-   "t": 1794875700,
-   "o": 3857.3,
-   "h": 3859.19,
-   "l": 3855.94,
-   "c": 3858.98,
-   "e20": 3857.3,
-   "e50": 3857.12,
-   "vw": 3858.08,
-   "dl": 88.0
-  },
   {
    "t": 1794876000,
    "o": 3858.98,
@@ -2228,8 +2206,8 @@
    "c": 3858.88,
    "e20": 3861.01,
    "e50": 3862.62,
-   "vw": 3865.37,
-   "dl": -0.0
+   "vw": 3865.28,
+   "dl": -236.0
   },
   {
    "t": 1794920100,
@@ -2239,8 +2217,30 @@
    "c": 3861.2,
    "e20": 3861.03,
    "e50": 3862.56,
-   "vw": 3865.37,
+   "vw": 3865.22,
+   "dl": 465.0
+  },
+  {
+   "t": 1794920400,
+   "o": 3861.25,
+   "h": 3864.38,
+   "l": 3860.87,
+   "c": 3862.81,
+   "e20": 3861.2,
+   "e50": 3862.57,
+   "vw": 3865.22,
    "dl": 0.0
+  },
+  {
+   "t": 1794920700,
+   "o": 3862.76,
+   "h": 3863.14,
+   "l": 3859.51,
+   "c": 3860.75,
+   "e20": 3861.15,
+   "e50": 3862.5,
+   "vw": 3865.22,
+   "dl": -0.0
   }
  ],
  "journal": {
