@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-17T01:50:35.911344+00:00",
- "dubai_time": "Tue 17 Nov 2026, 05:50",
+ "generated_utc": "2026-11-17T02:00:43.505277+00:00",
+ "dubai_time": "Tue 17 Nov 2026, 06:00",
  "session": "Asia",
- "price": 3866.89,
+ "price": 3866.18,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-11-17T01:45:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-11-17T01:55:00+00:00",
  "warnings": [],
  "regime": "Range",
  "bias": {
@@ -26,7 +26,7 @@
   ],
   "M15": [
    "HH",
-   "HL"
+   "LL"
   ],
   "M5": [
    "HH",
@@ -42,23 +42,23 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 3854.54,
+  "value": 3856.58,
   "side": "Choppy",
   "crosses_2h": 4,
   "volume_weighted": true
  },
- "rsi7": 72.7,
- "rsi14": 64.1,
+ "rsi7": 65.6,
+ "rsi14": 60.9,
  "adx14": {
-  "M5": 16.5,
-  "M15": 11.7
+  "M5": 17.9,
+  "M15": 12.0
  },
  "atr14": {
-  "M5": 6.07,
-  "M15": 8.82,
-  "percentile": 85
+  "M5": 6.39,
+  "M15": 9.0,
+  "percentile": 89
  },
- "volume": "RVOL 4.87\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "RVOL 7.14\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -69,8 +69,8 @@
   "naked_pocs": [],
   "developing": {
    "poc": 3854.25,
-   "vah": 3861.0,
-   "val": 3849.5,
+   "vah": 3863.0,
+   "val": 3849.0,
    "bins": [
     [
      3843.75,
@@ -190,123 +190,123 @@
     ],
     [
      3858.25,
-     279.5
+     327.4
     ],
     [
      3858.75,
-     314.5
+     362.5
     ],
     [
      3859.25,
-     243.4
+     291.3
     ],
     [
      3859.75,
-     185.0
+     233.0
     ],
     [
      3860.25,
-     240.5
+     288.4
     ],
     [
      3860.75,
-     224.9
+     272.9
     ],
     [
      3861.25,
-     170.0
+     218.0
     ],
     [
      3861.75,
-     156.4
+     204.3
     ],
     [
      3862.25,
-     142.8
+     190.8
     ],
     [
      3862.75,
-     142.8
+     190.8
     ],
     [
      3863.25,
-     118.8
+     166.8
     ],
     [
      3863.75,
-     88.6
+     136.5
     ],
     [
      3864.25,
-     88.6
+     168.4
     ],
     [
      3864.75,
-     20.3
+     100.1
     ],
     [
      3865.25,
-     0.0
+     79.8
     ],
     [
      3865.75,
-     0.0
+     79.8
     ],
     [
      3866.25,
-     0.0
+     79.8
     ],
     [
      3866.75,
-     0.0
+     79.8
     ],
     [
      3867.25,
-     0.0
+     79.8
     ],
     [
      3867.75,
-     0.0
+     79.8
     ],
     [
      3868.25,
-     0.0
+     79.8
     ],
     [
      3868.75,
-     0.0
+     79.8
     ],
     [
      3869.25,
-     0.0
+     79.8
     ],
     [
      3869.75,
-     0.0
+     79.8
     ],
     [
      3870.25,
-     0.0
+     79.8
     ],
     [
      3870.75,
-     0.0
+     48.0
     ],
     [
      3871.25,
-     0.0
+     48.0
     ],
     [
      3871.75,
-     0.0
+     48.0
     ],
     [
      3872.25,
-     0.0
+     48.0
     ],
     [
      3872.75,
-     0.0
+     48.0
     ]
    ]
   },
@@ -314,9 +314,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.308,
-  "session_delta": 847.0,
-  "session_slope": 405.0,
+  "leg_ratio": 0.305,
+  "session_delta": 1403.0,
+  "session_slope": 1232.0,
   "divergence": true,
   "absorption": false
  },
@@ -354,12 +354,12 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3865.67 / buy 3865.87 (spread $0.20)",
- "score": 70,
+ "spread": "eToro now: sell 3864.39 / buy 3864.59 (spread $0.20)",
+ "score": 69,
  "score_parts": {
   "structure": 15,
   "liquidity": 12,
-  "momentum": 7,
+  "momentum": 6,
   "vwap": 5,
   "volume_flow": 15,
   "volatility": 5,
@@ -376,8 +376,8 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "MARKET CHOP \u2014 ADX weak, VWAP crossed 4\u00d7 in 2h",
-  "Setup score would be 70/100 (not tradable while blocked)"
+  "MARKET CHOP \u2014 ADX weak, VWAP crossed 4\u00d7 in 2h, EMA20/50 flat",
+  "Setup score would be 69/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -479,28 +479,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1794831600,
-   "o": 3872.89,
-   "h": 3873.06,
-   "l": 3870.55,
-   "c": 3870.58,
-   "e20": 3870.76,
-   "e50": 3866.81,
-   "vw": 3865.06,
-   "dl": -591.0
-  },
-  {
-   "t": 1794831900,
-   "o": 3870.55,
-   "h": 3875.57,
-   "l": 3870.55,
-   "c": 3871.96,
-   "e20": 3870.87,
-   "e50": 3867.01,
-   "vw": 3865.12,
-   "dl": -309.0
-  },
   {
    "t": 1794832200,
    "o": 3871.99,
@@ -2115,8 +2093,8 @@
    "c": 3868.32,
    "e20": 3855.42,
    "e50": 3856.06,
-   "vw": 3854.54,
-   "dl": 0.0
+   "vw": 3856.16,
+   "dl": 591.0
   },
   {
    "t": 1794879900,
@@ -2126,8 +2104,30 @@
    "c": 3866.89,
    "e20": 3856.51,
    "e50": 3856.49,
-   "vw": 3854.54,
+   "vw": 3856.58,
+   "dl": -34.0
+  },
+  {
+   "t": 1794880200,
+   "o": 3866.87,
+   "h": 3868.56,
+   "l": 3860.77,
+   "c": 3861.97,
+   "e20": 3857.03,
+   "e50": 3856.7,
+   "vw": 3856.58,
    "dl": -0.0
+  },
+  {
+   "t": 1794880500,
+   "o": 3861.96,
+   "h": 3867.75,
+   "l": 3858.84,
+   "c": 3866.18,
+   "e20": 3857.9,
+   "e50": 3857.07,
+   "vw": 3856.58,
+   "dl": 0.0
   }
  ],
  "journal": {
