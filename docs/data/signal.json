@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-17T11:40:34.405260+00:00",
- "dubai_time": "Tue 17 Nov 2026, 15:40",
+ "generated_utc": "2026-11-17T11:50:35.557662+00:00",
+ "dubai_time": "Tue 17 Nov 2026, 15:50",
  "session": "London",
- "price": 3861.11,
+ "price": 3870.66,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-11-17T11:35:00+00:00",
+ "last_bar_utc": "2026-11-17T11:45:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 3865.74,
-  "side": "Below",
-  "crosses_2h": 0,
+  "value": 3865.66,
+  "side": "Above",
+  "crosses_2h": 1,
   "volume_weighted": true
  },
- "rsi7": 62.9,
- "rsi14": 52.4,
+ "rsi7": 83.7,
+ "rsi14": 68.7,
  "adx14": {
-  "M5": 19.8,
-  "M15": 21.7
+  "M5": 21.4,
+  "M15": 21.2
  },
  "atr14": {
-  "M5": 2.97,
-  "M15": 6.01,
-  "percentile": 45
+  "M5": 3.31,
+  "M15": 5.92,
+  "percentile": 55
  },
  "volume": "Not available \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -69,8 +69,8 @@
   "naked_pocs": [],
   "developing": {
    "poc": 3866.75,
-   "vah": 3877.0,
-   "val": 3857.5,
+   "vah": 3876.5,
+   "val": 3857.0,
    "bins": [
     [
      3843.75,
@@ -198,39 +198,39 @@
     ],
     [
      3859.25,
-     665.7
+     717.1
     ],
     [
      3859.75,
-     657.7
+     709.0
     ],
     [
      3860.25,
-     686.4
+     817.0
     ],
     [
      3860.75,
-     656.2
+     786.7
     ],
     [
      3861.25,
-     748.0
+     878.5
     ],
     [
      3861.75,
-     805.1
+     935.7
     ],
     [
      3862.25,
-     808.1
+     938.6
     ],
     [
      3862.75,
-     894.9
+     946.2
     ],
     [
      3863.25,
-     971.1
+     1022.4
     ],
     [
      3863.75,
@@ -427,7 +427,7 @@
  "orderflow": {
   "available": true
  },
- "liquidity_event": "M15 swing low 3861.75 swept (sell-side), displacement",
+ "liquidity_event": "No valid sweep in the last 2.5 hours",
  "bos_choch": "M5 CHOCH bullish through 3859.02 at 15:25",
  "news": {
   "risk": "Medium",
@@ -461,7 +461,7 @@
   ],
   "detail": "Core Retail Sales m/m at 17:30 Dubai (score reduced, not blocked)"
  },
- "spread": "eToro now: sell 3861.45 / buy 3861.65 (spread $0.20)",
+ "spread": "eToro now: sell 3869.96 / buy 3870.19 (spread $0.23)",
  "score": 0,
  "score_parts": {},
  "candidate": null,
@@ -553,7 +553,13 @@
   {
    "name": "Prior POC",
    "price": 3863.75,
-   "side": "buy",
+   "side": "sell",
+   "swept": false
+  },
+  {
+   "name": "M15 swing low",
+   "price": 3852.8,
+   "side": "sell",
    "swept": false
   },
   {
@@ -567,37 +573,9 @@
    "price": 3843.51,
    "side": "sell",
    "swept": false
-  },
-  {
-   "name": "H1 swing low",
-   "price": 3841.07,
-   "side": "sell",
-   "swept": false
   }
  ],
  "chart": [
-  {
-   "t": 1794870600,
-   "o": 3855.06,
-   "h": 3855.14,
-   "l": 3852.17,
-   "c": 3853.07,
-   "e20": 3854.99,
-   "e50": 3856.6,
-   "vw": 3854.2,
-   "dl": -67.0
-  },
-  {
-   "t": 1794870900,
-   "o": 3852.93,
-   "h": 3856.43,
-   "l": 3852.64,
-   "c": 3855.48,
-   "e20": 3855.04,
-   "e50": 3856.56,
-   "vw": 3854.48,
-   "dl": 104.0
-  },
   {
    "t": 1794871200,
    "o": 3855.4,
@@ -2212,8 +2190,8 @@
    "c": 3861.85,
    "e20": 3859.16,
    "e50": 3862.88,
-   "vw": 3865.74,
-   "dl": 0.0
+   "vw": 3865.7,
+   "dl": 180.0
   },
   {
    "t": 1794915300,
@@ -2223,8 +2201,30 @@
    "c": 3861.11,
    "e20": 3859.35,
    "e50": 3862.81,
-   "vw": 3865.74,
-   "dl": -0.0
+   "vw": 3865.66,
+   "dl": -68.0
+  },
+  {
+   "t": 1794915600,
+   "o": 3861.21,
+   "h": 3863.85,
+   "l": 3860.77,
+   "c": 3863.11,
+   "e20": 3859.7,
+   "e50": 3862.82,
+   "vw": 3865.66,
+   "dl": 0.0
+  },
+  {
+   "t": 1794915900,
+   "o": 3863.06,
+   "h": 3870.69,
+   "l": 3863.06,
+   "c": 3870.66,
+   "e20": 3860.75,
+   "e50": 3863.13,
+   "vw": 3865.66,
+   "dl": 0.0
   }
  ],
  "journal": {
