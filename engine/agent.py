@@ -612,6 +612,19 @@ def plan_trade(ctx, d):
             "R": R, "rr": abs(tp2 - price) / R, "stop_reason": why, "stop_atr": R / a5}
 
 
+def failed_break(ctx, d):
+    """True when an M5 close after the confirming BOS/CHOCH went back through the broken level
+    by more than 0.1 ATR (a failed break). Replay of 51 signals: such trades -6.5R vs +3.0R."""
+    if not ctx.get("confirm"):
+        return False
+    ev = ctx["confirm"][-1]
+    after = ctx["m5"]["close"].iloc[ev["i"] + 1:]
+    if not len(after):
+        return False
+    tol = 0.1 * ctx["a5"]
+    return bool(((after - ev["level"]) * -d > tol).any())
+
+
 def score_setup(ctx, d, plan):
     """100-point setup quality score (Section 20). Not a win probability."""
     st, b5, b15, bh1, m5, m15 = ctx["st"], ctx["b5"], ctx["b15"], ctx["bh1"], ctx["m5"], ctx["m15"]
@@ -812,6 +825,15 @@ def decide(ctx, journal):
         elif not ctx["confirm"]:
             decision = "WAIT"
             why.append("No M5 BOS/CHOCH confirmation yet")
+        elif CFG.get("block_failed_break", True) and failed_break(ctx, d):
+            decision = "WAIT"
+            ev = ctx["confirm"][-1]
+            why.append(f"The M5 break of {ev['level']:.2f} failed: price closed back "
+                       f"{'above' if d < 0 else 'below'} it, so the move is no longer confirmed")
+        elif CFG.get("block_wrong_ema_side", True) and (ctx["b5"]["ema20"] - ctx["price"]) * d / ctx["a5"] > 0.5:
+            decision = "WAIT"
+            why.append(f"Price {ctx['price']:.2f} is on the wrong side of M5 EMA20 {ctx['b5']['ema20']:.2f}: "
+                       "the pullback has turned into a reversal")
         elif ctx["flow"].get("available") and d * ctx["flow"]["leg_ratio"] < -0.15:
             decision = "WAIT"
             why.append(f"Estimated order flow opposes the trade (leg delta {ctx['flow']['leg_ratio']:+.2f})")
