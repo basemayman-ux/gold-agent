@@ -192,14 +192,86 @@ def on_signal(rec, plan, size, now):
                  kind="update")
 
 
+_HIST_PATH = {"ok": None}
+
+
+def history(mode, days=45):
+    """Closed positions from eToro itself, keyed by positionId (the only trustworthy source of results).
+    Tries the demo/real history endpoints; remembers the one that works."""
+    since = (pd.Timestamp.now(tz="UTC") - pd.Timedelta(days=days)).strftime("%Y-%m-%d")
+    d = mode == "demo"
+    cands = ["/api/v1/trading/info/demo/trade/history", "/api/v1/trading/info/trade/history"]
+    if not d:
+        cands.reverse()
+    if _HIST_PATH["ok"]:
+        cands = [_HIST_PATH["ok"]]
+    last = None
+    for path in cands:
+        rows, page = [], 1
+        try:
+            while page <= 20:
+                js = call("GET", path, params={"minDate": since, "page": page, "pageSize": 100})
+                batch = js if isinstance(js, list) else (js.get("items") or js.get("trades") or js.get("data")
+                                                         or js.get("history") or [])
+                rows += batch
+                if len(batch) < 100:
+                    break
+                page += 1
+        except Exception as e:  # noqa: BLE001
+            last = e
+            continue
+        out = {}
+        for x in rows:
+            pid = x.get("positionId", x.get("positionID"))
+            if pid is not None:
+                out[str(pid)] = x
+        if out:
+            _HIST_PATH["ok"] = path
+            return out
+    print(f"Auto-trade: eToro history not available ({last})")
+    return {}
+
+
+def real_result(t, row):
+    """Fill the trade's result from eToro's own numbers: r = net profit / money risked at the stop."""
+    net = float(row.get("netProfit", 0) or 0)
+    risk = float(t["R"]) * float(t.get("units") or row.get("units") or 0)
+    t["r"] = round(net / risk, 2) if risk > 0 else 0.0
+    t["close_px"] = row.get("closeRate")
+    ct = row.get("closeTimestamp") or row.get("closeDateTime")
+    if ct:
+        t["closed"] = pd.Timestamp(ct).tz_convert("UTC").isoformat()
+    t["real"] = True
+    t.pop("est", None)
+
+
 def manage(journal):
-    """Every run: move the stop to entry once price reaches 0.7R, and record closed trades."""
+    """Every run: move the stop to entry once price reaches 0.7R, and record closed trades
+    using eToro's own history (never a guess)."""
     c = cfg()
     st = load()
+    changed = False
+    # --- one-off / ongoing reconcile of trades recorded before this fix (at most every 30 min)
+    todo = [t for t in st["trades"] if t["status"] == "closed" and not t.get("real")]
+    now_ts = pd.Timestamp.now(tz="UTC")
+    last = pd.Timestamp(st["recon_ts"]) if st.get("recon_ts") else None
+    if todo and c["mode"] != "off" and (last is None or (now_ts - last) > pd.Timedelta(minutes=30)):
+        st["recon_ts"] = now_ts.isoformat()
+        changed = True
+        hist = history(todo[0]["mode"])
+        fixed = 0
+        for t in todo:
+            row = hist.get(str(t["pos"]))
+            if row:
+                real_result(t, row)
+                fixed += 1
+        if fixed:
+            print(f"Auto-trade: corrected {fixed} trade result(s) from eToro history")
     live = [t for t in st["trades"] if t["status"] == "open"]
     if not live:
+        if changed:
+            save(st)
         return
-    changed = False
     by_sig = {s["time_utc"]: s for s in journal.get("signals", [])}
     for t in live:
         mode = t["mode"]
@@ -211,6 +283,9 @@ def manage(journal):
             continue
         sig = by_sig.get(t["sig"], {})
         if t["pos"] in ids:
+            if t.get("miss"):
+                t["miss"] = 0
+                changed = True
             if t["be"]:
                 continue
             reached = bool(sig.get("tp1_hit"))           # engine saw 0.7R on the chart
@@ -228,10 +303,23 @@ def manage(journal):
                     agent.notify(f"⚠️ {tag(mode)} could not move stop to entry: {e}. Do it manually in eToro.",
                                  kind="signal")
         else:
-            t["status"] = "closed"
-            t["closed"] = pd.Timestamp.now(tz="UTC").isoformat()
-            t["r"] = sig.get("r", 0) if sig.get("status") == "closed" else (0.0 if t["be"] else -1.0)
+            # Not in the portfolio list. A single missing read can be a glitch, so confirm twice,
+            # then take the result from eToro's history. Until then the trade counts as still open.
+            t["miss"] = t.get("miss", 0) + 1
             changed = True
-            agent.notify(f"{tag(mode)} 🤖 auto-trade {t['dir']} closed (≈{t['r']:+.2f}R).", kind="update")
+            if t["miss"] < 2:
+                continue
+            row = history(mode, days=10).get(str(t["pos"]))
+            if row:
+                real_result(t, row)
+            elif t["miss"] >= 12:                       # history unavailable for about an hour: last resort
+                t["closed"] = now_ts.isoformat()
+                t["r"] = sig.get("r", 0) if sig.get("status") == "closed" else (0.0 if t["be"] else -1.0)
+                t["est"] = True
+            else:
+                continue
+            t["status"] = "closed"
+            agent.notify(f"{tag(mode)} 🤖 auto-trade {t['dir']} closed ({t['r']:+.2f}R"
+                         f"{', estimated' if t.get('est') else ''}).", kind="update")
     if changed:
         save(st)
