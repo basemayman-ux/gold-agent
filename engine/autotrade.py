@@ -203,7 +203,7 @@ def history(mode, days=45):
     Tries the demo/real history endpoints; remembers the one that works."""
     since = (pd.Timestamp.now(tz="UTC") - pd.Timedelta(days=days)).strftime("%Y-%m-%d")
     d = mode == "demo"
-    cands = ["/api/v1/trading/info/demo/trade/history", "/api/v1/trading/info/trade/history"]
+    cands = ["/api/v1/trading/info/trade/demo/history", "/api/v1/trading/info/trade/history"]
     if not d:
         cands.reverse()
     if _HIST_PATH["ok"]:
