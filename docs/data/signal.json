@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-18T22:00:49.682547+00:00",
- "dubai_time": "Thu 19 Nov 2026, 02:00",
+ "generated_utc": "2026-11-18T22:10:34.168372+00:00",
+ "dubai_time": "Thu 19 Nov 2026, 02:10",
  "session": "Late US / off-hours",
  "price": 3725.48,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
+ "data_age_min": 10.6,
  "last_bar_utc": "2026-11-18T21:55:00+00:00",
  "warnings": [],
  "regime": "Breakout",
@@ -42,7 +42,7 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 3771.53,
+  "value": 3771.47,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
@@ -107,27 +107,27 @@
     ],
     [
      3723.25,
-     603.5
+     668.6
     ],
     [
      3723.75,
-     700.3
+     765.5
     ],
     [
      3724.25,
-     839.1
+     904.2
     ],
     [
      3724.75,
-     778.1
+     843.2
     ],
     [
      3725.25,
-     760.0
+     787.7
     ],
     [
      3725.75,
-     760.0
+     787.7
     ],
     [
      3726.25,
@@ -1187,9 +1187,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.213,
-  "session_delta": -18519.0,
-  "session_slope": -502.0,
+  "leg_ratio": -0.205,
+  "session_delta": -18467.0,
+  "session_slope": -449.0,
   "divergence": null,
   "absorption": null
  },
@@ -1212,7 +1212,7 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3724.65 / buy 3724.85 (spread $0.20)",
+ "spread": "eToro now: sell 3727.25 / buy 3727.45 (spread $0.20)",
  "score": 77,
  "score_parts": {
   "structure": 25,
@@ -1239,7 +1239,7 @@
   "M5 bearish CHOCH through 3734.40",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
   "RSI7 52, RSI14 46, M15 ADX 29, RVOL 1.9\u00d7",
-  "Profile & flow: Accepted below prior VAL 3853.50 (initiative selling); setup-leg delta -0.21",
+  "Profile & flow: Accepted below prior VAL 3853.50 (initiative selling); setup-leg delta -0.20",
   "Weak components: liquidity, session"
  ],
  "invalidation": null,
@@ -2978,8 +2978,8 @@
    "c": 3723.46,
    "e20": 3725.92,
    "e50": 3730.89,
-   "vw": 3771.53,
-   "dl": -0.0
+   "vw": 3771.5,
+   "dl": -64.0
   },
   {
    "t": 1795038900,
@@ -2989,8 +2989,8 @@
    "c": 3725.48,
    "e20": 3725.88,
    "e50": 3730.68,
-   "vw": 3771.53,
-   "dl": 0.0
+   "vw": 3771.47,
+   "dl": 117.0
   }
  ],
  "journal": {
