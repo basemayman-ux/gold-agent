@@ -26,7 +26,7 @@ import agent
 API = "https://public-api.etoro.com"
 STATE = agent.OUT / "autotrade.json"
 DEFAULTS = {"mode": "off", "leverage": 20, "max_trades_per_day": 4, "daily_loss_stop_r": 2.0,
-            "max_units": 10.0, "max_spread": 1.0}
+            "max_units": 10.0, "max_spread": 1.0, "max_spread_frac": 0.10}
 
 
 def cfg():
@@ -166,6 +166,9 @@ def on_signal(rec, plan, size, now):
             bid, ask = agent.etoro_quote()
             if ask - bid > c["max_spread"]:
                 why = f"spread too wide (${ask - bid:.2f})"
+            elif plan["R"] > 0 and (ask - bid) > c["max_spread_frac"] * plan["R"]:
+                why = (f"spread ${ask - bid:.2f} is more than {c['max_spread_frac']:.0%} of the "
+                       f"${plan['R']:.2f} stop (costs too much of each trade)")
         except Exception as e:  # noqa: BLE001
             why = f"no eToro quote ({e})"
     if why:
