@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-19T11:40:39.967812+00:00",
- "dubai_time": "Thu 19 Nov 2026, 15:40",
+ "generated_utc": "2026-11-19T11:45:39.002776+00:00",
+ "dubai_time": "Thu 19 Nov 2026, 15:45",
  "session": "London",
- "price": 3727.78,
+ "price": 3725.59,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.7,
- "last_bar_utc": "2026-11-19T11:35:00+00:00",
+ "last_bar_utc": "2026-11-19T11:40:00+00:00",
  "warnings": [],
  "regime": "Range",
  "bias": {
@@ -29,7 +29,7 @@
    "HL"
   ],
   "M5": [
-   "HH",
+   "LH",
    "LL"
   ]
  },
@@ -47,16 +47,16 @@
   "crosses_2h": 4,
   "volume_weighted": true
  },
- "rsi7": 39.6,
- "rsi14": 43.7,
+ "rsi7": 34.0,
+ "rsi14": 40.6,
  "adx14": {
-  "M5": 11.7,
-  "M15": 10.1
+  "M5": 12.0,
+  "M15": 9.5
  },
  "atr14": {
-  "M5": 3.86,
-  "M15": 8.2,
-  "percentile": 31
+  "M5": 3.83,
+  "M15": 8.21,
+  "percentile": 29
  },
  "volume": "RVOL 1.57\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -367,43 +367,43 @@
     ],
     [
      3728.75,
-     949.5
+     1001.7
     ],
     [
      3729.25,
-     1121.0
+     1173.2
     ],
     [
      3729.75,
-     1271.3
+     1323.5
     ],
     [
      3730.25,
-     1177.8
+     1230.0
     ],
     [
      3730.75,
-     1229.0
+     1281.2
     ],
     [
      3731.25,
-     1348.3
+     1400.5
     ],
     [
      3731.75,
-     1266.2
+     1318.4
     ],
     [
      3732.25,
-     1294.4
+     1346.6
     ],
     [
      3732.75,
-     1311.2
+     1363.4
     ],
     [
      3733.25,
-     1551.0
+     1603.2
     ],
     [
      3733.75,
@@ -615,9 +615,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.029,
-  "session_delta": 1697.0,
-  "session_slope": 600.0,
+  "leg_ratio": 0.179,
+  "session_delta": 1995.0,
+  "session_slope": 770.0,
   "divergence": null,
   "absorption": null
  },
@@ -640,12 +640,12 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3726.98 / buy 3727.18 (spread $0.20)",
- "score": 82,
+ "spread": "eToro now: sell 3725.76 / buy 3725.96 (spread $0.20)",
+ "score": 83,
  "score_parts": {
   "structure": 25,
   "liquidity": 15,
-  "momentum": 8,
+  "momentum": 9,
   "vwap": 5,
   "volume_flow": 10,
   "volatility": 5,
@@ -663,7 +663,7 @@
  "plan": null,
  "why": [
   "MARKET CHOP \u2014 ADX weak, VWAP crossed 4\u00d7 in 2h",
-  "Setup score would be 82/100 (not tradable while blocked)"
+  "Setup score would be 83/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -746,6 +746,12 @@
    "swept": false
   },
   {
+   "name": "M15 swing high",
+   "price": 3737.72,
+   "side": "buy",
+   "swept": false
+  },
+  {
    "name": "Prior VAL",
    "price": 3736.0,
    "side": "buy",
@@ -756,26 +762,9 @@
    "price": 3719.79,
    "side": "sell",
    "swept": true
-  },
-  {
-   "name": "Asian low",
-   "price": 3693.39,
-   "side": "sell",
-   "swept": false
   }
  ],
  "chart": [
-  {
-   "t": 1795043400,
-   "o": 3735.65,
-   "h": 3736.94,
-   "l": 3733.56,
-   "c": 3734.62,
-   "e20": 3727.96,
-   "e50": 3731.04,
-   "vw": 3734.1,
-   "dl": -131.0
-  },
   {
    "t": 1795043700,
    "o": 3734.6,
@@ -2402,7 +2391,7 @@
    "e20": 3731.41,
    "e50": 3732.3,
    "vw": 3731.96,
-   "dl": 0.0
+   "dl": 298.0
   },
   {
    "t": 1795088100,
@@ -2412,6 +2401,17 @@
    "c": 3727.78,
    "e20": 3731.06,
    "e50": 3732.12,
+   "vw": 3731.96,
+   "dl": -0.0
+  },
+  {
+   "t": 1795088400,
+   "o": 3727.78,
+   "h": 3728.21,
+   "l": 3724.72,
+   "c": 3725.59,
+   "e20": 3730.54,
+   "e50": 3731.87,
    "vw": 3731.96,
    "dl": -0.0
   }
@@ -2494,9 +2494,10 @@
    "regime": "Breakout",
    "reason": "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP; M5 bearish CHOCH through 3733.11; H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
    "status": "open",
-   "tp1_hit": false,
+   "tp1_hit": true,
    "mgmt": "1R_be07",
-   "setup": "trend"
+   "setup": "trend",
+   "be_utc": "2026-11-19T11:40:00+00:00"
   },
   {
    "time_utc": "2026-11-18T17:05:33.110569+00:00",
