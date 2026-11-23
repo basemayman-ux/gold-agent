@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-23T18:50:40.180657+00:00",
- "dubai_time": "Mon 23 Nov 2026, 22:50",
+ "generated_utc": "2026-11-23T19:00:53.112027+00:00",
+ "dubai_time": "Mon 23 Nov 2026, 23:00",
  "session": "New York",
- "price": 3651.86,
+ "price": 3649.25,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-11-23T18:45:00+00:00",
+ "data_age_min": 0.9,
+ "last_bar_utc": "2026-11-23T18:55:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,29 +42,29 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 3637.27,
+  "value": 3637.34,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 45.3,
- "rsi14": 43.5,
+ "rsi7": 37.5,
+ "rsi14": 40.4,
  "adx14": {
-  "M5": 17.4,
-  "M15": 34.6
+  "M5": 17.0,
+  "M15": 32.9
  },
  "atr14": {
-  "M5": 4.79,
-  "M15": 11.16,
-  "percentile": 61
+  "M5": 4.64,
+  "M15": 10.83,
+  "percentile": 59
  },
  "volume": "RVOL 1.79\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
    "poc": 3573.25,
-   "vah": 3587.5,
-   "val": 3535.0
+   "vah": 3590.5,
+   "val": 3536.0
   },
   "naked_pocs": [],
   "developing": {
@@ -778,51 +778,51 @@
     ],
     [
      3646.75,
-     252.8
+     329.0
     ],
     [
      3647.25,
-     252.8
+     329.0
     ],
     [
      3647.75,
-     463.6
+     539.8
     ],
     [
      3648.25,
-     463.6
+     601.0
     ],
     [
      3648.75,
-     604.1
+     741.4
     ],
     [
      3649.25,
-     604.1
+     741.4
     ],
     [
      3649.75,
-     825.1
+     962.4
     ],
     [
      3650.25,
-     825.1
+     962.4
     ],
     [
      3650.75,
-     1234.6
+     1371.9
     ],
     [
      3651.25,
-     1234.6
+     1371.9
     ],
     [
      3651.75,
-     1433.5
+     1494.6
     ],
     [
      3652.25,
-     1534.3
+     1595.4
     ],
     [
      3652.75,
@@ -1126,13 +1126,13 @@
     ]
    ]
   },
-  "context": "Accepted above prior VAH 3587.50 (initiative buying)"
+  "context": "Accepted above prior VAH 3590.50 (initiative buying)"
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.08,
-  "session_delta": -5216.0,
-  "session_slope": -1038.0,
+  "leg_ratio": -0.064,
+  "session_delta": -4833.0,
+  "session_slope": -910.0,
   "divergence": false,
   "absorption": false
  },
@@ -1160,7 +1160,7 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3660.93 / buy 3661.13 (spread $0.20)",
+ "spread": "eToro now: sell 3652.63 / buy 3652.83 (spread $0.20)",
  "score": 70,
  "score_parts": {
   "structure": 10,
@@ -1185,8 +1185,8 @@
   "Score 70/100 is below the 85 live-trade minimum",
   "M15 swing low at 3657.88 swept, then displacement",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bullish, M15 bearish",
-  "RSI7 45, RSI14 44, M15 ADX 35, RVOL 1.8\u00d7",
-  "Profile & flow: Accepted above prior VAH 3587.50 (initiative buying); setup-leg delta -0.08",
+  "RSI7 38, RSI14 40, M15 ADX 33, RVOL 1.8\u00d7",
+  "Profile & flow: Accepted above prior VAH 3590.50 (initiative buying); setup-leg delta -0.06",
   "Weak components: structure, momentum"
  ],
  "invalidation": null,
@@ -1264,16 +1264,16 @@
    "swept": false
   },
   {
+   "name": "Prior VAH",
+   "price": 3590.5,
+   "side": "sell",
+   "swept": false
+  },
+  {
    "name": "Previous day high",
    "price": 3587.9,
    "side": "buy",
    "swept": true
-  },
-  {
-   "name": "Prior VAH",
-   "price": 3587.5,
-   "side": "sell",
-   "swept": false
   },
   {
    "name": "M15 swing low",
@@ -1289,28 +1289,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1795414800,
-   "o": 3621.04,
-   "h": 3621.11,
-   "l": 3613.12,
-   "c": 3616.22,
-   "e20": 3616.05,
-   "e50": 3607.81,
-   "vw": 3601.62,
-   "dl": -180.0
-  },
-  {
-   "t": 1795415100,
-   "o": 3616.27,
-   "h": 3619.26,
-   "l": 3616.25,
-   "c": 3617.95,
-   "e20": 3616.23,
-   "e50": 3608.2,
-   "vw": 3601.72,
-   "dl": 46.0
-  },
   {
    "t": 1795415400,
    "o": 3617.95,
@@ -2925,8 +2903,8 @@
    "c": 3648.65,
    "e20": 3655.62,
    "e50": 3656.43,
-   "vw": 3637.27,
-   "dl": -0.0
+   "vw": 3637.31,
+   "dl": -88.0
   },
   {
    "t": 1795459500,
@@ -2936,8 +2914,30 @@
    "c": 3651.86,
    "e20": 3655.26,
    "e50": 3656.25,
-   "vw": 3637.27,
-   "dl": 0.0
+   "vw": 3637.34,
+   "dl": 471.0
+  },
+  {
+   "t": 1795459800,
+   "o": 3651.86,
+   "h": 3654.62,
+   "l": 3650.42,
+   "c": 3651.43,
+   "e20": 3654.89,
+   "e50": 3656.06,
+   "vw": 3637.34,
+   "dl": -0.0
+  },
+  {
+   "t": 1795460100,
+   "o": 3651.43,
+   "h": 3651.98,
+   "l": 3648.68,
+   "c": 3649.25,
+   "e20": 3654.36,
+   "e50": 3655.8,
+   "vw": 3637.34,
+   "dl": -0.0
   }
  ],
  "journal": {
