@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-23T06:10:33.156390+00:00",
- "dubai_time": "Mon 23 Nov 2026, 10:10",
+ "generated_utc": "2026-11-23T06:20:34.930907+00:00",
+ "dubai_time": "Mon 23 Nov 2026, 10:20",
  "session": "Asia",
- "price": 3623.46,
+ "price": 3621.04,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-11-23T06:05:00+00:00",
+ "last_bar_utc": "2026-11-23T06:15:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 3599.95,
+  "value": 3600.47,
   "side": "Above",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 66.2,
- "rsi14": 64.4,
+ "rsi7": 56.9,
+ "rsi14": 58.7,
  "adx14": {
-  "M5": 31.2,
-  "M15": 41.4
+  "M5": 30.8,
+  "M15": 42.0
  },
  "atr14": {
-  "M5": 5.46,
-  "M15": 10.05,
-  "percentile": 66
+  "M5": 5.62,
+  "M15": 10.12,
+  "percentile": 67
  },
  "volume": "RVOL 6.18\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -68,7 +68,7 @@
   },
   "naked_pocs": [
    {
-    "price": 3678.75,
+    "price": 3685.25,
     "day": "Thu 19 Nov"
    }
   ],
@@ -543,87 +543,87 @@
     ],
     [
      3616.75,
-     516.4
+     589.2
     ],
     [
      3617.25,
-     516.4
+     589.2
     ],
     [
      3617.75,
-     516.4
+     618.5
     ],
     [
      3618.25,
-     486.5
+     588.7
     ],
     [
      3618.75,
-     588.7
+     690.9
     ],
     [
      3619.25,
-     588.7
+     690.9
     ],
     [
      3619.75,
-     789.3
+     891.5
     ],
     [
      3620.25,
-     750.3
+     852.5
     ],
     [
      3620.75,
-     750.3
+     852.5
     ],
     [
      3621.25,
-     633.2
+     735.4
     ],
     [
      3621.75,
-     869.9
+     899.2
     ],
     [
      3622.25,
-     869.9
+     899.2
     ],
     [
      3622.75,
-     869.9
+     899.2
     ],
     [
      3623.25,
-     869.9
+     899.2
     ],
     [
      3623.75,
-     760.9
+     790.3
     ],
     [
      3624.25,
-     658.7
+     688.1
     ],
     [
      3624.75,
-     607.8
+     637.1
     ],
     [
      3625.25,
-     607.8
+     637.1
     ],
     [
      3625.75,
-     607.8
+     637.1
     ],
     [
      3626.25,
-     361.9
+     391.3
     ],
     [
      3626.75,
-     81.6
+     111.0
     ],
     [
      3627.25,
@@ -663,9 +663,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": -0.14,
-  "session_delta": -1017.0,
-  "session_slope": -1384.0,
+  "leg_ratio": -0.128,
+  "session_delta": -1055.0,
+  "session_slope": -1497.0,
   "divergence": null,
   "absorption": null
  },
@@ -698,11 +698,11 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3622.50 / buy 3622.70 (spread $0.20)",
- "score": 64,
+ "spread": "eToro now: sell 3619.16 / buy 3619.36 (spread $0.20)",
+ "score": 71,
  "score_parts": {
   "structure": 18,
-  "liquidity": 0,
+  "liquidity": 7,
   "momentum": 12,
   "vwap": 8,
   "volume_flow": 10,
@@ -711,20 +711,21 @@
   "news": 10
  },
  "candidate": "LONG",
- "decision": "NO TRADE",
- "headline": "No trade",
- "quality": "NO TRADE",
+ "decision": "WAIT",
+ "headline": "Wait",
+ "quality": "WATCH",
  "setup": "trend",
  "range": null,
  "mode": "active",
  "min_score": 85,
  "plan": null,
  "why": [
-  "No liquidity sweep or clean continuation setup",
+  "Score 71/100 is below the 85 live-trade minimum",
+  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
   "M5 bullish BOS through 3613.34",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bullish, M15 bullish",
-  "RSI7 66, RSI14 64, M15 ADX 41, RVOL 6.2\u00d7",
-  "Profile & flow: Accepted above prior VAH 3590.50 (initiative buying); setup-leg delta -0.14",
+  "RSI7 57, RSI14 59, M15 ADX 42, RVOL 6.2\u00d7",
+  "Profile & flow: Accepted above prior VAH 3590.50 (initiative buying); setup-leg delta -0.13",
   "Weak components: liquidity, session"
  ],
  "invalidation": null,
@@ -773,7 +774,7 @@
   },
   {
    "name": "Naked POC (Thu 19 Nov)",
-   "price": 3678.75,
+   "price": 3685.25,
    "side": "buy",
    "swept": false
   },
@@ -827,28 +828,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1795365600,
-   "o": 3559.65,
-   "h": 3560.75,
-   "l": 3559.3,
-   "c": 3560.75,
-   "e20": 3558.53,
-   "e50": 3556.44,
-   "vw": 3560.27,
-   "dl": 0.0
-  },
-  {
-   "t": 1795365900,
-   "o": 3560.75,
-   "h": 3561.08,
-   "l": 3560.32,
-   "c": 3560.32,
-   "e20": 3558.7,
-   "e50": 3556.6,
-   "vw": 3560.57,
-   "dl": -0.0
-  },
   {
    "t": 1795366200,
    "o": 3560.32,
@@ -2463,8 +2442,8 @@
    "c": 3618.38,
    "e20": 3614.51,
    "e50": 3605.81,
-   "vw": 3599.95,
-   "dl": -0.0
+   "vw": 3600.22,
+   "dl": -198.0
   },
   {
    "t": 1795413900,
@@ -2474,7 +2453,29 @@
    "c": 3623.46,
    "e20": 3615.37,
    "e50": 3606.5,
-   "vw": 3599.95,
+   "vw": 3600.47,
+   "dl": 160.0
+  },
+  {
+   "t": 1795414200,
+   "o": 3623.31,
+   "h": 3623.66,
+   "l": 3615.56,
+   "c": 3616.79,
+   "e20": 3615.5,
+   "e50": 3606.91,
+   "vw": 3600.47,
+   "dl": -0.0
+  },
+  {
+   "t": 1795414500,
+   "o": 3616.79,
+   "h": 3621.78,
+   "l": 3616.46,
+   "c": 3621.04,
+   "e20": 3616.03,
+   "e50": 3607.46,
+   "vw": 3600.47,
    "dl": 0.0
   }
  ],
