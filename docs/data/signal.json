@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-23T04:30:43.135792+00:00",
- "dubai_time": "Mon 23 Nov 2026, 08:30",
+ "generated_utc": "2026-11-23T04:40:38.037848+00:00",
+ "dubai_time": "Mon 23 Nov 2026, 08:40",
  "session": "Asia",
- "price": 3609.23,
+ "price": 3608.38,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-11-23T04:25:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-11-23T04:35:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -42,23 +42,23 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 3594.86,
+  "value": 3595.08,
   "side": "Above",
   "crosses_2h": 1,
   "volume_weighted": true
  },
- "rsi7": 64.7,
- "rsi14": 62.1,
+ "rsi7": 58.4,
+ "rsi14": 59.8,
  "adx14": {
-  "M5": 25.5,
+  "M5": 24.5,
   "M15": 39.8
  },
  "atr14": {
-  "M5": 5.26,
+  "M5": 4.98,
   "M15": 10.86,
-  "percentile": 62
+  "percentile": 59
  },
- "volume": "RVOL 0.90\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
+ "volume": "RVOL 0.85\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
   "type": "volume",
   "prior": {
@@ -74,7 +74,7 @@
   ],
   "developing": {
    "poc": 3577.25,
-   "vah": 3607.0,
+   "vah": 3607.5,
    "val": 3570.0,
    "bins": [
     [
@@ -463,39 +463,39 @@
     ],
     [
      3606.75,
-     582.5
+     631.9
     ],
     [
      3607.25,
-     572.0
+     621.4
     ],
     [
      3607.75,
-     589.0
+     638.3
     ],
     [
      3608.25,
-     532.8
+     623.0
     ],
     [
      3608.75,
-     457.9
+     548.1
     ],
     [
      3609.25,
-     429.7
+     520.0
     ],
     [
      3609.75,
-     381.5
+     471.7
     ],
     [
      3610.25,
-     318.9
+     409.1
     ],
     [
      3610.75,
-     218.8
+     259.6
     ],
     [
      3611.25,
@@ -663,9 +663,9 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.15,
-  "session_delta": 660.0,
-  "session_slope": 570.0,
+  "leg_ratio": 0.111,
+  "session_delta": 874.0,
+  "session_slope": 509.0,
   "divergence": null,
   "absorption": null
  },
@@ -698,14 +698,14 @@
   ],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3607.97 / buy 3608.17 (spread $0.20)",
- "score": 65,
+ "spread": "eToro now: sell 3607.53 / buy 3607.73 (spread $0.20)",
+ "score": 63,
  "score_parts": {
   "structure": 13,
   "liquidity": 8,
-  "momentum": 11,
+  "momentum": 10,
   "vwap": 8,
-  "volume_flow": 9,
+  "volume_flow": 8,
   "volatility": 5,
   "session": 1,
   "news": 10
@@ -722,8 +722,8 @@
  "why": [
   "No liquidity sweep or clean continuation setup",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bullish, M15 bullish",
-  "RSI7 65, RSI14 62, M15 ADX 40, RVOL 0.9\u00d7",
-  "Profile & flow: Accepted above prior VAH 3590.50 (initiative buying); setup-leg delta +0.15",
+  "RSI7 58, RSI14 60, M15 ADX 40, RVOL 0.8\u00d7",
+  "Profile & flow: Accepted above prior VAH 3590.50 (initiative buying); setup-leg delta +0.11",
   "Weak components: session"
  ],
  "invalidation": null,
@@ -826,28 +826,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1795359600,
-   "o": 3556.58,
-   "h": 3556.9,
-   "l": 3556.12,
-   "c": 3556.45,
-   "e20": 3554.78,
-   "e50": 3553.96,
-   "vw": 3556.49,
-   "dl": -0.0
-  },
-  {
-   "t": 1795359900,
-   "o": 3556.45,
-   "h": 3556.51,
-   "l": 3555.42,
-   "c": 3555.58,
-   "e20": 3554.86,
-   "e50": 3554.02,
-   "vw": 3555.84,
-   "dl": -0.0
-  },
   {
    "t": 1795360200,
    "o": 3555.58,
@@ -2462,8 +2440,8 @@
    "c": 3609.81,
    "e20": 3603.67,
    "e50": 3594.8,
-   "vw": 3594.86,
-   "dl": 0.0
+   "vw": 3594.94,
+   "dl": 53.0
   },
   {
    "t": 1795407900,
@@ -2473,8 +2451,30 @@
    "c": 3609.23,
    "e20": 3604.2,
    "e50": 3595.37,
-   "vw": 3594.86,
-   "dl": 0.0
+   "vw": 3595.08,
+   "dl": 161.0
+  },
+  {
+   "t": 1795408200,
+   "o": 3609.14,
+   "h": 3609.19,
+   "l": 3605.97,
+   "c": 3607.32,
+   "e20": 3604.5,
+   "e50": 3595.84,
+   "vw": 3595.08,
+   "dl": -0.0
+  },
+  {
+   "t": 1795408500,
+   "o": 3607.25,
+   "h": 3610.23,
+   "l": 3607.0,
+   "c": 3608.38,
+   "e20": 3604.87,
+   "e50": 3596.33,
+   "vw": 3595.08,
+   "dl": -0.0
   }
  ],
  "journal": {
