@@ -919,6 +919,14 @@ def decide(ctx, journal):
             gate = f"H4 trend is {ctx['h4_bias'].lower()}; a {decision} needs H4 {want.lower()} (trades without it won only ~47%)"
         elif CFG.get("require_h4_trend") and ctx.get("setup") == "range" and ctx["h4_bias"] == oppose:
             gate = f"H4 trend is {oppose.lower()}, against this range {decision}"
+        fl = ctx.get("flow") or {}
+        lim = CFG.get("max_flow_with_trade", 0.15)
+        if not gate and lim is not None and fl.get("available") and fl.get("leg_ratio") is not None \
+                and d * fl["leg_ratio"] >= lim:
+            # Real eToro results (37 trades): entries after one-sided flow in the trade direction
+            # won 2 of 11 (-6.2R); the move is usually spent by the time the signal fires.
+            gate = (f"Order flow is already one-sided in the trade direction (leg delta {fl['leg_ratio']:+.2f}): "
+                    "late entry, wait for a pullback")
         if gate:
             decision = "WAIT"
             why.insert(0, gate)

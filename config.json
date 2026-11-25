@@ -20,7 +20,7 @@
   "min_stop_usd": 6.0,
   "require_h4_trend": true,
   "trade_hours_dubai": [
-    11,
+    12,
     22
   ],
   "management": "all out at 1R, stop to entry after 0.7R",
@@ -35,5 +35,6 @@
     "max_spread_frac": 0.1
   },
   "etoro_spread_per_oz": 0.83,
-  "min_score_override": 85
+  "min_score_override": 85,
+  "max_flow_with_trade": 0.15
 }
