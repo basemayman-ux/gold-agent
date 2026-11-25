@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-11-25T12:40:39.599025+00:00",
- "dubai_time": "Wed 25 Nov 2026, 16:40",
+ "generated_utc": "2026-11-25T12:50:32.502564+00:00",
+ "dubai_time": "Wed 25 Nov 2026, 16:50",
  "session": "London/NY overlap",
- "price": 3522.99,
+ "price": 3517.99,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-11-25T12:35:00+00:00",
+ "data_age_min": 0.5,
+ "last_bar_utc": "2026-11-25T12:45:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
   "H4": "Bearish",
   "H1": "Bearish",
   "M15": "Bearish",
-  "M5": "Neutral"
+  "M5": "Bullish"
  },
  "swings": {
   "H4": [
@@ -29,7 +29,7 @@
    "LL"
   ],
   "M5": [
-   "LH",
+   "HH",
    "LL"
   ]
  },
@@ -42,21 +42,21 @@
   "M15": "EMA20 below EMA50"
  },
  "vwap": {
-  "value": 3530.16,
+  "value": 3529.9,
   "side": "Below",
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 59.7,
- "rsi14": 53.2,
+ "rsi7": 49.5,
+ "rsi14": 48.4,
  "adx14": {
-  "M5": 26.9,
-  "M15": 24.7
+  "M5": 24.2,
+  "M15": 25.1
  },
  "atr14": {
-  "M5": 7.49,
-  "M15": 11.55,
-  "percentile": 88
+  "M5": 7.29,
+  "M15": 11.59,
+  "percentile": 87
  },
  "volume": "RVOL 7.55\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -75,7 +75,7 @@
   "developing": {
    "poc": 3530.25,
    "vah": 3538.5,
-   "val": 3509.5,
+   "val": 3511.0,
    "bins": [
     [
      3485.25,
@@ -343,103 +343,103 @@
     ],
     [
      3518.25,
-     508.1
+     604.9
     ],
     [
      3518.75,
-     472.1
+     568.9
     ],
     [
      3519.25,
-     489.2
+     586.0
     ],
     [
      3519.75,
-     432.2
+     528.9
     ],
     [
      3520.25,
-     452.2
+     548.9
     ],
     [
      3520.75,
-     469.0
+     565.8
     ],
     [
      3521.25,
-     501.3
+     598.1
     ],
     [
      3521.75,
-     486.1
+     582.9
     ],
     [
      3522.25,
-     499.2
+     696.9
     ],
     [
      3522.75,
-     412.2
+     609.9
     ],
     [
      3523.25,
-     349.8
+     547.5
     ],
     [
      3523.75,
-     455.7
+     653.4
     ],
     [
      3524.25,
-     466.9
+     664.6
     ],
     [
      3524.75,
-     517.5
+     715.2
     ],
     [
      3525.25,
-     582.4
+     683.3
     ],
     [
      3525.75,
-     584.8
+     685.8
     ],
     [
      3526.25,
-     597.2
+     698.1
     ],
     [
      3526.75,
-     674.3
+     775.3
     ],
     [
      3527.25,
-     721.0
+     822.0
     ],
     [
      3527.75,
-     774.3
+     875.3
     ],
     [
      3528.25,
-     751.2
+     852.2
     ],
     [
      3528.75,
-     649.0
+     750.0
     ],
     [
      3529.25,
-     692.1
+     793.1
     ],
     [
      3529.75,
-     900.3
+     1001.2
     ],
     [
      3530.25,
-     2690.9
+     2791.8
     ],
     [
      3530.75,
@@ -803,16 +803,16 @@
  },
  "orderflow": {
   "available": true,
-  "leg_ratio": 0.185,
-  "session_delta": 15769.0,
-  "session_slope": 1692.0,
+  "leg_ratio": 0.131,
+  "session_delta": 15546.0,
+  "session_slope": 1491.0,
   "divergence": null,
   "absorption": null
  },
  "liquidity_event": "Asian low 3512.53 swept (sell-side), rejection wick",
  "bos_choch": "M5 CHOCH bullish through 3516.92 at 16:15",
  "news": {
-  "risk": "Medium",
+  "risk": "High",
   "status": "live",
   "upcoming": [
    {
@@ -831,36 +831,32 @@
     "time": "Wed 17:30"
    }
   ],
-  "detail": "Core PCE Price Index m/m at 17:30 Dubai (score reduced, not blocked)"
+  "detail": "Core PCE Price Index m/m at 17:30 Dubai"
  },
- "spread": "eToro now: sell 3533.56 / buy 3533.89 (spread $0.33)",
- "score": 79,
+ "spread": "eToro now: sell 3536.52 / buy 3536.72 (spread $0.20)",
+ "score": 80,
  "score_parts": {
   "structure": 25,
   "liquidity": 15,
-  "momentum": 7,
+  "momentum": 12,
   "vwap": 8,
   "volume_flow": 10,
   "volatility": 5,
   "session": 5,
-  "news": 4
+  "news": 0
  },
  "candidate": "SHORT",
- "decision": "WAIT",
- "headline": "Wait",
- "quality": "WATCH",
+ "decision": "NO TRADE",
+ "headline": "No trade",
+ "quality": "NO TRADE",
  "setup": "trend",
  "range": null,
  "mode": "active",
  "min_score": 85,
  "plan": null,
  "why": [
-  "Score 79/100 is below the 85 live-trade minimum",
-  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
-  "M5 bearish BOS through 3508.67",
-  "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 bearish",
-  "RSI7 60, RSI14 53, M15 ADX 25, RVOL 7.5\u00d7",
-  "Profile & flow: Accepted below prior VAL 3592.50 (initiative selling); setup-leg delta +0.18"
+  "High-impact news window: Core PCE Price Index m/m at 17:30 Dubai",
+  "Setup score would be 80/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -956,28 +952,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1795565400,
-   "o": 3552.11,
-   "h": 3553.36,
-   "l": 3547.49,
-   "c": 3551.18,
-   "e20": 3554.85,
-   "e50": 3557.6,
-   "vw": 3558.15,
-   "dl": 59.0
-  },
-  {
-   "t": 1795565700,
-   "o": 3551.16,
-   "h": 3552.2,
-   "l": 3541.72,
-   "c": 3542.3,
-   "e20": 3553.66,
-   "e50": 3557.0,
-   "vw": 3556.71,
-   "dl": -441.0
-  },
   {
    "t": 1795566000,
    "o": 3542.3,
@@ -2592,8 +2566,8 @@
    "c": 3524.6,
    "e20": 3517.84,
    "e50": 3522.95,
-   "vw": 3530.16,
-   "dl": 0.0
+   "vw": 3530.02,
+   "dl": 1200.0
   },
   {
    "t": 1795610100,
@@ -2603,7 +2577,29 @@
    "c": 3522.99,
    "e20": 3518.33,
    "e50": 3522.95,
-   "vw": 3530.16,
+   "vw": 3529.9,
+   "dl": -1423.0
+  },
+  {
+   "t": 1795610400,
+   "o": 3522.92,
+   "h": 3523.12,
+   "l": 3518.83,
+   "c": 3522.86,
+   "e20": 3518.76,
+   "e50": 3522.95,
+   "vw": 3529.9,
+   "dl": 0.0
+  },
+  {
+   "t": 1795610700,
+   "o": 3522.86,
+   "h": 3523.04,
+   "l": 3515.37,
+   "c": 3517.99,
+   "e20": 3518.69,
+   "e50": 3522.76,
+   "vw": 3529.9,
    "dl": -0.0
   }
  ],
