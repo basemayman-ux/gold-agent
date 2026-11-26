@@ -1,19 +1,19 @@
 {
- "generated_utc": "2026-11-26T15:20:32.307569+00:00",
- "dubai_time": "Thu 26 Nov 2026, 19:20",
+ "generated_utc": "2026-11-26T15:30:42.556151+00:00",
+ "dubai_time": "Thu 26 Nov 2026, 19:30",
  "session": "London/NY overlap",
- "price": 3576.01,
+ "price": 3573.99,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.5,
- "last_bar_utc": "2026-11-26T15:15:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-11-26T15:25:00+00:00",
  "warnings": [],
  "regime": "Range",
  "bias": {
   "H4": "Bearish",
   "H1": "Bullish",
   "M15": "Bullish",
-  "M5": "Bullish"
+  "M5": "Bearish"
  },
  "swings": {
   "H4": [
@@ -47,16 +47,16 @@
   "crosses_2h": 6,
   "volume_weighted": true
  },
- "rsi7": 46.7,
- "rsi14": 52.9,
+ "rsi7": 43.4,
+ "rsi14": 49.5,
  "adx14": {
-  "M5": 29.8,
-  "M15": 16.7
+  "M5": 26.0,
+  "M15": 17.1
  },
  "atr14": {
-  "M5": 4.79,
-  "M15": 7.98,
-  "percentile": 27
+  "M5": 4.91,
+  "M15": 7.86,
+  "percentile": 32
  },
  "volume": "RVOL 4.25\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -542,19 +542,19 @@
   "absorption": null
  },
  "liquidity_event": "M15 swing high 3575.23 swept (buy-side), rejection wick",
- "bos_choch": "M5 BOS bullish through 3577.15 at 18:30",
+ "bos_choch": "M5 CHOCH bearish through 3572.16 at 19:20",
  "news": {
   "risk": "Low",
   "status": "live",
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3574.96 / buy 3575.16 (spread $0.20)",
- "score": 67,
+ "spread": "eToro now: sell 3572.38 / buy 3572.64 (spread $0.26)",
+ "score": 62,
  "score_parts": {
   "structure": 15,
-  "liquidity": 15,
-  "momentum": 7,
+  "liquidity": 12,
+  "momentum": 5,
   "vwap": 0,
   "volume_flow": 10,
   "volatility": 5,
@@ -572,7 +572,7 @@
  "plan": null,
  "why": [
   "MARKET CHOP \u2014 ADX weak, VWAP crossed 6\u00d7 in 2h",
-  "Setup score would be 67/100 (not tradable while blocked)"
+  "Setup score would be 62/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -585,12 +585,6 @@
   {
    "name": "H1 swing high",
    "price": 3689.57,
-   "side": "buy",
-   "swept": false
-  },
-  {
-   "name": "M15 swing high",
-   "price": 3681.17,
    "side": "buy",
    "swept": false
   },
@@ -637,6 +631,12 @@
    "swept": true
   },
   {
+   "name": "M15 swing high",
+   "price": 3586.34,
+   "side": "buy",
+   "swept": false
+  },
+  {
    "name": "London high",
    "price": 3576.97,
    "side": "buy",
@@ -655,13 +655,13 @@
    "swept": false
   },
   {
-   "name": "London low",
+   "name": "Equal lows",
    "price": 3552.08,
    "side": "sell",
    "swept": false
   },
   {
-   "name": "Asian low",
+   "name": "Equal lows",
    "price": 3551.35,
    "side": "sell",
    "swept": false
@@ -674,28 +674,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1795661400,
-   "o": 3595.14,
-   "h": 3596.39,
-   "l": 3585.31,
-   "c": 3586.06,
-   "e20": 3582.66,
-   "e50": 3574.08,
-   "vw": 3575.56,
-   "dl": -688.0
-  },
-  {
-   "t": 1795661700,
-   "o": 3586.09,
-   "h": 3591.34,
-   "l": 3581.72,
-   "c": 3588.91,
-   "e20": 3583.25,
-   "e50": 3574.66,
-   "vw": 3575.84,
-   "dl": 325.0
-  },
   {
    "t": 1795662000,
    "o": 3588.7,
@@ -2323,6 +2301,28 @@
    "e50": 3572.39,
    "vw": 3578.29,
    "dl": 0.0
+  },
+  {
+   "t": 1795706400,
+   "o": 3576.0,
+   "h": 3576.11,
+   "l": 3570.83,
+   "c": 3571.81,
+   "e20": 3575.21,
+   "e50": 3572.37,
+   "vw": 3578.29,
+   "dl": -0.0
+  },
+  {
+   "t": 1795706700,
+   "o": 3571.81,
+   "h": 3577.17,
+   "l": 3571.16,
+   "c": 3573.99,
+   "e20": 3575.1,
+   "e50": 3572.43,
+   "vw": 3578.29,
+   "dl": -0.0
   }
  ],
  "journal": {
