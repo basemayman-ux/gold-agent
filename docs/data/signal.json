@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-26T23:30:36.098593+00:00",
- "dubai_time": "Fri 27 Nov 2026, 03:30",
+ "generated_utc": "2026-11-26T23:40:34.659173+00:00",
+ "dubai_time": "Fri 27 Nov 2026, 03:40",
  "session": "Late US / off-hours",
- "price": 3566.67,
+ "price": 3565.46,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-11-26T23:25:00+00:00",
+ "last_bar_utc": "2026-11-26T23:35:00+00:00",
  "warnings": [],
  "regime": "Range",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 3565.96,
+  "value": 3565.24,
   "side": "Choppy",
-  "crosses_2h": 4,
+  "crosses_2h": 6,
   "volume_weighted": true
  },
- "rsi7": 39.2,
- "rsi14": 41.0,
+ "rsi7": 38.1,
+ "rsi14": 39.6,
  "adx14": {
-  "M5": 27.0,
+  "M5": 28.2,
   "M15": 16.4
  },
  "atr14": {
-  "M5": 2.64,
+  "M5": 2.93,
   "M15": 3.8,
-  "percentile": 5
+  "percentile": 6
  },
  "volume": "RVOL 4.25\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -99,7 +99,7 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3565.06 / buy 3568.03 (spread $2.97)",
+ "spread": "eToro now: sell 3566.95 / buy 3569.04 (spread $2.09)",
  "score": 48,
  "score_parts": {
   "structure": 12,
@@ -121,7 +121,7 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "MARKET CHOP \u2014 ADX weak, VWAP crossed 4\u00d7 in 2h, EMA20/50 flat",
+  "MARKET CHOP \u2014 ADX weak, VWAP crossed 6\u00d7 in 2h, EMA20/50 flat",
   "Setup score would be 48/100 (not tradable while blocked)"
  ],
  "invalidation": null,
@@ -224,28 +224,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1795685700,
-   "o": 3574.13,
-   "h": 3576.97,
-   "l": 3573.82,
-   "c": 3574.97,
-   "e20": 3571.52,
-   "e50": 3572.97,
-   "vw": 3578.29,
-   "dl": -0.0
-  },
-  {
-   "t": 1795686000,
-   "o": 3574.93,
-   "h": 3576.46,
-   "l": 3574.37,
-   "c": 3576.05,
-   "e20": 3571.95,
-   "e50": 3573.09,
-   "vw": 3578.29,
-   "dl": 0.0
-  },
   {
    "t": 1795686300,
    "o": 3576.05,
@@ -1872,6 +1850,28 @@
    "e20": 3569.14,
    "e50": 3569.66,
    "vw": 3565.96,
+   "dl": 0.0
+  },
+  {
+   "t": 1795735800,
+   "o": 3566.67,
+   "h": 3567.14,
+   "l": 3561.65,
+   "c": 3564.39,
+   "e20": 3568.68,
+   "e50": 3569.45,
+   "vw": 3564.39,
+   "dl": -0.0
+  },
+  {
+   "t": 1795736100,
+   "o": 3564.4,
+   "h": 3567.13,
+   "l": 3563.13,
+   "c": 3565.46,
+   "e20": 3568.38,
+   "e50": 3569.29,
+   "vw": 3565.24,
    "dl": 0.0
   }
  ],
