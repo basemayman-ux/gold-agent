@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-26T20:40:30.052642+00:00",
- "dubai_time": "Fri 27 Nov 2026, 00:40",
+ "generated_utc": "2026-11-26T20:50:36.127831+00:00",
+ "dubai_time": "Fri 27 Nov 2026, 00:50",
  "session": "New York",
- "price": 3570.4,
+ "price": 3570.2,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.5,
- "last_bar_utc": "2026-11-26T20:35:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-11-26T20:45:00+00:00",
  "warnings": [],
  "regime": "Range",
  "bias": {
   "H4": "Bearish",
   "H1": "Bullish",
-  "M15": "Neutral",
+  "M15": "Bullish",
   "M5": "Bullish"
  },
  "swings": {
@@ -47,15 +47,15 @@
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 75.9,
- "rsi14": 60.6,
+ "rsi7": 71.3,
+ "rsi14": 59.2,
  "adx14": {
-  "M5": 14.7,
-  "M15": 10.9
+  "M5": 16.8,
+  "M15": 11.0
  },
  "atr14": {
-  "M5": 1.11,
-  "M15": 4.08,
+  "M5": 1.01,
+  "M15": 3.88,
   "percentile": 0
  },
  "volume": "RVOL 4.25\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
@@ -549,12 +549,12 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3570.40 / buy 3577.08 (spread $6.68)",
- "score": 46,
+ "spread": "eToro now: sell 3570.20 / buy 3576.80 (spread $6.60)",
+ "score": 55,
  "score_parts": {
-  "structure": 12,
-  "liquidity": 0,
-  "momentum": 7,
+  "structure": 15,
+  "liquidity": 7,
+  "momentum": 6,
   "vwap": 3,
   "volume_flow": 10,
   "volatility": 0,
@@ -571,9 +571,8 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "H4 (Bearish) and H1 (Bullish) conflict",
   "MARKET CHOP \u2014 ADX weak, EMA20/50 flat",
-  "Setup score would be 46/100 (not tradable while blocked)"
+  "Setup score would be 55/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -644,9 +643,9 @@
    "swept": true
   },
   {
-   "name": "M15 swing high",
-   "price": 3570.0,
-   "side": "buy",
+   "name": "M15 swing low",
+   "price": 3565.58,
+   "side": "sell",
    "swept": false
   },
   {
@@ -675,28 +674,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1795678800,
-   "o": 3572.61,
-   "h": 3572.72,
-   "l": 3569.48,
-   "c": 3571.49,
-   "e20": 3572.92,
-   "e50": 3576.94,
-   "vw": 3578.29,
-   "dl": 0.0
-  },
-  {
-   "t": 1795679100,
-   "o": 3571.47,
-   "h": 3571.67,
-   "l": 3564.08,
-   "c": 3564.41,
-   "e20": 3572.11,
-   "e50": 3576.45,
-   "vw": 3578.29,
-   "dl": -0.0
-  },
   {
    "t": 1795679400,
    "o": 3564.4,
@@ -2322,6 +2299,28 @@
    "c": 3570.4,
    "e20": 3568.61,
    "e50": 3569.23,
+   "vw": 3578.29,
+   "dl": 0.0
+  },
+  {
+   "t": 1795725600,
+   "o": 3570.4,
+   "h": 3570.9,
+   "l": 3570.2,
+   "c": 3570.2,
+   "e20": 3568.76,
+   "e50": 3569.27,
+   "vw": 3578.29,
+   "dl": -0.0
+  },
+  {
+   "t": 1795725900,
+   "o": 3570.2,
+   "h": 3570.2,
+   "l": 3570.1,
+   "c": 3570.2,
+   "e20": 3568.9,
+   "e50": 3569.31,
    "vw": 3578.29,
    "dl": 0.0
   }
