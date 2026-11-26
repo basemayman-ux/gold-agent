@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-26T14:00:45.272795+00:00",
- "dubai_time": "Thu 26 Nov 2026, 18:00",
+ "generated_utc": "2026-11-26T14:10:38.698915+00:00",
+ "dubai_time": "Thu 26 Nov 2026, 18:10",
  "session": "London/NY overlap",
- "price": 3571.77,
+ "price": 3574.16,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-11-26T13:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-11-26T14:05:00+00:00",
  "warnings": [],
  "regime": "Trend",
  "bias": {
@@ -47,16 +47,16 @@
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 61.5,
- "rsi14": 56.7,
+ "rsi7": 66.4,
+ "rsi14": 59.8,
  "adx14": {
-  "M5": 24.1,
+  "M5": 25.8,
   "M15": 10.8
  },
  "atr14": {
-  "M5": 4.85,
+  "M5": 4.9,
   "M15": 7.93,
-  "percentile": 30
+  "percentile": 31
  },
  "volume": "RVOL 4.25\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -541,19 +541,19 @@
   "divergence": false,
   "absorption": false
  },
- "liquidity_event": "M15 swing high 3574.92 swept (buy-side), rejection wick",
- "bos_choch": "M5 BOS bullish through 3569.66 at 16:00",
+ "liquidity_event": "M15 swing high 3575.23 swept (buy-side), rejection wick",
+ "bos_choch": "M5 BOS bullish through 3573.02 at 18:00",
  "news": {
   "risk": "Low",
   "status": "live",
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3570.42 / buy 3570.62 (spread $0.20)",
- "score": 69,
+ "spread": "eToro now: sell 3573.42 / buy 3573.62 (spread $0.20)",
+ "score": 74,
  "score_parts": {
   "structure": 17,
-  "liquidity": 12,
+  "liquidity": 17,
   "momentum": 0,
   "vwap": 8,
   "volume_flow": 12,
@@ -562,18 +562,19 @@
   "news": 10
  },
  "candidate": "SHORT",
- "decision": "NO TRADE",
- "headline": "No trade",
- "quality": "NO TRADE",
+ "decision": "WAIT",
+ "headline": "Wait",
+ "quality": "WATCH",
  "setup": "trend",
  "range": null,
  "mode": "active",
  "min_score": 85,
  "plan": null,
  "why": [
-  "M15 swing high at 3574.92 swept, then rejection wick",
+  "Score 74/100 is below the 85 live-trade minimum",
+  "M15 swing high at 3575.23 swept, then rejection wick",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 neutral",
-  "RSI7 61, RSI14 57, M15 ADX 11, RVOL 4.3\u00d7",
+  "RSI7 66, RSI14 60, M15 ADX 11, RVOL 4.3\u00d7",
   "Profile & flow: Sweep happened at the value-area high (responsive selling); setup-leg delta -0.14",
   "Weak components: momentum"
  ],
@@ -628,10 +629,16 @@
    "swept": true
   },
   {
-   "name": "London high",
+   "name": "H1 swing high",
    "price": 3576.97,
    "side": "buy",
    "swept": false
+  },
+  {
+   "name": "London high",
+   "price": 3576.97,
+   "side": "buy",
+   "swept": true
   },
   {
    "name": "M15 swing high",
@@ -652,13 +659,13 @@
    "swept": false
   },
   {
-   "name": "London low",
+   "name": "Equal lows",
    "price": 3552.08,
    "side": "sell",
    "swept": false
   },
   {
-   "name": "Asian low",
+   "name": "Equal lows",
    "price": 3551.35,
    "side": "sell",
    "swept": false
@@ -668,37 +675,9 @@
    "price": 3536.02,
    "side": "sell",
    "swept": false
-  },
-  {
-   "name": "Naked POC (Wed 25 Nov)",
-   "price": 3530.25,
-   "side": "sell",
-   "swept": false
   }
  ],
  "chart": [
-  {
-   "t": 1795656600,
-   "o": 3568.55,
-   "h": 3569.71,
-   "l": 3556.56,
-   "c": 3558.5,
-   "e20": 3570.0,
-   "e50": 3566.4,
-   "vw": 3571.67,
-   "dl": -573.0
-  },
-  {
-   "t": 1795656900,
-   "o": 3558.41,
-   "h": 3561.18,
-   "l": 3556.91,
-   "c": 3557.8,
-   "e20": 3568.84,
-   "e50": 3566.06,
-   "vw": 3571.41,
-   "dl": -208.0
-  },
   {
    "t": 1795657200,
    "o": 3557.63,
@@ -2326,6 +2305,28 @@
    "e50": 3568.12,
    "vw": 3578.29,
    "dl": 0.0
+  },
+  {
+   "t": 1795701600,
+   "o": 3571.6,
+   "h": 3574.68,
+   "l": 3568.5,
+   "c": 3574.58,
+   "e20": 3568.97,
+   "e50": 3568.38,
+   "vw": 3578.29,
+   "dl": 0.0
+  },
+  {
+   "t": 1795701900,
+   "o": 3574.54,
+   "h": 3577.15,
+   "l": 3572.84,
+   "c": 3574.16,
+   "e20": 3569.46,
+   "e50": 3568.6,
+   "vw": 3578.29,
+   "dl": -0.0
   }
  ],
  "journal": {
