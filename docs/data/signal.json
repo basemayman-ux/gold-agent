@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-26T14:30:42.227450+00:00",
- "dubai_time": "Thu 26 Nov 2026, 18:30",
+ "generated_utc": "2026-11-26T14:40:36.458376+00:00",
+ "dubai_time": "Thu 26 Nov 2026, 18:40",
  "session": "London/NY overlap",
- "price": 3574.4,
+ "price": 3576.97,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.7,
- "last_bar_utc": "2026-11-26T14:25:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-11-26T14:35:00+00:00",
  "warnings": [],
  "regime": "Trend",
  "bias": {
@@ -44,19 +44,19 @@
  "vwap": {
   "value": 3578.29,
   "side": "Below",
-  "crosses_2h": 0,
+  "crosses_2h": 2,
   "volume_weighted": true
  },
- "rsi7": 65.2,
- "rsi14": 59.7,
+ "rsi7": 58.8,
+ "rsi14": 58.8,
  "adx14": {
-  "M5": 28.3,
+  "M5": 32.4,
   "M15": 11.8
  },
  "atr14": {
-  "M5": 4.38,
+  "M5": 5.18,
   "M15": 7.69,
-  "percentile": 17
+  "percentile": 39
  },
  "volume": "RVOL 4.25\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -542,14 +542,14 @@
   "absorption": false
  },
  "liquidity_event": "M15 swing high 3575.23 swept (buy-side), rejection wick",
- "bos_choch": "M5 BOS bullish through 3573.02 at 18:00",
+ "bos_choch": "M5 BOS bullish through 3577.15 at 18:30",
  "news": {
   "risk": "Low",
   "status": "live",
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3575.47 / buy 3575.67 (spread $0.20)",
+ "spread": "eToro now: sell 3576.10 / buy 3576.30 (spread $0.20)",
  "score": 74,
  "score_parts": {
   "structure": 17,
@@ -574,7 +574,7 @@
   "Score 74/100 is below the 85 live-trade minimum",
   "M15 swing high at 3575.23 swept, then rejection wick",
   "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 neutral",
-  "RSI7 65, RSI14 60, M15 ADX 12, RVOL 4.3\u00d7",
+  "RSI7 59, RSI14 59, M15 ADX 12, RVOL 4.3\u00d7",
   "Profile & flow: Sweep happened at the value-area high (responsive selling); setup-leg delta -0.14",
   "Weak components: momentum"
  ],
@@ -659,13 +659,13 @@
    "swept": false
   },
   {
-   "name": "London low",
+   "name": "Equal lows",
    "price": 3552.08,
    "side": "sell",
    "swept": false
   },
   {
-   "name": "Asian low",
+   "name": "Equal lows",
    "price": 3551.35,
    "side": "sell",
    "swept": false
@@ -678,28 +678,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1795658400,
-   "o": 3570.1,
-   "h": 3574.28,
-   "l": 3567.47,
-   "c": 3571.32,
-   "e20": 3567.71,
-   "e50": 3565.97,
-   "vw": 3570.63,
-   "dl": 52.0
-  },
-  {
-   "t": 1795658700,
-   "o": 3571.41,
-   "h": 3578.81,
-   "l": 3570.18,
-   "c": 3576.85,
-   "e20": 3568.58,
-   "e50": 3566.4,
-   "vw": 3570.72,
-   "dl": 218.0
-  },
   {
    "t": 1795659000,
    "o": 3576.85,
@@ -2325,6 +2303,28 @@
    "c": 3574.4,
    "e20": 3571.01,
    "e50": 3569.42,
+   "vw": 3578.29,
+   "dl": -0.0
+  },
+  {
+   "t": 1795703400,
+   "o": 3574.47,
+   "h": 3586.34,
+   "l": 3574.18,
+   "c": 3582.61,
+   "e20": 3572.12,
+   "e50": 3569.94,
+   "vw": 3578.29,
+   "dl": 0.0
+  },
+  {
+   "t": 1795703700,
+   "o": 3582.6,
+   "h": 3585.21,
+   "l": 3576.87,
+   "c": 3576.97,
+   "e20": 3572.58,
+   "e50": 3570.22,
    "vw": 3578.29,
    "dl": -0.0
   }
