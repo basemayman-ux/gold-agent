@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-26T14:50:34.522539+00:00",
- "dubai_time": "Thu 26 Nov 2026, 18:50",
+ "generated_utc": "2026-11-26T15:00:47.386585+00:00",
+ "dubai_time": "Thu 26 Nov 2026, 19:00",
  "session": "London/NY overlap",
- "price": 3577.1,
+ "price": 3581.66,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-11-26T14:45:00+00:00",
+ "data_age_min": 0.8,
+ "last_bar_utc": "2026-11-26T14:55:00+00:00",
  "warnings": [],
  "regime": "Range",
  "bias": {
   "H4": "Bearish",
-  "H1": "Bearish",
+  "H1": "Bullish",
   "M15": "Bullish",
   "M5": "Bullish"
  },
@@ -44,19 +44,19 @@
  "vwap": {
   "value": 3578.19,
   "side": "Choppy",
-  "crosses_2h": 4,
+  "crosses_2h": 5,
   "volume_weighted": true
  },
- "rsi7": 56.9,
- "rsi14": 57.9,
+ "rsi7": 67.4,
+ "rsi14": 63.7,
  "adx14": {
-  "M5": 32.6,
-  "M15": 13.6
+  "M5": 33.3,
+  "M15": 15.2
  },
  "atr14": {
-  "M5": 5.29,
-  "M15": 8.15,
-  "percentile": 42
+  "M5": 5.16,
+  "M15": 8.1,
+  "percentile": 38
  },
  "volume": "RVOL 4.25\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -531,15 +531,15 @@
     ]
    ]
   },
-  "context": "Sweep happened at the value-area high (responsive selling)"
+  "context": "Accepted above prior VAH 3554.00 (initiative buying)"
  },
  "orderflow": {
   "available": true,
   "leg_ratio": -0.143,
   "session_delta": 977.0,
   "session_slope": 0.0,
-  "divergence": false,
-  "absorption": false
+  "divergence": null,
+  "absorption": null
  },
  "liquidity_event": "M15 swing high 3575.23 swept (buy-side), rejection wick",
  "bos_choch": "M5 BOS bullish through 3577.15 at 18:30",
@@ -549,19 +549,19 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3575.34 / buy 3575.54 (spread $0.20)",
- "score": 69,
+ "spread": "eToro now: sell 3580.36 / buy 3580.56 (spread $0.20)",
+ "score": 75,
  "score_parts": {
   "structure": 15,
-  "liquidity": 17,
-  "momentum": 0,
+  "liquidity": 15,
+  "momentum": 10,
   "vwap": 5,
-  "volume_flow": 12,
+  "volume_flow": 10,
   "volatility": 5,
   "session": 5,
   "news": 10
  },
- "candidate": "SHORT",
+ "candidate": "LONG",
  "decision": "NO TRADE",
  "headline": "No trade",
  "quality": "NO TRADE",
@@ -571,11 +571,17 @@
  "min_score": 85,
  "plan": null,
  "why": [
-  "MARKET CHOP \u2014 ADX weak, VWAP crossed 4\u00d7 in 2h",
-  "Setup score would be 69/100 (not tradable while blocked)"
+  "MARKET CHOP \u2014 ADX weak, VWAP crossed 5\u00d7 in 2h",
+  "Setup score would be 75/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
+  {
+   "name": "H1 swing high",
+   "price": 3742.57,
+   "side": "buy",
+   "swept": false
+  },
   {
    "name": "H1 swing high",
    "price": 3689.57,
@@ -631,12 +637,6 @@
    "swept": true
   },
   {
-   "name": "H1 swing high",
-   "price": 3576.97,
-   "side": "buy",
-   "swept": false
-  },
-  {
    "name": "London high",
    "price": 3576.97,
    "side": "buy",
@@ -674,28 +674,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1795659600,
-   "o": 3586.42,
-   "h": 3591.04,
-   "l": 3583.02,
-   "c": 3583.54,
-   "e20": 3572.74,
-   "e50": 3568.46,
-   "vw": 3571.26,
-   "dl": -337.0
-  },
-  {
-   "t": 1795659900,
-   "o": 3583.54,
-   "h": 3585.92,
-   "l": 3579.39,
-   "c": 3585.79,
-   "e20": 3573.98,
-   "e50": 3569.14,
-   "vw": 3571.45,
-   "dl": 311.0
-  },
   {
    "t": 1795660200,
    "o": 3585.79,
@@ -2323,6 +2301,28 @@
    "e50": 3570.81,
    "vw": 3578.19,
    "dl": -0.0
+  },
+  {
+   "t": 1795704600,
+   "o": 3576.95,
+   "h": 3580.59,
+   "l": 3574.94,
+   "c": 3580.59,
+   "e20": 3574.21,
+   "e50": 3571.19,
+   "vw": 3578.19,
+   "dl": 0.0
+  },
+  {
+   "t": 1795704900,
+   "o": 3580.59,
+   "h": 3582.11,
+   "l": 3578.99,
+   "c": 3581.66,
+   "e20": 3574.92,
+   "e50": 3571.6,
+   "vw": 3578.19,
+   "dl": 0.0
   }
  ],
  "journal": {
