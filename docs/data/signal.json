@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-26T12:40:32.841599+00:00",
- "dubai_time": "Thu 26 Nov 2026, 16:40",
+ "generated_utc": "2026-11-26T12:45:42.771747+00:00",
+ "dubai_time": "Thu 26 Nov 2026, 16:45",
  "session": "London/NY overlap",
- "price": 3569.73,
+ "price": 3569.98,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.5,
- "last_bar_utc": "2026-11-26T12:35:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-11-26T12:40:00+00:00",
  "warnings": [],
- "regime": "Range",
+ "regime": "Breakout",
  "bias": {
   "H4": "Bearish",
   "H1": "Bearish",
-  "M15": "Bearish",
+  "M15": "Neutral",
   "M5": "Bullish"
  },
  "swings": {
@@ -25,7 +25,7 @@
    "HL"
   ],
   "M15": [
-   "HH",
+   "LH",
    "LL"
   ],
   "M5": [
@@ -47,15 +47,15 @@
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 54.3,
- "rsi14": 53.5,
+ "rsi7": 55.0,
+ "rsi14": 53.9,
  "adx14": {
-  "M5": 17.6,
-  "M15": 13.6
+  "M5": 17.1,
+  "M15": 12.6
  },
  "atr14": {
-  "M5": 4.25,
-  "M15": 8.24,
+  "M5": 4.27,
+  "M15": 8.08,
   "percentile": 15
  },
  "volume": "RVOL 4.25\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
@@ -549,30 +549,35 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3568.93 / buy 3569.33 (spread $0.40)",
+ "spread": "eToro now: sell 3570.05 / buy 3570.25 (spread $0.20)",
  "score": 76,
  "score_parts": {
-  "structure": 25,
+  "structure": 22,
   "liquidity": 15,
   "momentum": 2,
   "vwap": 8,
   "volume_flow": 9,
-  "volatility": 2,
+  "volatility": 5,
   "session": 5,
   "news": 10
  },
  "candidate": "SHORT",
- "decision": "NO TRADE",
- "headline": "No trade",
- "quality": "NO TRADE",
+ "decision": "WAIT",
+ "headline": "Wait",
+ "quality": "WATCH",
  "setup": "trend",
  "range": null,
  "mode": "active",
  "min_score": 85,
  "plan": null,
  "why": [
-  "MARKET CHOP \u2014 ADX weak, EMA20/50 flat",
-  "Setup score would be 76/100 (not tradable while blocked)"
+  "Score 76/100 is below the 85 live-trade minimum",
+  "Structural continuation: M5 BOS followed by a pullback into EMA20/VWAP",
+  "M5 bearish BOS through 3559.66",
+  "H4 bearish (Price clearly below H4 EMA200), H1 bearish, M15 neutral",
+  "RSI7 55, RSI14 54, M15 ADX 13, RVOL 4.3\u00d7",
+  "Profile & flow: Price inside value, no edge from the profile; setup-leg delta -0.14",
+  "Weak components: momentum"
  ],
  "invalidation": null,
  "levels": [
@@ -674,17 +679,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1795651800,
-   "o": 3575.99,
-   "h": 3577.82,
-   "l": 3571.5,
-   "c": 3575.4,
-   "e20": 3575.49,
-   "e50": 3563.74,
-   "vw": 3575.25,
-   "dl": 80.0
-  },
   {
    "t": 1795652100,
    "o": 3575.49,
@@ -2321,6 +2315,17 @@
    "c": 3569.73,
    "e20": 3567.71,
    "e50": 3568.13,
+   "vw": 3578.29,
+   "dl": -0.0
+  },
+  {
+   "t": 1795696800,
+   "o": 3569.73,
+   "h": 3572.98,
+   "l": 3568.4,
+   "c": 3569.98,
+   "e20": 3567.92,
+   "e50": 3568.2,
    "vw": 3578.29,
    "dl": -0.0
   }
