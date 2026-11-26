@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-26T21:50:33.475163+00:00",
- "dubai_time": "Fri 27 Nov 2026, 01:50",
+ "generated_utc": "2026-11-26T22:00:44.317932+00:00",
+ "dubai_time": "Fri 27 Nov 2026, 02:00",
  "session": "Late US / off-hours",
- "price": 3571.7,
+ "price": 3571.02,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-11-26T21:45:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-11-26T21:55:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -47,15 +47,15 @@
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 49.2,
- "rsi14": 56.9,
+ "rsi7": 37.3,
+ "rsi14": 51.1,
  "adx14": {
-  "M5": 24.5,
-  "M15": 13.3
+  "M5": 22.0,
+  "M15": 13.2
  },
  "atr14": {
-  "M5": 0.74,
-  "M15": 3.19,
+  "M5": 0.73,
+  "M15": 3.07,
   "percentile": 0
  },
  "volume": "RVOL 4.25\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
@@ -549,7 +549,7 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3571.81 / buy 3578.52 (spread $6.71)",
+ "spread": "eToro now: sell 3571.02 / buy 3577.65 (spread $6.63)",
  "score": 51,
  "score_parts": {
   "structure": 15,
@@ -575,7 +575,7 @@
   "M5 bullish BOS through 3570.90",
   "Early trend turn: H1 and M15 turned up before H4 (allowed in active mode)",
   "H4 bearish (Price clearly below H4 EMA200), H1 bullish, M15 bullish",
-  "RSI7 49, RSI14 57, M15 ADX 13, RVOL 4.3\u00d7",
+  "RSI7 37, RSI14 51, M15 ADX 13, RVOL 4.3\u00d7",
   "Profile & flow: Accepted above prior VAH 3554.00 (initiative buying); setup-leg delta -0.14",
   "Weak components: liquidity, vwap, volatility, session"
  ],
@@ -648,6 +648,12 @@
    "swept": true
   },
   {
+   "name": "M15 swing high",
+   "price": 3573.3,
+   "side": "buy",
+   "swept": false
+  },
+  {
    "name": "M15 swing low",
    "price": 3565.58,
    "side": "sell",
@@ -670,37 +676,9 @@
    "price": 3554.0,
    "side": "sell",
    "swept": false
-  },
-  {
-   "name": "London low",
-   "price": 3552.08,
-   "side": "sell",
-   "swept": false
   }
  ],
  "chart": [
-  {
-   "t": 1795683000,
-   "o": 3573.68,
-   "h": 3574.57,
-   "l": 3572.13,
-   "c": 3573.09,
-   "e20": 3569.53,
-   "e50": 3573.06,
-   "vw": 3578.29,
-   "dl": -0.0
-  },
-  {
-   "t": 1795683300,
-   "o": 3573.02,
-   "h": 3575.19,
-   "l": 3572.74,
-   "c": 3572.74,
-   "e20": 3569.83,
-   "e50": 3573.05,
-   "vw": 3578.29,
-   "dl": -0.0
-  },
   {
    "t": 1795683600,
    "o": 3572.6,
@@ -2328,6 +2306,28 @@
    "e50": 3570.4,
    "vw": 3578.29,
    "dl": -0.0
+  },
+  {
+   "t": 1795729800,
+   "o": 3571.7,
+   "h": 3571.85,
+   "l": 3571.3,
+   "c": 3571.4,
+   "e20": 3571.23,
+   "e50": 3570.44,
+   "vw": 3578.29,
+   "dl": -0.0
+  },
+  {
+   "t": 1795730100,
+   "o": 3571.4,
+   "h": 3571.4,
+   "l": 3570.62,
+   "c": 3571.02,
+   "e20": 3571.21,
+   "e50": 3570.46,
+   "vw": 3578.29,
+   "dl": 0.0
   }
  ],
  "journal": {
