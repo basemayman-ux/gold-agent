@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-26T19:20:33.490655+00:00",
- "dubai_time": "Thu 26 Nov 2026, 23:20",
+ "generated_utc": "2026-11-26T19:30:39.680638+00:00",
+ "dubai_time": "Thu 26 Nov 2026, 23:30",
  "session": "New York",
- "price": 3566.63,
+ "price": 3566.35,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-11-26T19:15:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-11-26T19:25:00+00:00",
  "warnings": [],
  "regime": "Range",
  "bias": {
@@ -47,15 +47,15 @@
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 31.3,
- "rsi14": 39.3,
+ "rsi7": 37.1,
+ "rsi14": 40.1,
  "adx14": {
-  "M5": 13.3,
-  "M15": 12.3
+  "M5": 15.4,
+  "M15": 11.6
  },
  "atr14": {
-  "M5": 1.53,
-  "M15": 4.68,
+  "M5": 1.48,
+  "M15": 4.46,
   "percentile": 0
  },
  "volume": "RVOL 4.25\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
@@ -549,11 +549,11 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3566.26 / buy 3566.46 (spread $0.20)",
- "score": 55,
+ "spread": "eToro now: sell 3566.35 / buy 3566.55 (spread $0.20)",
+ "score": 50,
  "score_parts": {
   "structure": 10,
-  "liquidity": 17,
+  "liquidity": 12,
   "momentum": 1,
   "vwap": 3,
   "volume_flow": 10,
@@ -573,7 +573,7 @@
  "why": [
   "H4 (Bearish) and H1 (Bullish) conflict",
   "MARKET CHOP \u2014 ADX weak, EMA20/50 flat",
-  "Setup score would be 55/100 (not tradable while blocked)"
+  "Setup score would be 50/100 (not tradable while blocked)"
  ],
  "invalidation": null,
  "levels": [
@@ -644,6 +644,12 @@
    "swept": true
   },
   {
+   "name": "M15 swing high",
+   "price": 3570.0,
+   "side": "buy",
+   "swept": false
+  },
+  {
    "name": "M15 swing low",
    "price": 3565.21,
    "side": "sell",
@@ -666,37 +672,9 @@
    "price": 3552.08,
    "side": "sell",
    "swept": false
-  },
-  {
-   "name": "Asian low",
-   "price": 3551.35,
-   "side": "sell",
-   "swept": false
   }
  ],
  "chart": [
-  {
-   "t": 1795675800,
-   "o": 3569.11,
-   "h": 3570.17,
-   "l": 3566.07,
-   "c": 3566.43,
-   "e20": 3576.18,
-   "e50": 3579.95,
-   "vw": 3578.29,
-   "dl": -0.0
-  },
-  {
-   "t": 1795676100,
-   "o": 3566.38,
-   "h": 3569.81,
-   "l": 3565.58,
-   "c": 3568.49,
-   "e20": 3575.45,
-   "e50": 3579.5,
-   "vw": 3578.29,
-   "dl": 0.0
-  },
   {
    "t": 1795676400,
    "o": 3568.44,
@@ -2324,6 +2302,28 @@
    "e50": 3569.51,
    "vw": 3578.29,
    "dl": -0.0
+  },
+  {
+   "t": 1795720800,
+   "o": 3566.43,
+   "h": 3566.77,
+   "l": 3565.58,
+   "c": 3565.59,
+   "e20": 3567.87,
+   "e50": 3569.35,
+   "vw": 3578.29,
+   "dl": -0.0
+  },
+  {
+   "t": 1795721100,
+   "o": 3565.59,
+   "h": 3566.76,
+   "l": 3565.58,
+   "c": 3566.35,
+   "e20": 3567.72,
+   "e50": 3569.24,
+   "vw": 3578.29,
+   "dl": 0.0
   }
  ],
  "journal": {
