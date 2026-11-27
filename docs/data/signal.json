@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-27T13:00:47.821590+00:00",
- "dubai_time": "Fri 27 Nov 2026, 17:00",
+ "generated_utc": "2026-11-27T13:10:40.420123+00:00",
+ "dubai_time": "Fri 27 Nov 2026, 17:10",
  "session": "London/NY overlap",
- "price": 3669.8,
+ "price": 3668.44,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-11-27T12:55:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-11-27T13:05:00+00:00",
  "warnings": [],
  "regime": "Trend",
  "bias": {
@@ -30,7 +30,7 @@
   ],
   "M5": [
    "LH",
-   "HL"
+   "LL"
   ]
  },
  "ema200": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 3667.74,
+  "value": 3668.33,
   "side": "Choppy",
   "crosses_2h": 9,
   "volume_weighted": true
  },
- "rsi7": 53.2,
- "rsi14": 48.2,
+ "rsi7": 47.5,
+ "rsi14": 45.6,
  "adx14": {
-  "M5": 11.9,
+  "M5": 10.2,
   "M15": 52.5
  },
  "atr14": {
-  "M5": 4.01,
+  "M5": 4.28,
   "M15": 7.24,
-  "percentile": 18
+  "percentile": 24
  },
  "volume": "RVOL 4.25\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -64,7 +64,7 @@
   "prior": {
    "poc": 3576.75,
    "vah": 3588.0,
-   "val": 3561.0
+   "val": 3561.5
   },
   "naked_pocs": [
    {
@@ -91,12 +91,12 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3667.09 / buy 3667.41 (spread $0.32)",
- "score": 69,
+ "spread": "eToro now: sell 3669.68 / buy 3669.88 (spread $0.20)",
+ "score": 66,
  "score_parts": {
   "structure": 13,
   "liquidity": 17,
-  "momentum": 9,
+  "momentum": 6,
   "vwap": 5,
   "volume_flow": 5,
   "volatility": 5,
@@ -116,7 +116,7 @@
   "M15 swing low at 3666.58 swept, then displacement",
   "Early trend turn: H1 and M15 turned up before H4 (allowed in active mode)",
   "H4 bearish (Price clearly below H4 EMA200), H1 bullish, M15 bullish",
-  "RSI7 53, RSI14 48, M15 ADX 53, RVOL 4.3\u00d7",
+  "RSI7 48, RSI14 46, M15 ADX 53, RVOL 4.3\u00d7",
   "Profile & flow: Profile unavailable; setup-leg delta -0.14",
   "Weak components: volume & flow"
  ],
@@ -202,7 +202,7 @@
   },
   {
    "name": "Prior VAL",
-   "price": 3561.0,
+   "price": 3561.5,
    "side": "sell",
    "swept": false
   },
@@ -220,28 +220,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1795739400,
-   "o": 3566.95,
-   "h": 3571.2,
-   "l": 3566.08,
-   "c": 3570.73,
-   "e20": 3568.61,
-   "e50": 3569.05,
-   "vw": 3569.34,
-   "dl": 0.0
-  },
-  {
-   "t": 1795739700,
-   "o": 3570.72,
-   "h": 3570.82,
-   "l": 3565.79,
-   "c": 3566.52,
-   "e20": 3568.41,
-   "e50": 3568.95,
-   "vw": 3567.71,
-   "dl": -0.0
-  },
   {
    "t": 1795740000,
    "o": 3566.51,
@@ -1868,6 +1846,28 @@
    "e20": 3670.07,
    "e50": 3669.79,
    "vw": 3667.74,
+   "dl": 0.0
+  },
+  {
+   "t": 1795784400,
+   "o": 3669.43,
+   "h": 3670.92,
+   "l": 3664.1,
+   "c": 3669.23,
+   "e20": 3669.99,
+   "e50": 3669.77,
+   "vw": 3668.08,
+   "dl": 0.0
+  },
+  {
+   "t": 1795784700,
+   "o": 3669.15,
+   "h": 3670.88,
+   "l": 3665.66,
+   "c": 3668.44,
+   "e20": 3669.84,
+   "e50": 3669.72,
+   "vw": 3668.33,
    "dl": 0.0
   }
  ],
