@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-27T04:00:48.143086+00:00",
- "dubai_time": "Fri 27 Nov 2026, 08:00",
+ "generated_utc": "2026-11-27T04:10:38.340291+00:00",
+ "dubai_time": "Fri 27 Nov 2026, 08:10",
  "session": "Asia",
- "price": 3629.23,
+ "price": 3628.93,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.8,
- "last_bar_utc": "2026-11-27T03:55:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-11-27T04:05:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -29,7 +29,7 @@
    "LL"
   ],
   "M5": [
-   "LH",
+   "HH",
    "HL"
   ]
  },
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 3629.52,
+  "value": 3628.3,
   "side": "Choppy",
   "crosses_2h": 13,
   "volume_weighted": true
  },
- "rsi7": 56.6,
- "rsi14": 63.4,
+ "rsi7": 55.3,
+ "rsi14": 62.3,
  "adx14": {
-  "M5": 52.8,
+  "M5": 51.6,
   "M15": 42.3
  },
  "atr14": {
-  "M5": 6.23,
+  "M5": 5.71,
   "M15": 9.52,
-  "percentile": 62
+  "percentile": 54
  },
  "volume": "RVOL 4.25\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -91,13 +91,13 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3628.36 / buy 3628.57 (spread $0.21)",
- "score": 57,
+ "spread": "eToro now: sell 3628.53 / buy 3628.73 (spread $0.20)",
+ "score": 62,
  "score_parts": {
   "structure": 18,
   "liquidity": 7,
   "momentum": 11,
-  "vwap": 0,
+  "vwap": 5,
   "volume_flow": 5,
   "volatility": 5,
   "session": 1,
@@ -117,9 +117,9 @@
   "M5 bullish BOS through 3630.56",
   "Early trend turn: H1 and M15 turned up before H4 (allowed in active mode)",
   "H4 bearish (Price clearly below H4 EMA200), H1 bullish, M15 bullish",
-  "RSI7 57, RSI14 63, M15 ADX 42, RVOL 4.3\u00d7",
+  "RSI7 55, RSI14 62, M15 ADX 42, RVOL 4.3\u00d7",
   "Profile & flow: Profile unavailable; setup-leg delta -0.14",
-  "Weak components: liquidity, vwap, volume & flow, session"
+  "Weak components: liquidity, volume & flow, session"
  ],
  "invalidation": null,
  "levels": [
@@ -221,28 +221,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1795701900,
-   "o": 3574.54,
-   "h": 3577.15,
-   "l": 3572.84,
-   "c": 3574.16,
-   "e20": 3569.46,
-   "e50": 3568.6,
-   "vw": 3578.29,
-   "dl": -0.0
-  },
-  {
-   "t": 1795702200,
-   "o": 3574.16,
-   "h": 3574.44,
-   "l": 3572.09,
-   "c": 3573.83,
-   "e20": 3569.88,
-   "e50": 3568.81,
-   "vw": 3578.29,
-   "dl": 0.0
-  },
   {
    "t": 1795702500,
    "o": 3573.83,
@@ -1870,6 +1848,28 @@
    "e50": 3605.02,
    "vw": 3629.52,
    "dl": -0.0
+  },
+  {
+   "t": 1795752000,
+   "o": 3629.25,
+   "h": 3630.22,
+   "l": 3627.47,
+   "c": 3627.82,
+   "e20": 3623.31,
+   "e50": 3605.92,
+   "vw": 3628.5,
+   "dl": -0.0
+  },
+  {
+   "t": 1795752300,
+   "o": 3627.89,
+   "h": 3629.04,
+   "l": 3626.92,
+   "c": 3628.93,
+   "e20": 3623.84,
+   "e50": 3606.82,
+   "vw": 3628.3,
+   "dl": 0.0
   }
  ],
  "journal": {
