@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-27T13:20:34.863798+00:00",
- "dubai_time": "Fri 27 Nov 2026, 17:20",
+ "generated_utc": "2026-11-27T13:30:36.976486+00:00",
+ "dubai_time": "Fri 27 Nov 2026, 17:30",
  "session": "London/NY overlap",
- "price": 3650.49,
+ "price": 3647.85,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
  "data_age_min": 0.6,
- "last_bar_utc": "2026-11-27T13:15:00+00:00",
+ "last_bar_utc": "2026-11-27T13:25:00+00:00",
  "warnings": [],
  "regime": "Trend",
  "bias": {
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 3652.93,
+  "value": 3648.15,
   "side": "Choppy",
-  "crosses_2h": 9,
+  "crosses_2h": 8,
   "volume_weighted": true
  },
- "rsi7": 16.6,
- "rsi14": 25.3,
+ "rsi7": 20.4,
+ "rsi14": 26.1,
  "adx14": {
-  "M5": 14.7,
-  "M15": 49.2
+  "M5": 20.0,
+  "M15": 47.6
  },
  "atr14": {
-  "M5": 5.35,
-  "M15": 7.82,
-  "percentile": 48
+  "M5": 5.49,
+  "M15": 8.34,
+  "percentile": 52
  },
  "volume": "RVOL 4.25\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -91,7 +91,7 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3644.72 / buy 3644.92 (spread $0.20)",
+ "spread": "eToro now: sell 3649.68 / buy 3649.88 (spread $0.20)",
  "score": 56,
  "score_parts": {
   "structure": 8,
@@ -216,28 +216,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1795740600,
-   "o": 3562.03,
-   "h": 3562.35,
-   "l": 3558.21,
-   "c": 3559.51,
-   "e20": 3566.81,
-   "e50": 3568.21,
-   "vw": 3560.02,
-   "dl": -0.0
-  },
-  {
-   "t": 1795740900,
-   "o": 3559.89,
-   "h": 3562.1,
-   "l": 3558.84,
-   "c": 3560.86,
-   "e20": 3566.24,
-   "e50": 3567.92,
-   "vw": 3560.6,
-   "dl": 0.0
-  },
   {
    "t": 1795741200,
    "o": 3560.82,
@@ -1864,6 +1842,28 @@
    "e20": 3666.96,
    "e50": 3668.52,
    "vw": 3652.93,
+   "dl": -0.0
+  },
+  {
+   "t": 1795785600,
+   "o": 3650.29,
+   "h": 3650.29,
+   "l": 3643.99,
+   "c": 3645.98,
+   "e20": 3664.96,
+   "e50": 3667.63,
+   "vw": 3646.75,
+   "dl": -0.0
+  },
+  {
+   "t": 1795785900,
+   "o": 3646.09,
+   "h": 3651.43,
+   "l": 3645.16,
+   "c": 3647.85,
+   "e20": 3663.33,
+   "e50": 3666.86,
+   "vw": 3648.15,
    "dl": -0.0
   }
  ],
