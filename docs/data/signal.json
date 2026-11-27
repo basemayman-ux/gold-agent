@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-27T19:40:37.711688+00:00",
- "dubai_time": "Fri 27 Nov 2026, 23:40",
+ "generated_utc": "2026-11-27T19:50:46.042071+00:00",
+ "dubai_time": "Fri 27 Nov 2026, 23:50",
  "session": "New York",
- "price": 3645.44,
+ "price": 3654.31,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-11-27T19:35:00+00:00",
+ "data_age_min": 5.8,
+ "last_bar_utc": "2026-11-27T19:40:00+00:00",
  "warnings": [],
  "regime": "Transition",
  "bias": {
@@ -39,7 +39,7 @@
  },
  "ema20_50": {
   "M5": "EMA20 above EMA50",
-  "M15": "EMA20 below EMA50"
+  "M15": "EMA20 above EMA50"
  },
  "vwap": {
   "value": 3632.63,
@@ -47,16 +47,16 @@
   "crosses_2h": 0,
   "volume_weighted": true
  },
- "rsi7": 64.2,
- "rsi14": 58.5,
+ "rsi7": 82.8,
+ "rsi14": 69.7,
  "adx14": {
-  "M5": 14.9,
+  "M5": 16.8,
   "M15": 25.0
  },
  "atr14": {
-  "M5": 3.57,
-  "M15": 8.58,
-  "percentile": 9
+  "M5": 3.95,
+  "M15": 8.91,
+  "percentile": 15
  },
  "volume": "RVOL 2.96\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -1121,32 +1121,33 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3647.43 / buy 3647.63 (spread $0.20)",
- "score": 67,
+ "spread": "eToro now: sell 3654.31 / buy 3654.51 (spread $0.20)",
+ "score": 72,
  "score_parts": {
   "structure": 21,
   "liquidity": 0,
-  "momentum": 9,
+  "momentum": 11,
   "vwap": 8,
   "volume_flow": 13,
-  "volatility": 2,
+  "volatility": 5,
   "session": 4,
   "news": 10
  },
  "candidate": "LONG",
- "decision": "NO TRADE",
- "headline": "No trade",
- "quality": "NO TRADE",
+ "decision": "WAIT",
+ "headline": "Wait",
+ "quality": "WATCH",
  "setup": "trend",
  "range": null,
  "mode": "active",
  "min_score": 85,
  "plan": null,
  "why": [
+  "Score 72/100 is below the 85 live-trade minimum",
   "No liquidity sweep or clean continuation setup",
   "M5 bullish BOS through 3645.01",
   "H4 neutral (H4 price near EMA200 or structure disagrees), H1 bullish, M15 bullish",
-  "RSI7 64, RSI14 58, M15 ADX 25, RVOL 3.0\u00d7",
+  "RSI7 83, RSI14 70, M15 ADX 25, RVOL 3.0\u00d7",
   "Profile & flow: Accepted above prior VAH 3588.00 (initiative buying); setup-leg delta +0.58",
   "Weak components: liquidity"
  ],
@@ -1250,17 +1251,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1795763400,
-   "o": 3658.32,
-   "h": 3660.57,
-   "l": 3656.85,
-   "c": 3660.38,
-   "e20": 3650.34,
-   "e50": 3638.16,
-   "vw": 3659.27,
-   "dl": 0.0
-  },
   {
    "t": 1795763700,
    "o": 3660.42,
@@ -2897,6 +2887,17 @@
    "c": 3645.44,
    "e20": 3642.25,
    "e50": 3640.65,
+   "vw": 3632.63,
+   "dl": 0.0
+  },
+  {
+   "t": 1795808400,
+   "o": 3645.44,
+   "h": 3654.31,
+   "l": 3645.44,
+   "c": 3654.31,
+   "e20": 3643.4,
+   "e50": 3641.19,
    "vw": 3632.63,
    "dl": 0.0
   }
