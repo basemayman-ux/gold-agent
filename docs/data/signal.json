@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-27T11:20:37.817848+00:00",
- "dubai_time": "Fri 27 Nov 2026, 15:20",
+ "generated_utc": "2026-11-27T11:30:40.731746+00:00",
+ "dubai_time": "Fri 27 Nov 2026, 15:30",
  "session": "London",
- "price": 3674.61,
+ "price": 3678.28,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.6,
- "last_bar_utc": "2026-11-27T11:15:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-11-27T11:25:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -25,7 +25,7 @@
    "LL"
   ],
   "M15": [
-   "HH",
+   "LH",
    "HL"
   ],
   "M5": [
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 3675.07,
+  "value": 3677.02,
   "side": "Choppy",
-  "crosses_2h": 9,
+  "crosses_2h": 8,
   "volume_weighted": true
  },
- "rsi7": 42.6,
- "rsi14": 49.6,
+ "rsi7": 60.2,
+ "rsi14": 56.6,
  "adx14": {
-  "M5": 17.4,
-  "M15": 67.2
+  "M5": 16.4,
+  "M15": 65.9
  },
  "atr14": {
-  "M5": 3.36,
-  "M15": 7.73,
-  "percentile": 7
+  "M5": 3.37,
+  "M15": 7.62,
+  "percentile": 10
  },
  "volume": "RVOL 4.25\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -91,13 +91,13 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3673.72 / buy 3673.92 (spread $0.20)",
- "score": 57,
+ "spread": "eToro now: sell 3678.80 / buy 3679.00 (spread $0.20)",
+ "score": 62,
  "score_parts": {
   "structure": 18,
-  "liquidity": 12,
-  "momentum": 6,
-  "vwap": 0,
+  "liquidity": 7,
+  "momentum": 11,
+  "vwap": 5,
   "volume_flow": 5,
   "volatility": 2,
   "session": 4,
@@ -117,9 +117,9 @@
   "M5 bullish BOS through 3679.83",
   "Early trend turn: H1 and M15 turned up before H4 (allowed in active mode)",
   "H4 bearish (Price clearly below H4 EMA200), H1 bullish, M15 bullish",
-  "RSI7 43, RSI14 50, M15 ADX 67, RVOL 4.3\u00d7",
+  "RSI7 60, RSI14 57, M15 ADX 66, RVOL 4.3\u00d7",
   "Profile & flow: Profile unavailable; setup-leg delta -0.14",
-  "Weak components: vwap, volume & flow"
+  "Weak components: liquidity, volume & flow"
  ],
  "invalidation": null,
  "levels": [
@@ -221,28 +221,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1795730100,
-   "o": 3571.4,
-   "h": 3571.4,
-   "l": 3570.62,
-   "c": 3571.02,
-   "e20": 3571.21,
-   "e50": 3570.46,
-   "vw": 3578.29,
-   "dl": 0.0
-  },
-  {
-   "t": 1795730400,
-   "o": 3571.02,
-   "h": 3571.02,
-   "l": 3571.02,
-   "c": 3571.02,
-   "e20": 3571.19,
-   "e50": 3570.48,
-   "vw": 3571.02,
-   "dl": 0.0
-  },
   {
    "t": 1795734000,
    "o": 3558.16,
@@ -1870,6 +1848,28 @@
    "e50": 3669.56,
    "vw": 3675.07,
    "dl": -0.0
+  },
+  {
+   "t": 1795778400,
+   "o": 3674.63,
+   "h": 3674.75,
+   "l": 3672.52,
+   "c": 3674.09,
+   "e20": 3675.45,
+   "e50": 3669.74,
+   "vw": 3673.79,
+   "dl": 0.0
+  },
+  {
+   "t": 1795778700,
+   "o": 3674.09,
+   "h": 3678.7,
+   "l": 3674.09,
+   "c": 3678.28,
+   "e20": 3675.72,
+   "e50": 3670.07,
+   "vw": 3677.02,
+   "dl": 0.0
   }
  ],
  "journal": {
