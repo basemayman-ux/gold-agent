@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-27T11:00:51.832181+00:00",
- "dubai_time": "Fri 27 Nov 2026, 15:00",
+ "generated_utc": "2026-11-27T11:10:40.305542+00:00",
+ "dubai_time": "Fri 27 Nov 2026, 15:10",
  "session": "London",
- "price": 3679.46,
+ "price": 3675.38,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.9,
- "last_bar_utc": "2026-11-27T10:55:00+00:00",
+ "data_age_min": 0.7,
+ "last_bar_utc": "2026-11-27T11:05:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -42,19 +42,19 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 3679.48,
+  "value": 3676.34,
   "side": "Choppy",
-  "crosses_2h": 11,
+  "crosses_2h": 10,
   "volume_weighted": true
  },
- "rsi7": 66.1,
- "rsi14": 59.7,
+ "rsi7": 45.9,
+ "rsi14": 51.3,
  "adx14": {
-  "M5": 21.5,
+  "M5": 19.8,
   "M15": 67.9
  },
  "atr14": {
-  "M5": 3.53,
+  "M5": 3.48,
   "M15": 7.99,
   "percentile": 8
  },
@@ -64,7 +64,7 @@
   "prior": {
    "poc": 3576.75,
    "vah": 3588.0,
-   "val": 3561.5
+   "val": 3561.0
   },
   "naked_pocs": [
    {
@@ -91,12 +91,12 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3678.69 / buy 3678.89 (spread $0.20)",
- "score": 57,
+ "spread": "eToro now: sell 3676.54 / buy 3676.74 (spread $0.20)",
+ "score": 59,
  "score_parts": {
   "structure": 18,
-  "liquidity": 7,
-  "momentum": 11,
+  "liquidity": 12,
+  "momentum": 8,
   "vwap": 0,
   "volume_flow": 5,
   "volatility": 2,
@@ -117,9 +117,9 @@
   "M5 bullish BOS through 3679.83",
   "Early trend turn: H1 and M15 turned up before H4 (allowed in active mode)",
   "H4 bearish (Price clearly below H4 EMA200), H1 bullish, M15 bullish",
-  "RSI7 66, RSI14 60, M15 ADX 68, RVOL 4.3\u00d7",
+  "RSI7 46, RSI14 51, M15 ADX 68, RVOL 4.3\u00d7",
   "Profile & flow: Profile unavailable; setup-leg delta -0.14",
-  "Weak components: liquidity, vwap, volume & flow"
+  "Weak components: vwap, volume & flow"
  ],
  "invalidation": null,
  "levels": [
@@ -203,7 +203,7 @@
   },
   {
    "name": "Prior VAL",
-   "price": 3561.5,
+   "price": 3561.0,
    "side": "sell",
    "swept": false
   },
@@ -222,28 +222,6 @@
  ],
  "chart": [
   {
-   "t": 1795728900,
-   "o": 3572.52,
-   "h": 3572.6,
-   "l": 3572.43,
-   "c": 3572.6,
-   "e20": 3571.07,
-   "e50": 3570.28,
-   "vw": 3578.29,
-   "dl": 0.0
-  },
-  {
-   "t": 1795729200,
-   "o": 3572.6,
-   "h": 3572.6,
-   "l": 3572.02,
-   "c": 3572.02,
-   "e20": 3571.16,
-   "e50": 3570.35,
-   "vw": 3578.29,
-   "dl": -0.0
-  },
-  {
    "t": 1795729500,
    "o": 3572.02,
    "h": 3572.12,
@@ -251,7 +229,7 @@
    "c": 3571.7,
    "e20": 3571.21,
    "e50": 3570.4,
-   "vw": 3578.29,
+   "vw": 3578.19,
    "dl": -0.0
   },
   {
@@ -262,7 +240,7 @@
    "c": 3571.4,
    "e20": 3571.23,
    "e50": 3570.44,
-   "vw": 3578.29,
+   "vw": 3578.19,
    "dl": -0.0
   },
   {
@@ -273,7 +251,7 @@
    "c": 3571.02,
    "e20": 3571.21,
    "e50": 3570.46,
-   "vw": 3578.29,
+   "vw": 3578.19,
    "dl": 0.0
   },
   {
@@ -1869,6 +1847,28 @@
    "e20": 3675.53,
    "e50": 3668.48,
    "vw": 3679.48,
+   "dl": -0.0
+  },
+  {
+   "t": 1795777200,
+   "o": 3679.43,
+   "h": 3679.43,
+   "l": 3676.56,
+   "c": 3677.42,
+   "e20": 3675.71,
+   "e50": 3668.83,
+   "vw": 3677.8,
+   "dl": -0.0
+  },
+  {
+   "t": 1795777500,
+   "o": 3677.42,
+   "h": 3678.52,
+   "l": 3675.11,
+   "c": 3675.38,
+   "e20": 3675.68,
+   "e50": 3669.08,
+   "vw": 3676.34,
    "dl": -0.0
   }
  ],
