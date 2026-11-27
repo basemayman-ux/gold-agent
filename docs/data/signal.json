@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-27T06:40:31.865522+00:00",
- "dubai_time": "Fri 27 Nov 2026, 10:40",
+ "generated_utc": "2026-11-27T06:50:33.427105+00:00",
+ "dubai_time": "Fri 27 Nov 2026, 10:50",
  "session": "Asia",
- "price": 3646.19,
+ "price": 3650.52,
  "source": "eToro GOLD (same prices as your eToro app)",
  "volume_source": "COMEX GC futures (Yahoo, delayed)",
- "data_age_min": 0.5,
- "last_bar_utc": "2026-11-27T06:35:00+00:00",
+ "data_age_min": 0.6,
+ "last_bar_utc": "2026-11-27T06:45:00+00:00",
  "warnings": [],
  "regime": "Breakout",
  "bias": {
@@ -26,10 +26,10 @@
   ],
   "M15": [
    "HH",
-   "LL"
+   "HL"
   ],
   "M5": [
-   "LH",
+   "HH",
    "HL"
   ]
  },
@@ -42,21 +42,21 @@
   "M15": "EMA20 above EMA50"
  },
  "vwap": {
-  "value": 3648.67,
+  "value": 3650.59,
   "side": "Choppy",
-  "crosses_2h": 11,
+  "crosses_2h": 12,
   "volume_weighted": true
  },
- "rsi7": 50.3,
- "rsi14": 55.0,
+ "rsi7": 59.2,
+ "rsi14": 59.2,
  "adx14": {
-  "M5": 35.9,
-  "M15": 59.2
+  "M5": 33.7,
+  "M15": 60.3
  },
  "atr14": {
-  "M5": 6.02,
+  "M5": 5.81,
   "M15": 10.14,
-  "percentile": 60
+  "percentile": 56
  },
  "volume": "RVOL 4.25\u00d7 on the setup leg \u2014 COMEX GC futures (Yahoo, delayed)",
  "profile": {
@@ -91,11 +91,11 @@
   "upcoming": [],
   "detail": "No high-impact USD event in the next 3 hours"
  },
- "spread": "eToro now: sell 3647.52 / buy 3647.72 (spread $0.20)",
- "score": 65,
+ "spread": "eToro now: sell 3651.89 / buy 3652.09 (spread $0.20)",
+ "score": 62,
  "score_parts": {
   "structure": 18,
-  "liquidity": 15,
+  "liquidity": 12,
   "momentum": 11,
   "vwap": 0,
   "volume_flow": 5,
@@ -117,7 +117,7 @@
   "M5 bullish BOS through 3647.34",
   "Early trend turn: H1 and M15 turned up before H4 (allowed in active mode)",
   "H4 bearish (Price clearly below H4 EMA200), H1 bullish, M15 bullish",
-  "RSI7 50, RSI14 55, M15 ADX 59, RVOL 4.3\u00d7",
+  "RSI7 59, RSI14 59, M15 ADX 60, RVOL 4.3\u00d7",
   "Profile & flow: Profile unavailable; setup-leg delta -0.14",
   "Weak components: vwap, volume & flow, session"
  ],
@@ -221,28 +221,6 @@
   }
  ],
  "chart": [
-  {
-   "t": 1795711500,
-   "o": 3573.89,
-   "h": 3574.26,
-   "l": 3570.88,
-   "c": 3572.22,
-   "e20": 3573.46,
-   "e50": 3572.74,
-   "vw": 3578.29,
-   "dl": -0.0
-  },
-  {
-   "t": 1795711800,
-   "o": 3572.2,
-   "h": 3572.34,
-   "l": 3570.75,
-   "c": 3571.69,
-   "e20": 3573.29,
-   "e50": 3572.7,
-   "vw": 3578.29,
-   "dl": 0.0
-  },
   {
    "t": 1795712100,
    "o": 3571.69,
@@ -1869,6 +1847,28 @@
    "e20": 3644.24,
    "e50": 3632.43,
    "vw": 3648.67,
+   "dl": -0.0
+  },
+  {
+   "t": 1795761600,
+   "o": 3646.6,
+   "h": 3650.36,
+   "l": 3645.52,
+   "c": 3648.59,
+   "e20": 3644.65,
+   "e50": 3633.07,
+   "vw": 3648.16,
+   "dl": 0.0
+  },
+  {
+   "t": 1795761900,
+   "o": 3648.59,
+   "h": 3652.71,
+   "l": 3648.55,
+   "c": 3650.52,
+   "e20": 3645.21,
+   "e50": 3633.75,
+   "vw": 3650.59,
    "dl": -0.0
   }
  ],
